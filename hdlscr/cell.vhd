@@ -33,7 +33,7 @@ use IEEE.NUMERIC_STD.ALL;
 entity cell is
     Generic ( init_state : std_logic := '0' );
     Port ( prox : in std_logic_vector (7 downto 0); -- proximity (Nachbarschaft)
-           ena : in std_logic;
+           clk_en : in std_logic;
            clk : in std_logic;
            Q : out std_logic );    -- 1 stand for "ALIVE" and 0 stand for "DEAD" 
 end Cell;
@@ -41,7 +41,6 @@ end Cell;
 architecture Behavioral of Cell is
     signal internal_state : std_logic := init_state;    -- internal cell state
     
-    --3 x LUT6
     function count6bits(val: std_logic_vector(5 downto 0)) return std_logic_vector is
     begin
         case val is
@@ -106,7 +105,6 @@ architecture Behavioral of Cell is
         end case;
     end function;
     
-    --1 x LUT6
     function countRestbits(val: std_logic_vector(5 downto 0)) return std_logic is
     begin
         case val is
@@ -120,6 +118,7 @@ architecture Behavioral of Cell is
             when "001111" => return '1';
             when "010001" => return '1';
             when "010011" => return '1';
+            when "010101" => return '1';
             when "011001" => return '1';
             when others => return '0';
         end case;
@@ -128,7 +127,7 @@ begin
     RULES_PROC: process(clk)
     begin
         if rising_edge(clk) then
-            if ena = '1' then
+            if clk_en = '1' then
                 internal_state <= countRestbits(count6bits(prox(7 downto 2)) & prox(1 downto 0) & internal_state);
             end if; -- enable
         end if; -- rising_edge

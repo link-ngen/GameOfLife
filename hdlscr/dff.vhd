@@ -33,7 +33,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 
 entity dff is
     Port ( clk: in std_logic;
-           clk_en: in std_logic;
+           en: in std_logic;
            D: in std_logic;
            Q: out std_logic);
 end dff;
@@ -43,7 +43,7 @@ begin
     FF: process(clk)
     begin
         if rising_edge(clk) then
-            if clk_en = '1' then
+            if en = '1' then
                 Q <= D;
             end if;
         end if;

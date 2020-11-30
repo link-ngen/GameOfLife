@@ -39,7 +39,7 @@ architecture Behavioral of cell_tb is
     component cell is 
           Generic ( init_state : std_logic := '0' );
           Port ( prox : in std_logic_vector (7 downto 0); -- proximity (Nachbarschaft)
-                 clk_en: in std_logic;
+                 en: in std_logic;
                  clk : in std_logic;
                  Q : out std_logic );    -- 1 stand for "ALIVE" and 0 stand for "DEAD" 
     end component;
@@ -51,7 +51,7 @@ architecture Behavioral of cell_tb is
 begin
     uut: cell generic map('0')
               port map(prox => prox,
-                       clk_en => clk_en,
+                       _en => clk_en,
                        clk => clk,
                        Q => Q);
    

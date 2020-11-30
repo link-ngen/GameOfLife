@@ -97,5 +97,4 @@ begin
             "100" when "111010",
             "100" when "111100",
             "111" when others;
-
 end Behavioral;
