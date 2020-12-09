@@ -64,7 +64,7 @@ architecture Behavioral of ca_core is
     component cell is
         Generic ( init_state : std_logic := '0' );
         Port ( prox : in std_logic_vector (7 downto 0); -- proximity (Nachbarschaft)
-               clk_en : in std_logic;
+               en : in std_logic;
                clk : in std_logic;
                Q : out std_logic );    -- 1 stand for "ALIVE" and 0 stand for "DEAD" 
     end component;
@@ -82,8 +82,7 @@ begin
                                    d_in => shift_reg_signals(i),
                                    q_out => shift_reg_signals(i+1),
                                    srvec => state_grid(i));
-        end generate SHIFT_L2R;
-        
+        end generate SHIFT_L2R;       
         -- left shift
         SHIFT_R2L: if i mod 2 = 1 generate -- TODO: UND-Verknüpfung mit 1 ist vllt besser
             SR_REG_RL: shiftreg Generic map (LENGTH => WIDTH)
@@ -107,48 +106,15 @@ begin
                               state_grid(i-1)(j-1)&
                               state_grid(i)  (j-1)&
                               state_grid(i+1)(j-1));
-            
-            CELLX_ZERO: if (state_grid(i)(j) = '0') generate
+                              
+            CELLX_ZERO: if (state_grid(i)(j) = '0') generate -- Warning: condition in if generate must be static
                 CELLX: cell Generic map (init_state => '0')
                                     Port map ( prox => internal_prox,
-                                               clk_en => ena,
+                                               en => ena,
                                                clk => clk,
                                                Q =>  state_grid(i)(j));
             end generate CELLX_ZERO;
-            
-            
-            
+                  
         end generate GEN_CELL_ROWS; 
     end generate GEN_CELL_COLS;
-    
---    CA_FSM_PROC: process(clk)
---    begin
---        if rising_edge(clk) then
---            case STATE is
---                when IDLE => 
---                    if shift_flag = '1' then
---                        STATE <= SHIFT;
---                    elsif start = '1' then
---                        STATE <= ITERATION;
---                    else
---                        STATE <= IDLE;
---                    end if;
---                when SHIFT => 
---                    if shift_flag = '0' then
---                        STATE <= IDLE;
---                    else
---                        STATE <= SHIFT;
---                    end if;
---                when ITERATION => 
---                    if start = '0' then
---                        STATE <= IDLE;
---                    else
---                        STATE <= ITERATION;
---                    end if;
---            when others => null;
---            end case;
---        end if;
---    end process;
-    
-    
 end Behavioral;

@@ -27,19 +27,21 @@ use IEEE.NUMERIC_STD.ALL;
 
 -- Uncomment the following library declaration if instantiating
 -- any Xilinx leaf cells in this code.
---library UNISIM;
---use UNISIM.VComponents.all;
+library UNISIM;
+use UNISIM.VComponents.all;
 
 entity cell is
     Generic ( init_state : std_logic := '0' );
     Port ( prox : in std_logic_vector (7 downto 0); -- proximity (Nachbarschaft)
-           clk_en : in std_logic;
+           ce : in std_logic;
            clk : in std_logic;
+           shift: in std_logic;
            Q : out std_logic );    -- 1 stand for "ALIVE" and 0 stand for "DEAD" 
-end Cell;
+end cell;
 
 architecture Behavioral of Cell is
     signal internal_state : std_logic := init_state;    -- internal cell state
+    signal tmp_signal: std_logic;
     
     function count6bits(val: std_logic_vector(5 downto 0)) return std_logic_vector is
     begin
@@ -123,14 +125,16 @@ architecture Behavioral of Cell is
             when others => return '0';
         end case;
     end function;
+    
 begin
-    RULES_PROC: process(clk)
-    begin
-        if rising_edge(clk) then
-            if clk_en = '1' then
-                internal_state <= countRestbits(count6bits(prox(7 downto 2)) & prox(1 downto 0) & internal_state);
-            end if; -- enable
-        end if; -- rising_edge
-    end process;
+    tmp_signal <= countRestbits(count6bits(prox(7 downto 2)) & prox(1 downto 0) & internal_state);
+    FDRE_I1: FDRE
+    generic map (INIT => to_bit(init_state))
+    port map (
+      Q  => internal_state,-- [out std_logic]
+      C  => clk,           -- [in  std_logic]
+      CE => ce,            -- [in  std_logic]
+      D  => tmp_signal,    -- [in  std_logic]
+      R  => '0');          -- [in  std_logic]
     Q <= internal_state;
 end Behavioral;
