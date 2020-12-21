@@ -54,7 +54,7 @@ begin
               port map(prox => prox,
                        ce => clk_en,
                        clk => clk,
-                       shift => '0',
+                       shift => '1',
                        Q => Q);
    
    CLK_GEN_PROC: process
@@ -67,16 +67,20 @@ begin
    begin
        wait for 20ns;
        clk_en <= '1';  
-       wait for 20ns; -- 0
-       prox <= "01010100"; 
-       wait for 20ns; -- 1
-       prox <= "01011100"; 
-       wait for 20ns; -- 0
-       prox <= "01010001"; 
-       wait for 20ns; -- 1
-       prox <= "11110000";
-       wait for 20ns; -- 0
-       prox <= "11100000";
+       wait for 20ns; -- 0  40ns
+       prox <= "01010100"; -- 54h
+       wait for 20ns; -- 1  60ns
+       prox <= "01011100"; -- 5ch
+       wait for 20ns; -- 0  80ns
+       prox <= "01010001"; -- 51h
+       wait for 20ns; -- 1  100ns
+       prox <= "11110000"; -- f0h
+       wait for 20ns; -- 0  120ns
+       prox <= "11100000"; -- e0h
+       wait for 20ns; -- 1  140ns
+       prox <= "10101010"; -- aah
+       wait for 20ns; -- 0  160ns
+       prox <= "00000111"; -- 07h
        wait for 20ns; -- 1
        wait;
    end process;

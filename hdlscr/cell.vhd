@@ -41,8 +41,11 @@ end cell;
 
 architecture Behavioral of Cell is
     signal internal_state : std_logic := init_state;    -- internal cell state
-    signal tmp_signal: std_logic;
-    
+    signal lut6_2_bit1_o5, lut6_2_bit1_o6 : std_logic;
+    signal carry4_out : std_logic_vector(3 downto 0);
+    signal carry4_din : std_logic_vector(3 downto 0);
+    signal carry4_s : std_logic_vector(3 downto 0);
+        
     function count6bits(val: std_logic_vector(5 downto 0)) return std_logic_vector is
     begin
         case val is
@@ -107,34 +110,40 @@ architecture Behavioral of Cell is
         end case;
     end function;
     
-    function countRestbits(val: std_logic_vector(5 downto 0)) return std_logic is
-    begin
-        case val is
-            when "001110" => return '1';
-            when "010010" => return '1';
-            when "010100" => return '1';
-            when "011000" => return '1';
-            when "000111" => return '1';
-            when "001011" => return '1';
-            when "001101" => return '1';
-            when "001111" => return '1';
-            when "010001" => return '1';
-            when "010011" => return '1';
-            when "010101" => return '1';
-            when "011001" => return '1';
-            when others => return '0';
-        end case;
-    end function;
-    
 begin
-    tmp_signal <= countRestbits(count6bits(prox(7 downto 2)) & prox(1 downto 0) & internal_state);
+    carry4_s <= count6bits(prox(7 downto 2)) & lut6_2_bit1_o6;
+    carry4_din <= "000" & prox(1);
+    CARRY4_obj: CARRY4
+    port map (
+        CO => open,
+        O => carry4_out,
+        CI => prox(1),
+        CYINIT => '0',
+        DI => carry4_din,
+        S => carry4_s);
+    
+    LUT6_BIT1 : LUT6
+    generic map (
+        INIT => X"3e80cccccccc") -- Specify LUT Contents
+    port map (
+        O => lut6_2_bit1_o6, -- 6/5-LUT output (1-bit)
+        I0 => internal_state, -- LUT input (1-bit)
+        I1 => prox(0), -- LUT input (1-bit)
+        I2 => carry4_out(1), -- LUT input (1-bit)
+        I3 => carry4_out(2), -- LUT input (1-bit)
+        I4 => carry4_out(3), -- LUT input (1-bit)
+        I5 => shift -- LUT input (1-bit)
+    );
+    
     FDRE_I1: FDRE
     generic map (INIT => to_bit(init_state))
     port map (
       Q  => internal_state,-- [out std_logic]
       C  => clk,           -- [in  std_logic]
       CE => ce,            -- [in  std_logic]
-      D  => tmp_signal,    -- [in  std_logic]
+      D  => lut6_2_bit1_o6,    -- [in  std_logic]
       R  => '0');          -- [in  std_logic]
+
     Q <= internal_state;
+    
 end Behavioral;
