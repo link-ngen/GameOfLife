@@ -49,7 +49,6 @@ architecture Behavioral of ca_core is
     signal state_grid: MAT_HxW;-- := ((others => (others =>'0')));
     
     signal internal_prox_0, internal_prox_1, internal_prox_2, internal_prox_3, internal_prox_4, internal_prox_5, internal_prox_6, internal_prox_7, internal_prox_8 : std_logic_vector(7 downto 0);
-    --signal internal_prox_first_border : std_logic_vector(7 downto 0);
     component cell is
         Generic ( init_state: std_logic := '0' );
         Port ( prox:    in std_logic_vector (7 downto 0); -- proximity (Nachbarschaft)

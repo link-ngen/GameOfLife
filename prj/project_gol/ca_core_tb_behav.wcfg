@@ -11,12 +11,12 @@
    </db_ref_list>
    <zoom_setting>
       <ZoomStartTime time="0fs"></ZoomStartTime>
-      <ZoomEndTime time="400000001fs"></ZoomEndTime>
-      <Cursor1Time time="240000000fs"></Cursor1Time>
+      <ZoomEndTime time="340000001fs"></ZoomEndTime>
+      <Cursor1Time time="340000000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="161"></NameColumnWidth>
-      <ValueColumnWidth column_width="71"></ValueColumnWidth>
+      <ValueColumnWidth column_width="67"></ValueColumnWidth>
    </column_width_setting>
    <WVObjectSize size="15" />
    <wvobject fp_name="/ca_core_tb/clk" type="logic">
