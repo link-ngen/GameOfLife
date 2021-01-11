@@ -1,4 +1,5 @@
 #.gitignore
+prj/project_gol/project_gol.cache/wt
 prj/project_gol/project_gol.sim/sim_1/
 prj/project_gol/project_gol.runs/
 processing/build/

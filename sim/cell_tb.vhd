@@ -46,11 +46,11 @@ architecture Behavioral of cell_tb is
     end component;
        
     signal clk: std_logic := '0';
-    signal prox: std_logic_vector(7 downto 0) := "00000001";
+    signal prox: std_logic_vector(7 downto 0) := "00000000";
     signal clk_en: std_logic := '0';
     signal Q: std_logic := '0';
 begin
-    uut: cell generic map('0')
+    uut: cell generic map(init_state => '0')
               port map(prox => prox,
                        ce => clk_en,
                        clk => clk,
@@ -68,6 +68,8 @@ begin
        wait for 20ns;
        clk_en <= '1';  
        wait for 20ns; -- 0  40ns
+       prox <= "00000001"; -- 54h
+       wait for 20ns; -- 1  60ns
        prox <= "01010100"; -- 54h
        wait for 20ns; -- 1  60ns
        prox <= "01011100"; -- 5ch
@@ -84,5 +86,16 @@ begin
        wait for 20ns; -- 1
        wait;
    end process;
+
+--    SIMU: process
+--    begin
+--        wait for 28ns;
+--        clk_en <= '1';  
+--        wait for 20ns; -- 0  40ns
+--        prox <= "00111000";
+--        wait for 20ns; -- 0  60ns
+--        wait;
+--    end process;
+
 
 end Behavioral;

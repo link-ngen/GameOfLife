@@ -2,9 +2,9 @@
 -- Company: 
 -- Engineer: 
 -- 
--- Create Date: 24.11.2020 15:42:00
+-- Create Date: 22.11.2020 16:12:54
 -- Design Name: 
--- Module Name: ca_core - Behavioral
+-- Module Name: cellarray - Behavioral
 -- Project Name: 
 -- Target Devices: 
 -- Tool Versions: 
@@ -18,7 +18,6 @@
 -- 
 ----------------------------------------------------------------------------------
 
-
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 
@@ -31,90 +30,114 @@ use IEEE.NUMERIC_STD.ALL;
 --library UNISIM;
 --use UNISIM.VComponents.all;
 
+
 entity ca_core is
     Generic ( WIDTH: integer := 18;
               HEIGHT: integer := 12);
-    Port ( d_in: in std_logic;
-           shift_flag: in std_logic;    -- shift_flag = 1 shift data | shift_flag = 0 stop shift data
-           clk: in std_logic;
-           ena: in std_logic;    -- ena = 1 enable cell calculation | ena = 0 disable cell calculation
-           q_out: out std_logic);
+    Port ( d_in:    in std_logic;
+           clk:     in std_logic;
+           ce:      in std_logic;
+           shift:   in std_logic;
+           Q:       out std_logic);
 end ca_core;
 
 architecture Behavioral of ca_core is
---    type CA_TYPE is (IDLE, SHIFT, ITERATION);
---    signal STATE: CA_TYPE := IDLE;
-
---    constant CELL_TOTAL: integer := WIDTH * HEIGHT;
-    type MAT_WxH is array (0 to HEIGHT-1) of std_logic_vector(0 to WIDTH-1);
-    signal state_grid: MAT_WxH := ((others => (others =>'0')));
+    --type MAT_HxW is array (0 to HEIGHT-1, 0 to WIDTH-1) of std_logic;
+    --signal state_grid: MAT_HxW := ((others => (others =>'0')));
     
-    signal shift_reg_signals: std_logic_vector(0 to HEIGHT);
-    component shiftreg is
-        Generic (LENGTH: integer := 12);
-        Port ( shift: in std_logic;  -- shift = 1 -> shift 
-               r_l: in std_logic;   -- r_l = 1 right shift | r_l = 0 left shift
-               clk: in std_logic;
-               d_in: in std_logic;
-               q_out: out std_logic;
-               srvec: out std_logic_vector(0 to LENGTH-1));
-    end component;
+    type MAT_HxW is array (0 to 2, 0 to 2) of std_logic;
+    signal state_grid: MAT_HxW;-- := ((others => (others =>'0')));
     
-    signal internal_prox : std_logic_vector;
+    signal internal_prox_0, internal_prox_1, internal_prox_2, internal_prox_3, internal_prox_4, internal_prox_5, internal_prox_6, internal_prox_7, internal_prox_8 : std_logic_vector(7 downto 0);
+    --signal internal_prox_first_border : std_logic_vector(7 downto 0);
     component cell is
-        Generic ( init_state : std_logic := '0' );
-        Port ( prox : in std_logic_vector (7 downto 0); -- proximity (Nachbarschaft)
-               en : in std_logic;
-               clk : in std_logic;
-               Q : out std_logic );    -- 1 stand for "ALIVE" and 0 stand for "DEAD" 
+        Generic ( init_state: std_logic := '0' );
+        Port ( prox:    in std_logic_vector (7 downto 0); -- proximity (Nachbarschaft)
+               ce:      in std_logic;
+               clk:     in std_logic;
+               shift:   in std_logic;    -- 0 for shift | 1 for next gen
+               Q:       out std_logic ); -- 1 stand for "ALIVE" and 0 stand for "DEAD" 
     end component;
-    
 begin
-    shift_reg_signals(0) <= d_in;
-    GEN_SHIFT_REG: for i in 0 to HEIGHT-1 generate
-        
-        -- right shift
-        SHIFT_L2R: if i mod 2 = 0 generate -- TODO: UND-Verknüpfung mit 1 ist vllt besser
-            SR_REG_LR: shiftreg Generic map (LENGTH => WIDTH)
-                                Port map (shift => shift_flag,
-                                   r_l => '0',
-                                   clk => clk,
-                                   d_in => shift_reg_signals(i),
-                                   q_out => shift_reg_signals(i+1),
-                                   srvec => state_grid(i));
-        end generate SHIFT_L2R;       
-        -- left shift
-        SHIFT_R2L: if i mod 2 = 1 generate -- TODO: UND-Verknüpfung mit 1 ist vllt besser
-            SR_REG_RL: shiftreg Generic map (LENGTH => WIDTH)
-                                Port map (shift => shift_flag,
-                                   r_l => '1',
-                                   clk => clk,
-                                   d_in => shift_reg_signals(i),
-                                   q_out => shift_reg_signals(i+1),
-                                   srvec => state_grid(i));
-        end generate SHIFT_R2L;        
-    end generate;
+   internal_prox_0 <= "00" & state_grid(1,0) & state_grid(1,1) & state_grid(0,1) & "00" & d_in;
+   CELL0: cell generic map(init_state => '0')
+                port map(prox => internal_prox_0,
+                         ce => ce,
+                         clk => clk,
+                         shift => shift,
+                         Q => state_grid(0,0));
+                         
+   internal_prox_1 <= '0' & state_grid(1,0) & state_grid(1,1) & state_grid(1,2) & state_grid(0,2) & "00" & state_grid(0,0);
+   CELL1: cell generic map(init_state => '0')
+                port map(prox => internal_prox_1,
+                         ce => ce,
+                         clk => clk,
+                         shift => shift,
+                         Q => state_grid(0,1));
+                         
+   internal_prox_2 <= '0' & state_grid(1,1) & state_grid(1,2) & "0000" & state_grid(0,1);                                          
+   CELL2: cell generic map(init_state => '0')
+               port map(prox => internal_prox_2,
+                        ce => ce,
+                        clk => clk,
+                        shift => shift,
+                        Q => state_grid(0,2));
+                        
+   internal_prox_3 <=  state_grid(1,1) & state_grid(2,1) & state_grid(2,2) & "000" & state_grid(0,1) & state_grid(0,2);    
+   CELL3: cell generic map(init_state => '0')
+               port map(prox => internal_prox_3,
+                        ce => ce,
+                        clk => clk,
+                        shift => shift,
+                        Q => state_grid(1,2));
+                        
+   internal_prox_4 <= state_grid(1,1) & "00000" & state_grid(1,2) & state_grid(2,1);                                                                                     
+   CELL4: cell generic map(init_state => '0')
+               port map(prox => internal_prox_4,
+                        ce => ce,
+                        clk => clk,
+                        shift => shift,
+                        Q => state_grid(2,2));
+                        
+   internal_prox_5 <= state_grid(1,0) & "000" & state_grid(2,2) & state_grid(1,2) & state_grid(1,1) & state_grid(2,0);                                                                                    
+   CELL5: cell generic map(init_state => '0')
+               port map(prox => internal_prox_5,
+                        ce => ce,
+                        clk => clk,
+                        shift => shift,
+                        Q => state_grid(2,1));        
+                                                                                                                                                                                                    
+   internal_prox_6 <= "0000" & state_grid(2,1) & state_grid(1,1) & '0' & state_grid(1,0);           
+   CELL6: cell generic map(init_state => '0')
+               port map(prox => internal_prox_6,
+                        ce => ce,
+                        clk => clk,
+                        shift => shift,
+                        Q => state_grid(2,0));
+                        
+   internal_prox_7 <= "00" & state_grid(2,0) & state_grid(2,1) & '0' & state_grid(0,1) & state_grid(0,0) & state_grid(1,1);                                                                                                                                             
+   CELL7: cell generic map(init_state => '0')
+               port map(prox => internal_prox_7,
+                        ce => ce,
+                        clk => clk,
+                        shift => shift,
+                        Q => state_grid(1,0));            
+   
+   internal_prox_8 <= (state_grid(1,0) &
+                      state_grid(2,0) &
+                      state_grid(2,1) &
+                      state_grid(2,2) &
+                      state_grid(0,0) &
+                      state_grid(0,2) &
+                      state_grid(0,1) &
+                      state_grid(1,2));
+   CELL_IJ: cell generic map(init_state => '0')
+               port map(prox => internal_prox_8,
+                        ce => ce,
+                        clk => clk,
+                        shift => shift,
+                        Q => state_grid(1,1));                                                                                                                                                                                                                                                                                    
     
-    -- using generic to instantiate cells
-    GEN_CELL_COLS: for i in 1 to WIDTH-2 generate
-        GEN_CELL_ROWS: for j in 1 to HEIGHT-2 generate
-            internal_prox <= (state_grid(i+1)(j)  &
-                              state_grid(i+1)(j+1)&
-                              state_grid(i)  (j+1)&
-                              state_grid(i-1)(j+1)&
-                              state_grid(i-1)(j)  &
-                              state_grid(i-1)(j-1)&
-                              state_grid(i)  (j-1)&
-                              state_grid(i+1)(j-1));
-                              
-            CELLX_ZERO: if (state_grid(i)(j) = '0') generate -- Warning: condition in if generate must be static
-                CELLX: cell Generic map (init_state => '0')
-                                    Port map ( prox => internal_prox,
-                                               en => ena,
-                                               clk => clk,
-                                               Q =>  state_grid(i)(j));
-            end generate CELLX_ZERO;
-                  
-        end generate GEN_CELL_ROWS; 
-    end generate GEN_CELL_COLS;
+    Q <= state_grid(2, 2);
+    
 end Behavioral;

@@ -49,13 +49,13 @@ def gen_LUT6_3_shift():
     bit_array = bitarray(64, endian='big')
     bit_array.setall(0)
 
-    masks_to_return0 = ["00111", "01001", "01010", "01011", "01100", "01101"]
+    masks_to_return1 = ["00111", "01001", "01010", "01011", "01100", "01101"]
 
     for s in combination:
         if '0' in s[0]:
             bit_array[runner] = int(s[4])
         elif '1' in s[0]:
-            if s[1:] in masks_to_return0:
+            if s[1:] in masks_to_return1:
                 bit_array[runner] = 1
         runner += 1
     bit_array = bit_array[::-1]  # change endian (inverse bit array)

@@ -1,0 +1,31 @@
+update_macro cellxj {CELL0 X41Y54 CELL1 X42Y54 CELL2 X43Y54 CELL3 X43Y53 CELL4 X43Y52 CELL5 X42Y52 CELL6 X41Y52 CELL7 X41Y53 CELL_IJ X42Y53}
+
+create_macro cell0
+update_macro cell0 {CELL0/CARRY4_obj X41Y54 CELL0/FDRE_I1 X41Y54 CELL0/LUT6_BIT0 X41Y54 CELL0/LUT6_BIT1 X41Y54 CELL0/LUT6_BIT2 X41Y54 CELL0/LUT6_LAST_BIT1 X41Y54}
+create_macro cell1
+update_macro cell1 {CELL1/CARRY4_obj X42Y54 CELL1/FDRE_I1 X42Y54 CELL1/LUT6_BIT0 X42Y54 CELL1/LUT6_BIT1 X42Y54 CELL1/LUT6_BIT2 X42Y54 CELL1/LUT6_LAST_BIT1 X42Y54}
+create_macro cell2
+update_macro cell2 {CELL2/CARRY4_obj X43Y54 CELL2/FDRE_I1 X43Y54 CELL2/LUT6_BIT0 X43Y54 CELL2/LUT6_BIT1 X43Y54 CELL2/LUT6_BIT2 X43Y54 CELL2/LUT6_LAST_BIT1 X43Y54}
+
+create_macro cell3
+update_macro cell3 {CELL3/CARRY4_obj X43Y53 CELL3/FDRE_I1 X43Y53 CELL3/LUT6_BIT0 X43Y53 CELL3/LUT6_BIT1 X43Y53 CELL3/LUT6_BIT2 X43Y53 CELL3/LUT6_LAST_BIT1 X43Y53}
+CRITICAL WARNING: [Shape Builder 18-146] Failed to build an RLOC shape for set cell3.  for bel A6LUT Element SLICE_X42Y0.A6LUT is not routable as there are 6 input pins and A6 cannot be used because of A5LUT usage..
+
+create_macro cell4
+update_macro cell4 {CELL4/CARRY4_obj X43Y52 CELL4/FDRE_I1 X43Y52 CELL4/LUT6_BIT0 X43Y52 CELL4/LUT6_BIT1 X43Y52 CELL4/LUT6_BIT2 X43Y52 CELL4/LUT6_LAST_BIT1 X43Y52}
+CRITICAL WARNING: [Shape Builder 18-146] Failed to build an RLOC shape for set cell4.  for bel A6LUT Element SLICE_X42Y0.A6LUT is not routable as there are 6 input pins and A6 cannot be used because of A5LUT usage..
+
+create_macro cell5
+update_macro cell5 {CELL5/CARRY4_obj X42Y52 CELL5/FDRE_I1 X42Y52 CELL5/LUT6_BIT0 X42Y52 CELL5/LUT6_BIT1 X42Y52 CELL5/LUT6_BIT2 X42Y52 CELL5/LUT6_LAST_BIT1 X42Y52}
+CRITICAL WARNING: [Shape Builder 18-146] Failed to build an RLOC shape for set cell5.  for bel A6LUT Element SLICE_X42Y0.A6LUT is not routable as there are 6 input pins and A6 cannot be used because of A5LUT usage..
+
+create_macro cell6
+update_macro cell6 {CELL6/CARRY4_obj X41Y52 CELL6/FDRE_I1 X41Y52 CELL6/LUT6_BIT0 X41Y52 CELL6/LUT6_BIT1 X41Y52 CELL6/LUT6_BIT2 X41Y52 CELL6/LUT6_LAST_BIT1 X41Y52}
+
+create_macro cell7
+update_macro cell7 {CELL7/CARRY4_obj X41Y53 CELL7/FDRE_I1 X41Y53 CELL7/LUT6_BIT0 X41Y53 CELL7/LUT6_BIT1 X41Y53 CELL7/LUT6_BIT2 X41Y53 CELL7/LUT6_LAST_BIT1 X41Y53}
+CRITICAL WARNING: [Shape Builder 18-146] Failed to build an RLOC shape for set cell7.  for bel A6LUT Element SLICE_X42Y0.A6LUT is not routable as there are 6 input pins and A6 cannot be used because of A5LUT usage..
+
+create_macro cellij
+update_macro cellij {CELL_IJ/CARRY4_obj X42Y53 CELL_IJ/FDRE_I1 X42Y53 CELL_IJ/LUT6_BIT0 X42Y53 CELL_IJ/LUT6_BIT1 X42Y53 CELL_IJ/LUT6_BIT2 X42Y53 CELL_IJ/LUT6_LAST_BIT1 X42Y53}
+CRITICAL WARNING: [Shape Builder 18-146] Failed to build an RLOC shape for set cellij.  for bel A6LUT Element SLICE_X42Y0.A6LUT is not routable as there are 6 input pins and A6 cannot be used because of A5LUT usage..

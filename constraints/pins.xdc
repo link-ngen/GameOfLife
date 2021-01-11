@@ -1,12 +1,12 @@
 ## ----------------------------------------------------------------------------
 ## Clock Source - Bank 13
-## ---------------------------------------------------------------------------- 
+## ----------------------------------------------------------------------------
 #set_property PACKAGE_PIN Y9 [get_ports {clk}];  # "GCLK"
 #set_property IOSTANDARD LVCMOS33 [get_ports clk];
 #create_clock -add -name sys_clk_pin -period 8.00 -waveform {0 4} [get_ports clk];
 
 ###Buttons
-#set_property -dict { PACKAGE_PIN P16   IOSTANDARD LVCMOS33 } [get_ports { clk_en }]; 
+#set_property -dict { PACKAGE_PIN P16   IOSTANDARD LVCMOS33 } [get_ports { clk_en }];
 #set_property -dict { PACKAGE_PIN W12   IOSTANDARD LVCMOS33 } [get_ports { Q }]; #"JB1"
 
 ###Pmod Header JA (XADC)
@@ -21,21 +21,110 @@
 
 
 ##Clock signal
-set_property -dict { PACKAGE_PIN K17   IOSTANDARD LVCMOS33 } [get_ports { clk }]; #IO_L12P_T1_MRCC_35 Sch=sysclk 125Mhz
-create_clock -add -name sys_clk_pin -period 8.00 -waveform {0 4} [get_ports { clk }];
+set_property -dict {PACKAGE_PIN K17 IOSTANDARD LVCMOS33} [get_ports clk]
+create_clock -period 8.000 -name sys_clk_pin -waveform {0.000 4.000} -add [get_ports clk]
 
 ##Buttons
-set_property -dict { PACKAGE_PIN K18   IOSTANDARD LVCMOS33 } [get_ports { ce }]; #IO_L12N_T1_MRCC_35 Sch=btn[0]
-set_property -dict { PACKAGE_PIN P16   IOSTANDARD LVCMOS33 } [get_ports { shift }]; #IO_L24N_T3_34 Sch=btn[1]
+set_property -dict {PACKAGE_PIN K18 IOSTANDARD LVCMOS33} [get_ports ce]
+set_property -dict {PACKAGE_PIN P16 IOSTANDARD LVCMOS33} [get_ports shift]
 
-set_property -dict { PACKAGE_PIN M14   IOSTANDARD LVCMOS33 } [get_ports { Q }]; #IO_L23P_T3_35 Sch=led[0]
+set_property -dict {PACKAGE_PIN M14 IOSTANDARD LVCMOS33} [get_ports Q]
 
 ##Pmod Header JA (XADC)
-set_property -dict { PACKAGE_PIN N15   IOSTANDARD LVCMOS33 } [get_ports { prox[0] }]; #IO_L21P_T3_DQS_AD14P_35 Sch=JA1_R_p		   
-set_property -dict { PACKAGE_PIN L14   IOSTANDARD LVCMOS33 } [get_ports { prox[1] }]; #IO_L22P_T3_AD7P_35 Sch=JA2_R_P             
-set_property -dict { PACKAGE_PIN K16   IOSTANDARD LVCMOS33 } [get_ports { prox[2] }]; #IO_L24P_T3_AD15P_35 Sch=JA3_R_P            
-set_property -dict { PACKAGE_PIN K14   IOSTANDARD LVCMOS33 } [get_ports { prox[3] }]; #IO_L20P_T3_AD6P_35 Sch=JA4_R_P             
-set_property -dict { PACKAGE_PIN N16   IOSTANDARD LVCMOS33 } [get_ports { prox[4] }]; #IO_L21N_T3_DQS_AD14N_35 Sch=JA1_R_N        
-set_property -dict { PACKAGE_PIN L15   IOSTANDARD LVCMOS33 } [get_ports { prox[5] }]; #IO_L22N_T3_AD7N_35 Sch=JA2_R_N             
-set_property -dict { PACKAGE_PIN J16   IOSTANDARD LVCMOS33 } [get_ports { prox[6] }]; #IO_L24N_T3_AD15N_35 Sch=JA3_R_N            
-set_property -dict { PACKAGE_PIN J14   IOSTANDARD LVCMOS33 } [get_ports { prox[7] }]; #IO_L20N_T3_AD6N_35 Sch=JA4_R_N  
+set_property -dict {PACKAGE_PIN N15 IOSTANDARD LVCMOS33} [get_ports d_in]
+#set_property -dict {PACKAGE_PIN N15 IOSTANDARD LVCMOS33} [get_ports {prox[0]}]
+#set_property -dict {PACKAGE_PIN L14 IOSTANDARD LVCMOS33} [get_ports {prox[1]}]
+#set_property -dict {PACKAGE_PIN K16 IOSTANDARD LVCMOS33} [get_ports {prox[2]}]
+#set_property -dict {PACKAGE_PIN K14 IOSTANDARD LVCMOS33} [get_ports {prox[3]}]
+#set_property -dict {PACKAGE_PIN N16 IOSTANDARD LVCMOS33} [get_ports {prox[4]}]
+#set_property -dict {PACKAGE_PIN L15 IOSTANDARD LVCMOS33} [get_ports {prox[5]}]
+#set_property -dict {PACKAGE_PIN J16 IOSTANDARD LVCMOS33} [get_ports {prox[6]}]
+#set_property -dict {PACKAGE_PIN J14 IOSTANDARD LVCMOS33} [get_ports {prox[7]}]
+
+create_macro cell0
+update_macro [get_macros cell0] -rlocs {CELL0/CARRY4_obj X41Y54 CELL0/FDRE_I1 X41Y54 CELL0/LUT6_BIT1 X41Y54 CELL0/LUT6_LAST_BIT1 X41Y54 CELL0/LUT6_BIT0 X41Y54 CELL0/LUT6_BIT2 X41Y54}
+create_macro cell1
+update_macro [get_macros cell1] -rlocs {CELL1/CARRY4_obj X42Y54 CELL1/LUT6_BIT1 X42Y54 CELL1/LUT6_LAST_BIT1 X42Y54 CELL1/FDRE_I1 X42Y54 CELL1/LUT6_BIT0 X42Y54 CELL1/LUT6_BIT2 X42Y54}
+create_macro cell2
+update_macro [get_macros cell2] -rlocs {CELL2/CARRY4_obj X43Y54 CELL2/LUT6_BIT2 X43Y54 CELL2/LUT6_LAST_BIT1 X43Y54 CELL2/FDRE_I1 X43Y54 CELL2/LUT6_BIT1 X43Y54 CELL2/LUT6_BIT0 X43Y54}
+create_macro cell3
+update_macro [get_macros cell3] -rlocs {CELL3/CARRY4_obj X43Y53 CELL3/LUT6_BIT2 X43Y53 CELL3/FDRE_I1 X43Y53 CELL3/LUT6_BIT0 X43Y53 CELL3/LUT6_BIT1 X43Y53 CELL3/LUT6_LAST_BIT1 X43Y53}
+create_macro cell4
+update_macro [get_macros cell4] -rlocs {CELL4/CARRY4_obj X43Y52 CELL4/LUT6_BIT1 X43Y52 CELL4/LUT6_LAST_BIT1 X43Y52 CELL4/FDRE_I1 X43Y52 CELL4/LUT6_BIT0 X43Y52 CELL4/LUT6_BIT2 X43Y52}
+create_macro cell5
+update_macro [get_macros cell5] -rlocs {CELL5/CARRY4_obj X42Y52 CELL5/LUT6_BIT1 X42Y52 CELL5/LUT6_LAST_BIT1 X42Y52 CELL5/FDRE_I1 X42Y52 CELL5/LUT6_BIT0 X42Y52 CELL5/LUT6_BIT2 X42Y52}
+create_macro cell6
+update_macro [get_macros cell6] -rlocs {CELL6/CARRY4_obj X41Y52 CELL6/LUT6_BIT1 X41Y52 CELL6/LUT6_LAST_BIT1 X41Y52 CELL6/FDRE_I1 X41Y52 CELL6/LUT6_BIT0 X41Y52 CELL6/LUT6_BIT2 X41Y52}
+create_macro cell7
+update_macro [get_macros cell7] -rlocs {CELL7/CARRY4_obj X41Y53 CELL7/LUT6_BIT1 X41Y53 CELL7/LUT6_LAST_BIT1 X41Y53 CELL7/FDRE_I1 X41Y53 CELL7/LUT6_BIT0 X41Y53 CELL7/LUT6_BIT2 X41Y53}
+create_macro cellij
+update_macro [get_macros cellij] -rlocs {CELL_IJ/CARRY4_obj X42Y53 CELL_IJ/FDRE_I1 X42Y53 CELL_IJ/LUT6_BIT0 X42Y53 CELL_IJ/LUT6_BIT2 X42Y53 CELL_IJ/LUT6_BIT1 X42Y53 CELL_IJ/LUT6_LAST_BIT1 X42Y53}
+
+set_property BEL CARRY4 [get_cells CELL0/CARRY4_obj]
+set_property LOC SLICE_X41Y54 [get_cells CELL0/CARRY4_obj]
+set_property BEL CARRY4 [get_cells CELL1/CARRY4_obj]
+set_property LOC SLICE_X42Y54 [get_cells CELL1/CARRY4_obj]
+set_property BEL CARRY4 [get_cells CELL2/CARRY4_obj]
+set_property LOC SLICE_X43Y54 [get_cells CELL2/CARRY4_obj]
+set_property BEL CARRY4 [get_cells CELL6/CARRY4_obj]
+set_property LOC SLICE_X41Y52 [get_cells CELL6/CARRY4_obj]
+set_property BEL A6LUT [get_cells CELL3/LUT6_LAST_BIT1]
+set_property LOC SLICE_X43Y53 [get_cells CELL3/LUT6_LAST_BIT1]
+set_property BEL CARRY4 [get_cells CELL3/CARRY4_obj]
+set_property LOC SLICE_X43Y53 [get_cells CELL3/CARRY4_obj]
+set_property BEL AFF [get_cells CELL3/FDRE_I1]
+set_property LOC SLICE_X43Y53 [get_cells CELL3/FDRE_I1]
+set_property BEL B6LUT [get_cells CELL3/LUT6_BIT0]
+set_property LOC SLICE_X43Y53 [get_cells CELL3/LUT6_BIT0]
+set_property BEL C6LUT [get_cells CELL3/LUT6_BIT1]
+set_property LOC SLICE_X43Y53 [get_cells CELL3/LUT6_BIT1]
+set_property BEL D6LUT [get_cells CELL3/LUT6_BIT2]
+set_property LOC SLICE_X43Y53 [get_cells CELL3/LUT6_BIT2]
+set_property BEL CARRY4 [get_cells CELL4/CARRY4_obj]
+set_property LOC SLICE_X43Y52 [get_cells CELL4/CARRY4_obj]
+set_property BEL AFF [get_cells CELL4/FDRE_I1]
+set_property LOC SLICE_X43Y52 [get_cells CELL4/FDRE_I1]
+set_property BEL B6LUT [get_cells CELL4/LUT6_BIT0]
+set_property LOC SLICE_X43Y52 [get_cells CELL4/LUT6_BIT0]
+set_property BEL C6LUT [get_cells CELL4/LUT6_BIT1]
+set_property LOC SLICE_X43Y52 [get_cells CELL4/LUT6_BIT1]
+set_property BEL D6LUT [get_cells CELL4/LUT6_BIT2]
+set_property LOC SLICE_X43Y52 [get_cells CELL4/LUT6_BIT2]
+set_property BEL A6LUT [get_cells CELL4/LUT6_LAST_BIT1]
+set_property LOC SLICE_X43Y52 [get_cells CELL4/LUT6_LAST_BIT1]
+set_property BEL CARRY4 [get_cells CELL5/CARRY4_obj]
+set_property LOC SLICE_X42Y52 [get_cells CELL5/CARRY4_obj]
+set_property BEL AFF [get_cells CELL5/FDRE_I1]
+set_property LOC SLICE_X42Y52 [get_cells CELL5/FDRE_I1]
+set_property BEL B6LUT [get_cells CELL5/LUT6_BIT0]
+set_property LOC SLICE_X42Y52 [get_cells CELL5/LUT6_BIT0]
+set_property BEL C6LUT [get_cells CELL5/LUT6_BIT1]
+set_property LOC SLICE_X42Y52 [get_cells CELL5/LUT6_BIT1]
+set_property BEL D6LUT [get_cells CELL5/LUT6_BIT2]
+set_property LOC SLICE_X42Y52 [get_cells CELL5/LUT6_BIT2]
+set_property BEL A6LUT [get_cells CELL5/LUT6_LAST_BIT1]
+set_property LOC SLICE_X42Y52 [get_cells CELL5/LUT6_LAST_BIT1]
+set_property BEL CARRY4 [get_cells CELL7/CARRY4_obj]
+set_property LOC SLICE_X41Y53 [get_cells CELL7/CARRY4_obj]
+set_property BEL AFF [get_cells CELL7/FDRE_I1]
+set_property LOC SLICE_X41Y53 [get_cells CELL7/FDRE_I1]
+set_property BEL B6LUT [get_cells CELL7/LUT6_BIT0]
+set_property LOC SLICE_X41Y53 [get_cells CELL7/LUT6_BIT0]
+set_property BEL C6LUT [get_cells CELL7/LUT6_BIT1]
+set_property LOC SLICE_X41Y53 [get_cells CELL7/LUT6_BIT1]
+set_property BEL D6LUT [get_cells CELL7/LUT6_BIT2]
+set_property LOC SLICE_X41Y53 [get_cells CELL7/LUT6_BIT2]
+set_property BEL A6LUT [get_cells CELL7/LUT6_LAST_BIT1]
+set_property LOC SLICE_X41Y53 [get_cells CELL7/LUT6_LAST_BIT1]
+set_property BEL CARRY4 [get_cells CELL_IJ/CARRY4_obj]
+set_property LOC SLICE_X42Y53 [get_cells CELL_IJ/CARRY4_obj]
+set_property BEL AFF [get_cells CELL_IJ/FDRE_I1]
+set_property LOC SLICE_X42Y53 [get_cells CELL_IJ/FDRE_I1]
+set_property BEL B6LUT [get_cells CELL_IJ/LUT6_BIT0]
+set_property LOC SLICE_X42Y53 [get_cells CELL_IJ/LUT6_BIT0]
+set_property BEL C6LUT [get_cells CELL_IJ/LUT6_BIT1]
+set_property LOC SLICE_X42Y53 [get_cells CELL_IJ/LUT6_BIT1]
+set_property BEL D6LUT [get_cells CELL_IJ/LUT6_BIT2]
+set_property LOC SLICE_X42Y53 [get_cells CELL_IJ/LUT6_BIT2]
+set_property BEL A6LUT [get_cells CELL_IJ/LUT6_LAST_BIT1]
+set_property LOC SLICE_X42Y53 [get_cells CELL_IJ/LUT6_LAST_BIT1]
