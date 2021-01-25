@@ -32,8 +32,8 @@ use IEEE.NUMERIC_STD.ALL;
 
 
 entity ca_core is
-    Generic ( WIDTH: integer := 18;
-              HEIGHT: integer := 12);
+    Generic ( WIDTH: integer := 59; --18
+              HEIGHT: integer := 98); --12
     Port ( d_in:    in std_logic;
            clk:     in std_logic;
            ce:      in std_logic;
@@ -42,13 +42,13 @@ entity ca_core is
 end ca_core;
 
 architecture Behavioral of ca_core is
-    signal internal_prox_0, internal_prox_1, internal_prox_2, 
-           internal_prox_3, internal_prox_4, internal_prox_5, 
-           internal_prox_6, internal_prox_7, internal_prox_8,
-           internal_prox_9, internal_prox_10,internal_prox_11: std_logic_vector(7 downto 0);
+    constant TOTAL_CELL : integer := WIDTH * HEIGHT;
+    
+    type PROX_MAT is array (0 to (TOTAL_CELL-1)) of std_logic_vector(7 downto 0);
+    signal internal_proxs : PROX_MAT := ((others => (others =>'0')));
     
     type MAT_HxW is array (0 to HEIGHT-1, 0 to WIDTH-1) of std_logic;
-    signal state_grid: MAT_HxW := ((others => (others =>'0')));       
+    signal state_grid: MAT_HxW := ((others => (others =>'0')));
     
     component cell is
         Generic ( init_state: std_logic := '0' );
@@ -58,16 +58,19 @@ architecture Behavioral of ca_core is
                shift:   in std_logic;    -- 0 for shift | 1 for next gen
                Q:       out std_logic ); -- 1 stand for "ALIVE" and 0 stand for "DEAD" 
     end component;
+ 
+for all: cell use entity work.cell(behavioral);
+ 
 begin
    -- using generic to instantiate cells
    GEN_CELL_ROWS: for j in 0 to HEIGHT-1 generate
     GEN_CELL_COLS: for i in 0 to WIDTH-1 generate
-        
-        -- first cell
+          
+      -- first cell
         FIRST_LINE_LEFT_EDGE: if ((j = 0) and (i = 0)) generate
-            internal_prox_0 <= "00" & state_grid(j+1,i) & state_grid(j+1,i+1) & state_grid(j,i+1) & "00" & d_in; -- [7 6 5 4 3 2 1 0]
-            CELL_X0Y0: cell generic map ('0')
-                         port map (prox => internal_prox_0,
+            internal_proxs((j * WIDTH)+i) <= "00" & state_grid(j+1,i) & state_grid(j+1,i+1) & state_grid(j,i+1) & "00" & d_in; -- [7 6 5 4 3 2 1 0]        
+            CELL_X0Y0: cell generic map (init_state => '0')
+                         port map (prox => internal_proxs((j * WIDTH)+i),
                                    ce => ce,
                                    clk => clk,
                                    shift => shift,
@@ -76,9 +79,9 @@ begin
         
         -- first line middle
         FIRST_LINE_MIDDLE: if ((j = 0) and ((i > 0) and (i < WIDTH-1))) generate
-             internal_prox_1 <= '0' & state_grid(j+1,i-1) & state_grid(j+1,i) & state_grid(j+1,i+1) & state_grid(j,i+1) & "00" & state_grid(j,i-1); -- [7 6 5 4 3 2 1 0]
-             CELL_XIY0: cell generic map ('0')
-                         port map (prox => internal_prox_1,
+             internal_proxs((j * WIDTH)+i) <= '0' & state_grid(j+1,i-1) & state_grid(j+1,i) & state_grid(j+1,i+1) & state_grid(j,i+1) & "00" & state_grid(j,i-1); -- [7 6 5 4 3 2 1 0]
+             CELL_XIY0: cell generic map (init_state => '0')
+                         port map (prox => internal_proxs((j * WIDTH)+i),
                                    ce => ce,
                                    clk => clk,
                                    shift => shift,
@@ -87,141 +90,151 @@ begin
         
         -- first line right edge
         FIRST_LINE_RIGHT_EDGE: if (j = 0 and i = WIDTH-1) generate 
-            internal_prox_2 <= '0' & state_grid(j+1,i-1) & state_grid(j+1,i) & "0000" & state_grid(j,i-1);
-            CELL_XWY0: cell generic map ('0')
-                         port map (prox => internal_prox_2,
+            internal_proxs((j * WIDTH)+i) <= '0' & state_grid(j+1,i-1) & state_grid(j+1,i) & "0000" & state_grid(j,i-1);
+            CELL_XWY0: cell generic map (init_state => '0')
+                         port map (prox => internal_proxs((j * WIDTH)+i),
                                    ce => ce,
                                    clk => clk,
                                    shift => shift,
                                    Q => state_grid(j, i));
         end generate FIRST_LINE_RIGHT_EDGE;
-        -- ODD HEIGHT ##################################################################################################
-        ODD_HEIGHT: if HEIGHT mod 2 = 1 generate
-            -- odd line right 
-            ODD_LINE_RIGHT_CELL: if ((j mod 2 = 1) and (j < HEIGHT-1) and (i = WIDTH-1)) generate 
-                internal_prox_3 <= state_grid(j,i-1) & state_grid(j+1,i-1) & state_grid(j+1,i) & "000" & state_grid(j-1,i-1) & state_grid(j-1,i);
-                    CELLOH_XWYODD: cell generic map ('0')
-                                      port map (prox => internal_prox_3,
-                                                ce => ce,
-                                                clk => clk,
-                                                shift => shift,
-                                                Q => state_grid(j, i));
-                end generate ODD_LINE_RIGHT_CELL; 
-                
-                
-            -- odd line middle 
-            ODD_LINE_MIDDLE: if ((j mod 2 = 1) and (j < HEIGHT-1) and ((i < WIDTH-1) and (i > 0))) generate
-                 internal_prox_4 <= state_grid(j,i-1) & state_grid(j+1,i-1) & state_grid(j+1,i) & state_grid(j+1,i+1) & state_grid(j-1,i-1) & state_grid(j-1,i+1) & state_grid(j-1,i) & state_grid(j,i+1);
-                 CELL_XIYODD: cell generic map ('0')
-                               port map (prox => internal_prox_4,
+
+-- ODD HEIGHT ####################################################################################################################################################################################################
+        ODD_HEIGHT: if (HEIGHT mod 2) = 1 generate
+            OH_ODD_LINE_RIGHT_CELL: if ((j mod 2 = 1) and (j < HEIGHT-1) and (i = WIDTH-1)) generate
+                internal_proxs((j * WIDTH)+i) <= state_grid(j,i-1) & state_grid(j+1,i-1) & state_grid(j+1,i) & "000" & state_grid(j-1,i-1) & state_grid(j-1,i);
+                CELLOH_XWYODD: cell generic map ('0')
+                                port map (prox => internal_proxs((j * WIDTH)+i),
+                                     ce => ce,
+                                     clk => clk,
+                                     shift => shift,
+                                     Q => state_grid(j, i));
+            end generate OH_ODD_LINE_RIGHT_CELL;
+            
+        -- odd line middle 
+            OH_ODD_LINE_MIDDLE: if ((j mod 2 = 1) and (j < HEIGHT-1) and ((i < WIDTH-1) and (i > 0))) generate
+                internal_proxs((j * WIDTH)+i) <= state_grid(j,i-1)   & -- 7
+                                                  state_grid(j+1,i-1) & -- 6
+                                                  state_grid(j+1,i)   & -- 5
+                                                  state_grid(j+1,i+1) & -- 4
+                                                  state_grid(j-1,i-1) & -- 3
+                                                  state_grid(j-1,i+1) & -- 2
+                                                  state_grid(j-1,i)   & -- 1
+                                                  state_grid(j,i+1);    -- 0
+                CELLOH_XIYODD: cell generic map ('0')
+                                port map (prox => internal_proxs((j * WIDTH)+i),
                                       ce => ce,
                                       clk => clk,
                                       shift => shift,
                                       Q => state_grid(j, i));                                                                    
-            end generate ODD_LINE_MIDDLE;
-            
+                end generate OH_ODD_LINE_MIDDLE;    
+                
             -- odd line left 
-            ODD_LINE_LEFT_CELL: if ((j mod 2 = 1) and (j < HEIGHT-1) and (i = 0)) generate 
-                internal_prox_5 <= "00" & state_grid(j+1,i) & state_grid(j+1,i+1) & '0' & state_grid(j-1,i+1) & state_grid(j-1,i) & state_grid(j,i+1);
-                CELL_X0YODD: cell generic map ('0')
-                               port map (prox => internal_prox_5,
+            OH_ODD_LINE_LEFT_CELL: if ((j mod 2 = 1) and (j < HEIGHT-1) and (i = 0)) generate 
+                internal_proxs((j * WIDTH)+i) <= "00" & state_grid(j+1,i) & state_grid(j+1,i+1) & '0' & state_grid(j-1,i+1) & state_grid(j-1,i) & state_grid(j,i+1);
+                CELLOH_X0YODD: cell generic map ('0')
+                               port map (prox => internal_proxs((j * WIDTH)+i),
                                       ce => ce,
                                       clk => clk,
                                       shift => shift,
                                       Q => state_grid(j, i));       
-            end generate ODD_LINE_LEFT_CELL;
+            end generate OH_ODD_LINE_LEFT_CELL;    
             
             -- even line left cell
-            EVEN_LINE_LEFT_CELL: if ((j mod 2 = 0) and (j > 0) and (j <= HEIGHT-2) and (i = 0)) generate 
-                 internal_prox_6 <= "00" & state_grid(j+1,i) & state_grid(j+1,i+1) & state_grid(j,i+1) & state_grid(j-1,i+1) & '0' & state_grid(j-1,i);
-                 CELL_X0YEVEN: cell generic map ('0')
-                                port map (prox => internal_prox_6,
+            OH_EVEN_LINE_LEFT_CELL: if ((j mod 2 = 0) and (j > 0) and (j < HEIGHT-2) and (i = 0)) generate 
+                 internal_proxs((j * WIDTH)+i) <= "00" & state_grid(j+1,i) & state_grid(j+1,i+1) & state_grid(j,i+1) & state_grid(j-1,i+1) & '0' & state_grid(j-1,i);
+                 CELLOH_X0YEVEN: cell generic map ('0')
+                                port map (prox => internal_proxs((j * WIDTH)+i),
                                        ce => ce,
                                        clk => clk,
                                        shift => shift,
                                        Q => state_grid(j, i));
-            end generate EVEN_LINE_LEFT_CELL;
+            end generate OH_EVEN_LINE_LEFT_CELL;
             
             -- even line middle 
-            EVEN_LINE_MIDDLE: if ((j mod 2 = 0) and (j > 0) and (j <= HEIGHT-2) and ((i < WIDTH-1) and (i > 0))) generate
-                internal_prox_7 <= state_grid(j-1,i-1) &
-                                   state_grid(j+1,i-1) &
-                                   state_grid(j+1,i)   &
-                                   state_grid(j+1,i+1) &
-                                   state_grid(j,i+1)   &
-                                   state_grid(j-1,i+1) &
-                                   state_grid(j-1,i)   &
-                                   state_grid(j,i-1);
-                CELL_XIYEVEN: cell generic map ('0')
-                                port map (prox => internal_prox_7,
+            OH_EVEN_LINE_MIDDLE: if ((j mod 2 = 0) and (j > 0) and (j < HEIGHT-2) and ((i < WIDTH-1) and (i > 0))) generate
+                internal_proxs((j * WIDTH)+i) <= state_grid(j-1,i-1) &
+                                                  state_grid(j+1,i-1) &
+                                                  state_grid(j+1,i)   &
+                                                  state_grid(j+1,i+1) &
+                                                  state_grid(j,i+1)   &
+                                                  state_grid(j-1,i+1) &
+                                                  state_grid(j-1,i)   &
+                                                  state_grid(j,i-1);
+                CELLOH_XIYEVEN: cell generic map ('0')
+                                port map (prox => internal_proxs((j * WIDTH)+i),
                                        ce => ce,
                                        clk => clk,
                                        shift => shift,
                                        Q => state_grid(j, i));
-            end generate EVEN_LINE_MIDDLE;
+            end generate OH_EVEN_LINE_MIDDLE;
             
             -- even line right
-            EVEN_LINE_RIGHT_CELL: if ((j mod 2 = 0) and (j > 0) and (j <= HEIGHT-2) and (i = WIDTH-1)) generate
-                internal_prox_8 <= state_grid(j-1,i-1) & state_grid(j+1,i-1) & state_grid(j+1,i) & "000" & state_grid(j-1,i) & state_grid(j,i-1);
-                CELL_XWYEVEN: cell generic map ('0')
-                                   port map (prox => internal_prox_8,
+            OH_EVEN_LINE_RIGHT_CELL: if ((j mod 2 = 0) and (j > 0) and (j < HEIGHT-2) and (i = WIDTH-1)) generate
+                internal_proxs((j * WIDTH)+i) <= state_grid(j-1,i-1) & state_grid(j+1,i-1) & state_grid(j+1,i) & "000" & state_grid(j-1,i) & state_grid(j,i-1);
+                CELLOH_XWYEVEN: cell generic map ('0')
+                                   port map (prox => internal_proxs((j * WIDTH)+i),
                                        ce => ce,
                                        clk => clk,
                                        shift => shift,
                                        Q => state_grid(j, i));
-            end generate EVEN_LINE_RIGHT_CELL;
+            end generate OH_EVEN_LINE_RIGHT_CELL;
             
             -- last line left edge 
-            LAST_LINE_LEFT_EGDE_ODD: if ((j = HEIGHT -1) and (i = 0)) generate
-                 internal_prox_9 <= "00000" & state_grid(j-1,i+1) & state_grid(j-1,i) & state_grid(j,i+1);
-                 CELL_X0YH: cell generic map ('0')
-                                    port map (prox => internal_prox_9,
+            OH_LAST_LINE_LEFT_EGDE: if ((j = HEIGHT-1) and (i = 0)) generate
+                 internal_proxs((j * WIDTH)+i) <= "0000" & 
+                                                    state_grid(j,i+1) & 
+                                                    state_grid(j-1,i+1) & 
+                                                    '0' & 
+                                                    state_grid(j-1,i);
+                 CELLOH_X0YH: cell generic map ('0')
+                                    port map (prox => internal_proxs((j * WIDTH)+i),
                                         ce => ce,
                                         clk => clk,
                                         shift => shift,
                                         Q => state_grid(j, i));
-            end generate LAST_LINE_LEFT_EGDE_ODD;
+            end generate OH_LAST_LINE_LEFT_EGDE;
             
             -- last line middle 
-            LAST_LINE_MIDDLE_ODD: if ((j = HEIGHT -1) and ((i < WIDTH-1) and (i > 0))) generate
-                internal_prox_10 <= state_grid(j,i-1) & "000" & state_grid(j-1,i-1) & state_grid(j-1,i+1) & state_grid(j-1,i) & state_grid(j,i+1);
-                CELL_XIYH: cell generic map ('0')
-                                port map (prox => internal_prox_10,
+            OH_LAST_LINE_MIDDLE: if ((j = HEIGHT -1) and ((i < WIDTH-1) and (i > 0))) generate
+                internal_proxs((j * WIDTH)+i) <= state_grid(j-1,i-1) & "000" & state_grid(j,i+1) & state_grid(j-1,i+1) & state_grid(j-1,i) & state_grid(j,i-1);
+                CELLOH_XIYH: cell generic map ('0')
+                                port map (prox => internal_proxs((j * WIDTH)+i),
                                           ce => ce,
                                           clk => clk,
                                           shift => shift,
                                           Q => state_grid(j, i));
-            end generate LAST_LINE_MIDDLE_ODD;
+            end generate OH_LAST_LINE_MIDDLE;
             
             -- last line right edge
-            LAST_LINE_RIGHT_EDGE_ODD: if ((j = HEIGHT -1) and (i = WIDTH-1)) generate
-                internal_prox_11 <= state_grid(j,i-1) & "00000" & state_grid(j-1,i-1) & state_grid(j-1,i);
-                CELL_XWYH: cell generic map ('0')
-                                port map (prox => internal_prox_11,
+            OH_LAST_LINE_RIGHT_EDGE: if ((j = HEIGHT -1) and (i = WIDTH-1)) generate
+                internal_proxs((j * WIDTH)+i) <= state_grid(j-1,i-1) & "00000" & state_grid(j-1,i) & state_grid(j,i-1); 
+                CELLOH_XWYH: cell generic map ('0')
+                                port map (prox => internal_proxs((j * WIDTH)+i),
                                           ce => ce,
                                           clk => clk,
                                           shift => shift,
                                           Q => state_grid(j, i));
-            end generate LAST_LINE_RIGHT_EDGE_ODD;
-            
+            end generate OH_LAST_LINE_RIGHT_EDGE;                  
         end generate ODD_HEIGHT;
+-- EVEN HEIGHT ####################################################################################################################################################################################################
         
-         -- EVEN HEIGHT ##################################################################################################
         EVEN_HEIGHT: if HEIGHT mod 2 = 0 generate
+                   
             -- odd line right 
-            ODD_EH_LINE_RIGHT_CELL: if ((j mod 2 = 1) and (j < HEIGHT-2) and (i = WIDTH-1)) generate 
-                internal_prox_3 <= state_grid(j,i-1) & state_grid(j+1,i-1) & state_grid(j+1,i) & "000" & state_grid(j-1,i-1) & state_grid(j-1,i);
-                    CELLEH_XWYODD: cell generic map ('0')
-                                        port map (prox => internal_prox_3,
-                                                  ce => ce,
-                                                  clk => clk,
-                                                  shift => shift,
-                                                  Q => state_grid(j, i));
-            end generate ODD_EH_LINE_RIGHT_CELL; 
+            EH_ODD_LINE_RIGHT_CELL: if ((j mod 2 = 1) and (j /= HEIGHT-1) and (i = WIDTH-1)) generate 
+                internal_proxs((j * WIDTH)+i) <= state_grid(j,i-1) & state_grid(j+1,i-1) & state_grid(j+1,i) & "000" & state_grid(j-1,i-1) & state_grid(j-1,i);
+                CELLEH_XWYODD: cell generic map ('0')
+                                port map (prox => internal_proxs((j * WIDTH)+i),
+                                          ce => ce,
+                                          clk => clk,
+                                          shift => shift,
+                                          Q => state_grid(j, i));
+            end generate EH_ODD_LINE_RIGHT_CELL;           
             
             -- odd line middle 
-            ODD_EH_LINE_MIDDLE: if ((j mod 2 = 1) and (j < HEIGHT-2) and ((i < WIDTH-1) and (i > 0))) generate
-                 internal_prox_4 <= state_grid(j,i-1)   & 
+            EH_ODD_LINE_MIDDLE: if ((j mod 2 = 1) and (j /= HEIGHT-1) and ((i < WIDTH-1) and (i > 0))) generate
+                 internal_proxs((j * WIDTH)+i) <= state_grid(j,i-1)   & 
                                     state_grid(j+1,i-1) & 
                                     state_grid(j+1,i)   & 
                                     state_grid(j+1,i+1) & 
@@ -229,39 +242,39 @@ begin
                                     state_grid(j-1,i+1) & 
                                     state_grid(j-1,i)   & 
                                     state_grid(j,i+1);
-                 CELL_XIYODD: cell generic map ('0')
-                               port map (prox => internal_prox_4,
+                 CELLEH_XIYODD: cell generic map ('0')
+                               port map (prox => internal_proxs((j * WIDTH)+i),
                                       ce => ce,
                                       clk => clk,
                                       shift => shift,
                                       Q => state_grid(j, i));                                                                    
-            end generate ODD_EH_LINE_MIDDLE;
+            end generate EH_ODD_LINE_MIDDLE;
             
             -- odd line left 
-            ODD_EH_LINE_LEFT_CELL: if ((j mod 2 = 1) and (j < HEIGHT-2) and (i = 0)) generate 
-                internal_prox_5 <= "00" & state_grid(j+1,i) & state_grid(j+1,i+1) & '0' & state_grid(j-1,i+1) & state_grid(j-1,i) & state_grid(j,i+1);
-                CELL_X0YODD: cell generic map ('0')
-                               port map (prox => internal_prox_5,
+            EH_ODD_LINE_LEFT_CELL: if ((j mod 2 = 1) and (j /= HEIGHT-1) and (i = 0)) generate 
+                internal_proxs((j * WIDTH)+i) <= "00" & state_grid(j+1,i) & state_grid(j+1,i+1) & '0' & state_grid(j-1,i+1) & state_grid(j-1,i) & state_grid(j,i+1);
+                CELLEH_X0YODD: cell generic map ('0')
+                               port map (prox => internal_proxs((j * WIDTH)+i),
                                       ce => ce,
                                       clk => clk,
                                       shift => shift,
                                       Q => state_grid(j, i));       
-            end generate ODD_EH_LINE_LEFT_CELL;
+            end generate EH_ODD_LINE_LEFT_CELL;
             
             -- even line left cell
-            EVEN_EH_LINE_LEFT_CELL: if ((j mod 2 = 0) and (j > 0) and (j <= HEIGHT-1) and (i = 0)) generate 
-                 internal_prox_6 <= "00" & state_grid(j+1,i) & state_grid(j+1,i+1) & state_grid(j,i+1) & state_grid(j-1,i+1) & '0' & state_grid(j-1,i);
-                 CELL_X0YEVEN: cell generic map ('0')
-                                port map (prox => internal_prox_6,
+            EH_EVEN_LINE_LEFT_CELL: if ((j mod 2 = 0) and (j > 0) and (j < HEIGHT-1) and (i = 0)) generate 
+                 internal_proxs((j * WIDTH)+i) <= "00" & state_grid(j+1,i) & state_grid(j+1,i+1) & state_grid(j,i+1) & state_grid(j-1,i+1) & '0' & state_grid(j-1,i);
+                 CELLEH_X0YEVEN: cell generic map ('0')
+                                port map (prox => internal_proxs((j * WIDTH)+i),
                                        ce => ce,
                                        clk => clk,
                                        shift => shift,
                                        Q => state_grid(j, i));
-            end generate EVEN_EH_LINE_LEFT_CELL;
+            end generate EH_EVEN_LINE_LEFT_CELL;
             
             -- even line middle 
-            EVEN_EH_LINE_MIDDLE: if ((j mod 2 = 0) and (j > 0) and (j <= HEIGHT-1) and ((i < WIDTH-1) and (i > 0))) generate
-                internal_prox_7 <= state_grid(j-1,i-1) &
+            EH_EVEN_LINE_MIDDLE: if ((j mod 2 = 0) and (j > 0) and (j < HEIGHT-1) and ((i < WIDTH-1) and (i > 0))) generate
+                internal_proxs((j * WIDTH)+i) <= state_grid(j-1,i-1) &
                                    state_grid(j+1,i-1) &
                                    state_grid(j+1,i)   &
                                    state_grid(j+1,i+1) &
@@ -269,57 +282,57 @@ begin
                                    state_grid(j-1,i+1) &
                                    state_grid(j-1,i)   &
                                    state_grid(j,i-1);
-                CELL_XIYEVEN: cell generic map ('0')
-                                port map (prox => internal_prox_7,
+                CELLEH_XIYEVEN: cell generic map ('0')
+                                port map (prox => internal_proxs((j * WIDTH)+i),
                                        ce => ce,
                                        clk => clk,
                                        shift => shift,
                                        Q => state_grid(j, i));
-            end generate EVEN_EH_LINE_MIDDLE;
+            end generate EH_EVEN_LINE_MIDDLE;
             
             -- even line right
-            EVEN_EH_LINE_RIGHT_CELL: if ((j mod 2 = 0) and (j > 0) and (j <= HEIGHT-1) and (i = WIDTH-1)) generate
-                internal_prox_8 <= state_grid(j-1,i-1) & state_grid(j+1,i-1) & state_grid(j+1,i) & "000" & state_grid(j-1,i) & state_grid(j,i-1);
-                CELL_XWYEVEN: cell generic map ('0')
-                                   port map (prox => internal_prox_8,
+            EH_EVEN_LINE_RIGHT_CELL: if ((j mod 2 = 0) and (j > 0) and (j < HEIGHT-1) and (i = WIDTH-1)) generate
+                internal_proxs((j * WIDTH)+i) <= state_grid(j-1,i-1) & state_grid(j+1,i-1) & state_grid(j+1,i) & "000" & state_grid(j-1,i) & state_grid(j,i-1);
+                CELLEH_XWYEVEN: cell generic map ('0')
+                                   port map (prox => internal_proxs((j * WIDTH)+i),
                                        ce => ce,
                                        clk => clk,
                                        shift => shift,
                                        Q => state_grid(j, i));
-            end generate EVEN_EH_LINE_RIGHT_CELL;
+            end generate EH_EVEN_LINE_RIGHT_CELL;
+            
+            -- last line right edge
+            EH_LAST_LINE_RIGHT_EDGE: if ((j = HEIGHT-1) and (i = WIDTH-1)) generate
+                internal_proxs((j * WIDTH)+i) <= state_grid(j-1,i-1) & "00000" & state_grid(j-1,i) & state_grid(j,i-1); 
+                CELLEH_XWYH: cell generic map ('0')
+                                port map (prox => internal_proxs((j * WIDTH)+i),
+                                          ce => ce,
+                                          clk => clk,
+                                          shift => shift,
+                                          Q => state_grid(j, i));
+            end generate EH_LAST_LINE_RIGHT_EDGE;
+            
+            -- last line middle 
+            EH_LAST_LINE_MIDDLE: if ((j = HEIGHT-1) and ((i < WIDTH-1) and (i > 0))) generate
+                internal_proxs((j * WIDTH)+i) <= state_grid(j-1,i-1) & "000" & state_grid(j,i+1) & state_grid(j-1,i+1) & state_grid(j-1,i) & state_grid(j,i-1);
+                CELLEH_XIYH: cell generic map ('0')
+                                port map (prox => internal_proxs((j * WIDTH)+i),
+                                          ce => ce,
+                                          clk => clk,
+                                          shift => shift,
+                                          Q => state_grid(j, i));
+            end generate EH_LAST_LINE_MIDDLE;
             
             -- last line left edge 
-            LAST_LINE_LEFT_EGDE_EVEN: if ((j = HEIGHT -1) and (i = 0)) generate
-                 internal_prox_9 <= "0000" & state_grid(j,i+1) & state_grid(j-1,i+1) & '0' & state_grid(j-1,i);
-                 CELL_X0YH: cell generic map ('0')
-                                    port map (prox => internal_prox_9,
+            EH_LAST_LINE_LEFT_EGDE: if ((j = HEIGHT-1) and (i = 0)) generate
+                 internal_proxs((j * WIDTH)+i) <= "0000" & state_grid(j,i+1) & state_grid(j-1,i+1) & '0' & state_grid(j-1,i);
+                 CELLEH_X0YH: cell generic map ('0')
+                                    port map (prox => internal_proxs((j * WIDTH)+i),
                                         ce => ce,
                                         clk => clk,
                                         shift => shift,
                                         Q => state_grid(j, i));
-            end generate LAST_LINE_LEFT_EGDE_EVEN;
-            
-            -- last line middle 
-            LAST_LINE_MIDDLE_EVEN: if ((j = HEIGHT -1) and ((i < WIDTH-1) and (i > 0))) generate
-                internal_prox_10 <= state_grid(j-1,i-1) & "000" & state_grid(j,i+1) & state_grid(j-1,i+1) & state_grid(j-1,i) & state_grid(j,i-1);
-                CELL_XIYH: cell generic map ('0')
-                                port map (prox => internal_prox_10,
-                                          ce => ce,
-                                          clk => clk,
-                                          shift => shift,
-                                          Q => state_grid(j, i));
-            end generate LAST_LINE_MIDDLE_EVEN;
-            
-            -- last line right edge
-            LAST_LINE_RIGHT_EDGE_EVEN: if ((j = HEIGHT -1) and (i = WIDTH-1)) generate
-                internal_prox_11 <= state_grid(j-1,i-1) & "00000" & state_grid(j-1,i) & state_grid(j,i-1); 
-                CELL_XWYH: cell generic map ('0')
-                                port map (prox => internal_prox_11,
-                                          ce => ce,
-                                          clk => clk,
-                                          shift => shift,
-                                          Q => state_grid(j, i));
-            end generate LAST_LINE_RIGHT_EDGE_EVEN;
+            end generate EH_LAST_LINE_LEFT_EGDE;
             
         end generate EVEN_HEIGHT;
         

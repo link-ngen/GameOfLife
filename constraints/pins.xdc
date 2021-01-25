@@ -1,17 +1,17 @@
 ## ----------------------------------------------------------------------------
 ## Clock Source - Bank 13
 ## ----------------------------------------------------------------------------
-#set_property PACKAGE_PIN Y9 [get_ports {clk}];  # "GCLK"
-#set_property IOSTANDARD LVCMOS33 [get_ports clk];
-#create_clock -add -name sys_clk_pin -period 8.00 -waveform {0 4} [get_ports clk];
+set_property PACKAGE_PIN Y9 [get_ports {clk}];  # "GCLK"
+set_property IOSTANDARD LVCMOS33 [get_ports clk];
+create_clock -add -name sys_clk_pin -period 8.00 -waveform {0 4} [get_ports clk];
 
 ###Buttons
-#set_property -dict { PACKAGE_PIN P16   IOSTANDARD LVCMOS33 } [get_ports { clk_en }];
-#set_property -dict { PACKAGE_PIN W12   IOSTANDARD LVCMOS33 } [get_ports { Q }]; #"JB1"
+set_property -dict { PACKAGE_PIN P16   IOSTANDARD LVCMOS33 } [get_ports { ce }];
+set_property -dict { PACKAGE_PIN W12   IOSTANDARD LVCMOS33 } [get_ports { shift }]; #"JB1"
 
 ###Pmod Header JA (XADC)
-#set_property -dict { PACKAGE_PIN Y11   IOSTANDARD LVCMOS33 } [get_ports { prox[0] }]; # "JA1"
-#set_property -dict { PACKAGE_PIN AA11   IOSTANDARD LVCMOS33 } [get_ports { prox[1] }]; # "JA2"
+set_property -dict { PACKAGE_PIN Y11   IOSTANDARD LVCMOS33 } [get_ports { d_in }]; # "JA1"
+set_property -dict { PACKAGE_PIN AA11   IOSTANDARD LVCMOS33 } [get_ports { Q }]; # "JA2"
 #set_property -dict { PACKAGE_PIN Y10   IOSTANDARD LVCMOS33 } [get_ports { prox[2] }]; # "JA3"
 #set_property -dict { PACKAGE_PIN AA9   IOSTANDARD LVCMOS33 } [get_ports { prox[3] }]; # "JA4"
 #set_property -dict { PACKAGE_PIN AB11   IOSTANDARD LVCMOS33 } [get_ports { prox[4] }]; # "JA7"
@@ -21,17 +21,17 @@
 
 
 ##Clock signal
-set_property -dict {PACKAGE_PIN K17 IOSTANDARD LVCMOS33} [get_ports clk]
-create_clock -period 8.000 -name sys_clk_pin -waveform {0.000 4.000} -add [get_ports clk]
+#set_property -dict {PACKAGE_PIN K17 IOSTANDARD LVCMOS33} [get_ports clk]
+#create_clock -period 8.000 -name sys_clk_pin -waveform {0.000 4.000} -add [get_ports clk]
 
-##Buttons
-set_property -dict {PACKAGE_PIN K18 IOSTANDARD LVCMOS33} [get_ports ce]
-set_property -dict {PACKAGE_PIN P16 IOSTANDARD LVCMOS33} [get_ports shift]
+###Buttons
+#set_property -dict {PACKAGE_PIN K18 IOSTANDARD LVCMOS33} [get_ports ce]
+#set_property -dict {PACKAGE_PIN P16 IOSTANDARD LVCMOS33} [get_ports shift]
 
-set_property -dict {PACKAGE_PIN M14 IOSTANDARD LVCMOS33} [get_ports Q]
+#set_property -dict {PACKAGE_PIN M14 IOSTANDARD LVCMOS33} [get_ports Q]
 
-##Pmod Header JA (XADC)
-set_property -dict {PACKAGE_PIN N15 IOSTANDARD LVCMOS33} [get_ports d_in]
+###Pmod Header JA (XADC)
+#set_property -dict {PACKAGE_PIN N15 IOSTANDARD LVCMOS33} [get_ports d_in]
 #set_property -dict {PACKAGE_PIN N15 IOSTANDARD LVCMOS33} [get_ports {prox[0]}]
 #set_property -dict {PACKAGE_PIN L14 IOSTANDARD LVCMOS33} [get_ports {prox[1]}]
 #set_property -dict {PACKAGE_PIN K16 IOSTANDARD LVCMOS33} [get_ports {prox[2]}]
