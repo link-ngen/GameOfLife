@@ -45,18 +45,26 @@ architecture Behavioral of ca_core_tb is
                shift:   in std_logic;
                Q:       out std_logic);
     end component;
-
-    constant cpu_data: std_logic_vector(8 downto 0) := "010111010";
+    
+    constant W : integer := 18;
+    constant H : integer := 12;
+    
+    constant TOTAL_CELL : integer := W * H;
+    constant cpu_data: std_logic_vector(TOTAL_CELL-1 downto 0) := "000011000000110000000101000000101000000100000000001000110100000000001011110101001100101011000101010010101000000101010010101000110101001100101011110100000000001011000100000000001000000101000000101000000011000000110000";
+    --constant cpu_data: std_logic_vector(TOTAL_CELL-1 downto 0) := "010111010";
+    --constant cpu_data: std_logic_vector(TOTAL_CELL-1 downto 0) := "1010101010101010";
+    signal output_data : std_logic_vector(TOTAL_CELL-1 downto 0) := (others => '0');
+    
     signal clk: std_logic := '0';
     signal ce: std_logic := '0';
     signal shift: std_logic := '1';
     signal Q: std_logic := '0';
-    --signal cnt_pixel: unsigned(3 downto 0) := x"0";
+
     signal ddata: std_logic := cpu_data(0);
 begin
     -- shift test
-    dut: ca_core generic map (WIDTH => 18,
-                              HEIGHT => 12)
+    dut: ca_core generic map (WIDTH => W,
+                              HEIGHT => H)
                  port map (d_in => ddata,
                            clk => clk,
                            ce => ce,
@@ -78,36 +86,51 @@ begin
         
         ce <= '1';
         shift <= '0';
-        ddata <= cpu_data(0);
-        wait for 20ns;
+        for i in 0 to (TOTAL_CELL-1) loop
+            ddata <= cpu_data(i);        
+            wait for 20ns;   
+        end loop;
         
-        ddata <= cpu_data(1);
-        wait for 20ns;
         
-        ddata <= cpu_data(2);
-        wait for 20ns;
+--        wait for 10ns;
+--        ce <= '0';
+--        wait for 10ns;
+--        ce <= '1';
         
-        ddata <= cpu_data(3);
-        wait for 20ns;
+--        for i in 0 to (TOTAL_CELL-1) loop
+--            output_data <= Q & output_data(TOTAL_CELL-1 downto 1);
+--            wait for 20ns;
+--        end loop;
+--        wait for 10ns;
+--        shift <= '1';  
+--        ce <= '0'; 
+               
+        -- shift end
+        wait for 10ns;    
+        shift <= '1';  
+        ce <= '0'; 
         
-        ddata <= cpu_data(4);
-        wait for 20ns;
+--######### Calc test #########
+        wait for 40ns;
+        ce <= '1';
+        wait for 20ns; -- 1 cycle = 20ns
+        ce <= '0'; 
         
-        ddata <= cpu_data(5);
-        wait for 20ns;
+--######### Calc test end #########
+
+--######### Shift out test #########   
+        wait for 40ns;
+        ce <= '1';
+        shift <= '0';
         
-        ddata <= cpu_data(6);
-        wait for 20ns;
+        for i in 0 to (TOTAL_CELL-1) loop
+            output_data <= Q & output_data(TOTAL_CELL-1 downto 1);
+            wait for 20ns;
+        end loop;
+        wait for 10ns;
+        shift <= '1';  
+        ce <= '0';        
         
-        ddata <= cpu_data(7);
-        wait for 20ns;
-    
-        ddata <= cpu_data(8);              
-        wait for 20ns;     
-        shift <= '1';
-        
-        wait for 100ns;
-        ce <= '0';
         wait;
     end process;
     

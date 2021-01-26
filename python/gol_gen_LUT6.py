@@ -2,7 +2,10 @@ from bitarray import bitarray
 from bitstring import BitArray
 
 def tohex(val, nbits):
-  return hex((val + (1 << nbits)) % (1 << nbits))
+  return padhexa(hex((val + (1 << nbits)) % (1 << nbits)))
+
+def padhexa(s):
+    return '0x' + s[2:].zfill(16)
 
 def gen_lut6_old():
     combination = [f'{n:06b}' for n in range(64)]
@@ -51,10 +54,12 @@ def gen_LUT6_3_shift():
 
     masks_to_return1 = ["00111", "01001", "01010", "01011", "01100", "01101"]
 
+    
+
     for s in combination:
-        if '0' in s[0]:
+        if '0' in s[0]:     # 0 für shift 
             bit_array[runner] = int(s[4])
-        elif '1' in s[0]:
+        elif '1' in s[0]:   # 1 für calc
             if s[1:] in masks_to_return1:
                 bit_array[runner] = 1
         runner += 1

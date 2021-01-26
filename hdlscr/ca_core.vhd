@@ -32,8 +32,8 @@ use IEEE.NUMERIC_STD.ALL;
 
 
 entity ca_core is
-    Generic ( WIDTH: integer := 59; --18
-              HEIGHT: integer := 98); --12
+    Generic ( WIDTH: integer := 18; --max 93
+              HEIGHT: integer := 12); --max 93
     Port ( d_in:    in std_logic;
            clk:     in std_logic;
            ce:      in std_logic;
@@ -63,8 +63,8 @@ for all: cell use entity work.cell(behavioral);
  
 begin
    -- using generic to instantiate cells
-   GEN_CELL_ROWS: for j in 0 to HEIGHT-1 generate
-    GEN_CELL_COLS: for i in 0 to WIDTH-1 generate
+   GEN_ROWS: for j in 0 to HEIGHT-1 generate
+    GEN_COLS: for i in 0 to WIDTH-1 generate
           
       -- first cell
         FIRST_LINE_LEFT_EDGE: if ((j = 0) and (i = 0)) generate
@@ -303,7 +303,7 @@ begin
             
             -- last line right edge
             EH_LAST_LINE_RIGHT_EDGE: if ((j = HEIGHT-1) and (i = WIDTH-1)) generate
-                internal_proxs((j * WIDTH)+i) <= state_grid(j-1,i-1) & "00000" & state_grid(j-1,i) & state_grid(j,i-1); 
+                internal_proxs((j * WIDTH)+i) <= state_grid(j,i-1) & "00000" & state_grid(j-1,i-1) & state_grid(j-1,i); 
                 CELLEH_XWYH: cell generic map ('0')
                                 port map (prox => internal_proxs((j * WIDTH)+i),
                                           ce => ce,
@@ -314,7 +314,7 @@ begin
             
             -- last line middle 
             EH_LAST_LINE_MIDDLE: if ((j = HEIGHT-1) and ((i < WIDTH-1) and (i > 0))) generate
-                internal_proxs((j * WIDTH)+i) <= state_grid(j-1,i-1) & "000" & state_grid(j,i+1) & state_grid(j-1,i+1) & state_grid(j-1,i) & state_grid(j,i-1);
+                internal_proxs((j * WIDTH)+i) <= state_grid(j,i-1) & "000" & state_grid(j-1,i-1) & state_grid(j-1,i+1) & state_grid(j-1,i) & state_grid(j,i+1);
                 CELLEH_XIYH: cell generic map ('0')
                                 port map (prox => internal_proxs((j * WIDTH)+i),
                                           ce => ce,
@@ -325,7 +325,7 @@ begin
             
             -- last line left edge 
             EH_LAST_LINE_LEFT_EGDE: if ((j = HEIGHT-1) and (i = 0)) generate
-                 internal_proxs((j * WIDTH)+i) <= "0000" & state_grid(j,i+1) & state_grid(j-1,i+1) & '0' & state_grid(j-1,i);
+                 internal_proxs((j * WIDTH)+i) <= "00000" & state_grid(j-1,i+1) & state_grid(j-1,i) & state_grid(j,i+1); --
                  CELLEH_X0YH: cell generic map ('0')
                                     port map (prox => internal_proxs((j * WIDTH)+i),
                                         ce => ce,
@@ -336,8 +336,8 @@ begin
             
         end generate EVEN_HEIGHT;
         
-    end generate GEN_CELL_COLS; 
-   end generate GEN_CELL_ROWS;
+    end generate GEN_COLS; 
+   end generate GEN_ROWS;
    
    Q <= state_grid(HEIGHT-1,0) when (HEIGHT mod 2 = 0) else state_grid(HEIGHT-1, WIDTH-1);
    
