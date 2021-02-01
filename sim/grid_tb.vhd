@@ -2,9 +2,9 @@
 -- Company: 
 -- Engineer: 
 -- 
--- Create Date: 10.01.2021 14:20:25
+-- Create Date: 27.01.2021 13:01:16
 -- Design Name: 
--- Module Name: ca_core_tb - Behavioral
+-- Module Name: grid_tb - Behavioral
 -- Project Name: 
 -- Target Devices: 
 -- Tool Versions: 
@@ -31,12 +31,12 @@ use IEEE.STD_LOGIC_1164.ALL;
 --library UNISIM;
 --use UNISIM.VComponents.all;
 
-entity ca_core_tb is
+entity grid_tb is
 --  Port ( );
-end ca_core_tb;
+end grid_tb;
 
-architecture Behavioral of ca_core_tb is
-    component ca_core is
+architecture Behavioral of grid_tb is
+    component grid is
         Generic ( WIDTH: integer := 18;
                   HEIGHT: integer := 12);
         Port ( d_in:    in std_logic;
@@ -63,8 +63,8 @@ architecture Behavioral of ca_core_tb is
     signal ddata: std_logic := cpu_data(0);
 begin
     -- shift test
-    dut: ca_core generic map (WIDTH => W,
-                              HEIGHT => H)
+    dut: grid generic map (WIDTH => W,
+                           HEIGHT => H)
                  port map (d_in => ddata,
                            clk => clk,
                            ce => ce,
@@ -113,7 +113,7 @@ begin
 --######### Calc test #########
         wait for 40ns;
         ce <= '1';
-        wait for 20ns; -- 1 cycle = 20ns
+        wait for 100ns; -- 1 cycle = 20ns
         ce <= '0'; 
         
 --######### Calc test end #########
@@ -133,6 +133,5 @@ begin
         
         wait;
     end process;
-    
-    
+
 end Behavioral;

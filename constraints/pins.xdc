@@ -7,17 +7,26 @@ create_clock -add -name sys_clk_pin -period 8.00 -waveform {0 4} [get_ports clk]
 
 ###Buttons
 set_property -dict { PACKAGE_PIN P16   IOSTANDARD LVCMOS33 } [get_ports { ce }];
-set_property -dict { PACKAGE_PIN W12   IOSTANDARD LVCMOS33 } [get_ports { shift }]; #"JB1"
+#set_property -dict { PACKAGE_PIN W12   IOSTANDARD LVCMOS33 } [get_ports { shift }]; #"JB1"
+set_property -dict { PACKAGE_PIN W12   IOSTANDARD LVCMOS33 } [get_ports { ce }]; #"JB1"
 
 ###Pmod Header JA (XADC)
-set_property -dict { PACKAGE_PIN Y11   IOSTANDARD LVCMOS33 } [get_ports { d_in }]; # "JA1"
-set_property -dict { PACKAGE_PIN AA11   IOSTANDARD LVCMOS33 } [get_ports { Q }]; # "JA2"
+#set_property -dict { PACKAGE_PIN Y11   IOSTANDARD LVCMOS33 } [get_ports { d_in }]; # "JA1"
+#set_property -dict { PACKAGE_PIN AA11   IOSTANDARD LVCMOS33 } [get_ports { Q }]; # "JA2"
 #set_property -dict { PACKAGE_PIN Y10   IOSTANDARD LVCMOS33 } [get_ports { prox[2] }]; # "JA3"
 #set_property -dict { PACKAGE_PIN AA9   IOSTANDARD LVCMOS33 } [get_ports { prox[3] }]; # "JA4"
 #set_property -dict { PACKAGE_PIN AB11   IOSTANDARD LVCMOS33 } [get_ports { prox[4] }]; # "JA7"
 #set_property -dict { PACKAGE_PIN AB10   IOSTANDARD LVCMOS33 } [get_ports { prox[5] }]; # "JA8"
 #set_property -dict { PACKAGE_PIN AB9   IOSTANDARD LVCMOS33 } [get_ports { prox[6] }]; # "JA9"
 #set_property -dict { PACKAGE_PIN AA8   IOSTANDARD LVCMOS33 } [get_ports { prox[7] }]; # "JA10"
+
+set_property -dict { PACKAGE_PIN Y11   IOSTANDARD LVCMOS33 } [get_ports { d_in }]; # "JA1"
+set_property -dict { PACKAGE_PIN AA11   IOSTANDARD LVCMOS33 } [get_ports { load_ca }]; # "JA2"
+set_property -dict { PACKAGE_PIN Y10   IOSTANDARD LVCMOS33 } [get_ports { start_iter }]; # "JA3"
+set_property -dict { PACKAGE_PIN AA9   IOSTANDARD LVCMOS33 } [get_ports { stop_iter }]; # "JA4"
+set_property -dict { PACKAGE_PIN AB11   IOSTANDARD LVCMOS33 } [get_ports { read }]; # "JA7"
+set_property -dict { PACKAGE_PIN AB10   IOSTANDARD LVCMOS33 } [get_ports { max_iter }]; # "JA8"
+set_property -dict { PACKAGE_PIN AB9   IOSTANDARD LVCMOS33 } [get_ports { bitstream }]; # "JA9"
 
 
 ##Clock signal

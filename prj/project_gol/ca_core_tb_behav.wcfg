@@ -10,15 +10,15 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="0fs"></ZoomStartTime>
-      <ZoomEndTime time="52638297886fs"></ZoomEndTime>
-      <Cursor1Time time="10000000000fs"></Cursor1Time>
+      <ZoomStartTime time="3821000000fs"></ZoomStartTime>
+      <ZoomEndTime time="6125000001fs"></ZoomEndTime>
+      <Cursor1Time time="4380000000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="134"></NameColumnWidth>
-      <ValueColumnWidth column_width="126"></ValueColumnWidth>
+      <ValueColumnWidth column_width="211"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="8" />
+   <WVObjectSize size="18" />
    <wvobject type="logic" fp_name="/ca_core_tb/clk">
       <obj_property name="ElementShortName">clk</obj_property>
       <obj_property name="ObjectShortName">clk</obj_property>
@@ -26,14 +26,6 @@
    <wvobject type="logic" fp_name="/ca_core_tb/ce">
       <obj_property name="ElementShortName">ce</obj_property>
       <obj_property name="ObjectShortName">ce</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="/ca_core_tb/shift">
-      <obj_property name="ElementShortName">shift</obj_property>
-      <obj_property name="ObjectShortName">shift</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="/ca_core_tb/Q">
-      <obj_property name="ElementShortName">Q</obj_property>
-      <obj_property name="ObjectShortName">Q</obj_property>
    </wvobject>
    <wvobject type="logic" fp_name="/ca_core_tb/ddata">
       <obj_property name="ElementShortName">ddata</obj_property>
@@ -43,14 +35,64 @@
       <obj_property name="ElementShortName">d_in</obj_property>
       <obj_property name="ObjectShortName">d_in</obj_property>
    </wvobject>
+   <wvobject type="logic" fp_name="/ca_core_tb/load_ca">
+      <obj_property name="ElementShortName">load_ca</obj_property>
+      <obj_property name="ObjectShortName">load_ca</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/ca_core_tb/start_iter">
+      <obj_property name="ElementShortName">start_iter</obj_property>
+      <obj_property name="ObjectShortName">start_iter</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/ca_core_tb/stop_iter">
+      <obj_property name="ElementShortName">stop_iter</obj_property>
+      <obj_property name="ObjectShortName">stop_iter</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/ca_core_tb/read">
+      <obj_property name="ElementShortName">read</obj_property>
+      <obj_property name="ObjectShortName">read</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/ca_core_tb/max_iter">
+      <obj_property name="ElementShortName">max_iter</obj_property>
+      <obj_property name="ObjectShortName">max_iter</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/ca_core_tb/bitstream">
+      <obj_property name="ElementShortName">bitstream</obj_property>
+      <obj_property name="ObjectShortName">bitstream</obj_property>
+   </wvobject>
+   <wvobject type="other" fp_name="/ca_core_tb/dut/state">
+      <obj_property name="ElementShortName">state</obj_property>
+      <obj_property name="ObjectShortName">state</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/ca_core_tb/dut/internal_ce">
+      <obj_property name="ElementShortName">internal_ce</obj_property>
+      <obj_property name="ObjectShortName">internal_ce</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/ca_core_tb/dut/internal_shift">
+      <obj_property name="ElementShortName">internal_shift</obj_property>
+      <obj_property name="ObjectShortName">internal_shift</obj_property>
+   </wvobject>
+   <wvobject type="other" fp_name="/ca_core_tb/dut/cnt_iter">
+      <obj_property name="ElementShortName">cnt_iter</obj_property>
+      <obj_property name="ObjectShortName">cnt_iter</obj_property>
+   </wvobject>
+   <wvobject type="other" fp_name="/ca_core_tb/dut/cnt_cell">
+      <obj_property name="ElementShortName">cnt_cell</obj_property>
+      <obj_property name="ObjectShortName">cnt_cell</obj_property>
+   </wvobject>
    <wvobject type="array" fp_name="/ca_core_tb/cpu_data">
       <obj_property name="ElementShortName">cpu_data[215:0]</obj_property>
       <obj_property name="ObjectShortName">cpu_data[215:0]</obj_property>
-      <obj_property name="Radix">BINARYRADIX</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/ca_core_tb/din_data">
+      <obj_property name="ElementShortName">din_data[215:0]</obj_property>
+      <obj_property name="ObjectShortName">din_data[215:0]</obj_property>
+      <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
    </wvobject>
    <wvobject type="array" fp_name="/ca_core_tb/output_data">
       <obj_property name="ElementShortName">output_data[215:0]</obj_property>
       <obj_property name="ObjectShortName">output_data[215:0]</obj_property>
-      <obj_property name="Radix">BINARYRADIX</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
    </wvobject>
 </wave_config>
