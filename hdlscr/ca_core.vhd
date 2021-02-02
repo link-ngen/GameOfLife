@@ -42,7 +42,8 @@ entity ca_core is
            d_in :       in std_logic;
            start_iter : in std_logic; -- flag
            stop_iter :  in std_logic; -- flag
-           read :       in std_logic; -- flag
+           read :       in std_logic; -- 1 begin shifting - 0 stop shifting
+           read_end:    out std_logic;
            max_iter :   out std_logic;
            bitstream :  out std_logic);
 end ca_core;
@@ -91,6 +92,7 @@ begin
                internal_ce <= '0';
                internal_shift <= '1';
                max_iter <= '0';
+               read_end <= '0'; 
             else
                 case state is
                     when IDLE => 
@@ -110,6 +112,7 @@ begin
                             state <= IDLE;
                         end if;
                     when LOADING => 
+                        read_end <= '0'; 
                         if load_ca = '0' then
                             state <= IDLE;
                             internal_ce <= '0';
@@ -135,6 +138,7 @@ begin
                             state <= IDLE;
                             internal_ce <= '0';
                             internal_shift <= '1';
+                            read_end <= '1'; 
                         else
                             state <= READING;
                         end if;
@@ -161,8 +165,11 @@ begin
         if rising_edge(clk) then
             if ce = '0' or state = IDLE then
                 cnt_cell <= 1;
+                --read_end <= '0';
             elsif state = READING then
                 cnt_cell <= cnt_cell + 1;
+            --elsif cnt_cell = TOTAL_CELLS-1 then
+                
             end if;
         end if;
     end process COUNT_CELL_PROC;

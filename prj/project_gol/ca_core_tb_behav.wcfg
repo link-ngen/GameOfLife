@@ -10,13 +10,13 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="3821000000fs"></ZoomStartTime>
-      <ZoomEndTime time="6125000001fs"></ZoomEndTime>
-      <Cursor1Time time="4380000000fs"></Cursor1Time>
+      <ZoomStartTime time="4302133334fs"></ZoomStartTime>
+      <ZoomEndTime time="4529333335fs"></ZoomEndTime>
+      <Cursor1Time time="4340000000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="134"></NameColumnWidth>
-      <ValueColumnWidth column_width="211"></ValueColumnWidth>
+      <ValueColumnWidth column_width="227"></ValueColumnWidth>
    </column_width_setting>
    <WVObjectSize size="18" />
    <wvobject type="logic" fp_name="/ca_core_tb/clk">
@@ -50,6 +50,12 @@
    <wvobject type="logic" fp_name="/ca_core_tb/read">
       <obj_property name="ElementShortName">read</obj_property>
       <obj_property name="ObjectShortName">read</obj_property>
+      <obj_property name="CustomSignalColor">#FF0000</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/ca_core_tb/read_end">
+      <obj_property name="ElementShortName">read_end</obj_property>
+      <obj_property name="ObjectShortName">read_end</obj_property>
    </wvobject>
    <wvobject type="logic" fp_name="/ca_core_tb/max_iter">
       <obj_property name="ElementShortName">max_iter</obj_property>
@@ -83,12 +89,6 @@
       <obj_property name="ElementShortName">cpu_data[215:0]</obj_property>
       <obj_property name="ObjectShortName">cpu_data[215:0]</obj_property>
       <obj_property name="Radix">HEXRADIX</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/ca_core_tb/din_data">
-      <obj_property name="ElementShortName">din_data[215:0]</obj_property>
-      <obj_property name="ObjectShortName">din_data[215:0]</obj_property>
-      <obj_property name="CustomSignalColor">#00FFFF</obj_property>
-      <obj_property name="UseCustomSignalColor">true</obj_property>
    </wvobject>
    <wvobject type="array" fp_name="/ca_core_tb/output_data">
       <obj_property name="ElementShortName">output_data[215:0]</obj_property>

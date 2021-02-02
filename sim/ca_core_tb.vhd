@@ -48,6 +48,7 @@ architecture Behavioral of ca_core_tb is
                start_iter : in std_logic;
                stop_iter :  in std_logic;
                read :       in std_logic;
+               read_end:    out std_logic;
                max_iter :   out std_logic;
                bitstream :  out std_logic);
     end component;
@@ -55,19 +56,22 @@ architecture Behavioral of ca_core_tb is
     constant W : integer := 18;
     constant H : integer := 12;
     constant TOTAL_CELL : integer := W * H;
+    signal counter : integer := 0;
     
     constant cpu_data: std_logic_vector(TOTAL_CELL-1 downto 0) := "000011000000110000000101000000101000000100000000001000110100000000001011110101001100101011000101010010101000000101010010101000110101001100101011110100000000001011000100000000001000000101000000101000000011000000110000";
     signal output_data : std_logic_vector(TOTAL_CELL-1 downto 0) := (others => '0');
-    signal din_data : std_logic_vector(TOTAL_CELL-1 downto 0) := (others => '0');
+    --signal debug_data : std_logic_vector(TOTAL_CELL-1 downto 0) := (others => '0');
     signal clk: std_logic := '0';
     signal ce: std_logic := '0';
     signal load_ca: std_logic := '0';
     signal start_iter: std_logic := '0';
     signal stop_iter: std_logic := '0';
     signal read: std_logic := '0';
+    signal read_end: std_logic := '0';
     signal max_iter: std_logic := '0';   
     signal ddata: std_logic := cpu_data(0);
     signal bitstream: std_logic := '0';
+    
 begin
     dut: ca_core generic map (WIDTH => W,
                               HEIGHT => H,
@@ -79,6 +83,7 @@ begin
                            start_iter => start_iter,
                            stop_iter => stop_iter,
                            read => read,
+                           read_end => read_end,
                            max_iter => max_iter,
                            bitstream => bitstream);
                            
@@ -94,33 +99,35 @@ begin
         wait for 20ns;
         ce <= '1';
         wait for 20ns;
+        
+        -- data input transfer process
         load_ca <= '1';
-        wait for 5ns;
         for i in 0 to (TOTAL_CELL-1) loop
+            wait until rising_edge(clk);  
             ddata <= cpu_data(i);       
-            din_data <= cpu_data(i) &  din_data(TOTAL_CELL-1 downto 1); 
-            wait for 20ns;   
+            --debug_data <= cpu_data(i) &  debug_data(TOTAL_CELL-1 downto 1);            
         end loop;
-        
         load_ca <= '0';
-        wait for 50ns;
---        start_iter <= '1';
---        wait for 20ns;
---        start_iter <= '0';
+        wait for 65ns;
         
---        while max_iter = '0' loop
---            wait for 10ns;
---        end loop;
+        -- calculate next generation
+        start_iter <= '1';
+        wait until rising_edge(clk);
+        start_iter <= '0';
         
-        read <= '1';
-        wait for 10ns;
-        read <= '0';
-        
-        for i in 0 to (TOTAL_CELL-1) loop
-            output_data <= bitstream & output_data(TOTAL_CELL-1 downto 1);
-            wait for 20ns;
+        while max_iter = '0' loop -- wait until max iteration is reached
+            wait until rising_edge(clk);
         end loop;
         
+        -- data output transfer process
+        read <= '1';
+        wait until rising_edge(clk);
+        read <= '0';
+        for i in 0 to (TOTAL_CELL-1) loop
+            wait until rising_edge(clk);
+            output_data <= bitstream & output_data(TOTAL_CELL-1 downto 1);
+        end loop;        
+               
         wait;        
     end process;
 end Behavioral;
