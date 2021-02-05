@@ -33,11 +33,12 @@ use IEEE.NUMERIC_STD.ALL;
 
 entity ca_core is
     Generic (WIDTH : integer := 3;
-             HEIGHT: integer := 3;
-             n_iter: integer := 5);
+             HEIGHT: integer := 3
+             --n_iter: integer := 5
+             );
     Port ( clk :        in std_logic;
            ce :         in std_logic;
-           --n_iter :     in unsigned (31 downto 0); 
+           n_iter :     in unsigned (31 downto 0); 
            load_ca :    in std_logic;
            d_in :       in std_logic;
            start_iter : in std_logic; -- flag
@@ -60,13 +61,13 @@ architecture Behavioral of ca_core is
     
     -- counter
     constant TOTAL_CELLS : integer := WIDTH * HEIGHT;
-    --signal cnt_iter: unsigned(n_iter'range) := (others => '0');
-    signal cnt_iter: integer := 0;
+    signal cnt_iter: unsigned(n_iter'range) := (others => '0');
+    --signal cnt_iter: integer := 0;
     signal cnt_cell: integer := 1;
     
     component grid is
-        Generic ( WIDTH: integer := 3; --max 93
-                  HEIGHT: integer := 3); --max 93
+        Generic ( WIDTH: integer := WIDTH; --max 93
+                  HEIGHT: integer := HEIGHT); --max 93
         Port ( d_in:    in std_logic;
                clk:     in std_logic;
                ce:      in std_logic;
@@ -125,7 +126,7 @@ begin
                             state <= IDLE;
                             internal_ce <= '0';
                             internal_shift <= '1';
-                        elsif cnt_iter = n_iter-1 then
+                        elsif cnt_iter = (n_iter-1) then
                             state <= IDLE;
                             max_iter <= '1';
                             internal_ce <= '0';
@@ -134,7 +135,7 @@ begin
                             state <= ITERATION;
                         end if;
                     when READING =>
-                        if cnt_cell = TOTAL_CELLS-2 then
+                        if cnt_cell = (TOTAL_CELLS-2) then
                             state <= IDLE;
                             internal_ce <= '0';
                             internal_shift <= '1';
@@ -152,8 +153,8 @@ begin
     begin
         if rising_edge(clk) then
             if ce = '0' or state = IDLE then
-                --cnt_iter <= (others => '0');
-                cnt_iter <= 0;
+                cnt_iter <= (others => '0');
+                --cnt_iter <= 0;
             elsif state = ITERATION then
                 cnt_iter <= cnt_iter + 1;
             end if;
@@ -165,11 +166,8 @@ begin
         if rising_edge(clk) then
             if ce = '0' or state = IDLE then
                 cnt_cell <= 1;
-                --read_end <= '0';
             elsif state = READING then
                 cnt_cell <= cnt_cell + 1;
-            --elsif cnt_cell = TOTAL_CELLS-1 then
-                
             end if;
         end if;
     end process COUNT_CELL_PROC;

@@ -38,11 +38,12 @@ end ca_core_tb;
 architecture Behavioral of ca_core_tb is
     component ca_core is
         Generic (WIDTH : integer := 18;
-                 HEIGHT: integer := 12;
-                 n_iter: integer := 5);
+                 HEIGHT: integer := 12
+                 --n_iter: integer := 5
+                 );
         Port ( clk :        in std_logic;
                ce :         in std_logic;
-               --n_iter :     in unsigned (31 downto 0); 
+               n_iter :     in unsigned (31 downto 0); 
                load_ca :    in std_logic;
                d_in :       in std_logic;
                start_iter : in std_logic;
@@ -75,9 +76,10 @@ architecture Behavioral of ca_core_tb is
 begin
     dut: ca_core generic map (WIDTH => W,
                               HEIGHT => H,
-                              n_iter => 5)
+                              --n_iter => 5)
                  port map (clk => clk,
                            ce => ce,
+                           n_iter => x"5",
                            load_ca => load_ca,
                            d_in => ddata,
                            start_iter => start_iter,
