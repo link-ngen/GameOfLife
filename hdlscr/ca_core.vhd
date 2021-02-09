@@ -32,13 +32,13 @@ use IEEE.NUMERIC_STD.ALL;
 --use UNISIM.VComponents.all;
 
 entity ca_core is
-    Generic (WIDTH : integer := 3;
-             HEIGHT: integer := 3
-             --n_iter: integer := 5
+    Generic (WIDTH : integer := 18;
+             HEIGHT: integer := 12;
+             n_iter: integer := 5
              );
     Port ( clk :        in std_logic;
            ce :         in std_logic;
-           n_iter :     in unsigned (31 downto 0); 
+           --n_iter :     in unsigned (31 downto 0); 
            load_ca :    in std_logic;
            d_in :       in std_logic;
            start_iter : in std_logic; -- flag
@@ -53,7 +53,6 @@ architecture Behavioral of ca_core is
     -- internal signals 
     signal internal_ce : std_logic := '0';   
     signal internal_shift : std_logic := '1';  -- 0 -> start shift and 1 -> stop shift
-    --signal internal_init : std_logic := '0';
     
     -- states
     type CA_STATE is (IDLE, LOADING, ITERATION, READING);
@@ -61,8 +60,8 @@ architecture Behavioral of ca_core is
     
     -- counter
     constant TOTAL_CELLS : integer := WIDTH * HEIGHT;
-    signal cnt_iter: unsigned(n_iter'range) := (others => '0');
-    --signal cnt_iter: integer := 0;
+    --signal cnt_iter: unsigned(n_iter'range) := (others => '0');
+    signal cnt_iter: integer := 0;
     signal cnt_cell: integer := 1;
     
     component grid is
@@ -76,7 +75,7 @@ architecture Behavioral of ca_core is
     end component;
 begin
     
-    Field : grid generic map (WIDTH => WIDTH,
+    Field: grid generic map (WIDTH => WIDTH,
                               HEIGHT => HEIGHT)
                  port map (d_in  => d_in,
                            clk   => clk,
@@ -84,7 +83,7 @@ begin
                            shift => internal_shift,
                            Q     => bitstream);
 
-    FSM_PROC : process(clk)
+    FSM_PROC: process(clk)
     begin
         -- think about reset !!!
         if rising_edge(clk) then
@@ -101,6 +100,7 @@ begin
                             state <= LOADING;
                             internal_ce <= '1';
                             internal_shift <= '0';
+                            read_end <= '0';
                         elsif start_iter = '1' then
                             state <= ITERATION;
                             internal_ce <= '1';
@@ -153,8 +153,8 @@ begin
     begin
         if rising_edge(clk) then
             if ce = '0' or state = IDLE then
-                cnt_iter <= (others => '0');
-                --cnt_iter <= 0;
+                --cnt_iter <= (others => '0');
+                cnt_iter <= 0;
             elsif state = ITERATION then
                 cnt_iter <= cnt_iter + 1;
             end if;
