@@ -11,14 +11,14 @@
    </db_ref_list>
    <zoom_setting>
       <ZoomStartTime time="0fs"></ZoomStartTime>
-      <ZoomEndTime time="12000000001fs"></ZoomEndTime>
-      <Cursor1Time time="0fs"></Cursor1Time>
+      <ZoomEndTime time="10404945905fs"></ZoomEndTime>
+      <Cursor1Time time="10312210000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="134"></NameColumnWidth>
-      <ValueColumnWidth column_width="79"></ValueColumnWidth>
+      <NameColumnWidth column_width="161"></NameColumnWidth>
+      <ValueColumnWidth column_width="288"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="18" />
+   <WVObjectSize size="31" />
    <wvobject type="logic" fp_name="/ca_core_tb/clk">
       <obj_property name="ElementShortName">clk</obj_property>
       <obj_property name="ObjectShortName">clk</obj_property>
@@ -39,6 +39,14 @@
       <obj_property name="ElementShortName">load_ca</obj_property>
       <obj_property name="ObjectShortName">load_ca</obj_property>
    </wvobject>
+   <wvobject type="logic" fp_name="/ca_core_tb/load_end">
+      <obj_property name="ElementShortName">load_end</obj_property>
+      <obj_property name="ObjectShortName">load_end</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/ca_core_tb/dut/internal_load_end">
+      <obj_property name="ElementShortName">internal_load_end</obj_property>
+      <obj_property name="ObjectShortName">internal_load_end</obj_property>
+   </wvobject>
    <wvobject type="logic" fp_name="/ca_core_tb/start_iter">
       <obj_property name="ElementShortName">start_iter</obj_property>
       <obj_property name="ObjectShortName">start_iter</obj_property>
@@ -47,15 +55,17 @@
       <obj_property name="ElementShortName">stop_iter</obj_property>
       <obj_property name="ObjectShortName">stop_iter</obj_property>
    </wvobject>
-   <wvobject type="logic" fp_name="/ca_core_tb/read">
-      <obj_property name="ElementShortName">read</obj_property>
-      <obj_property name="ObjectShortName">read</obj_property>
-      <obj_property name="CustomSignalColor">#FF0000</obj_property>
-      <obj_property name="UseCustomSignalColor">true</obj_property>
+   <wvobject type="logic" fp_name="/ca_core_tb/read_ca">
+      <obj_property name="ElementShortName">read_ca</obj_property>
+      <obj_property name="ObjectShortName">read_ca</obj_property>
    </wvobject>
    <wvobject type="logic" fp_name="/ca_core_tb/read_end">
       <obj_property name="ElementShortName">read_end</obj_property>
       <obj_property name="ObjectShortName">read_end</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/ca_core_tb/dut/internal_read_end">
+      <obj_property name="ElementShortName">internal_read_end</obj_property>
+      <obj_property name="ObjectShortName">internal_read_end</obj_property>
    </wvobject>
    <wvobject type="logic" fp_name="/ca_core_tb/max_iter">
       <obj_property name="ElementShortName">max_iter</obj_property>
@@ -77,23 +87,116 @@
       <obj_property name="ElementShortName">internal_shift</obj_property>
       <obj_property name="ObjectShortName">internal_shift</obj_property>
    </wvobject>
-   <wvobject type="other" fp_name="/ca_core_tb/dut/cnt_iter">
-      <obj_property name="ElementShortName">cnt_iter</obj_property>
-      <obj_property name="ObjectShortName">cnt_iter</obj_property>
+   <wvobject type="array" fp_name="/ca_core_tb/dut/cnt_iter">
+      <obj_property name="ElementShortName">cnt_iter[31:0]</obj_property>
+      <obj_property name="ObjectShortName">cnt_iter[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
    </wvobject>
-   <wvobject type="other" fp_name="/ca_core_tb/dut/cnt_cell">
-      <obj_property name="ElementShortName">cnt_cell</obj_property>
-      <obj_property name="ObjectShortName">cnt_cell</obj_property>
+   <wvobject type="other" fp_name="/ca_core_tb/dut/cnt_cell_wr">
+      <obj_property name="ElementShortName">cnt_cell_wr</obj_property>
+      <obj_property name="ObjectShortName">cnt_cell_wr</obj_property>
+      <obj_property name="CustomSignalColor">#FF0000</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject type="other" fp_name="/ca_core_tb/dut/cnt_cell_re">
+      <obj_property name="ElementShortName">cnt_cell_re</obj_property>
+      <obj_property name="ObjectShortName">cnt_cell_re</obj_property>
+      <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
    </wvobject>
    <wvobject type="array" fp_name="/ca_core_tb/cpu_data">
       <obj_property name="ElementShortName">cpu_data[215:0]</obj_property>
       <obj_property name="ObjectShortName">cpu_data[215:0]</obj_property>
       <obj_property name="Radix">HEXRADIX</obj_property>
    </wvobject>
+   <wvobject type="array" fp_name="/ca_core_tb/debug_data">
+      <obj_property name="ElementShortName">debug_data[215:0]</obj_property>
+      <obj_property name="ObjectShortName">debug_data[215:0]</obj_property>
+   </wvobject>
    <wvobject type="array" fp_name="/ca_core_tb/output_data">
       <obj_property name="ElementShortName">output_data[215:0]</obj_property>
       <obj_property name="ObjectShortName">output_data[215:0]</obj_property>
       <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/ca_core_tb/r_mem">
+      <obj_property name="ElementShortName">r_mem[0:6][31:0]</obj_property>
+      <obj_property name="ObjectShortName">r_mem[0:6][31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/ca_core_tb/read_mem">
+      <obj_property name="ElementShortName">read_mem[0:6][31:0]</obj_property>
+      <obj_property name="ObjectShortName">read_mem[0:6][31:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
       <obj_property name="isExpanded"></obj_property>
+      <wvobject type="array" fp_name="/ca_core_tb/read_mem[0]">
+         <obj_property name="ElementShortName">[0][31:0]</obj_property>
+         <obj_property name="ObjectShortName">[0][31:0]</obj_property>
+         <obj_property name="Radix">BINARYRADIX</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/ca_core_tb/read_mem[1]">
+         <obj_property name="ElementShortName">[1][31:0]</obj_property>
+         <obj_property name="ObjectShortName">[1][31:0]</obj_property>
+         <obj_property name="Radix">BINARYRADIX</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/ca_core_tb/read_mem[2]">
+         <obj_property name="ElementShortName">[2][31:0]</obj_property>
+         <obj_property name="ObjectShortName">[2][31:0]</obj_property>
+         <obj_property name="Radix">BINARYRADIX</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/ca_core_tb/read_mem[3]">
+         <obj_property name="ElementShortName">[3][31:0]</obj_property>
+         <obj_property name="ObjectShortName">[3][31:0]</obj_property>
+         <obj_property name="Radix">BINARYRADIX</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/ca_core_tb/read_mem[4]">
+         <obj_property name="ElementShortName">[4][31:0]</obj_property>
+         <obj_property name="ObjectShortName">[4][31:0]</obj_property>
+         <obj_property name="Radix">BINARYRADIX</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/ca_core_tb/read_mem[5]">
+         <obj_property name="ElementShortName">[5][31:0]</obj_property>
+         <obj_property name="ObjectShortName">[5][31:0]</obj_property>
+         <obj_property name="Radix">BINARYRADIX</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/ca_core_tb/read_mem[6]">
+         <obj_property name="ElementShortName">[6][31:0]</obj_property>
+         <obj_property name="ObjectShortName">[6][31:0]</obj_property>
+         <obj_property name="Radix">BINARYRADIX</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject type="logic" fp_name="/ca_core_tb/dut/Field/\ROW(11)\/\COL(5)\/eh/ll_m/CELL_XIYH/Q">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">Q</obj_property>
+      <obj_property name="ObjectShortName">Q</obj_property>
+      <obj_property name="label">Q5</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/ca_core_tb/dut/Field/\ROW(11)\/\COL(4)\/eh/ll_m/CELL_XIYH/Q">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">Q</obj_property>
+      <obj_property name="ObjectShortName">Q</obj_property>
+      <obj_property name="label">Q4</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/ca_core_tb/dut/Field/\ROW(11)\/\COL(3)\/eh/ll_m/CELL_XIYH/Q">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">Q</obj_property>
+      <obj_property name="ObjectShortName">Q</obj_property>
+      <obj_property name="label">Q3</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/ca_core_tb/dut/Field/\ROW(11)\/\COL(2)\/eh/ll_m/CELL_XIYH/Q">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">Q</obj_property>
+      <obj_property name="ObjectShortName">Q</obj_property>
+      <obj_property name="label">Q2</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/ca_core_tb/dut/Field/\ROW(11)\/\COL(1)\/eh/ll_m/CELL_XIYH/Q">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">Q</obj_property>
+      <obj_property name="ObjectShortName">Q</obj_property>
+      <obj_property name="label">Q1</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/ca_core_tb/dut/Field/\ROW(11)\/\COL(0)\/eh/ll_le/CELL_X0YH/Q">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">Q</obj_property>
+      <obj_property name="ObjectShortName">Q</obj_property>
+      <obj_property name="label">Q0</obj_property>
    </wvobject>
 </wave_config>
