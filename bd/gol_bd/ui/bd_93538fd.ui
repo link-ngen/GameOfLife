@@ -1,0 +1,22 @@
+{
+   guistr: "# # String gsaved with Nlview 6.6.8  2016-12-21 bk=1.3817 VDI=40 GEI=35 GUI=JA:1.6
+#  -string -flagsOSRD
+preplace port sys_clock -pg 1 -y 200 -defaultsOSRD
+preplace port reset -pg 1 -y 130 -defaultsOSRD
+preplace inst GameOfLife_0 -pg 1 -lvl 4 -y 120 -defaultsOSRD
+preplace inst proc_sys_reset_0 -pg 1 -lvl 2 -y 150 -defaultsOSRD
+preplace inst microblaze_0 -pg 1 -lvl 3 -y 80 -defaultsOSRD
+preplace inst clk_wiz_0 -pg 1 -lvl 1 -y 190 -defaultsOSRD
+preplace netloc clk_wiz_0_locked 1 1 1 220
+preplace netloc clk_in1_1 1 0 1 NJ
+preplace netloc proc_sys_reset_0_mb_reset 1 2 1 N
+preplace netloc microblaze_0_M_AXI_DP 1 3 1 N
+preplace netloc clk_wiz_0_clk_out1 1 1 3 220 60 590 160 1070J
+preplace netloc proc_sys_reset_0_peripheral_aresetn 1 2 2 590 170 1080J
+preplace netloc reset_1 1 0 2 20 130 NJ
+levelinfo -pg 1 0 120 410 830 1210 1350 -top 0 -bot 250
+",
+}
+{
+   da_board_cnt: "1",
+}

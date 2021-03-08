@@ -1,0 +1,62 @@
+
+*** Running vivado
+    with args -log gol_bd_proc_sys_reset_0_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source gol_bd_proc_sys_reset_0_0.tcl
+
+
+****** Vivado v2017.2 (64-bit)
+  **** SW Build 1909853 on Thu Jun 15 18:39:10 MDT 2017
+  **** IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+source gol_bd_proc_sys_reset_0_0.tcl -notrace
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1149.867 ; gain = 48.996 ; free physical = 4050 ; free virtual = 12983
+INFO: [Synth 8-638] synthesizing module 'gol_bd_proc_sys_reset_0_0' [/home/link/projects/vivado/GameOfLife/bd/gol_bd/ip/gol_bd_proc_sys_reset_0_0/synth/gol_bd_proc_sys_reset_0_0.vhd:74]
+INFO: [Synth 8-638] synthesizing module 'proc_sys_reset' [/home/link/projects/vivado/GameOfLife/bd/gol_bd/ipshared/5db7/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1323]
+INFO: [Synth 8-638] synthesizing module 'lpf' [/home/link/projects/vivado/GameOfLife/bd/gol_bd/ipshared/5db7/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:816]
+INFO: [Synth 8-638] synthesizing module 'SRL16' [/home/link/Tools/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:43657]
+INFO: [Synth 8-256] done synthesizing module 'SRL16' (1#1) [/home/link/Tools/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:43657]
+INFO: [Synth 8-638] synthesizing module 'cdc_sync' [/home/link/projects/vivado/GameOfLife/bd/gol_bd/ipshared/52cb/hdl/lib_cdc_v1_0_rfs.vhd:106]
+INFO: [Synth 8-256] done synthesizing module 'cdc_sync' (2#1) [/home/link/projects/vivado/GameOfLife/bd/gol_bd/ipshared/52cb/hdl/lib_cdc_v1_0_rfs.vhd:106]
+INFO: [Synth 8-256] done synthesizing module 'lpf' (3#1) [/home/link/projects/vivado/GameOfLife/bd/gol_bd/ipshared/5db7/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:816]
+INFO: [Synth 8-638] synthesizing module 'sequence_psr' [/home/link/projects/vivado/GameOfLife/bd/gol_bd/ipshared/5db7/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:301]
+INFO: [Synth 8-638] synthesizing module 'upcnt_n' [/home/link/projects/vivado/GameOfLife/bd/gol_bd/ipshared/5db7/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:125]
+INFO: [Synth 8-256] done synthesizing module 'upcnt_n' (4#1) [/home/link/projects/vivado/GameOfLife/bd/gol_bd/ipshared/5db7/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:125]
+INFO: [Synth 8-256] done synthesizing module 'sequence_psr' (5#1) [/home/link/projects/vivado/GameOfLife/bd/gol_bd/ipshared/5db7/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:301]
+INFO: [Synth 8-256] done synthesizing module 'proc_sys_reset' (6#1) [/home/link/projects/vivado/GameOfLife/bd/gol_bd/ipshared/5db7/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1323]
+INFO: [Synth 8-256] done synthesizing module 'gol_bd_proc_sys_reset_0_0' (7#1) [/home/link/projects/vivado/GameOfLife/bd/gol_bd/ip/gol_bd_proc_sys_reset_0_0/synth/gol_bd_proc_sys_reset_0_0.vhd:74]
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1191.367 ; gain = 90.496 ; free physical = 3992 ; free virtual = 12927
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1191.367 ; gain = 90.496 ; free physical = 4002 ; free virtual = 12937
+INFO: [Device 21-403] Loading part xc7z020clg484-1
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 1558.398 ; gain = 0.000 ; free physical = 3188 ; free virtual = 12153
+Finished Constraint Validation : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1558.398 ; gain = 457.527 ; free physical = 3288 ; free virtual = 12243
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1558.398 ; gain = 457.527 ; free physical = 3288 ; free virtual = 12243
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1558.398 ; gain = 457.527 ; free physical = 3289 ; free virtual = 12244
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 1558.398 ; gain = 457.527 ; free physical = 3281 ; free virtual = 12236
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 1558.398 ; gain = 457.527 ; free physical = 3263 ; free virtual = 12226
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1558.398 ; gain = 457.527 ; free physical = 2915 ; free virtual = 11879
+Finished Timing Optimization : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1558.398 ; gain = 457.527 ; free physical = 2913 ; free virtual = 11876
+Finished Technology Mapping : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1558.398 ; gain = 457.527 ; free physical = 2904 ; free virtual = 11868
+Finished IO Insertion : Time (s): cpu = 00:00:21 ; elapsed = 00:00:21 . Memory (MB): peak = 1558.398 ; gain = 457.527 ; free physical = 2905 ; free virtual = 11869
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:21 ; elapsed = 00:00:21 . Memory (MB): peak = 1558.398 ; gain = 457.527 ; free physical = 2904 ; free virtual = 11868
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:21 ; elapsed = 00:00:21 . Memory (MB): peak = 1558.398 ; gain = 457.527 ; free physical = 2902 ; free virtual = 11865
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:21 ; elapsed = 00:00:21 . Memory (MB): peak = 1558.398 ; gain = 457.527 ; free physical = 2901 ; free virtual = 11865
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:21 ; elapsed = 00:00:21 . Memory (MB): peak = 1558.398 ; gain = 457.527 ; free physical = 2900 ; free virtual = 11864
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:21 ; elapsed = 00:00:21 . Memory (MB): peak = 1558.398 ; gain = 457.527 ; free physical = 2899 ; free virtual = 11863
+
+Report Cell Usage: 
++------+------+------+
+|      |Cell  |Count |
++------+------+------+
+|1     |LUT1  |     5|
+|2     |LUT2  |     9|
+|3     |LUT3  |     1|
+|4     |LUT4  |     6|
+|5     |LUT5  |     3|
+|6     |LUT6  |     1|
+|7     |SRL16 |     1|
+|8     |FDR   |     8|
+|9     |FDRE  |    28|
+|10    |FDSE  |     4|
++------+------+------+
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:21 ; elapsed = 00:00:21 . Memory (MB): peak = 1558.398 ; gain = 457.527 ; free physical = 2899 ; free virtual = 11862
+synth_design: Time (s): cpu = 00:00:22 ; elapsed = 00:00:22 . Memory (MB): peak = 1558.398 ; gain = 470.113 ; free physical = 2897 ; free virtual = 11861
