@@ -1,0 +1,29 @@
+#-----------------------------------------------------------
+# Vivado v2017.2 (64-bit)
+# SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
+# IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+# Start of session at: Tue Mar  9 19:04:10 2021
+# Process ID: 5676
+# Current directory: C:/Workspace/GameOfLife/prj/project_gol
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent8880 C:\Workspace\GameOfLife\prj\project_gol\project_gol.xpr
+# Log file: C:/Workspace/GameOfLife/prj/project_gol/vivado.log
+# Journal file: C:/Workspace/GameOfLife/prj/project_gol\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Workspace/GameOfLife/prj/project_gol/project_gol.xpr
+update_compile_order -fileset sources_1
+open_bd_design {C:/Workspace/GameOfLife/bd/gol_bd/gol_bd.bd}
+startgroup
+delete_bd_objs [get_bd_intf_nets microblaze_0_M_AXI_DP]
+delete_bd_objs [get_bd_nets clk_in1_1] [get_bd_nets clk_wiz_0_clk_out1] [get_bd_nets proc_sys_reset_0_peripheral_aresetn] [get_bd_nets proc_sys_reset_0_mb_reset] [get_bd_nets clk_wiz_0_locked] [get_bd_nets reset_1]
+delete_bd_objs [get_bd_ports reset] [get_bd_ports sys_clock]
+delete_bd_objs [get_bd_cells GameOfLife_0] [get_bd_cells microblaze_0] [get_bd_cells proc_sys_reset_0] [get_bd_cells clk_wiz_0]
+endgroup
+update_compile_order -fileset sources_1
+remove_files  C:/Workspace/GameOfLife/bd/gol_bd/hdl/gol_bd_wrapper.vhd
+update_compile_order -fileset sources_1
+remove_files  C:/Workspace/GameOfLife/bd/gol_bd/gol_bd.bd
+set_property top GameOfLife [current_fileset]
+update_compile_order -fileset sources_1
+launch_runs synth_2 -jobs 8
+wait_on_run synth_2

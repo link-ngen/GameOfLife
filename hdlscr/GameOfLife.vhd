@@ -81,9 +81,9 @@ architecture Behavioral of GameOfLife is
     
     ---- Write Register Address ----
     signal Write_RegAddress : std_logic_vector(1 downto 0);
-    signal golcr_we         : std_logic;
-    signal golicr_we        : std_logic;
-    signal goldr_we         : std_logic;
+    signal WriteEnable_GOLCR         : std_logic;
+    signal WriteEnable_GOLICR        : std_logic;
+    signal WriteEnable_GOLDR         : std_logic;
     
 	---- READ SIGNALS ---- 
     signal ar_transfer : std_logic;
@@ -94,43 +94,46 @@ architecture Behavioral of GameOfLife is
     
     ---- Read Register Address ----
     signal Read_RegAddress : std_logic_vector(1 downto 0);
-    signal golcr_re         : std_logic;
-    signal golicr_re        : std_logic;
-    signal goldr_re         : std_logic;
+    signal ReadEnable_GOLCR         : std_logic;
+    signal ReadEnable_GOLICR        : std_logic;
+    signal ReadEnable_GOLDR         : std_logic;
     
     ---- REGISTER SIGNALS ----
-    signal GOLCR:  std_logic_vector(31 downto 0);    -- game of life control register               00
-    signal GOLICR: std_logic_vector(31 downto 0);    -- game of life iteration control register     01
-    signal GOLDR:  std_logic_vector(31 downto 0);    -- game of life data register                  10
+    signal Register_GOLCR:  std_logic_vector(31 downto 0);    -- game of life control register               00
+    signal Register_GOLICR: std_logic_vector(31 downto 0);    -- game of life iteration control register     01
+    signal Register_GOLDR:  std_logic_vector(31 downto 0);    -- game of life data register                  10
     
     -- register signals
-    signal GLD : std_logic; -- game of life load ca
-    signal GLS : std_logic; -- game of life load stop
-    signal GST : std_logic; -- game of life start iteration
-    signal GSP : std_logic; -- game of life stop iteration
-    signal GRE : std_logic; -- game of life read data
-    signal GRS : std_logic; -- game of life read stop
-    signal GMI : std_logic; -- game of life max iter
-    signal GSI : std_logic; -- game of life set iteration
+    signal GLD : std_logic := '0'; -- game of life load ca
+    signal GLS : std_logic := '0'; -- game of life load stop
+    signal GST : std_logic := '0'; -- game of life start iteration
+    signal GSP : std_logic := '0'; -- game of life stop iteration
+    signal GRE : std_logic := '0'; -- game of life read data
+    signal GRS : std_logic := '0'; -- game of life read stop
+    signal GMI : std_logic := '0'; -- game of life max iter
+    signal GSI : std_logic := '0'; -- game of life set iteration
     
+    signal GLD_old : std_logic; -- game of life load ca
     signal GST_old : std_logic; -- game of life start iteration
     signal GSP_old : std_logic; -- game of life stop iteration
     signal GSI_old : std_logic;
     
     ----- ca_core signals-----
     signal ce : std_logic;  -- enable cells
+    signal n_iter: unsigned(31 downto 0);
     signal load_ca: std_logic;
-    signal load_end: std_logic;
     signal d_in: std_logic;
     signal start_iter: std_logic;
     signal stop_iter: std_logic;
     signal read_ca: std_logic;
+    signal load_end: std_logic;
     signal read_end: std_logic;
     signal max_iter: std_logic;
     signal bitstream: std_logic;   
-    signal n_iter: unsigned(31 downto 0);
-    
-    signal set_iteration: std_logic;
+       
+    signal set_iteration_pulse: std_logic;
+    signal set_load_ca: std_logic;
+    signal set_read_ca: std_logic;
     signal shift_finish_re: std_logic;
     signal shift_finish_wr: std_logic;
     
@@ -157,6 +160,7 @@ begin
     clock <= s00_axi_aclk;
 	reset <= not s00_axi_aresetn;
 
+-- #########################################################################################################
     ---- WRITE ACCESS (control flow) ----
     s00_axi_awready <= aw_ready;
     s00_axi_wready  <= w_ready;
@@ -207,10 +211,11 @@ begin
     end process;
     
     -- Write De-multiplexer
-    golcr_we <= '1' when (w_transfer='1' and Write_RegAddress="00") else '0';
-    golicr_we <= '1' when (w_transfer='1' and Write_RegAddress="01") else '0';
-    goldr_we <= '1' when (w_transfer='1' and Write_RegAddress="10") else '0';
+    WriteEnable_GOLCR  <= '1' when (w_transfer='1' and Write_RegAddress="00") else '0';
+    WriteEnable_GOLICR <= '1' when (w_transfer='1' and Write_RegAddress="01") else '0';
+    WriteEnable_GOLDR  <= '1' when (w_transfer='1' and Write_RegAddress="10") else '0';
 
+-- #########################################################################################################
     ---- READ ACCESS (control flow) ----
     s00_axi_arready <= ar_ready;
     s00_axi_rvalid  <= r_valid;
@@ -246,168 +251,203 @@ begin
     end process;
     
     -- Read De-multiplexer
-    golcr_re <= '1' when (r_transfer='1' and Read_RegAddress="00") else '0';
-    --golicr_re <= '1' when (r_transfer='1' and Read_RegAddress="01") else '0';
-    goldr_re <= '1' when (r_transfer='1' and Read_RegAddress="10") else '0';
+    ReadEnable_GOLCR <= '1' when (r_transfer='1' and Read_RegAddress="00") else '0';
+    ReadEnable_GOLDR <= '1' when (r_transfer='1' and Read_RegAddress="10") else '0';
     
     -- Read Multiplexer - picks which register value to return
     with Read_RegAddress select
         s00_axi_rdata <= (x"000000" & GSI & GMI & GRS & GRE & GSP & GST & GLS & GLD) when "00",
-                         --GOLICR when "01",
                          data_taken when "10",
                          x"FFFFFFFF" when others;       --TODO: maybe redesign
     
 -- #########################################################################################################
-    -- Get data from AXI-bus and write to register
+-- Get data from AXI-bus and write to register
     ---- REGISTERS (data flow) ----
     -- GOLCR - control register
-    GET_GOLCR_PROC: process(clock)
+    process(clock)
     begin
         if (rising_edge(clock)) then
             if (reset='1') then
-                GOLCR <= (others => '0');
-            elsif (golcr_we='1') then
-                GOLCR <= s00_axi_wdata;
+                Register_GOLCR <= (others => '0');
+            elsif (WriteEnable_GOLCR='1') then
+                Register_GOLCR <= s00_axi_wdata;
             end if;
         end if;
-    end process GET_GOLCR_PROC;
-     
+    end process;
+    
     -- GOLICR - iteration control register
-    GET_GOLICR_PROC: process(clock)
+    process(clock)
     begin
         if (rising_edge(clock)) then
             if (reset='1') then
-                GOLICR <= (others => '0');
-            elsif (golicr_we='1') then
-                GOLICR <= s00_axi_wdata;
+                Register_GOLICR <= (others => '0');
+            elsif (WriteEnable_GOLICR='1') then
+                Register_GOLICR <= s00_axi_wdata;
             end if;
         end if;
-    end process GET_GOLICR_PROC;
-     
+    end process;
+    
     -- GOLDR - data register
-    GET_GOLDR_PROC: process(clock)
+    process(clock)
     begin
         if (rising_edge(clock)) then
             if (reset='1') then
-                GOLDR <= (others => '0');
-            elsif (goldr_we='1') then
-                GOLDR <= s00_axi_wdata;
+                Register_GOLDR <= (others => '0');
+            elsif (WriteEnable_GOLDR='1') then
+                Register_GOLDR <= s00_axi_wdata;
             end if;
         end if;
-    end process GET_GOLDR_PROC;
-
+    end process;
+    
+    
     --------------------------
     -- ca_core process
     --------------------------    
     CACORE: ca_core generic map (WIDTH => GOL_WIDTH,
                                  HEIGHT => GOL_HEIGHT)
-                     port map (clk => clock,
-                               ce => ce,
-                               n_iter => n_iter,
-                               load_ca => load_ca,          -- hier ändern
-                               d_in => d_in,
-                               start_iter => start_iter,
-                               stop_iter => stop_iter,
-                               read_ca => read_ca,
-                               load_end => load_end,
-                               read_end => read_end,
-                               max_iter => max_iter,
-                               bitstream => bitstream);
+                    port map (clk => clock,
+                              ce => ce,
+                              n_iter => n_iter,
+                              load_ca => load_ca,          
+                              d_in => d_in,
+                              start_iter => start_iter,
+                              stop_iter => stop_iter,
+                              read_ca => read_ca,
+                              load_end => load_end,
+                              read_end => read_end,
+                              max_iter => max_iter,
+                              bitstream => bitstream);
     
     GRS <= read_end;
     GMI <= max_iter;
     GLS <= load_end;
     
-    RW_GOLCR_PROG: process(clock)
+-- #########################################################################################################
+    -- gol operation
+    -- read input signal from control register
+    READ_GOLCR_SIG_PROC: process(clock)
     begin
         if rising_edge(clock) then
             if (reset = '1') then
-                GLD <= '0'; set_iteration <= '0';              
-                GST <= '0'; GSP <= '0';
-                GRE <= '0'; GRS <= '0';
-                GMI <= '0'; GSI <= '0';
+                start_iter <= '0';
+                stop_iter <= '0';
             else
-                GLD <= GOLCR(0);
-                                
-                GST <= GOLCR(2);
+                GLD <= Register_GOLCR(0);
+                
+                GST <= Register_GOLCR(2);              
                 GST_old <= GST; -- rising flag detection
                 
-                GSP <= GOLCR(3);
+                GSP <= Register_GOLCR(3);
                 GSP_old <= GSP; -- rising flag detection
                 
-                GRE <= GOLCR(4);
-                                
-                GSI <= GOLCR(7);
-                GSI_old <= GSI;               
+                GRE <= Register_GOLCR(4);
+                GSI <= Register_GOLCR(7);
+                GSI_old <= GSI; 
             end if;
+            
+            set_load_ca <= GLD;                      
+            set_read_ca <= GRE;
             
             start_iter <= not GST_old and GST;
             stop_iter <= not GSP_old and GSP;
-            set_iteration <= not GSI_old and GSI;
+            set_iteration_pulse <= not GSI_old and GSI;
             
-            load_ca <= GLD;
-            read_ca <= GRE;
         end if;
-    end process RW_GOLCR_PROG;
+    end process READ_GOLCR_SIG_PROC;
     
-    SET_ITER_PROG: process(clock)
+    -- set max iter from iteration control register
+    SET_ITER_PROC: process(clock)
     begin
         if rising_edge(clock) then
             if (reset = '1') then
                 n_iter <= (others => '0');
             else
-                if set_iteration = '1' then
-                    n_iter <= unsigned(GOLICR);
+                if set_iteration_pulse = '1' then
+                    n_iter <= unsigned(Register_GOLICR);
                 end if;
             end if;
         end if;
-    end process SET_ITER_PROG;
-    
-    --  load axi data in ca_core 
-    WR_DATA_2_CA_CORE_PROG: process(clock)
-        variable data_reg: std_logic_vector(C_S00_AXI_DATA_WIDTH-1 downto 0) := GOLDR;
-        variable cnt_bit: integer := 0;
+    end process SET_ITER_PROC;
+
+-- #########################################################################################################   
+    --  load axi data in ca_core
+    SET_LOAD_CA_PROC: process(clock)
+        variable cnt_shifted_bit_wr: integer := 0;
     begin
         if rising_edge(clock) then
-            if reset = '1' or GLD = '0' then
+            if (reset = '1') then
                 shift_finish_wr <= '1';
-                cnt_bit := 0;
-            elsif load_ca = '1' then
-                data_reg := '0' & data_reg(C_S00_AXI_DATA_WIDTH-1 downto 1);    -- shift data to register (right shift) 
-                d_in <= data_reg(0);
-                
-                if cnt_bit >= (C_S00_AXI_DATA_WIDTH-1) then   -- last bit was shifted
-                    shift_finish_wr <= '1';
-                    cnt_bit := 0;
-                else
-                    shift_finish_wr <= '0';
-                    cnt_bit := cnt_bit + 1;
-                end if;
-            end if; 
-        end if;
-    end process WR_DATA_2_CA_CORE_PROG;
-    
-    -- shift data from ca_core to data register
-    RD_DATA_FROM_CA_CORE: process(clock)
-        variable cnt_bit: integer := 0;
-    begin
-        if rising_edge(clock) then
-            if reset = '1' or GRE = '0'then
-                shift_finish_re <= '1';
-                cnt_bit := 0;
-                data_taken <= (others => '0');
-            elsif read_ca = '1' then
-                data_taken <= bitstream & data_taken(C_S00_AXI_DATA_WIDTH-1 downto 1);
-                if cnt_bit >= (C_S00_AXI_DATA_WIDTH-1) then   -- last bit was shifted
-                    shift_finish_re <= '1';
-                    cnt_bit := 0;
-                    data_taken <= (others => '0');
-                else
-                    shift_finish_re <= '0';
-                    cnt_bit := cnt_bit + 1;
+                cnt_shifted_bit_wr := 0;
+            else
+                if set_load_ca = '1' then
+                    if cnt_shifted_bit_wr >= (C_S00_AXI_DATA_WIDTH-1) then
+                        shift_finish_wr <= '1';
+                        cnt_shifted_bit_wr := 0;
+                        load_ca <= '0';
+                    else
+                        load_ca <= '1';
+                        shift_finish_wr <= '0';
+                        cnt_shifted_bit_wr := cnt_shifted_bit_wr + 1;
+                    end if;
                 end if;
             end if;
         end if;
-    end process RD_DATA_FROM_CA_CORE;
+    end process SET_LOAD_CA_PROC;
+    
+    LOAD_DATA_IN_CACORE_PROC: process(clock)
+        variable data_reg: std_logic_vector(C_S00_AXI_DATA_WIDTH-1 downto 0);
+    begin
+        if rising_edge(clock) then
+            if reset='1' then
+            else
+                if load_ca = '1' then
+                    data_reg := '0' & data_reg(C_S00_AXI_DATA_WIDTH-1 downto 1);    -- shift data to register (right shift) 
+                    d_in <= data_reg(0);
+                else
+                    data_reg := Register_GOLDR;
+                end if;
+            end if;
+        end if;
+    end process LOAD_DATA_IN_CACORE_PROC;
+    
+-- #########################################################################################################
+    -- shift data from ca_core to data register
+    SET_READ_CA_PROC: process(clock)
+        variable cnt_shifted_bit_re: integer := 0;
+    begin
+        if rising_edge(clock) then
+            if (reset = '1') then
+                shift_finish_re <= '1';
+                cnt_shifted_bit_re := 0;
+            else
+                if set_read_ca = '1' then
+                    if cnt_shifted_bit_re >= (C_S00_AXI_DATA_WIDTH-1) then
+                        shift_finish_re <= '1';
+                        cnt_shifted_bit_re := 0;
+                        read_ca <= '0';
+                    else
+                        read_ca <= '1';
+                        shift_finish_re <= '0';
+                        cnt_shifted_bit_re := cnt_shifted_bit_re + 1;
+                    end if;
+                end if;
+            end if;
+        end if;
+    end process SET_READ_CA_PROC;
+    
+    READ_DATA_FROM_CACORE_PROC: process(clock)
+    begin
+        if rising_edge(clock) then
+            if reset='1' then
+                data_taken <= (others => '0');
+            else
+                if read_ca = '1' then
+                    data_taken <= bitstream & data_taken(C_S00_AXI_DATA_WIDTH-1 downto 1);
+                else
+                    data_taken <= (others => '0');
+                end if;
+            end if;
+        end if;
+    end process READ_DATA_FROM_CACORE_PROC;
     
 end Behavioral;

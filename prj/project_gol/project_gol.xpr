@@ -3,7 +3,7 @@
 <!--                                                         -->
 <!-- Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.   -->
 
-<Project Version="7" Minor="20" Path="/home/link/projects/vivado/GameOfLife/prj/project_gol/project_gol.xpr">
+<Project Version="7" Minor="20" Path="C:/Workspace/GameOfLife/prj/project_gol/project_gol.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
     <Option Name="Id" Val="2d0220e0197b49908e37d031ee42dbe8"/>
@@ -20,7 +20,6 @@
     <Option Name="BoardPart" Val="em.avnet.com:zed:part0:1.3"/>
     <Option Name="ActiveSimSet" Val="sim_1"/>
     <Option Name="DefaultLib" Val="xil_defaultlib"/>
-    <Option Name="IPRepoPath" Val="$PPRDIR/../../../../../ZyboZ7/IP Cores/vivado-library"/>
     <Option Name="IPOutputRepo" Val="$PCACHEDIR/ip"/>
     <Option Name="IPCachePermission" Val="read"/>
     <Option Name="IPCachePermission" Val="write"/>
@@ -78,31 +77,6 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../../bd/gol_bd/gol_bd.bd">
-        <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-        <CompFileExtendedInfo CompFileName="gol_bd.bd" FileRelPathName="ip/gol_bd_GameOfLife_0_0/gol_bd_GameOfLife_0_0.xci">
-          <Proxy FileSetName="gol_bd_GameOfLife_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="gol_bd.bd" FileRelPathName="ip/gol_bd_microblaze_0_0/gol_bd_microblaze_0_0.xci">
-          <Proxy FileSetName="gol_bd_microblaze_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="gol_bd.bd" FileRelPathName="ip/gol_bd_proc_sys_reset_0_0/gol_bd_proc_sys_reset_0_0.xci">
-          <Proxy FileSetName="gol_bd_proc_sys_reset_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="gol_bd.bd" FileRelPathName="ip/gol_bd_clk_wiz_0_0/gol_bd_clk_wiz_0_0.xci">
-          <Proxy FileSetName="gol_bd_clk_wiz_0_0"/>
-        </CompFileExtendedInfo>
-      </File>
-      <File Path="$PPRDIR/../../bd/gol_bd/hdl/gol_bd_wrapper.vhd">
-        <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
       <File Path="$PPRDIR/../../hdlscr/dff.vhd">
         <FileInfo>
           <Attr Name="UserDisabled" Val="1"/>
@@ -154,7 +128,7 @@
       </File>
       <Config>
         <Option Name="DesignMode" Val="RTL"/>
-        <Option Name="TopModule" Val="gol_bd_wrapper"/>
+        <Option Name="TopModule" Val="GameOfLife"/>
       </Config>
     </FileSet>
     <FileSet Name="constrs_1" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
@@ -220,30 +194,6 @@
         <Option Name="NLNetlistMode" Val="funcsim"/>
       </Config>
     </FileSet>
-    <FileSet Name="gol_bd_microblaze_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/gol_bd_microblaze_0_0">
-      <Config>
-        <Option Name="TopModule" Val="gol_bd_microblaze_0_0"/>
-        <Option Name="UseBlackboxStub" Val="1"/>
-      </Config>
-    </FileSet>
-    <FileSet Name="gol_bd_proc_sys_reset_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/gol_bd_proc_sys_reset_0_0">
-      <Config>
-        <Option Name="TopModule" Val="gol_bd_proc_sys_reset_0_0"/>
-        <Option Name="UseBlackboxStub" Val="1"/>
-      </Config>
-    </FileSet>
-    <FileSet Name="gol_bd_clk_wiz_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/gol_bd_clk_wiz_0_0">
-      <Config>
-        <Option Name="TopModule" Val="gol_bd_clk_wiz_0_0"/>
-        <Option Name="UseBlackboxStub" Val="1"/>
-      </Config>
-    </FileSet>
-    <FileSet Name="gol_bd_GameOfLife_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/gol_bd_GameOfLife_0_0">
-      <Config>
-        <Option Name="TopModule" Val="gol_bd_GameOfLife_0_0"/>
-        <Option Name="UseBlackboxStub" Val="1"/>
-      </Config>
-    </FileSet>
   </FileSets>
   <Simulators>
     <Simulator Name="XSim">
@@ -256,14 +206,11 @@
     <Simulator Name="Questa">
       <Option Name="Description" Val="Questa Advanced Simulator"/>
     </Simulator>
-    <Simulator Name="IES">
-      <Option Name="Description" Val="Incisive Enterprise Simulator (IES)"/>
-    </Simulator>
-    <Simulator Name="VCS">
-      <Option Name="Description" Val="Verilog Compiler Simulator (VCS)"/>
-    </Simulator>
     <Simulator Name="Riviera">
       <Option Name="Description" Val="Riviera-PRO Simulator"/>
+    </Simulator>
+    <Simulator Name="ActiveHDL">
+      <Option Name="Description" Val="Active-HDL Simulator"/>
     </Simulator>
   </Simulators>
   <Runs Version="1" Minor="10">
@@ -276,125 +223,9 @@
       <ReportStrategy/>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
-    <Run Id="gol_bd_microblaze_0_0_synth_1" Type="Ft3:Synth" SrcSet="gol_bd_microblaze_0_0" Part="xc7z020clg484-1" ConstrsSet="gol_bd_microblaze_0_0" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/gol_bd_microblaze_0_0_synth_1" IncludeInArchive="true">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2017">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
-        <Step Id="synth_design"/>
-      </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-      <ReportStrategy/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-    </Run>
-    <Run Id="gol_bd_proc_sys_reset_0_0_synth_1" Type="Ft3:Synth" SrcSet="gol_bd_proc_sys_reset_0_0" Part="xc7z020clg484-1" ConstrsSet="gol_bd_proc_sys_reset_0_0" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/gol_bd_proc_sys_reset_0_0_synth_1" IncludeInArchive="true">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2017">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
-        <Step Id="synth_design"/>
-      </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-      <ReportStrategy/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-    </Run>
-    <Run Id="gol_bd_clk_wiz_0_0_synth_1" Type="Ft3:Synth" SrcSet="gol_bd_clk_wiz_0_0" Part="xc7z020clg484-1" ConstrsSet="gol_bd_clk_wiz_0_0" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/gol_bd_clk_wiz_0_0_synth_1" IncludeInArchive="true">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2017">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
-        <Step Id="synth_design"/>
-      </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-      <ReportStrategy/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-    </Run>
-    <Run Id="gol_bd_GameOfLife_0_0_synth_1" Type="Ft3:Synth" SrcSet="gol_bd_GameOfLife_0_0" Part="xc7z020clg484-1" ConstrsSet="gol_bd_GameOfLife_0_0" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/gol_bd_GameOfLife_0_0_synth_1" IncludeInArchive="true">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2017">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
-        <Step Id="synth_design"/>
-      </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-      <ReportStrategy/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-    </Run>
     <Run Id="impl_2" Type="Ft2:EntireDesign" Part="xc7z020clg484-1" ConstrsSet="constrs_1" Description="Default settings for Implementation." State="current" SynthRun="synth_2" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2017"/>
-        <Step Id="init_design"/>
-        <Step Id="opt_design"/>
-        <Step Id="power_opt_design"/>
-        <Step Id="place_design"/>
-        <Step Id="post_place_power_opt_design"/>
-        <Step Id="phys_opt_design"/>
-        <Step Id="route_design"/>
-        <Step Id="post_route_phys_opt_design"/>
-        <Step Id="write_bitstream"/>
-      </Strategy>
-      <ReportStrategy/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-    </Run>
-    <Run Id="gol_bd_microblaze_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg484-1" ConstrsSet="gol_bd_microblaze_0_0" Description="Default settings for Implementation." SynthRun="gol_bd_microblaze_0_0_synth_1" IncludeInArchive="false">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2017">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
-        <Step Id="init_design"/>
-        <Step Id="opt_design"/>
-        <Step Id="power_opt_design"/>
-        <Step Id="place_design"/>
-        <Step Id="post_place_power_opt_design"/>
-        <Step Id="phys_opt_design"/>
-        <Step Id="route_design"/>
-        <Step Id="post_route_phys_opt_design"/>
-        <Step Id="write_bitstream"/>
-      </Strategy>
-      <ReportStrategy/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-    </Run>
-    <Run Id="gol_bd_proc_sys_reset_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg484-1" ConstrsSet="gol_bd_proc_sys_reset_0_0" Description="Default settings for Implementation." SynthRun="gol_bd_proc_sys_reset_0_0_synth_1" IncludeInArchive="false">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2017">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
-        <Step Id="init_design"/>
-        <Step Id="opt_design"/>
-        <Step Id="power_opt_design"/>
-        <Step Id="place_design"/>
-        <Step Id="post_place_power_opt_design"/>
-        <Step Id="phys_opt_design"/>
-        <Step Id="route_design"/>
-        <Step Id="post_route_phys_opt_design"/>
-        <Step Id="write_bitstream"/>
-      </Strategy>
-      <ReportStrategy/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-    </Run>
-    <Run Id="gol_bd_clk_wiz_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg484-1" ConstrsSet="gol_bd_clk_wiz_0_0" Description="Default settings for Implementation." SynthRun="gol_bd_clk_wiz_0_0_synth_1" IncludeInArchive="false">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2017">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
-        <Step Id="init_design"/>
-        <Step Id="opt_design"/>
-        <Step Id="power_opt_design"/>
-        <Step Id="place_design"/>
-        <Step Id="post_place_power_opt_design"/>
-        <Step Id="phys_opt_design"/>
-        <Step Id="route_design"/>
-        <Step Id="post_route_phys_opt_design"/>
-        <Step Id="write_bitstream"/>
-      </Strategy>
-      <ReportStrategy/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-    </Run>
-    <Run Id="gol_bd_GameOfLife_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg484-1" ConstrsSet="gol_bd_GameOfLife_0_0" Description="Default settings for Implementation." SynthRun="gol_bd_GameOfLife_0_0_synth_1" IncludeInArchive="false">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2017">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
