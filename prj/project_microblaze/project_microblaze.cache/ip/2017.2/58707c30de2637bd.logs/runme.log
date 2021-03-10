@@ -1,0 +1,62 @@
+
+*** Running vivado
+    with args -log design_gol_rst_clk_wiz_1_100M_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_gol_rst_clk_wiz_1_100M_0.tcl
+
+
+****** Vivado v2017.2 (64-bit)
+  **** SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
+  **** IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+source design_gol_rst_clk_wiz_1_100M_0.tcl -notrace
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:09 . Memory (MB): peak = 312.496 ; gain = 80.098
+INFO: [Synth 8-638] synthesizing module 'design_gol_rst_clk_wiz_1_100M_0' [c:/Workspace/GameOfLife/bd/design_gol/ip/design_gol_rst_clk_wiz_1_100M_0/synth/design_gol_rst_clk_wiz_1_100M_0.vhd:74]
+INFO: [Synth 8-638] synthesizing module 'proc_sys_reset' [c:/Workspace/GameOfLife/bd/design_gol/ipshared/5db7/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1323]
+INFO: [Synth 8-638] synthesizing module 'lpf' [c:/Workspace/GameOfLife/bd/design_gol/ipshared/5db7/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:816]
+INFO: [Synth 8-638] synthesizing module 'SRL16' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:43657]
+INFO: [Synth 8-256] done synthesizing module 'SRL16' (1#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:43657]
+INFO: [Synth 8-638] synthesizing module 'cdc_sync' [c:/Workspace/GameOfLife/bd/design_gol/ipshared/52cb/hdl/lib_cdc_v1_0_rfs.vhd:106]
+INFO: [Synth 8-256] done synthesizing module 'cdc_sync' (2#1) [c:/Workspace/GameOfLife/bd/design_gol/ipshared/52cb/hdl/lib_cdc_v1_0_rfs.vhd:106]
+INFO: [Synth 8-256] done synthesizing module 'lpf' (3#1) [c:/Workspace/GameOfLife/bd/design_gol/ipshared/5db7/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:816]
+INFO: [Synth 8-638] synthesizing module 'sequence_psr' [c:/Workspace/GameOfLife/bd/design_gol/ipshared/5db7/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:301]
+INFO: [Synth 8-638] synthesizing module 'upcnt_n' [c:/Workspace/GameOfLife/bd/design_gol/ipshared/5db7/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:125]
+INFO: [Synth 8-256] done synthesizing module 'upcnt_n' (4#1) [c:/Workspace/GameOfLife/bd/design_gol/ipshared/5db7/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:125]
+INFO: [Synth 8-256] done synthesizing module 'sequence_psr' (5#1) [c:/Workspace/GameOfLife/bd/design_gol/ipshared/5db7/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:301]
+INFO: [Synth 8-256] done synthesizing module 'proc_sys_reset' (6#1) [c:/Workspace/GameOfLife/bd/design_gol/ipshared/5db7/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1323]
+INFO: [Synth 8-256] done synthesizing module 'design_gol_rst_clk_wiz_1_100M_0' (7#1) [c:/Workspace/GameOfLife/bd/design_gol/ip/design_gol_rst_clk_wiz_1_100M_0/synth/design_gol_rst_clk_wiz_1_100M_0.vhd:74]
+Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:11 . Memory (MB): peak = 352.828 ; gain = 120.430
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:12 . Memory (MB): peak = 352.828 ; gain = 120.430
+INFO: [Device 21-403] Loading part xc7z020clg484-1
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.212 . Memory (MB): peak = 675.020 ; gain = 0.000
+Finished Constraint Validation : Time (s): cpu = 00:00:26 ; elapsed = 00:00:35 . Memory (MB): peak = 675.020 ; gain = 442.621
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:26 ; elapsed = 00:00:35 . Memory (MB): peak = 675.020 ; gain = 442.621
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:26 ; elapsed = 00:00:35 . Memory (MB): peak = 675.020 ; gain = 442.621
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:26 ; elapsed = 00:00:36 . Memory (MB): peak = 675.020 ; gain = 442.621
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:27 ; elapsed = 00:00:37 . Memory (MB): peak = 675.020 ; gain = 442.621
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:46 ; elapsed = 00:01:00 . Memory (MB): peak = 675.020 ; gain = 442.621
+Finished Timing Optimization : Time (s): cpu = 00:00:46 ; elapsed = 00:01:00 . Memory (MB): peak = 675.020 ; gain = 442.621
+Finished Technology Mapping : Time (s): cpu = 00:00:46 ; elapsed = 00:01:00 . Memory (MB): peak = 675.020 ; gain = 442.621
+Finished IO Insertion : Time (s): cpu = 00:00:47 ; elapsed = 00:01:01 . Memory (MB): peak = 675.020 ; gain = 442.621
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:47 ; elapsed = 00:01:01 . Memory (MB): peak = 675.020 ; gain = 442.621
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:47 ; elapsed = 00:01:01 . Memory (MB): peak = 675.020 ; gain = 442.621
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:47 ; elapsed = 00:01:01 . Memory (MB): peak = 675.020 ; gain = 442.621
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:47 ; elapsed = 00:01:01 . Memory (MB): peak = 675.020 ; gain = 442.621
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:47 ; elapsed = 00:01:01 . Memory (MB): peak = 675.020 ; gain = 442.621
+
+Report Cell Usage: 
++------+------+------+
+|      |Cell  |Count |
++------+------+------+
+|1     |LUT1  |     5|
+|2     |LUT2  |     9|
+|3     |LUT3  |     1|
+|4     |LUT4  |     6|
+|5     |LUT5  |     3|
+|6     |LUT6  |     1|
+|7     |SRL16 |     1|
+|8     |FDR   |     8|
+|9     |FDRE  |    28|
+|10    |FDSE  |     4|
++------+------+------+
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:47 ; elapsed = 00:01:01 . Memory (MB): peak = 675.020 ; gain = 442.621
+synth_design: Time (s): cpu = 00:00:49 ; elapsed = 00:01:05 . Memory (MB): peak = 675.020 ; gain = 444.355

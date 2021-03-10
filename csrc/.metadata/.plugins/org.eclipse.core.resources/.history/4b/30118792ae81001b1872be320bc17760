@@ -1,0 +1,16 @@
+/*
+ * gol_driver.c
+ *
+ *  Created on: 10.03.2021
+ *      Author: progr
+ */
+
+#include "gol_driver.h"
+
+static volatile uint32_t *pRegister;
+
+void init_gol(uint32_t data_array[])
+{
+	/** data array format i. e 01000000101000000011000000110000 **/
+
+}

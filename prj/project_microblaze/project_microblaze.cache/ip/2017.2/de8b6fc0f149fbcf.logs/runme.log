@@ -1,0 +1,76 @@
+
+*** Running vivado
+    with args -log design_gol_mdm_1_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_gol_mdm_1_0.tcl
+
+
+****** Vivado v2017.2 (64-bit)
+  **** SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
+  **** IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+source design_gol_mdm_1_0.tcl -notrace
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 320.898 ; gain = 78.824
+INFO: [Synth 8-638] synthesizing module 'design_gol_mdm_1_0' [c:/Workspace/GameOfLife/bd/design_gol/ip/design_gol_mdm_1_0/synth/design_gol_mdm_1_0.vhd:74]
+INFO: [Synth 8-638] synthesizing module 'MDM' [c:/Workspace/GameOfLife/bd/design_gol/ipshared/5967/hdl/mdm_v3_2_vh_rfs.vhd:13762]
+INFO: [Synth 8-638] synthesizing module 'MB_BSCANE2' [c:/Workspace/GameOfLife/bd/design_gol/ipshared/5967/hdl/mdm_v3_2_vh_rfs.vhd:277]
+INFO: [Synth 8-256] done synthesizing module 'MB_BSCANE2' (1#1) [c:/Workspace/GameOfLife/bd/design_gol/ipshared/5967/hdl/mdm_v3_2_vh_rfs.vhd:277]
+INFO: [Synth 8-638] synthesizing module 'MB_BUFG' [c:/Workspace/GameOfLife/bd/design_gol/ipshared/5967/hdl/mdm_v3_2_vh_rfs.vhd:328]
+INFO: [Synth 8-256] done synthesizing module 'MB_BUFG' (2#1) [c:/Workspace/GameOfLife/bd/design_gol/ipshared/5967/hdl/mdm_v3_2_vh_rfs.vhd:328]
+INFO: [Synth 8-638] synthesizing module 'MDM_Core' [c:/Workspace/GameOfLife/bd/design_gol/ipshared/5967/hdl/mdm_v3_2_vh_rfs.vhd:6642]
+INFO: [Synth 8-638] synthesizing module 'JTAG_CONTROL' [c:/Workspace/GameOfLife/bd/design_gol/ipshared/5967/hdl/mdm_v3_2_vh_rfs.vhd:3115]
+INFO: [Synth 8-638] synthesizing module 'MB_FDC_1' [c:/Workspace/GameOfLife/bd/design_gol/ipshared/5967/hdl/mdm_v3_2_vh_rfs.vhd:630]
+INFO: [Synth 8-256] done synthesizing module 'MB_FDC_1' (3#1) [c:/Workspace/GameOfLife/bd/design_gol/ipshared/5967/hdl/mdm_v3_2_vh_rfs.vhd:630]
+INFO: [Synth 8-638] synthesizing module 'MB_FDRE_1' [c:/Workspace/GameOfLife/bd/design_gol/ipshared/5967/hdl/mdm_v3_2_vh_rfs.vhd:690]
+INFO: [Synth 8-256] done synthesizing module 'MB_FDRE_1' (4#1) [c:/Workspace/GameOfLife/bd/design_gol/ipshared/5967/hdl/mdm_v3_2_vh_rfs.vhd:690]
+INFO: [Synth 8-638] synthesizing module 'MB_SRL16E' [c:/Workspace/GameOfLife/bd/design_gol/ipshared/5967/hdl/mdm_v3_2_vh_rfs.vhd:759]
+INFO: [Synth 8-256] done synthesizing module 'MB_SRL16E' (5#1) [c:/Workspace/GameOfLife/bd/design_gol/ipshared/5967/hdl/mdm_v3_2_vh_rfs.vhd:759]
+INFO: [Synth 8-638] synthesizing module 'MB_SRL16E__parameterized1' [c:/Workspace/GameOfLife/bd/design_gol/ipshared/5967/hdl/mdm_v3_2_vh_rfs.vhd:759]
+INFO: [Synth 8-256] done synthesizing module 'MB_SRL16E__parameterized1' (5#1) [c:/Workspace/GameOfLife/bd/design_gol/ipshared/5967/hdl/mdm_v3_2_vh_rfs.vhd:759]
+INFO: [Synth 8-638] synthesizing module 'MB_SRL16E__parameterized3' [c:/Workspace/GameOfLife/bd/design_gol/ipshared/5967/hdl/mdm_v3_2_vh_rfs.vhd:759]
+INFO: [Synth 8-256] done synthesizing module 'MB_SRL16E__parameterized3' (5#1) [c:/Workspace/GameOfLife/bd/design_gol/ipshared/5967/hdl/mdm_v3_2_vh_rfs.vhd:759]
+INFO: [Synth 8-638] synthesizing module 'MB_SRL16E__parameterized5' [c:/Workspace/GameOfLife/bd/design_gol/ipshared/5967/hdl/mdm_v3_2_vh_rfs.vhd:759]
+INFO: [Synth 8-256] done synthesizing module 'MB_SRL16E__parameterized5' (5#1) [c:/Workspace/GameOfLife/bd/design_gol/ipshared/5967/hdl/mdm_v3_2_vh_rfs.vhd:759]
+INFO: [Synth 8-256] done synthesizing module 'JTAG_CONTROL' (6#1) [c:/Workspace/GameOfLife/bd/design_gol/ipshared/5967/hdl/mdm_v3_2_vh_rfs.vhd:3115]
+INFO: [Synth 8-256] done synthesizing module 'MDM_Core' (7#1) [c:/Workspace/GameOfLife/bd/design_gol/ipshared/5967/hdl/mdm_v3_2_vh_rfs.vhd:6642]
+INFO: [Synth 8-256] done synthesizing module 'MDM' (8#1) [c:/Workspace/GameOfLife/bd/design_gol/ipshared/5967/hdl/mdm_v3_2_vh_rfs.vhd:13762]
+INFO: [Synth 8-256] done synthesizing module 'design_gol_mdm_1_0' (9#1) [c:/Workspace/GameOfLife/bd/design_gol/ip/design_gol_mdm_1_0/synth/design_gol_mdm_1_0.vhd:74]
+Finished RTL Elaboration : Time (s): cpu = 00:00:13 ; elapsed = 00:00:18 . Memory (MB): peak = 372.000 ; gain = 129.926
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:19 . Memory (MB): peak = 372.000 ; gain = 129.926
+INFO: [Device 21-403] Loading part xc7z020clg484-1
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.044 . Memory (MB): peak = 694.441 ; gain = 0.000
+Finished Constraint Validation : Time (s): cpu = 00:00:32 ; elapsed = 00:00:43 . Memory (MB): peak = 694.441 ; gain = 452.367
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:32 ; elapsed = 00:00:43 . Memory (MB): peak = 694.441 ; gain = 452.367
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:32 ; elapsed = 00:00:43 . Memory (MB): peak = 694.441 ; gain = 452.367
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:33 ; elapsed = 00:00:44 . Memory (MB): peak = 694.441 ; gain = 452.367
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:35 ; elapsed = 00:00:47 . Memory (MB): peak = 694.441 ; gain = 452.367
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:54 ; elapsed = 00:01:12 . Memory (MB): peak = 694.441 ; gain = 452.367
+Finished Timing Optimization : Time (s): cpu = 00:00:55 ; elapsed = 00:01:13 . Memory (MB): peak = 694.441 ; gain = 452.367
+Finished Technology Mapping : Time (s): cpu = 00:00:55 ; elapsed = 00:01:13 . Memory (MB): peak = 694.441 ; gain = 452.367
+Finished IO Insertion : Time (s): cpu = 00:00:56 ; elapsed = 00:01:15 . Memory (MB): peak = 694.441 ; gain = 452.367
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:56 ; elapsed = 00:01:15 . Memory (MB): peak = 694.441 ; gain = 452.367
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:56 ; elapsed = 00:01:15 . Memory (MB): peak = 694.441 ; gain = 452.367
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:56 ; elapsed = 00:01:15 . Memory (MB): peak = 694.441 ; gain = 452.367
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:56 ; elapsed = 00:01:15 . Memory (MB): peak = 694.441 ; gain = 452.367
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:56 ; elapsed = 00:01:15 . Memory (MB): peak = 694.441 ; gain = 452.367
+
+Report Cell Usage: 
++------+--------+------+
+|      |Cell    |Count |
++------+--------+------+
+|1     |BSCANE2 |     1|
+|2     |BUFG    |     1|
+|3     |LUT1    |     2|
+|4     |LUT2    |    14|
+|5     |LUT3    |    28|
+|6     |LUT4    |    14|
+|7     |LUT5    |    17|
+|8     |LUT6    |    34|
+|9     |SRL16E  |     7|
+|10    |FDCE    |   100|
+|11    |FDC_1   |     1|
+|12    |FDPE    |     7|
+|13    |FDRE    |     3|
+|14    |FDRE_1  |     1|
++------+--------+------+
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:56 ; elapsed = 00:01:15 . Memory (MB): peak = 694.441 ; gain = 452.367
+synth_design: Time (s): cpu = 00:00:59 ; elapsed = 00:01:19 . Memory (MB): peak = 694.441 ; gain = 454.496
