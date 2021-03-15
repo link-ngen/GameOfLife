@@ -48,13 +48,40 @@
 #include <stdio.h>
 #include "platform.h"
 #include "xil_printf.h"
+#include "xparameters.h"
+#include "gol_driver.h"
 
+const uint32_t pattern[7] =  { 00000000000011000000110000000101,
+							   00000010100000010000000000100011,
+							   01000000000010111101010011001010,
+							   11000101010010101000000101010010,
+							   10100011010100110010101111010000,
+							   00000010110001000000000010000001,
+							   01000000101000000011000000110000 };
 
 int main()
 {
     init_platform();
+    print("Game of life hardware acceleration.\n\r");
 
-    print("Hello World\n\r");
+    /** data array format i. e:
+    	 * [00000000000011000000110000000101,	0
+    	 *  00000010100000010000000000100011,	1
+    	 *  01000000000010111101010011001010,	2
+    	 *  11000101010010101000000101010010,	3
+    	 *  10100011010100110010101111010000,	4
+    	 *  00000010110001000000000010000001,	5
+    	 *  01000000101000000011000000110000]   6
+    	 * **/
+
+    print("Init CA Core!\n\r");
+    init_gol(XPAR_GAME_OF_LIFE_0_S00_AXI_BASEADDR, pattern);
+
+    print("Check if CA Core is loaded\n\r");
+    // wait till ca core is loaded
+    while (!read_flag(GLS));
+
+    print("CA Core loaded!\n\r");
 
     cleanup_platform();
     return 0;

@@ -3395,3 +3395,1791 @@ org.eclipse.core.runtime.CoreException: No property tester contributes a propert
 
 !ENTRY com.xilinx.sdk.utils 1 0 2021-03-10 17:31:42.379
 !MESSAGE Executed Webtalk command
+!SESSION 2021-03-15 11:48:33.512 -----------------------------------------------
+eclipse.buildId=2017.2
+java.version=1.8.0_112
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=de_DE
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -data C:/Workspace/GameOfLife/csrc
+
+!ENTRY org.eclipse.osgi 4 0 2021-03-15 11:48:34.653
+!MESSAGE Bundle reference:file:com.xilinx.sdk.cmdline_1.0.0.201706160058.jar@4 not found.
+
+!ENTRY org.eclipse.osgi 4 0 2021-03-15 11:48:34.662
+!MESSAGE Bundle reference:file:com.xilinx.sdk.hw_1.0.0.201706160058.jar@4 not found.
+
+!ENTRY org.eclipse.osgi 4 0 2021-03-15 11:48:34.669
+!MESSAGE Bundle reference:file:com.xilinx.sdk.hw.sync_1.0.0.201706160058.jar@4 not found.
+
+!ENTRY org.eclipse.osgi 4 0 2021-03-15 11:48:34.679
+!MESSAGE Bundle reference:file:com.xilinx.sdk.startup_1.0.0.201706160058.jar@4 not found.
+
+!ENTRY org.eclipse.ui 2 0 2021-03-15 11:48:36.542
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2021-03-15 11:48:36.542
+!MESSAGE Commands should really have a category: plug-in='com.xilinx.sdk.appwiz', id='com.xilinx.sdk.app.commands.ChangeAtfBuiltReferences', categoryId='com.xilinx.sdk.app.commands.category'
+
+!ENTRY org.eclipse.ui 2 0 2021-03-15 11:48:37.388
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2021-03-15 11:48:37.388
+!MESSAGE Commands should really have a category: plug-in='com.xilinx.sdk.appwiz', id='com.xilinx.sdk.app.commands.ChangeAtfBuiltReferences', categoryId='com.xilinx.sdk.app.commands.category'
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-03-15 11:48:45.581
+!MESSAGE XSCT Command: [::hsi::utils::init_repo], Thread: Worker-4
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-03-15 11:48:45.588
+!MESSAGE XSCT Command: [set sdk::sdk_chan tcfchan#0], Thread: Thread-18
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-03-15 11:48:49.726
+!MESSAGE XSCT command with result: [::hsi::utils::init_repo], Result: [null, ]. Thread: Worker-4
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-03-15 11:48:50.021
+!MESSAGE XSCT command with result: [set sdk::sdk_chan tcfchan#0], Result: [null, tcfchan#0]. Thread: Thread-18
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-03-15 11:48:50.037
+!MESSAGE XSCT Command: [setws C:/Workspace/GameOfLife/csrc], Thread: Thread-18
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-03-15 11:48:50.050
+!MESSAGE XSCT command with result: [setws C:/Workspace/GameOfLife/csrc], Result: [null, ]. Thread: Thread-18
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-03-15 11:48:50.061
+!MESSAGE XSCT Command: [::hsi::utils::openhw C:/Workspace/GameOfLife/csrc/design_gol_wrapper_hw_platform_0/system.hdf], Thread: Worker-8
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-03-15 11:48:52.104
+!MESSAGE XSCT command with result: [::hsi::utils::openhw C:/Workspace/GameOfLife/csrc/design_gol_wrapper_hw_platform_0/system.hdf], Result: [null, ]. Thread: Worker-8
+!SESSION 2021-03-15 13:05:18.393 -----------------------------------------------
+eclipse.buildId=2017.2
+java.version=1.8.0_112
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=de_DE
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -data C:/Workspace/GameOfLife/csrc
+
+!ENTRY org.eclipse.osgi 4 0 2021-03-15 13:05:19.499
+!MESSAGE Bundle reference:file:com.xilinx.sdk.cmdline_1.0.0.201706160058.jar@4 not found.
+
+!ENTRY org.eclipse.osgi 4 0 2021-03-15 13:05:19.617
+!MESSAGE Bundle reference:file:com.xilinx.sdk.hw_1.0.0.201706160058.jar@4 not found.
+
+!ENTRY org.eclipse.osgi 4 0 2021-03-15 13:05:19.622
+!MESSAGE Bundle reference:file:com.xilinx.sdk.hw.sync_1.0.0.201706160058.jar@4 not found.
+
+!ENTRY org.eclipse.osgi 4 0 2021-03-15 13:05:20.069
+!MESSAGE Bundle reference:file:com.xilinx.sdk.startup_1.0.0.201706160058.jar@4 not found.
+
+!ENTRY org.eclipse.ui 2 0 2021-03-15 13:05:34.895
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2021-03-15 13:05:34.895
+!MESSAGE Commands should really have a category: plug-in='com.xilinx.sdk.appwiz', id='com.xilinx.sdk.app.commands.ChangeAtfBuiltReferences', categoryId='com.xilinx.sdk.app.commands.category'
+
+!ENTRY org.eclipse.ui 2 0 2021-03-15 13:05:35.968
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2021-03-15 13:05:35.968
+!MESSAGE Commands should really have a category: plug-in='com.xilinx.sdk.appwiz', id='com.xilinx.sdk.app.commands.ChangeAtfBuiltReferences', categoryId='com.xilinx.sdk.app.commands.category'
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-03-15 13:05:46.954
+!MESSAGE XSCT Command: [set sdk::sdk_chan tcfchan#0], Thread: Thread-18
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-03-15 13:05:46.960
+!MESSAGE XSCT Command: [::hsi::utils::init_repo], Thread: Worker-6
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-03-15 13:05:46.968
+!MESSAGE XSCT command with result: [set sdk::sdk_chan tcfchan#0], Result: [null, tcfchan#0]. Thread: Thread-18
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-03-15 13:05:46.975
+!MESSAGE XSCT Command: [setws C:/Workspace/GameOfLife/csrc], Thread: Thread-18
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-03-15 13:05:55.621
+!MESSAGE XSCT command with result: [::hsi::utils::init_repo], Result: [null, ]. Thread: Worker-6
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-03-15 13:05:55.627
+!MESSAGE XSCT command with result: [setws C:/Workspace/GameOfLife/csrc], Result: [null, ]. Thread: Thread-18
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-03-15 13:05:55.663
+!MESSAGE XSCT Command: [::hsi::utils::openhw C:/Workspace/GameOfLife/csrc/design_gol_wrapper_hw_platform_0/system.hdf], Thread: Worker-5
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-03-15 13:05:55.859
+!MESSAGE XSCT command with result: [::hsi::utils::openhw C:/Workspace/GameOfLife/csrc/design_gol_wrapper_hw_platform_0/system.hdf], Result: [null, ]. Thread: Worker-5
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-03-15 13:08:29.256
+!MESSAGE XSCT Command: [::hsi::utils::get_design_properties -json C:/Workspace/GameOfLife/csrc/design_gol_wrapper_hw_platform_0/system.hdf], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-03-15 13:08:29.265
+!MESSAGE XSCT command with result: [::hsi::utils::get_design_properties -json C:/Workspace/GameOfLife/csrc/design_gol_wrapper_hw_platform_0/system.hdf], Result: [null, {"device": "7z020",
+"family": "zynq",
+"timestamp": "Wed Mar 10 11:59:50 2021",
+"vivado_version": "2017.2",
+"part": "xc7z020clg484-1",
+}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-03-15 13:08:29.278
+!MESSAGE XSCT Command: [::hsi::utils::get_all_periphs -json C:/Workspace/GameOfLife/csrc/design_gol_wrapper_hw_platform_0/system.hdf], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-03-15 13:08:29.290
+!MESSAGE XSCT command with result: [::hsi::utils::get_all_periphs -json C:/Workspace/GameOfLife/csrc/design_gol_wrapper_hw_platform_0/system.hdf], Result: [null, {"axi_interconnect_0": {"hier_name": "axi_interconnect_0",
+"type": "axi_interconnect",
+"version": "2.1",
+"ip_type": "BUS",
+},
+"axi_uartlite_0": {"hier_name": "axi_uartlite_0",
+"type": "axi_uartlite",
+"version": "2.0",
+"ip_type": "PERIPHERAL",
+},
+"clk_wiz_1": {"hier_name": "clk_wiz_1",
+"type": "clk_wiz",
+"version": "5.4",
+"ip_type": "PERIPHERAL",
+},
+"game_of_life_0": {"hier_name": "game_of_life_0",
+"type": "game_of_life",
+"version": "1.0",
+"ip_type": "PERIPHERAL",
+},
+"mdm_1": {"hier_name": "mdm_1",
+"type": "mdm",
+"version": "3.2",
+"ip_type": "DEBUG",
+},
+"microblaze_0": {"hier_name": "microblaze_0",
+"type": "microblaze",
+"version": "10.0",
+"ip_type": "PROCESSOR",
+},
+"microblaze_0_local_memory_dlmb_bram_if_cntlr": {"hier_name": "microblaze_0_local_memory_dlmb_bram_if_cntlr",
+"type": "lmb_bram_if_cntlr",
+"version": "4.0",
+"ip_type": "MEMORY_CNTLR",
+},
+"microblaze_0_local_memory_dlmb_v10": {"hier_name": "microblaze_0_local_memory_dlmb_v10",
+"type": "lmb_v10",
+"version": "3.0",
+"ip_type": "BUS",
+},
+"microblaze_0_local_memory_ilmb_bram_if_cntlr": {"hier_name": "microblaze_0_local_memory_ilmb_bram_if_cntlr",
+"type": "lmb_bram_if_cntlr",
+"version": "4.0",
+"ip_type": "MEMORY_CNTLR",
+},
+"microblaze_0_local_memory_ilmb_v10": {"hier_name": "microblaze_0_local_memory_ilmb_v10",
+"type": "lmb_v10",
+"version": "3.0",
+"ip_type": "BUS",
+},
+"microblaze_0_local_memory_lmb_bram": {"hier_name": "microblaze_0_local_memory_lmb_bram",
+"type": "blk_mem_gen",
+"version": "8.3",
+"ip_type": "MEMORY",
+},
+"rst_clk_wiz_1_100M": {"hier_name": "rst_clk_wiz_1_100M",
+"type": "proc_sys_reset",
+"version": "5.0",
+"ip_type": "PERIPHERAL",
+},
+}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-03-15 13:08:29.298
+!MESSAGE XSCT Command: [::hsi::utils::get_addr_ranges -json C:/Workspace/GameOfLife/csrc/design_gol_wrapper_hw_platform_0/system.hdf microblaze_0], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-03-15 13:08:29.312
+!MESSAGE XSCT command with result: [::hsi::utils::get_addr_ranges -json C:/Workspace/GameOfLife/csrc/design_gol_wrapper_hw_platform_0/system.hdf microblaze_0], Result: [null, {"axi_uartlite_0_S_AXI": {"name": "axi_uartlite_0",
+"base": "0x40600000",
+"high": "0x4060FFFF",
+"size": "65536",
+"slaveintf": "S_AXI",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"game_of_life_0_S00_AXI": {"name": "game_of_life_0",
+"base": "0x44A00000",
+"high": "0x44A0FFFF",
+"size": "65536",
+"slaveintf": "S00_AXI",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"microblaze_0_local_memory_dlmb_bram_if_cntlr_SLMB_Mem": {"name": "microblaze_0_local_memory_dlmb_bram_if_cntlr",
+"base": "0x00000000",
+"high": "0x00003FFF",
+"size": "16384",
+"slaveintf": "SLMB",
+"type": "MEMORY",
+"flags": "7",
+"segment": "Mem",
+"acctype": "",
+"tz": "",
+},
+}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-03-15 13:08:29.341
+!MESSAGE XSCT Command: [::hsi::utils::get_addr_ranges -json C:/Workspace/GameOfLife/csrc/design_gol_wrapper_hw_platform_0/system.hdf mdm_1], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-03-15 13:08:29.349
+!MESSAGE XSCT command with result: [::hsi::utils::get_addr_ranges -json C:/Workspace/GameOfLife/csrc/design_gol_wrapper_hw_platform_0/system.hdf mdm_1], Result: [null, {}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-03-15 13:08:29.377
+!MESSAGE XSCT Command: [::hsi::utils::get_all_register_data -json C:/Workspace/GameOfLife/csrc/design_gol_wrapper_hw_platform_0/system.hdf microblaze_0], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-03-15 13:08:29.396
+!MESSAGE XSCT command with result: [::hsi::utils::get_all_register_data -json C:/Workspace/GameOfLife/csrc/design_gol_wrapper_hw_platform_0/system.hdf microblaze_0], Result: [null, {"axi_uartlite_0": {"RX_FIFO": {"description": "Receive data FIFO",
+"address_offset": "0x0",
+"access": "read-only",
+"size": "32",
+"fields": {"RX_DATA": {"access": "read-only",
+"bit_offset": "0",
+"bit_range": "",
+"bit_width": "8",
+"desc": "UART Receive Data
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+},
+},
+"TX_FIFO": {"description": "Transmit data FIFO",
+"address_offset": "0x4",
+"access": "write-only",
+"size": "32",
+"fields": {"TX_DATA": {"access": "write-only",
+"bit_offset": "0",
+"bit_range": "",
+"bit_width": "8",
+"desc": "UART Transmit Data
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+},
+},
+"CTRL_REG": {"description": "UART Lite control register",
+"address_offset": "0xC",
+"access": "write-only",
+"size": "32",
+"fields": {"RST_TXFIFO": {"access": "write-only",
+"bit_offset": "0",
+"bit_range": "",
+"bit_width": "1",
+"desc": "Reset/clear the transmit FIFO
+Writing a 1 to this bit position clears the transmit FIFO
+  0 - Do nothing
+  1 - Clear the transmit FIFO
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+"RST_RXFIFO": {"access": "write-only",
+"bit_offset": "1",
+"bit_range": "",
+"bit_width": "1",
+"desc": "Reset/clear the receive FIFO
+Writing a 1 to this bit position clears the receive FIFO
+  0 - Do nothing
+  1 - Clear the receive FIFO
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+"Enable_Intr": {"access": "write-only",
+"bit_offset": "4",
+"bit_range": "",
+"bit_width": "1",
+"desc": "Enable interrupt for the AXI UART Lite
+  0 - Disable interrupt signal
+  1 - Enable interrupt signal
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+},
+},
+"STAT_REG": {"description": "UART Lite status register",
+"address_offset": "0x8",
+"access": "read-only",
+"size": "32",
+"fields": {"RX_FIFO_Valid_Data": {"access": "read-only",
+"bit_offset": "0",
+"bit_range": "",
+"bit_width": "1",
+"desc": "Indicates if the receive FIFO has data.
+  0 - Receive FIFO is empty
+  1 - Receive FIFO has data
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+"RX_FIFO_Full": {"access": "read-only",
+"bit_offset": "1",
+"bit_range": "",
+"bit_width": "1",
+"desc": "Indicates if the receive FIFO is full.
+  0 - Receive FIFO is not full
+  1 - Receive FIFO is full
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+"TX_FIFO_Empty": {"access": "read-only",
+"bit_offset": "2",
+"bit_range": "",
+"bit_width": "1",
+"desc": "Indicates if the transmit FIFO is empty.
+  0 - Transmit FIFO is not empty
+  1 - Transmit FIFO is empty
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+"TX_FIFO_Full": {"access": "read-only",
+"bit_offset": "3",
+"bit_range": "",
+"bit_width": "1",
+"desc": "Indicates if the transmit FIFO is full.
+  0 - Transmit FIFO is not full
+  1 - Transmit FIFO is full
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+"Intr_Enabled": {"access": "read-only",
+"bit_offset": "4",
+"bit_range": "",
+"bit_width": "1",
+"desc": "Indicates that interrupts is enabled.
+  0 - Interrupt is disabled
+  1 - Interrupt is enabled
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+"Overrun_Error": {"access": "read-only",
+"bit_offset": "5",
+"bit_range": "",
+"bit_width": "1",
+"desc": "Indicates that a overrun error has occurred after the last time the status register was read. Overrun is when a new character has been received but the receive FIFO is full. The received character is ignored and not written into the receive FIFO. This bit is cleared when the status register is read.      0 - No overrun error has occurred      1 - Overrun error has occurred
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+"Frame_Error": {"access": "read-only",
+"bit_offset": "6",
+"bit_range": "",
+"bit_width": "1",
+"desc": "Indicates that a frame error has occurred after the last time the status register was read. Frame error is defined as detection of a stop bit with the value 0. The receive character is ignored and not written to the receive FIFO. This bit is cleared when the status register is read.      0 - No frame error has occurred   1 - Frame error has occurred
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+"Parity_Error": {"access": "read-only",
+"bit_offset": "7",
+"bit_range": "",
+"bit_width": "1",
+"desc": "Indicates that a parity error has occurred after the last time the status register was read. If the UART is configured without any parity handling, this bit is always 0. The received character is written into the receive FIFO. This bit is cleared when the status register is read.      0 - No parity error has occurred      1 - Parity error has occurred
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+},
+},
+},
+"game_of_life_0": {},
+"microblaze_0_local_memory_dlmb_bram_if_cntlr": {},
+"microblaze_0_local_memory_ilmb_bram_if_cntlr": {},
+}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-03-15 13:19:13.381
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw C:/Workspace/GameOfLife/csrc/design_gol_wrapper_hw_platform_0/system.hdf C:/Workspace/GameOfLife/csrc/gol_app_bsp/system.mss ], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-03-15 13:19:13.406
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw C:/Workspace/GameOfLife/csrc/design_gol_wrapper_hw_platform_0/system.hdf C:/Workspace/GameOfLife/csrc/gol_app_bsp/system.mss ], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-03-15 13:19:13.412
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json C:/Workspace/GameOfLife/csrc/design_gol_wrapper_hw_platform_0/system.hdf C:/Workspace/GameOfLife/csrc/gol_app_bsp/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-03-15 13:19:13.422
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json C:/Workspace/GameOfLife/csrc/design_gol_wrapper_hw_platform_0/system.hdf C:/Workspace/GameOfLife/csrc/gol_app_bsp/system.mss], Result: [null, {"procname": "microblaze_0",
+"osname": "standalone",
+"osver": "6.3",
+}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-03-15 13:19:13.429
+!MESSAGE XSCT Command: [hsi::utils::get_supported_os -json C:/Workspace/GameOfLife/csrc/design_gol_wrapper_hw_platform_0/system.hdf], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-03-15 13:19:13.442
+!MESSAGE XSCT command with result: [hsi::utils::get_supported_os -json C:/Workspace/GameOfLife/csrc/design_gol_wrapper_hw_platform_0/system.hdf], Result: [null, {"microblaze_0": {"freertos901_xilinx_v1_0": {"name": "freertos901_xilinx",
+"version": "1.0",
+"desc": "FreeRTOS is a market leading open source RTOS",
+"compilerflags": "",
+"linkerflags": "-Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group",
+"repo": "C:/Xilinx/SDK/2017.2/data/embeddedsw/ThirdParty/bsp/freertos901_xilinx_v1_0",
+},
+"standalone_v6_3": {"name": "standalone",
+"version": "6.3",
+"desc": "Standalone is a simple, low-level software layer. It provides access to basic processor features such as caches, interrupts and exceptions as well as the basic features of a hosted environment, such as standard input and output, profiling, abort and exit.",
+"compilerflags": "",
+"linkerflags": "-Wl,--start-group,-lxil,-lgcc,-lc,--end-group",
+"repo": "C:/Xilinx/SDK/2017.2/data/embeddedsw/lib/bsp/standalone_v6_3",
+},
+},
+}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-03-15 13:19:13.450
+!MESSAGE XSCT Command: [::hsi::utils::get_libs_from_sw C:/Workspace/GameOfLife/csrc/design_gol_wrapper_hw_platform_0/system.hdf C:/Workspace/GameOfLife/csrc/gol_app_bsp/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-03-15 13:19:13.459
+!MESSAGE XSCT command with result: [::hsi::utils::get_libs_from_sw C:/Workspace/GameOfLife/csrc/design_gol_wrapper_hw_platform_0/system.hdf C:/Workspace/GameOfLife/csrc/gol_app_bsp/system.mss], Result: [null, ]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-03-15 13:19:13.465
+!MESSAGE XSCT Command: [::hsi::utils::get_sw_libs -json C:/Workspace/GameOfLife/csrc/design_gol_wrapper_hw_platform_0/system.hdf C:/Workspace/GameOfLife/csrc/gol_app_bsp/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-03-15 13:19:13.473
+!MESSAGE XSCT command with result: [::hsi::utils::get_sw_libs -json C:/Workspace/GameOfLife/csrc/design_gol_wrapper_hw_platform_0/system.hdf C:/Workspace/GameOfLife/csrc/gol_app_bsp/system.mss], Result: [null, {}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-03-15 13:19:13.479
+!MESSAGE XSCT Command: [::hsi::utils::get_connected_periphs C:/Workspace/GameOfLife/csrc/design_gol_wrapper_hw_platform_0/system.hdf microblaze_0], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-03-15 13:19:13.487
+!MESSAGE XSCT command with result: [::hsi::utils::get_connected_periphs C:/Workspace/GameOfLife/csrc/design_gol_wrapper_hw_platform_0/system.hdf microblaze_0], Result: [null, axi_uartlite_0 game_of_life_0 microblaze_0_local_memory_dlmb_bram_if_cntlr microblaze_0_local_memory_ilmb_bram_if_cntlr]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-03-15 13:19:13.494
+!MESSAGE XSCT Command: [::hsi::utils::get_drivers_for_sw -json C:/Workspace/GameOfLife/csrc/design_gol_wrapper_hw_platform_0/system.hdf C:/Workspace/GameOfLife/csrc/gol_app_bsp/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-03-15 13:19:13.503
+!MESSAGE XSCT command with result: [::hsi::utils::get_drivers_for_sw -json C:/Workspace/GameOfLife/csrc/design_gol_wrapper_hw_platform_0/system.hdf C:/Workspace/GameOfLife/csrc/gol_app_bsp/system.mss], Result: [null, {"axi_uartlite_0": {"name": "uartlite",
+"ver": "3.2",
+},
+"game_of_life_0": {"name": "game_of_life",
+"ver": "1.0",
+},
+"microblaze_0_local_memory_dlmb_bram_if_cntlr": {"name": "bram",
+"ver": "4.1",
+},
+"microblaze_0_local_memory_ilmb_bram_if_cntlr": {"name": "bram",
+"ver": "4.1",
+},
+"microblaze_0": {"name": "cpu",
+"ver": "2.6",
+},
+}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-03-15 13:19:13.510
+!MESSAGE XSCT Command: [hsi::utils::get_drivers_for_hw -json C:/Workspace/GameOfLife/csrc/design_gol_wrapper_hw_platform_0/system.hdf], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-03-15 13:19:13.562
+!MESSAGE XSCT command with result: [hsi::utils::get_drivers_for_hw -json C:/Workspace/GameOfLife/csrc/design_gol_wrapper_hw_platform_0/system.hdf], Result: [null, {"axi_interconnect_0": {"version": "2.1",
+"driver_info": {"generic": {"name": "generic",
+"version": "2.0",
+"repo": "C:/Xilinx/SDK/2017.2/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v2_0",
+},
+},
+},
+"axi_uartlite_0": {"version": "2.0",
+"driver_info": {"generic": {"name": "generic",
+"version": "2.0",
+"repo": "C:/Xilinx/SDK/2017.2/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v2_0",
+},
+"uartlite_v3_2": {"name": "uartlite",
+"version": "3.2",
+"repo": "C:/Xilinx/SDK/2017.2/data/embeddedsw/XilinxProcessorIPLib/drivers/uartlite_v3_2",
+},
+},
+},
+"clk_wiz_1": {"version": "5.4",
+"driver_info": {"generic": {"name": "generic",
+"version": "2.0",
+"repo": "C:/Xilinx/SDK/2017.2/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v2_0",
+},
+"clk_wiz_v1_2": {"name": "clk_wiz",
+"version": "1.2",
+"repo": "C:/Xilinx/SDK/2017.2/data/embeddedsw/XilinxProcessorIPLib/drivers/clk_wiz_v1_2",
+},
+},
+},
+"game_of_life_0": {"version": "1.0",
+"driver_info": {"generic": {"name": "generic",
+"version": "2.0",
+"repo": "C:/Xilinx/SDK/2017.2/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v2_0",
+},
+"game_of_life_v1_0": {"name": "game_of_life",
+"version": "1.0",
+"repo": "C:/Workspace/GameOfLife/csrc/design_gol_wrapper_hw_platform_0/drivers/game_of_life_v1_0",
+},
+},
+},
+"mdm_1": {"version": "3.2",
+"driver_info": {"generic": {"name": "generic",
+"version": "2.0",
+"repo": "C:/Xilinx/SDK/2017.2/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v2_0",
+},
+"uartlite_v3_2": {"name": "uartlite",
+"version": "3.2",
+"repo": "C:/Xilinx/SDK/2017.2/data/embeddedsw/XilinxProcessorIPLib/drivers/uartlite_v3_2",
+},
+},
+},
+"microblaze_0": {"version": "10.0",
+"driver_info": {"generic": {"name": "generic",
+"version": "2.0",
+"repo": "C:/Xilinx/SDK/2017.2/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v2_0",
+},
+"cpu_v2_6": {"name": "cpu",
+"version": "2.6",
+"repo": "C:/Xilinx/SDK/2017.2/data/embeddedsw/XilinxProcessorIPLib/drivers/cpu_v2_6",
+},
+},
+},
+"microblaze_0_local_memory_dlmb_bram_if_cntlr": {"version": "4.0",
+"driver_info": {"generic": {"name": "generic",
+"version": "2.0",
+"repo": "C:/Xilinx/SDK/2017.2/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v2_0",
+},
+"bram_v4_1": {"name": "bram",
+"version": "4.1",
+"repo": "C:/Xilinx/SDK/2017.2/data/embeddedsw/XilinxProcessorIPLib/drivers/bram_v4_1",
+},
+},
+},
+"microblaze_0_local_memory_dlmb_v10": {"version": "3.0",
+"driver_info": {"generic": {"name": "generic",
+"version": "2.0",
+"repo": "C:/Xilinx/SDK/2017.2/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v2_0",
+},
+},
+},
+"microblaze_0_local_memory_ilmb_bram_if_cntlr": {"version": "4.0",
+"driver_info": {"generic": {"name": "generic",
+"version": "2.0",
+"repo": "C:/Xilinx/SDK/2017.2/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v2_0",
+},
+"bram_v4_1": {"name": "bram",
+"version": "4.1",
+"repo": "C:/Xilinx/SDK/2017.2/data/embeddedsw/XilinxProcessorIPLib/drivers/bram_v4_1",
+},
+},
+},
+"microblaze_0_local_memory_ilmb_v10": {"version": "3.0",
+"driver_info": {"generic": {"name": "generic",
+"version": "2.0",
+"repo": "C:/Xilinx/SDK/2017.2/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v2_0",
+},
+},
+},
+"microblaze_0_local_memory_lmb_bram": {"version": "8.3",
+"driver_info": {"generic": {"name": "generic",
+"version": "2.0",
+"repo": "C:/Xilinx/SDK/2017.2/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v2_0",
+},
+},
+},
+"rst_clk_wiz_1_100M": {"version": "5.0",
+"driver_info": {"generic": {"name": "generic",
+"version": "2.0",
+"repo": "C:/Xilinx/SDK/2017.2/data/embeddedsw/XilinxProcessorIPLib/drivers/generic_v2_0",
+},
+},
+},
+}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-03-15 13:19:13.572
+!MESSAGE XSCT Command: [::hsi::utils::closesw C:/Workspace/GameOfLife/csrc/gol_app_bsp/system.mss], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-03-15 13:19:13.579
+!MESSAGE XSCT command with result: [::hsi::utils::closesw C:/Workspace/GameOfLife/csrc/gol_app_bsp/system.mss], Result: [null, ]. Thread: main
+
+!ENTRY org.eclipse.cdt.core 4 0 2021-03-15 13:25:45.910
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.processLine(ConsoleOutputSniffer.java:178)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.access$0(ConsoleOutputSniffer.java:174)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.checkLine(ConsoleOutputSniffer.java:99)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.write(ConsoleOutputSniffer.java:58)
+	at java.io.OutputStream.write(OutputStream.java:75)
+	at org.eclipse.cdt.core.CommandLauncher.printCommandLine(CommandLauncher.java:287)
+	at org.eclipse.cdt.core.CommandLauncher.waitAndRead(CommandLauncher.java:250)
+	at org.eclipse.cdt.internal.core.BuildRunnerHelper.build(BuildRunnerHelper.java:273)
+	at org.eclipse.cdt.make.core.MakeBuilder.invokeMake(MakeBuilder.java:219)
+	at org.eclipse.cdt.make.core.MakeBuilder.build(MakeBuilder.java:108)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:735)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:206)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:246)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:301)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:304)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:360)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:383)
+	at org.eclipse.core.internal.resources.Workspace.buildInternal(Workspace.java:487)
+	at org.eclipse.core.internal.resources.Workspace.build(Workspace.java:406)
+	at org.eclipse.ui.actions.BuildAction$1.runInWorkspace(BuildAction.java:285)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:39)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.cdt.core 4 0 2021-03-15 13:25:46.154
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.processLine(ConsoleOutputSniffer.java:178)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.access$0(ConsoleOutputSniffer.java:174)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.checkLine(ConsoleOutputSniffer.java:99)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.write(ConsoleOutputSniffer.java:58)
+	at java.io.OutputStream.write(OutputStream.java:75)
+	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
+
+!ENTRY org.eclipse.cdt.core 4 0 2021-03-15 13:25:46.170
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.processLine(ConsoleOutputSniffer.java:178)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.access$0(ConsoleOutputSniffer.java:174)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.checkLine(ConsoleOutputSniffer.java:99)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.write(ConsoleOutputSniffer.java:58)
+	at java.io.OutputStream.write(OutputStream.java:75)
+	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
+
+!ENTRY org.eclipse.cdt.core 4 0 2021-03-15 13:25:46.444
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.processLine(ConsoleOutputSniffer.java:178)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.access$0(ConsoleOutputSniffer.java:174)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.checkLine(ConsoleOutputSniffer.java:99)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.write(ConsoleOutputSniffer.java:58)
+	at java.io.OutputStream.write(OutputStream.java:75)
+	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
+
+!ENTRY org.eclipse.cdt.core 4 0 2021-03-15 13:25:46.456
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.processLine(ConsoleOutputSniffer.java:178)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.access$0(ConsoleOutputSniffer.java:174)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.checkLine(ConsoleOutputSniffer.java:99)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.write(ConsoleOutputSniffer.java:58)
+	at java.io.OutputStream.write(OutputStream.java:75)
+	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
+
+!ENTRY org.eclipse.cdt.core 4 0 2021-03-15 13:25:46.576
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.processLine(ConsoleOutputSniffer.java:178)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.access$0(ConsoleOutputSniffer.java:174)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.checkLine(ConsoleOutputSniffer.java:99)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.write(ConsoleOutputSniffer.java:58)
+	at java.io.OutputStream.write(OutputStream.java:75)
+	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
+
+!ENTRY org.eclipse.cdt.core 4 0 2021-03-15 13:25:46.588
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.processLine(ConsoleOutputSniffer.java:178)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.access$0(ConsoleOutputSniffer.java:174)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.checkLine(ConsoleOutputSniffer.java:99)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.write(ConsoleOutputSniffer.java:58)
+	at java.io.OutputStream.write(OutputStream.java:75)
+	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
+
+!ENTRY org.eclipse.cdt.core 4 0 2021-03-15 13:25:46.695
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.processLine(ConsoleOutputSniffer.java:178)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.access$0(ConsoleOutputSniffer.java:174)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.checkLine(ConsoleOutputSniffer.java:99)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.write(ConsoleOutputSniffer.java:58)
+	at java.io.OutputStream.write(OutputStream.java:75)
+	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
+
+!ENTRY org.eclipse.cdt.core 4 0 2021-03-15 13:25:46.707
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.processLine(ConsoleOutputSniffer.java:178)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.access$0(ConsoleOutputSniffer.java:174)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.checkLine(ConsoleOutputSniffer.java:99)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.write(ConsoleOutputSniffer.java:58)
+	at java.io.OutputStream.write(OutputStream.java:75)
+	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
+
+!ENTRY org.eclipse.cdt.core 4 0 2021-03-15 13:25:47.462
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.processLine(ConsoleOutputSniffer.java:178)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.access$0(ConsoleOutputSniffer.java:174)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.checkLine(ConsoleOutputSniffer.java:99)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.write(ConsoleOutputSniffer.java:58)
+	at java.io.OutputStream.write(OutputStream.java:75)
+	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
+
+!ENTRY org.eclipse.cdt.core 4 0 2021-03-15 13:25:47.474
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.processLine(ConsoleOutputSniffer.java:178)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.access$0(ConsoleOutputSniffer.java:174)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.checkLine(ConsoleOutputSniffer.java:99)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.write(ConsoleOutputSniffer.java:58)
+	at java.io.OutputStream.write(OutputStream.java:75)
+	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
+
+!ENTRY org.eclipse.cdt.core 4 0 2021-03-15 13:25:47.655
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.processLine(ConsoleOutputSniffer.java:178)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.access$0(ConsoleOutputSniffer.java:174)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.checkLine(ConsoleOutputSniffer.java:99)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.write(ConsoleOutputSniffer.java:58)
+	at java.io.OutputStream.write(OutputStream.java:75)
+	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
+
+!ENTRY org.eclipse.cdt.core 4 0 2021-03-15 13:25:47.669
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.processLine(ConsoleOutputSniffer.java:178)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.access$0(ConsoleOutputSniffer.java:174)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.checkLine(ConsoleOutputSniffer.java:99)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.write(ConsoleOutputSniffer.java:58)
+	at java.io.OutputStream.write(OutputStream.java:75)
+	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
+
+!ENTRY org.eclipse.cdt.core 4 0 2021-03-15 13:25:47.743
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.processLine(ConsoleOutputSniffer.java:178)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.access$0(ConsoleOutputSniffer.java:174)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.checkLine(ConsoleOutputSniffer.java:99)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.write(ConsoleOutputSniffer.java:58)
+	at java.io.OutputStream.write(OutputStream.java:75)
+	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
+
+!ENTRY org.eclipse.cdt.core 4 0 2021-03-15 13:25:49.853
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.processLine(ConsoleOutputSniffer.java:178)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.access$0(ConsoleOutputSniffer.java:174)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.checkLine(ConsoleOutputSniffer.java:99)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.write(ConsoleOutputSniffer.java:58)
+	at java.io.OutputStream.write(OutputStream.java:75)
+	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
+
+!ENTRY org.eclipse.cdt.core 4 0 2021-03-15 13:25:49.865
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.processLine(ConsoleOutputSniffer.java:178)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.access$0(ConsoleOutputSniffer.java:174)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.checkLine(ConsoleOutputSniffer.java:99)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.write(ConsoleOutputSniffer.java:58)
+	at java.io.OutputStream.write(OutputStream.java:75)
+	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
+
+!ENTRY org.eclipse.cdt.core 4 0 2021-03-15 13:25:49.931
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.processLine(ConsoleOutputSniffer.java:178)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.access$0(ConsoleOutputSniffer.java:174)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.checkLine(ConsoleOutputSniffer.java:99)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.write(ConsoleOutputSniffer.java:58)
+	at java.io.OutputStream.write(OutputStream.java:75)
+	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
+
+!ENTRY org.eclipse.cdt.core 4 0 2021-03-15 13:25:50.176
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.processLine(ConsoleOutputSniffer.java:178)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.access$0(ConsoleOutputSniffer.java:174)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.checkLine(ConsoleOutputSniffer.java:99)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.write(ConsoleOutputSniffer.java:58)
+	at java.io.OutputStream.write(OutputStream.java:75)
+	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
+
+!ENTRY org.eclipse.cdt.core 4 0 2021-03-15 13:25:50.188
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.processLine(ConsoleOutputSniffer.java:178)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.access$0(ConsoleOutputSniffer.java:174)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.checkLine(ConsoleOutputSniffer.java:99)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.write(ConsoleOutputSniffer.java:58)
+	at java.io.OutputStream.write(OutputStream.java:75)
+	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
+
+!ENTRY org.eclipse.cdt.core 4 0 2021-03-15 13:25:50.262
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.processLine(ConsoleOutputSniffer.java:178)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.access$0(ConsoleOutputSniffer.java:174)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.checkLine(ConsoleOutputSniffer.java:99)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.write(ConsoleOutputSniffer.java:58)
+	at java.io.OutputStream.write(OutputStream.java:75)
+	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
+
+!ENTRY org.eclipse.cdt.core 4 0 2021-03-15 13:25:50.469
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.processLine(ConsoleOutputSniffer.java:178)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.access$0(ConsoleOutputSniffer.java:174)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.checkLine(ConsoleOutputSniffer.java:99)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.write(ConsoleOutputSniffer.java:58)
+	at java.io.OutputStream.write(OutputStream.java:75)
+	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
+
+!ENTRY org.eclipse.cdt.core 4 0 2021-03-15 13:25:50.483
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.processLine(ConsoleOutputSniffer.java:178)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.access$0(ConsoleOutputSniffer.java:174)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.checkLine(ConsoleOutputSniffer.java:99)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.write(ConsoleOutputSniffer.java:58)
+	at java.io.OutputStream.write(OutputStream.java:75)
+	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
+
+!ENTRY org.eclipse.cdt.core 4 0 2021-03-15 13:25:50.494
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.processLine(ConsoleOutputSniffer.java:178)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.access$0(ConsoleOutputSniffer.java:174)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.checkLine(ConsoleOutputSniffer.java:99)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.write(ConsoleOutputSniffer.java:58)
+	at java.io.OutputStream.write(OutputStream.java:75)
+	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
+
+!ENTRY org.eclipse.cdt.core 4 0 2021-03-15 13:25:50.503
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.processLine(ConsoleOutputSniffer.java:178)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.access$0(ConsoleOutputSniffer.java:174)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.checkLine(ConsoleOutputSniffer.java:99)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.write(ConsoleOutputSniffer.java:58)
+	at java.io.OutputStream.write(OutputStream.java:75)
+	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
+
+!ENTRY org.eclipse.cdt.core 4 0 2021-03-15 13:25:50.513
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.processLine(ConsoleOutputSniffer.java:178)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.access$0(ConsoleOutputSniffer.java:174)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.checkLine(ConsoleOutputSniffer.java:99)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.write(ConsoleOutputSniffer.java:58)
+	at java.io.OutputStream.write(OutputStream.java:75)
+	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
+
+!ENTRY org.eclipse.cdt.core 4 0 2021-03-15 13:25:50.523
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.processLine(ConsoleOutputSniffer.java:178)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.access$0(ConsoleOutputSniffer.java:174)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.checkLine(ConsoleOutputSniffer.java:99)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.write(ConsoleOutputSniffer.java:58)
+	at java.io.OutputStream.write(OutputStream.java:75)
+	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
+
+!ENTRY org.eclipse.cdt.core 4 0 2021-03-15 13:25:50.532
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.processLine(ConsoleOutputSniffer.java:178)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.access$0(ConsoleOutputSniffer.java:174)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.checkLine(ConsoleOutputSniffer.java:99)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.write(ConsoleOutputSniffer.java:58)
+	at java.io.OutputStream.write(OutputStream.java:75)
+	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
+
+!ENTRY org.eclipse.cdt.core 4 0 2021-03-15 13:25:50.695
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.processLine(ConsoleOutputSniffer.java:178)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.access$0(ConsoleOutputSniffer.java:174)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.checkLine(ConsoleOutputSniffer.java:99)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.write(ConsoleOutputSniffer.java:58)
+	at java.io.OutputStream.write(OutputStream.java:75)
+	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
+
+!ENTRY org.eclipse.cdt.core 4 0 2021-03-15 13:25:50.708
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.processLine(ConsoleOutputSniffer.java:178)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.access$0(ConsoleOutputSniffer.java:174)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.checkLine(ConsoleOutputSniffer.java:99)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.write(ConsoleOutputSniffer.java:58)
+	at java.io.OutputStream.write(OutputStream.java:75)
+	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
+
+!ENTRY org.eclipse.cdt.core 4 0 2021-03-15 13:25:50.901
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.processLine(ConsoleOutputSniffer.java:178)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.access$0(ConsoleOutputSniffer.java:174)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.checkLine(ConsoleOutputSniffer.java:99)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.write(ConsoleOutputSniffer.java:58)
+	at java.io.OutputStream.write(OutputStream.java:75)
+	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
+
+!ENTRY org.eclipse.cdt.core 4 0 2021-03-15 13:25:55.066
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.processLine(ConsoleOutputSniffer.java:178)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.access$0(ConsoleOutputSniffer.java:174)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.checkLine(ConsoleOutputSniffer.java:99)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.write(ConsoleOutputSniffer.java:58)
+	at java.io.OutputStream.write(OutputStream.java:75)
+	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
+
+!ENTRY org.eclipse.cdt.core 4 0 2021-03-15 13:25:55.080
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.processLine(ConsoleOutputSniffer.java:178)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.access$0(ConsoleOutputSniffer.java:174)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.checkLine(ConsoleOutputSniffer.java:99)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.write(ConsoleOutputSniffer.java:58)
+	at java.io.OutputStream.write(OutputStream.java:75)
+	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
+
+!ENTRY org.eclipse.cdt.core 4 0 2021-03-15 13:25:55.151
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.processLine(ConsoleOutputSniffer.java:178)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.access$0(ConsoleOutputSniffer.java:174)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.checkLine(ConsoleOutputSniffer.java:99)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.write(ConsoleOutputSniffer.java:58)
+	at java.io.OutputStream.write(OutputStream.java:75)
+	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
+
+!ENTRY org.eclipse.cdt.core 4 0 2021-03-15 13:25:56.040
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.processLine(ConsoleOutputSniffer.java:178)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.access$0(ConsoleOutputSniffer.java:174)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.checkLine(ConsoleOutputSniffer.java:99)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.write(ConsoleOutputSniffer.java:58)
+	at java.io.OutputStream.write(OutputStream.java:75)
+	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.run(ProcessClosure.java:57)
+
+!ENTRY org.eclipse.cdt.core 4 0 2021-03-15 13:25:56.056
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.closeConsoleOutputStream(ConsoleOutputSniffer.java:160)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.close(ConsoleOutputSniffer.java:68)
+	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.close(ProcessClosure.java:98)
+	at org.eclipse.cdt.internal.core.ProcessClosure.isAlive(ProcessClosure.java:193)
+	at org.eclipse.cdt.core.CommandLauncher.waitAndRead(CommandLauncher.java:259)
+	at org.eclipse.cdt.internal.core.BuildRunnerHelper.build(BuildRunnerHelper.java:273)
+	at org.eclipse.cdt.make.core.MakeBuilder.invokeMake(MakeBuilder.java:219)
+	at org.eclipse.cdt.make.core.MakeBuilder.build(MakeBuilder.java:108)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:735)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:206)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:246)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:301)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:304)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:360)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:383)
+	at org.eclipse.core.internal.resources.Workspace.buildInternal(Workspace.java:487)
+	at org.eclipse.core.internal.resources.Workspace.build(Workspace.java:406)
+	at org.eclipse.ui.actions.BuildAction$1.runInWorkspace(BuildAction.java:285)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:39)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-03-15 13:46:57.619
+!MESSAGE XSCT Command: [::hsi::utils::get_addr_tag_info -json C:/Workspace/GameOfLife/csrc/design_gol_wrapper_hw_platform_0/system.hdf ], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-03-15 13:46:57.631
+!MESSAGE XSCT command with result: [::hsi::utils::get_addr_tag_info -json C:/Workspace/GameOfLife/csrc/design_gol_wrapper_hw_platform_0/system.hdf ], Result: [null, {"microblaze_0": "design_gol_i/microblaze_0:design_gol_i/microblaze_0",
+}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-03-15 13:47:01.137
+!MESSAGE XSCT Command: [::hsi::utils::get_bram_blocks C:/Workspace/GameOfLife/csrc/design_gol_wrapper_hw_platform_0/system.hdf ], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-03-15 13:47:01.145
+!MESSAGE XSCT command with result: [::hsi::utils::get_bram_blocks C:/Workspace/GameOfLife/csrc/design_gol_wrapper_hw_platform_0/system.hdf ], Result: [null, microblaze_0_local_memory_dlmb_bram_if_cntlr microblaze_0_local_memory_ilmb_bram_if_cntlr]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-03-15 13:47:01.153
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_param_value C:/Workspace/GameOfLife/csrc/design_gol_wrapper_hw_platform_0/system.hdf microblaze_0 C_BASE_VECTORS], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-03-15 13:47:01.161
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_param_value C:/Workspace/GameOfLife/csrc/design_gol_wrapper_hw_platform_0/system.hdf microblaze_0 C_BASE_VECTORS], Result: [null, 0x0000000000000000]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-03-15 13:47:27.163
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-03-15 13:47:29.503
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#1]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-03-15 13:47:29.512
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-03-15 13:47:31.065
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1  Digilent Zed 210248722788]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-03-15 13:47:31.073
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-03-15 13:47:31.085
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1  Digilent Zed 210248722788]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-03-15 13:47:31.091
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248722788" && level==1}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-03-15 13:47:31.118
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248722788" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 23727093 irlen 6 fpga)]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-03-15 13:47:31.125
+!MESSAGE XSCT Command: [targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248722788" && level==0} -index 1], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-03-15 13:47:31.689
+!MESSAGE XSCT command with result: [targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248722788" && level==0} -index 1], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-03-15 13:47:31.695
+!MESSAGE XSCT Command: [fpga -file C:/Workspace/GameOfLife/csrc/design_gol_wrapper_hw_platform_0/download.bit], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-03-15 13:47:34.623
+!MESSAGE XSCT command with result: [fpga -file C:/Workspace/GameOfLife/csrc/design_gol_wrapper_hw_platform_0/download.bit], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-03-15 13:47:35.429
+!MESSAGE XSCT Command: [::hsi::utils::get_bram_blocks C:/Workspace/GameOfLife/csrc/design_gol_wrapper_hw_platform_0/system.hdf ], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-03-15 13:47:35.445
+!MESSAGE XSCT command with result: [::hsi::utils::get_bram_blocks C:/Workspace/GameOfLife/csrc/design_gol_wrapper_hw_platform_0/system.hdf ], Result: [null, microblaze_0_local_memory_dlmb_bram_if_cntlr microblaze_0_local_memory_ilmb_bram_if_cntlr]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-03-15 13:48:29.333
+!MESSAGE XSCT Command: [::hsi::utils::get_bram_blocks C:/Workspace/GameOfLife/csrc/design_gol_wrapper_hw_platform_0/system.hdf ], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-03-15 13:48:29.343
+!MESSAGE XSCT command with result: [::hsi::utils::get_bram_blocks C:/Workspace/GameOfLife/csrc/design_gol_wrapper_hw_platform_0/system.hdf ], Result: [null, microblaze_0_local_memory_dlmb_bram_if_cntlr microblaze_0_local_memory_ilmb_bram_if_cntlr]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-03-15 13:48:52.854
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-03-15 13:48:52.863
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#1]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-03-15 13:48:52.869
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-03-15 13:48:52.882
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1  Digilent Zed 210248722788]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-03-15 13:48:52.889
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-03-15 13:48:52.902
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1  Digilent Zed 210248722788]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-03-15 13:48:52.908
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248722788" && level==1}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-03-15 13:48:52.935
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248722788" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 23727093 irlen 6 fpga)]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-03-15 13:48:52.941
+!MESSAGE XSCT Command: [targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248722788" && level==0} -index 1], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-03-15 13:48:52.973
+!MESSAGE XSCT command with result: [targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248722788" && level==0} -index 1], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-03-15 13:48:52.979
+!MESSAGE XSCT Command: [fpga -file C:/Workspace/GameOfLife/csrc/design_gol_wrapper_hw_platform_0/download.bit], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-03-15 13:48:55.402
+!MESSAGE XSCT command with result: [fpga -file C:/Workspace/GameOfLife/csrc/design_gol_wrapper_hw_platform_0/download.bit], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-03-15 13:48:56.291
+!MESSAGE XSCT Command: [::hsi::utils::get_bram_blocks C:/Workspace/GameOfLife/csrc/design_gol_wrapper_hw_platform_0/system.hdf ], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-03-15 13:48:56.310
+!MESSAGE XSCT command with result: [::hsi::utils::get_bram_blocks C:/Workspace/GameOfLife/csrc/design_gol_wrapper_hw_platform_0/system.hdf ], Result: [null, microblaze_0_local_memory_dlmb_bram_if_cntlr microblaze_0_local_memory_ilmb_bram_if_cntlr]. Thread: ModalContext
+
+!ENTRY org.eclipse.debug.ui 4 0 2021-03-15 13:49:52.915
+!MESSAGE Launch shortcut 'com.xilinx.sdk.launch.remote.shortcut' enablement expression caused exception. Shortcut was removed.
+!STACK 1
+org.eclipse.core.runtime.CoreException: No property tester contributes a property org.eclipse.jdt.launching.isContainer to type class org.eclipse.core.internal.resources.File
+	at org.eclipse.core.internal.expressions.TypeExtensionManager.getProperty(TypeExtensionManager.java:127)
+	at org.eclipse.core.internal.expressions.TestExpression.evaluate(TestExpression.java:97)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:53)
+	at org.eclipse.core.internal.expressions.AndExpression.evaluate(AndExpression.java:31)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:53)
+	at org.eclipse.core.internal.expressions.IterateExpression.evaluate(IterateExpression.java:160)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:53)
+	at org.eclipse.core.internal.expressions.WithExpression.evaluate(WithExpression.java:75)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:53)
+	at org.eclipse.core.internal.expressions.EnablementExpression.evaluate(EnablementExpression.java:55)
+	at org.eclipse.debug.internal.ui.launchConfigurations.LaunchShortcutExtension.evalEnablementExpression(LaunchShortcutExtension.java:281)
+	at org.eclipse.debug.internal.ui.launchConfigurations.LaunchConfigurationManager.getApplicableConfigurationTypes(LaunchConfigurationManager.java:736)
+	at org.eclipse.debug.internal.ui.launchConfigurations.LaunchConfigurationManager.getApplicableLaunchConfigurations(LaunchConfigurationManager.java:773)
+	at org.eclipse.debug.internal.ui.contextlaunching.LaunchingResourceManager.getParticipatingLaunchConfigurations(LaunchingResourceManager.java:507)
+	at org.eclipse.debug.internal.ui.contextlaunching.LaunchingResourceManager.getLabel(LaunchingResourceManager.java:324)
+	at org.eclipse.debug.internal.ui.contextlaunching.LaunchingResourceManager.computeLabels(LaunchingResourceManager.java:244)
+	at org.eclipse.debug.internal.ui.contextlaunching.LaunchingResourceManager$1$1.run(LaunchingResourceManager.java:142)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.core.expressions 4 201 2021-03-15 13:49:52.916
+!MESSAGE No property tester contributes a property org.eclipse.jdt.launching.isContainer to type class org.eclipse.core.internal.resources.File
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-03-15 13:50:01.419
+!MESSAGE XSCT Command: [::hsi::utils::get_bram_blocks C:/Workspace/GameOfLife/csrc/design_gol_wrapper_hw_platform_0/system.hdf ], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-03-15 13:50:01.429
+!MESSAGE XSCT command with result: [::hsi::utils::get_bram_blocks C:/Workspace/GameOfLife/csrc/design_gol_wrapper_hw_platform_0/system.hdf ], Result: [null, microblaze_0_local_memory_dlmb_bram_if_cntlr microblaze_0_local_memory_ilmb_bram_if_cntlr]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-03-15 13:50:48.553
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-03-15 13:50:48.563
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#1]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-03-15 13:50:48.569
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-03-15 13:50:48.585
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1  Digilent Zed 210248722788]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-03-15 13:50:48.591
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-03-15 13:50:48.605
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1  Digilent Zed 210248722788]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-03-15 13:50:48.611
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248722788" && level==1}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-03-15 13:50:48.639
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248722788" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 23727093 irlen 6 fpga)]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-03-15 13:50:48.645
+!MESSAGE XSCT Command: [targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248722788" && level==0} -index 1], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-03-15 13:50:48.680
+!MESSAGE XSCT command with result: [targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248722788" && level==0} -index 1], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-03-15 13:50:48.687
+!MESSAGE XSCT Command: [fpga -file C:/Workspace/GameOfLife/csrc/design_gol_wrapper_hw_platform_0/download.bit], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-03-15 13:50:51.093
+!MESSAGE XSCT command with result: [fpga -file C:/Workspace/GameOfLife/csrc/design_gol_wrapper_hw_platform_0/download.bit], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-03-15 13:50:51.906
+!MESSAGE XSCT Command: [::hsi::utils::get_bram_blocks C:/Workspace/GameOfLife/csrc/design_gol_wrapper_hw_platform_0/system.hdf ], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-03-15 13:50:51.920
+!MESSAGE XSCT command with result: [::hsi::utils::get_bram_blocks C:/Workspace/GameOfLife/csrc/design_gol_wrapper_hw_platform_0/system.hdf ], Result: [null, microblaze_0_local_memory_dlmb_bram_if_cntlr microblaze_0_local_memory_ilmb_bram_if_cntlr]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-03-15 13:54:48.981
+!MESSAGE XSCT Command: [::hsi::utils::get_bram_blocks C:/Workspace/GameOfLife/csrc/design_gol_wrapper_hw_platform_0/system.hdf ], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-03-15 13:54:48.992
+!MESSAGE XSCT command with result: [::hsi::utils::get_bram_blocks C:/Workspace/GameOfLife/csrc/design_gol_wrapper_hw_platform_0/system.hdf ], Result: [null, microblaze_0_local_memory_dlmb_bram_if_cntlr microblaze_0_local_memory_ilmb_bram_if_cntlr]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-03-15 13:55:10.074
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-03-15 13:55:10.085
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#1]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-03-15 13:55:10.091
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-03-15 13:55:10.105
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1  Digilent Zed 210248722788]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-03-15 13:55:10.112
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-03-15 13:55:10.125
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1  Digilent Zed 210248722788]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-03-15 13:55:10.131
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248722788" && level==1}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-03-15 13:55:10.183
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248722788" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 23727093 irlen 6 fpga)]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-03-15 13:55:10.192
+!MESSAGE XSCT Command: [targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248722788" && level==0} -index 1], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-03-15 13:55:10.237
+!MESSAGE XSCT command with result: [targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248722788" && level==0} -index 1], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-03-15 13:55:10.243
+!MESSAGE XSCT Command: [fpga -file C:/Workspace/GameOfLife/csrc/design_gol_wrapper_hw_platform_0/download.bit], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-03-15 13:55:12.658
+!MESSAGE XSCT command with result: [fpga -file C:/Workspace/GameOfLife/csrc/design_gol_wrapper_hw_platform_0/download.bit], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-03-15 13:55:13.466
+!MESSAGE XSCT Command: [::hsi::utils::get_bram_blocks C:/Workspace/GameOfLife/csrc/design_gol_wrapper_hw_platform_0/system.hdf ], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-03-15 13:55:13.481
+!MESSAGE XSCT command with result: [::hsi::utils::get_bram_blocks C:/Workspace/GameOfLife/csrc/design_gol_wrapper_hw_platform_0/system.hdf ], Result: [null, microblaze_0_local_memory_dlmb_bram_if_cntlr microblaze_0_local_memory_ilmb_bram_if_cntlr]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-03-15 13:57:32.548
+!MESSAGE XSCT Command: [::hsi::utils::get_bram_blocks C:/Workspace/GameOfLife/csrc/design_gol_wrapper_hw_platform_0/system.hdf ], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-03-15 13:57:32.557
+!MESSAGE XSCT command with result: [::hsi::utils::get_bram_blocks C:/Workspace/GameOfLife/csrc/design_gol_wrapper_hw_platform_0/system.hdf ], Result: [null, microblaze_0_local_memory_dlmb_bram_if_cntlr microblaze_0_local_memory_ilmb_bram_if_cntlr]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-03-15 13:57:53.244
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-03-15 13:57:53.262
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#1]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-03-15 13:57:53.269
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-03-15 13:57:53.282
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1  Digilent Zed 210248722788]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-03-15 13:57:53.288
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-03-15 13:57:53.300
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1  Digilent Zed 210248722788]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-03-15 13:57:53.307
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248722788" && level==1}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-03-15 13:57:53.334
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248722788" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 23727093 irlen 6 fpga)]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-03-15 13:57:53.340
+!MESSAGE XSCT Command: [targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248722788" && level==0} -index 1], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-03-15 13:57:53.377
+!MESSAGE XSCT command with result: [targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248722788" && level==0} -index 1], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-03-15 13:57:53.383
+!MESSAGE XSCT Command: [fpga -file C:/Workspace/GameOfLife/csrc/design_gol_wrapper_hw_platform_0/download.bit], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-03-15 13:57:55.797
+!MESSAGE XSCT command with result: [fpga -file C:/Workspace/GameOfLife/csrc/design_gol_wrapper_hw_platform_0/download.bit], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-03-15 13:57:56.605
+!MESSAGE XSCT Command: [::hsi::utils::get_bram_blocks C:/Workspace/GameOfLife/csrc/design_gol_wrapper_hw_platform_0/system.hdf ], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-03-15 13:57:56.620
+!MESSAGE XSCT command with result: [::hsi::utils::get_bram_blocks C:/Workspace/GameOfLife/csrc/design_gol_wrapper_hw_platform_0/system.hdf ], Result: [null, microblaze_0_local_memory_dlmb_bram_if_cntlr microblaze_0_local_memory_ilmb_bram_if_cntlr]. Thread: ModalContext
+
+!ENTRY org.eclipse.ui 4 4 2021-03-15 15:40:01.975
+!MESSAGE Unable to process element: viewright in perspective extension: null
+
+!ENTRY org.eclipse.cdt.core 4 0 2021-03-15 15:40:02.163
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2021-03-15 15:40:02.268
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2021-03-15 15:40:02.281
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2021-03-15 15:40:02.435
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2021-03-15 15:40:02.447
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2021-03-15 15:40:02.596
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2021-03-15 15:40:02.611
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2021-03-15 15:40:02.718
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2021-03-15 15:40:02.728
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2021-03-15 15:40:03.503
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2021-03-15 15:40:03.513
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2021-03-15 15:40:03.693
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2021-03-15 15:40:03.705
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2021-03-15 15:40:03.787
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-03-15 15:40:04.168
+!MESSAGE XSCT Command: [enable_info_messages], Thread: Worker-26
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-03-15 15:40:04.175
+!MESSAGE XSCT command with result: [enable_info_messages], Result: [null, ]. Thread: Worker-26
+
+!ENTRY org.eclipse.cdt.core 4 0 2021-03-15 15:40:04.496
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2021-03-15 15:40:04.510
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2021-03-15 15:40:04.574
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2021-03-15 15:40:04.800
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2021-03-15 15:40:04.810
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2021-03-15 15:40:04.868
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2021-03-15 15:40:04.992
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2021-03-15 15:40:05.001
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2021-03-15 15:40:05.008
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2021-03-15 15:40:05.014
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2021-03-15 15:40:05.021
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2021-03-15 15:40:05.029
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2021-03-15 15:40:05.038
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2021-03-15 15:40:05.161
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2021-03-15 15:40:05.169
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2021-03-15 15:40:05.362
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2021-03-15 15:40:08.648
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2021-03-15 15:40:08.661
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2021-03-15 15:40:08.726
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2021-03-15 15:40:09.465
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+
+!ENTRY org.eclipse.cdt.core 4 0 2021-03-15 15:40:09.511
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer.closeConsoleOutputStream(ConsoleOutputSniffer.java:160)
+	at org.eclipse.cdt.internal.core.ConsoleOutputSniffer$ConsoleOutputStream.close(ConsoleOutputSniffer.java:68)
+	at org.eclipse.cdt.internal.core.ProcessClosure$ReaderThread.close(ProcessClosure.java:98)
+	at org.eclipse.cdt.internal.core.ProcessClosure.isAlive(ProcessClosure.java:193)
+	at org.eclipse.cdt.core.CommandLauncher.waitAndRead(CommandLauncher.java:259)
+	at org.eclipse.cdt.internal.core.BuildRunnerHelper.build(BuildRunnerHelper.java:273)
+	at org.eclipse.cdt.make.core.MakeBuilder.invokeMake(MakeBuilder.java:219)
+	at org.eclipse.cdt.make.core.MakeBuilder.build(MakeBuilder.java:108)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:735)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:206)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:246)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:301)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:304)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:360)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:383)
+	at org.eclipse.core.internal.resources.Workspace.buildInternal(Workspace.java:487)
+	at org.eclipse.core.internal.resources.Workspace.build(Workspace.java:399)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:859)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:739)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:1039)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1256)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-03-15 16:04:47.386
+!MESSAGE XSCT Command: [::hsi::utils::get_bram_blocks C:/Workspace/GameOfLife/csrc/design_gol_wrapper_hw_platform_0/system.hdf ], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-03-15 16:04:47.397
+!MESSAGE XSCT command with result: [::hsi::utils::get_bram_blocks C:/Workspace/GameOfLife/csrc/design_gol_wrapper_hw_platform_0/system.hdf ], Result: [null, microblaze_0_local_memory_dlmb_bram_if_cntlr microblaze_0_local_memory_ilmb_bram_if_cntlr]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-03-15 16:05:07.857
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-03-15 16:05:07.866
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#1]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-03-15 16:05:07.873
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-03-15 16:05:07.886
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1  Digilent Zed 210248722788]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-03-15 16:05:07.893
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-03-15 16:05:07.908
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1  Digilent Zed 210248722788]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-03-15 16:05:07.913
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248722788" && level==1}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-03-15 16:05:07.942
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248722788" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 23727093 irlen 6 fpga)]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-03-15 16:05:07.948
+!MESSAGE XSCT Command: [targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248722788" && level==0} -index 1], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-03-15 16:05:07.989
+!MESSAGE XSCT command with result: [targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248722788" && level==0} -index 1], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-03-15 16:05:07.997
+!MESSAGE XSCT Command: [fpga -file C:/Workspace/GameOfLife/csrc/design_gol_wrapper_hw_platform_0/download.bit], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-03-15 16:05:10.379
+!MESSAGE XSCT command with result: [fpga -file C:/Workspace/GameOfLife/csrc/design_gol_wrapper_hw_platform_0/download.bit], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-03-15 16:05:11.185
+!MESSAGE XSCT Command: [::hsi::utils::get_bram_blocks C:/Workspace/GameOfLife/csrc/design_gol_wrapper_hw_platform_0/system.hdf ], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-03-15 16:05:11.192
+!MESSAGE XSCT command with result: [::hsi::utils::get_bram_blocks C:/Workspace/GameOfLife/csrc/design_gol_wrapper_hw_platform_0/system.hdf ], Result: [null, microblaze_0_local_memory_dlmb_bram_if_cntlr microblaze_0_local_memory_ilmb_bram_if_cntlr]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-03-15 16:08:26.321
+!MESSAGE XSCT Command: [::hsi::utils::get_bram_blocks C:/Workspace/GameOfLife/csrc/design_gol_wrapper_hw_platform_0/system.hdf ], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-03-15 16:08:26.331
+!MESSAGE XSCT command with result: [::hsi::utils::get_bram_blocks C:/Workspace/GameOfLife/csrc/design_gol_wrapper_hw_platform_0/system.hdf ], Result: [null, microblaze_0_local_memory_dlmb_bram_if_cntlr microblaze_0_local_memory_ilmb_bram_if_cntlr]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-03-15 16:08:45.764
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-03-15 16:08:45.783
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#1]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-03-15 16:08:45.789
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-03-15 16:08:45.802
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1  Digilent Zed 210248722788]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-03-15 16:08:45.808
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-03-15 16:08:45.821
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1  Digilent Zed 210248722788]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-03-15 16:08:45.827
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248722788" && level==1}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-03-15 16:08:45.856
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248722788" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 23727093 irlen 6 fpga)]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-03-15 16:08:45.863
+!MESSAGE XSCT Command: [targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248722788" && level==0} -index 1], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-03-15 16:08:45.901
+!MESSAGE XSCT command with result: [targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248722788" && level==0} -index 1], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-03-15 16:08:45.907
+!MESSAGE XSCT Command: [fpga -file C:/Workspace/GameOfLife/csrc/design_gol_wrapper_hw_platform_0/download.bit], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-03-15 16:08:48.320
+!MESSAGE XSCT command with result: [fpga -file C:/Workspace/GameOfLife/csrc/design_gol_wrapper_hw_platform_0/download.bit], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-03-15 16:08:49.127
+!MESSAGE XSCT Command: [::hsi::utils::get_bram_blocks C:/Workspace/GameOfLife/csrc/design_gol_wrapper_hw_platform_0/system.hdf ], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-03-15 16:08:49.135
+!MESSAGE XSCT command with result: [::hsi::utils::get_bram_blocks C:/Workspace/GameOfLife/csrc/design_gol_wrapper_hw_platform_0/system.hdf ], Result: [null, microblaze_0_local_memory_dlmb_bram_if_cntlr microblaze_0_local_memory_ilmb_bram_if_cntlr]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-03-15 16:12:57.994
+!MESSAGE XSCT Command: [::hsi::utils::get_bram_blocks C:/Workspace/GameOfLife/csrc/design_gol_wrapper_hw_platform_0/system.hdf ], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-03-15 16:12:58.006
+!MESSAGE XSCT command with result: [::hsi::utils::get_bram_blocks C:/Workspace/GameOfLife/csrc/design_gol_wrapper_hw_platform_0/system.hdf ], Result: [null, microblaze_0_local_memory_dlmb_bram_if_cntlr microblaze_0_local_memory_ilmb_bram_if_cntlr]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-03-15 16:13:16.898
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-03-15 16:13:16.906
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#1]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-03-15 16:13:16.912
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-03-15 16:13:16.925
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1  Digilent Zed 210248722788]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-03-15 16:13:16.931
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-03-15 16:13:16.943
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1  Digilent Zed 210248722788]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-03-15 16:13:16.949
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248722788" && level==1}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-03-15 16:13:16.978
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248722788" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 23727093 irlen 6 fpga)]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-03-15 16:13:16.984
+!MESSAGE XSCT Command: [targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248722788" && level==0} -index 1], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-03-15 16:13:17.024
+!MESSAGE XSCT command with result: [targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248722788" && level==0} -index 1], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-03-15 16:13:17.031
+!MESSAGE XSCT Command: [fpga -file C:/Workspace/GameOfLife/csrc/design_gol_wrapper_hw_platform_0/download.bit], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-03-15 16:13:19.425
+!MESSAGE XSCT command with result: [fpga -file C:/Workspace/GameOfLife/csrc/design_gol_wrapper_hw_platform_0/download.bit], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-03-15 16:13:20.233
+!MESSAGE XSCT Command: [::hsi::utils::get_bram_blocks C:/Workspace/GameOfLife/csrc/design_gol_wrapper_hw_platform_0/system.hdf ], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-03-15 16:13:20.252
+!MESSAGE XSCT command with result: [::hsi::utils::get_bram_blocks C:/Workspace/GameOfLife/csrc/design_gol_wrapper_hw_platform_0/system.hdf ], Result: [null, microblaze_0_local_memory_dlmb_bram_if_cntlr microblaze_0_local_memory_ilmb_bram_if_cntlr]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-03-15 16:13:29.597
+!MESSAGE XSCT Command: [::hsi::utils::get_bram_blocks C:/Workspace/GameOfLife/csrc/design_gol_wrapper_hw_platform_0/system.hdf ], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-03-15 16:13:29.608
+!MESSAGE XSCT command with result: [::hsi::utils::get_bram_blocks C:/Workspace/GameOfLife/csrc/design_gol_wrapper_hw_platform_0/system.hdf ], Result: [null, microblaze_0_local_memory_dlmb_bram_if_cntlr microblaze_0_local_memory_ilmb_bram_if_cntlr]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-03-15 16:13:48.607
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-03-15 16:13:48.619
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#1]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-03-15 16:13:48.625
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-03-15 16:13:48.641
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1  Digilent Zed 210248722788]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-03-15 16:13:48.647
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-03-15 16:13:48.661
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1  Digilent Zed 210248722788]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-03-15 16:13:48.667
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248722788" && level==1}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-03-15 16:13:48.697
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248722788" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 23727093 irlen 6 fpga)]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-03-15 16:13:48.703
+!MESSAGE XSCT Command: [targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248722788" && level==0} -index 1], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-03-15 16:13:48.741
+!MESSAGE XSCT command with result: [targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248722788" && level==0} -index 1], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-03-15 16:13:48.747
+!MESSAGE XSCT Command: [fpga -file C:/Workspace/GameOfLife/csrc/design_gol_wrapper_hw_platform_0/download.bit], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-03-15 16:13:51.159
+!MESSAGE XSCT command with result: [fpga -file C:/Workspace/GameOfLife/csrc/design_gol_wrapper_hw_platform_0/download.bit], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-03-15 16:13:51.969
+!MESSAGE XSCT Command: [::hsi::utils::get_bram_blocks C:/Workspace/GameOfLife/csrc/design_gol_wrapper_hw_platform_0/system.hdf ], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-03-15 16:13:51.977
+!MESSAGE XSCT command with result: [::hsi::utils::get_bram_blocks C:/Workspace/GameOfLife/csrc/design_gol_wrapper_hw_platform_0/system.hdf ], Result: [null, microblaze_0_local_memory_dlmb_bram_if_cntlr microblaze_0_local_memory_ilmb_bram_if_cntlr]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-03-15 16:53:25.247
+!MESSAGE XSCT Command: [::hsi::utils::get_bram_blocks C:/Workspace/GameOfLife/csrc/design_gol_wrapper_hw_platform_0/system.hdf ], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-03-15 16:53:25.260
+!MESSAGE XSCT command with result: [::hsi::utils::get_bram_blocks C:/Workspace/GameOfLife/csrc/design_gol_wrapper_hw_platform_0/system.hdf ], Result: [null, microblaze_0_local_memory_dlmb_bram_if_cntlr microblaze_0_local_memory_ilmb_bram_if_cntlr]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-03-15 16:53:57.292
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-03-15 16:53:57.302
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#1]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-03-15 16:53:57.309
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-03-15 16:53:57.322
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1  Digilent Zed 210248722788]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-03-15 16:53:57.328
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-03-15 16:53:57.340
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1  Digilent Zed 210248722788]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-03-15 16:53:57.347
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248722788" && level==1}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-03-15 16:53:57.375
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248722788" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 23727093 irlen 6 fpga)]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-03-15 16:53:57.381
+!MESSAGE XSCT Command: [targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248722788" && level==0} -index 1], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-03-15 16:53:57.428
+!MESSAGE XSCT command with result: [targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248722788" && level==0} -index 1], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-03-15 16:53:57.434
+!MESSAGE XSCT Command: [fpga -file C:/Workspace/GameOfLife/csrc/design_gol_wrapper_hw_platform_0/download.bit], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-03-15 16:53:59.825
+!MESSAGE XSCT command with result: [fpga -file C:/Workspace/GameOfLife/csrc/design_gol_wrapper_hw_platform_0/download.bit], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-03-15 16:54:00.632
+!MESSAGE XSCT Command: [::hsi::utils::get_bram_blocks C:/Workspace/GameOfLife/csrc/design_gol_wrapper_hw_platform_0/system.hdf ], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-03-15 16:54:00.641
+!MESSAGE XSCT command with result: [::hsi::utils::get_bram_blocks C:/Workspace/GameOfLife/csrc/design_gol_wrapper_hw_platform_0/system.hdf ], Result: [null, microblaze_0_local_memory_dlmb_bram_if_cntlr microblaze_0_local_memory_ilmb_bram_if_cntlr]. Thread: ModalContext

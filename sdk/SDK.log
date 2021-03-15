@@ -1,0 +1,6 @@
+11:47:48 INFO  : Registering command handlers for SDK TCF services
+11:47:49 INFO  : Launching XSCT server: xsct.bat -interactive C:\Workspace\GameOfLife\sdk\temp_xsdb_launch_script.tcl
+11:47:52 INFO  : XSCT server has started successfully.
+11:48:06 INFO  : Successfully done setting XSCT server connection channel  
+11:48:06 INFO  : Processing command line option -hwspec C:/Workspace/GameOfLife/sdk/design_gol_wrapper.hdf.
+11:48:06 INFO  : Successfully done setting SDK workspace  

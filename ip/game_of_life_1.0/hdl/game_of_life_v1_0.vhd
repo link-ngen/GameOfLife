@@ -201,6 +201,7 @@ begin
     clock <= s00_axi_aclk;
     reset <= not s00_axi_aresetn;
     ce <= not reset;
+    
 -- #########################################################################################################
     ---- WRITE ACCESS (control flow) ----
     s00_axi_awready <= aw_ready;
@@ -299,6 +300,8 @@ begin
     -- Read Multiplexer - picks which register value to return
     with Read_RegAddress select
         s00_axi_rdata <= (Register_GOLCR(31 downto 8) & GSI & GMI & GRS & GRE & GSP & GST & GLS & GLD) when "00",
+                         Register_GOLICR(31 downto 0) when "01",
+                         Register_GOLDIR(31 downto 0) when "10",
                          Register_GOLDOR(31 downto 0) when others;       --TODO: maybe redesign
     
 -- #########################################################################################################
@@ -366,7 +369,7 @@ begin
                 GSI_old <= GSI; 
             end if;
             
-            set_load_ca <= GLD;                      
+            set_load_ca <= GLD;
             set_read_ca <= GRE;
             
             start_iter <= not GST_old and GST;
