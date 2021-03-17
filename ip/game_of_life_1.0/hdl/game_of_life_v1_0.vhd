@@ -405,6 +405,7 @@ begin
             if (reset = '1') then
                 shift_finish_wr <= '1';
                 cnt_shifted_bit_wr := 0;
+                load_ca <= '0';
             else
                 if set_load_ca = '1' then
                     if cnt_shifted_bit_wr >= (C_S00_AXI_DATA_WIDTH-1) then
@@ -446,6 +447,7 @@ begin
             if (reset = '1') then
                 shift_finish_re <= '1';
                 cnt_shifted_bit_re := 0;
+                read_ca <= '0';
             else
                 if set_read_ca = '1' then
                     if cnt_shifted_bit_re >= (C_S00_AXI_DATA_WIDTH-1) then

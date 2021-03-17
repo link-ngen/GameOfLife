@@ -51,3 +51,4 @@
 16:53:57 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
 16:53:57 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248722788" && level==0} -index 1' command is executed.
 16:53:59 INFO  : FPGA configured successfully with bitstream "C:/Workspace/GameOfLife/csrc/design_gol_wrapper_hw_platform_0/download.bit"
+21:05:12 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
