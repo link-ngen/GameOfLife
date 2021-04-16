@@ -10,24 +10,26 @@ proc init_gui { IPINST } {
   ipgui::add_param $IPINST -name "C_S00_AXI_BASEADDR" -parent ${Page_0}
   ipgui::add_param $IPINST -name "C_S00_AXI_HIGHADDR" -parent ${Page_0}
 
+  ipgui::add_param $IPINST -name "C_GOL_WIDTH"
+  ipgui::add_param $IPINST -name "C_GOL_HEIGHT"
 
 }
 
-proc update_PARAM_VALUE.GOL_HEIGHT { PARAM_VALUE.GOL_HEIGHT } {
-	# Procedure called to update GOL_HEIGHT when any of the dependent parameters in the arguments change
+proc update_PARAM_VALUE.C_GOL_HEIGHT { PARAM_VALUE.C_GOL_HEIGHT } {
+	# Procedure called to update C_GOL_HEIGHT when any of the dependent parameters in the arguments change
 }
 
-proc validate_PARAM_VALUE.GOL_HEIGHT { PARAM_VALUE.GOL_HEIGHT } {
-	# Procedure called to validate GOL_HEIGHT
+proc validate_PARAM_VALUE.C_GOL_HEIGHT { PARAM_VALUE.C_GOL_HEIGHT } {
+	# Procedure called to validate C_GOL_HEIGHT
 	return true
 }
 
-proc update_PARAM_VALUE.GOL_WIDTH { PARAM_VALUE.GOL_WIDTH } {
-	# Procedure called to update GOL_WIDTH when any of the dependent parameters in the arguments change
+proc update_PARAM_VALUE.C_GOL_WIDTH { PARAM_VALUE.C_GOL_WIDTH } {
+	# Procedure called to update C_GOL_WIDTH when any of the dependent parameters in the arguments change
 }
 
-proc validate_PARAM_VALUE.GOL_WIDTH { PARAM_VALUE.GOL_WIDTH } {
-	# Procedure called to validate GOL_WIDTH
+proc validate_PARAM_VALUE.C_GOL_WIDTH { PARAM_VALUE.C_GOL_WIDTH } {
+	# Procedure called to validate C_GOL_WIDTH
 	return true
 }
 
@@ -78,13 +80,13 @@ proc update_MODELPARAM_VALUE.C_S00_AXI_ADDR_WIDTH { MODELPARAM_VALUE.C_S00_AXI_A
 	set_property value [get_property value ${PARAM_VALUE.C_S00_AXI_ADDR_WIDTH}] ${MODELPARAM_VALUE.C_S00_AXI_ADDR_WIDTH}
 }
 
-proc update_MODELPARAM_VALUE.GOL_WIDTH { MODELPARAM_VALUE.GOL_WIDTH PARAM_VALUE.GOL_WIDTH } {
+proc update_MODELPARAM_VALUE.C_GOL_WIDTH { MODELPARAM_VALUE.C_GOL_WIDTH PARAM_VALUE.C_GOL_WIDTH } {
 	# Procedure called to set VHDL generic/Verilog parameter value(s) based on TCL parameter value
-	set_property value [get_property value ${PARAM_VALUE.GOL_WIDTH}] ${MODELPARAM_VALUE.GOL_WIDTH}
+	set_property value [get_property value ${PARAM_VALUE.C_GOL_WIDTH}] ${MODELPARAM_VALUE.C_GOL_WIDTH}
 }
 
-proc update_MODELPARAM_VALUE.GOL_HEIGHT { MODELPARAM_VALUE.GOL_HEIGHT PARAM_VALUE.GOL_HEIGHT } {
+proc update_MODELPARAM_VALUE.C_GOL_HEIGHT { MODELPARAM_VALUE.C_GOL_HEIGHT PARAM_VALUE.C_GOL_HEIGHT } {
 	# Procedure called to set VHDL generic/Verilog parameter value(s) based on TCL parameter value
-	set_property value [get_property value ${PARAM_VALUE.GOL_HEIGHT}] ${MODELPARAM_VALUE.GOL_HEIGHT}
+	set_property value [get_property value ${PARAM_VALUE.C_GOL_HEIGHT}] ${MODELPARAM_VALUE.C_GOL_HEIGHT}
 }
 

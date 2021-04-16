@@ -47,6 +47,7 @@ start_step init_design
 set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
+  set_param xicom.use_bs_reader 1
   create_project -in_memory -part xc7z020clg484-1
   set_property board_part em.avnet.com:zed:part0:1.3 [current_project]
   set_property design_mode GateLvl [current_fileset]
@@ -63,7 +64,7 @@ set rc [catch {
   add_files C:/Workspace/GameOfLife/bd/design_gol/design_gol.bd
   set_property is_locked true [get_files C:/Workspace/GameOfLife/bd/design_gol/design_gol.bd]
   set_param project.isImplRun false
-  read_xdc C:/Workspace/GameOfLife/constraints/microblaze_pins.xdc
+  read_xdc C:/Workspace/GameOfLife/prj/project_microblaze/project_microblaze.srcs/constrs_1/imports/constraints/zed_pins.xdc
   set_param project.isImplRun true
   link_design -top design_gol_wrapper -part xc7z020clg484-1
   set_param project.isImplRun false

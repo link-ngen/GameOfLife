@@ -5,11 +5,10 @@ use ieee.numeric_std.all;
 entity game_of_life_v1_0 is
 	generic (
 		-- Users to add parameters here
-        GOL_WIDTH               : integer   := 18;
-        GOL_HEIGHT              : integer   := 12;
+        C_GOL_WIDTH               : integer   := 18;
+        C_GOL_HEIGHT              : integer   := 12;
 		-- User parameters ends
 		-- Do not modify the parameters beyond this line
-
 
 		-- Parameters of Axi Slave Bus Interface S00_AXI
 		C_S00_AXI_DATA_WIDTH	: integer	:= 32;
@@ -20,7 +19,6 @@ entity game_of_life_v1_0 is
 
 		-- User ports ends
 		-- Do not modify the ports beyond this line
-
 
 		-- Ports of Axi Slave Bus Interface S00_AXI
 		s00_axi_aclk	: in std_logic;
@@ -47,39 +45,7 @@ entity game_of_life_v1_0 is
 	);
 end game_of_life_v1_0;
 
-architecture arch_imp of game_of_life_v1_0 is
-
-	-- component declaration
---	component game_of_life_v1_0_S00_AXI is
---		generic (
---		C_S_AXI_DATA_WIDTH	: integer	:= 32;
---		C_S_AXI_ADDR_WIDTH	: integer	:= 4
---		);
---		port (
---		S_AXI_ACLK	: in std_logic;
---		S_AXI_ARESETN	: in std_logic;
---		S_AXI_AWADDR	: in std_logic_vector(C_S_AXI_ADDR_WIDTH-1 downto 0);
---		S_AXI_AWPROT	: in std_logic_vector(2 downto 0);
---		S_AXI_AWVALID	: in std_logic;
---		S_AXI_AWREADY	: out std_logic;
---		S_AXI_WDATA	: in std_logic_vector(C_S_AXI_DATA_WIDTH-1 downto 0);
---		S_AXI_WSTRB	: in std_logic_vector((C_S_AXI_DATA_WIDTH/8)-1 downto 0);
---		S_AXI_WVALID	: in std_logic;
---		S_AXI_WREADY	: out std_logic;
---		S_AXI_BRESP	: out std_logic_vector(1 downto 0);
---		S_AXI_BVALID	: out std_logic;
---		S_AXI_BREADY	: in std_logic;
---		S_AXI_ARADDR	: in std_logic_vector(C_S_AXI_ADDR_WIDTH-1 downto 0);
---		S_AXI_ARPROT	: in std_logic_vector(2 downto 0);
---		S_AXI_ARVALID	: in std_logic;
---		S_AXI_ARREADY	: out std_logic;
---		S_AXI_RDATA	: out std_logic_vector(C_S_AXI_DATA_WIDTH-1 downto 0);
---		S_AXI_RRESP	: out std_logic_vector(1 downto 0);
---		S_AXI_RVALID	: out std_logic;
---		S_AXI_RREADY	: in std_logic
---		);
---	end component game_of_life_v1_0_S00_AXI;
-    
+architecture arch_imp of game_of_life_v1_0 is   
     signal clock : std_logic;
     signal reset : std_logic;
     
@@ -97,7 +63,7 @@ architecture arch_imp of game_of_life_v1_0 is
     signal Write_RegAddress : std_logic_vector(1 downto 0);
     signal WriteEnable_GOLCR         : std_logic;
     signal WriteEnable_GOLICR        : std_logic;
-    signal WriteEnable_GOLDIR         : std_logic;
+    signal WriteEnable_GOLDIR        : std_logic;
     signal WriteEnable_GOLDOR        : std_logic;
     ---- READ SIGNALS ---- 
     signal ar_transfer : std_logic;
@@ -120,83 +86,65 @@ architecture arch_imp of game_of_life_v1_0 is
     signal Register_GOLDOR: std_logic_vector(31 downto 0);    -- game of life data output register           11 
     
     -- register signals
-    signal GLD : std_logic := '0'; -- game of life load ca
-    signal GLS : std_logic := '0'; -- game of life load stop
     signal GST : std_logic := '0'; -- game of life start iteration
     signal GSP : std_logic := '0'; -- game of life stop iteration
-    signal GRE : std_logic := '0'; -- game of life read data
-    signal GRS : std_logic := '0'; -- game of life read stop
     signal GMI : std_logic := '0'; -- game of life max iter
     signal GSI : std_logic := '0'; -- game of life set iteration
     
-    signal GLD_old : std_logic; -- game of life load ca
-    signal GST_old : std_logic; -- game of life start iteration
-    signal GSP_old : std_logic; -- game of life stop iteration
-    signal GSI_old : std_logic;
+    --signal GLD_old : std_logic; -- game of life load ca
+    signal GST_old : std_logic := '0'; -- game of life start iteration
+    signal GSP_old : std_logic := '0'; -- game of life stop iteration
+    signal GSI_old : std_logic := '0';
     
     ----- ca_core signals-----
     signal ce : std_logic;  -- enable cells
     signal n_iter: unsigned(31 downto 0);
-    signal load_ca: std_logic;
+    signal shift_ca: std_logic;
     signal d_in: std_logic;
     signal start_iter: std_logic;
     signal stop_iter: std_logic;
-    signal read_ca: std_logic;
-    signal load_end: std_logic;
-    signal read_end: std_logic;
     signal max_iter: std_logic;
     signal bitstream: std_logic;   
-       
-    signal set_iteration_pulse: std_logic;
-    signal set_load_ca: std_logic;
-    signal set_read_ca: std_logic;
-    signal shift_finish_re: std_logic;
-    signal shift_finish_wr: std_logic;
     
-    --signal data_taken: std_logic_vector(C_S00_AXI_DATA_WIDTH-1 downto 0);
-    signal data_from_goldir: std_logic_vector(C_S00_AXI_DATA_WIDTH-1 downto 0); 
+    signal shift_delay: std_logic;
+    signal set_iteration_pulse: std_logic;
+    
+    signal w_FF: std_logic;
+    signal r_FF: std_logic;
     
     component ca_core is
-        generic (WIDTH : integer := GOL_WIDTH;
-                 HEIGHT: integer := GOL_HEIGHT);
-    port ( clk:         in std_logic;   
-           ce:          in std_logic;   -- chip enable
-           n_iter:      in unsigned (31 downto 0); 
-           load_ca:     in std_logic;
-           d_in:        in std_logic;
-           start_iter:  in std_logic;   -- flag
-           stop_iter:   in std_logic;   -- flag
-           read_ca:     in std_logic;   -- 1 begin shifting - 0 stop shifting
-           load_end:    out std_logic;  -- 
-           read_end:    out std_logic;
-           max_iter:    out std_logic;
-           bitstream:   out std_logic);
+        Generic (WIDTH : integer := 18;
+                 HEIGHT: integer := 12);
+        Port (clk:         in std_logic;   
+              ce:          in std_logic;   -- chip enable
+              n_iter:      in unsigned (31 downto 0); 
+              shift_ca:    in std_logic;
+              d_in:        in std_logic;
+              start_iter:  in std_logic;   -- flag
+              stop_iter:   in std_logic;   -- flag
+              max_iter:    out std_logic;
+              bitstream:   out std_logic);
     end component;
 
 begin
-
     --------------------------
     -- ca_core process
-    --------------------------    
-   CACORE: ca_core 
-       generic map (
-           WIDTH => GOL_WIDTH,
-           HEIGHT => GOL_HEIGHT
-       )
-       port map (
-          clk => clock,
-          ce => ce,
-          n_iter => n_iter,
-          load_ca => load_ca,          
-          d_in => d_in,
-          start_iter => start_iter,
-          stop_iter => stop_iter,
-          read_ca => read_ca,
-          load_end => load_end,
-          read_end => read_end,
-          max_iter => max_iter,
-          bitstream => bitstream);
-
+    --------------------------
+    CACORE: ca_core 
+           generic map (
+               WIDTH => C_GOL_WIDTH,
+               HEIGHT => C_GOL_HEIGHT)
+           port map (
+               clk => clock,
+               ce => ce,
+               n_iter => n_iter,
+               shift_ca => shift_ca,
+               d_in => d_in,
+               start_iter => start_iter,
+               stop_iter => stop_iter,
+               max_iter => max_iter,
+               bitstream => bitstream);
+        
 	-- Add user logic here
     clock <= s00_axi_aclk;
     reset <= not s00_axi_aresetn;
@@ -231,10 +179,10 @@ begin
         if (rising_edge(clock)) then
             if (reset='1') then
                 w_ready <= '0';
-            elsif (aw_transfer='1' and shift_finish_wr = '1') then -- can accept data one cycle after address transfer
+            elsif (aw_transfer='1') then -- can accept data one cycle after address transfer
                 w_ready <= '1';
             elsif (w_transfer='1') then
-                w_ready <= '0';
+                w_ready <= '0';               
             end if;
         end if;
     end process;
@@ -265,7 +213,7 @@ begin
     s00_axi_rresp   <= "00"; -- always OK
     
     ar_transfer <= s00_axi_arvalid and ar_ready;
-    r_transfer  <= s00_axi_rready  and r_valid and shift_finish_re;
+    r_transfer  <= s00_axi_rready  and r_valid;
     
     ar_ready <= '1';  -- can always accept read address
     
@@ -279,13 +227,13 @@ begin
             end if;
         end if;
     end process;
-    
+
     process(clock)
     begin
         if (rising_edge(clock)) then
             if (reset='1') then
                 r_valid <= '0';
-            elsif (ar_transfer='1' and shift_finish_re='1') then -- can offer data one cycle after address transfer
+            elsif (ar_transfer='1') then -- can offer data one cycle after address transfer
                 r_valid <= '1';
             elsif (r_transfer='1') then
                 r_valid <= '0';
@@ -295,15 +243,16 @@ begin
     
     -- Read De-multiplexer
     ReadEnable_GOLCR <= '1' when (r_transfer='1' and Read_RegAddress="00") else '0';
+    ReadEnable_GOLICR <= '1' when (r_transfer='1' and Read_RegAddress="01") else '0';
     ReadEnable_GOLDOR <= '1' when (r_transfer='1' and Read_RegAddress="11") else '0';
     
     -- Read Multiplexer - picks which register value to return
     with Read_RegAddress select
-        s00_axi_rdata <= (Register_GOLCR(31 downto 8) & GSI & GMI & GRS & GRE & GSP & GST & GLS & GLD) when "00",
+        s00_axi_rdata <= (Register_GOLCR(31 downto 3) & GMI & GSP & GST) when "00", --GLD GSI & GRS & GRE &
                          Register_GOLICR(31 downto 0) when "01",
                          Register_GOLDIR(31 downto 0) when "10",
-                         Register_GOLDOR(31 downto 0) when others;       --TODO: maybe redesign
-    
+                         (Register_GOLDOR(31 downto 1) & r_FF) when others;  --TODO: maybe redesign
+
 -- #########################################################################################################
     -- Get data from AXI-bus and write to register
     ---- REGISTERS (data flow) ----
@@ -337,8 +286,10 @@ begin
         if (rising_edge(clock)) then
             if (reset='1') then
                 Register_GOLDIR <= (others => '0');
+                --w_FF <= '0';
             elsif (WriteEnable_GOLDIR='1') then
                 Register_GOLDIR <= s00_axi_wdata;
+                --w_FF <= s00_axi_wdata(0);
             end if;
         end if;
     end process;
@@ -351,133 +302,85 @@ begin
         if rising_edge(clock) then
             if (reset = '1') then
                 start_iter <= '0';
-                stop_iter <= '0';
+                stop_iter <= '0';         
                 set_iteration_pulse <= '0';
-                set_load_ca <= '0';
-                set_read_ca <= '0';               
             else
-                GLD <= Register_GOLCR(0);
-                
-                GST <= Register_GOLCR(2);              
+                GST <= Register_GOLCR(0);
                 GST_old <= GST; -- rising flag detection
                 
-                GSP <= Register_GOLCR(3);
+                GSP <= Register_GOLCR(1);
                 GSP_old <= GSP; -- rising flag detection
                 
-                GRE <= Register_GOLCR(4);
-                GSI <= Register_GOLCR(7);
-                GSI_old <= GSI; 
+                GSI <= Register_GOLCR(3);
+                GSI_old <= GSI;
             end if;
-            
-            set_load_ca <= GLD;
-            set_read_ca <= GRE;
-            
             start_iter <= not GST_old and GST;
             stop_iter <= not GSP_old and GSP;
             set_iteration_pulse <= not GSI_old and GSI;
             
-            GRS <= read_end;
             GMI <= max_iter;
-            GLS <= load_end;
         end if;
     end process READ_GOLCR_SIG_PROC;
-    
-    -- set max iter from iteration control register
-    SET_ITER_PROC: process(clock)
-    begin
-        if rising_edge(clock) then
-            if (reset = '1') then
-                n_iter <= (others => '0');
-            else
-                if set_iteration_pulse = '1' then
-                    n_iter <= unsigned(Register_GOLICR);
-                end if;
-            end if;
-        end if;
-    end process SET_ITER_PROC;
-
--- #########################################################################################################   
-    --  load axi data in ca_core
-    SET_LOAD_CA_PROC: process(clock)
-        variable cnt_shifted_bit_wr: integer := 0;
-    begin
-        if rising_edge(clock) then
-            if (reset = '1') then
-                shift_finish_wr <= '1';
-                cnt_shifted_bit_wr := 0;
-                load_ca <= '0';
-            else
-                if set_load_ca = '1' then
-                    if cnt_shifted_bit_wr >= (C_S00_AXI_DATA_WIDTH-1) then
-                        shift_finish_wr <= '1';
-                        cnt_shifted_bit_wr := 0;
-                        load_ca <= '0';
-                    else
-                        load_ca <= '1';
-                        shift_finish_wr <= '0';
-                        cnt_shifted_bit_wr := cnt_shifted_bit_wr + 1;
-                    end if;
-                end if;
-            end if;
-        end if;
-    end process SET_LOAD_CA_PROC;
-    
-    LOAD_DATA_IN_CACORE_PROC: process(clock)
-    begin
-        if rising_edge(clock) then
-            if reset='1' then
-                data_from_goldir <= Register_GOLDIR;
-            else
-                if load_ca = '1' then
-                    data_from_goldir <= '0' & data_from_goldir(C_S00_AXI_DATA_WIDTH-1 downto 1);    -- shift data to register (right shift) 
-                    d_in <= data_from_goldir(0);
-                else
-                    data_from_goldir <= Register_GOLDIR;
-                end if;
-            end if;
-        end if;
-    end process LOAD_DATA_IN_CACORE_PROC;
-    
+-- #########################################################################################################    
+     -- set max iter from iteration control register
+       SET_ITER_PROC: process(clock)
+       begin
+           if rising_edge(clock) then
+               if (reset = '1') then
+                   n_iter <= (others => '0');
+               else
+                   if set_iteration_pulse = '1' then
+                       n_iter <= unsigned(Register_GOLICR);
+                   end if;
+               end if;
+           end if;
+       end process SET_ITER_PROC;
 -- #########################################################################################################
-    -- shift data from ca_core to data register
-    SET_READ_CA_PROC: process(clock)
-        variable cnt_shifted_bit_re: integer := 0;
+    SHIFT_WFF_PROC: process(clock)
     begin
         if rising_edge(clock) then
             if (reset = '1') then
-                shift_finish_re <= '1';
-                cnt_shifted_bit_re := 0;
-                read_ca <= '0';
+                shift_ca <= '0';
+                w_FF <= '0';
+            elsif (w_transfer = '1') then
+                shift_ca <= w_transfer;
+                w_FF <= Register_GOLDIR(0);
             else
-                if set_read_ca = '1' then
-                    if cnt_shifted_bit_re >= (C_S00_AXI_DATA_WIDTH-1) then
-                        shift_finish_re <= '1';
-                        cnt_shifted_bit_re := 0;
-                        read_ca <= '0';
-                    else
-                        read_ca <= '1';
-                        shift_finish_re <= '0';
-                        cnt_shifted_bit_re := cnt_shifted_bit_re + 1;
-                    end if;
-                end if;
+                shift_ca <= '0';
             end if;
         end if;
-    end process SET_READ_CA_PROC;
+    end process SHIFT_WFF_PROC;
     
-    READ_DATA_FROM_CACORE_PROC: process(clock)
-    begin
+    d_in <= w_FF;
+    
+    
+--    SHIFT_WFF_PROC: process(clock)
+--    begin
+--        if rising_edge(clock) then
+--            if (reset = '1') then
+--                shift_ca <= '0';
+--                d_in <= '0';
+--            elsif (w_transfer = '1') then
+--                shift_ca <= w_transfer;
+--                d_in <= w_FF;
+--            else
+--                d_in <= d_in;
+--                shift_ca <= w_transfer;
+--            end if;
+--        end if;
+--    end process SHIFT_WFF_PROC;
+-- #########################################################################################################
+   READ_CA_PROC: process(clock)
+   begin
         if rising_edge(clock) then
-            if reset='1' then
-                Register_GOLDOR <= (others => '0');
-            else
-                if read_ca = '1' then
-                    Register_GOLDOR <= bitstream & Register_GOLDOR(C_S00_AXI_DATA_WIDTH-1 downto 1);
-                else
-                    Register_GOLDOR <= (others => '0');
-                end if;
-            end if;
-        end if;
-    end process READ_DATA_FROM_CACORE_PROC;
-	-- User logic ends
+           if (reset = '1') then
+                r_FF <= '0';
+           else
+                r_FF <= bitstream;
+           end if;
+       end if;
+   end process READ_CA_PROC;
+   --r_FF <= bitstream;
+-- #########################################################################################################
 
 end arch_imp;

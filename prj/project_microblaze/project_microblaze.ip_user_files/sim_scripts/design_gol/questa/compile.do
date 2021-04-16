@@ -11,15 +11,15 @@ vlib msim/proc_sys_reset_v5_0_11
 vlib msim/lib_pkg_v1_0_2
 vlib msim/lib_srl_fifo_v1_0_2
 vlib msim/axi_uartlite_v2_0_17
+vlib msim/lmb_v10_v3_0_9
+vlib msim/lmb_bram_if_cntlr_v4_0_12
+vlib msim/blk_mem_gen_v8_3_6
 vlib msim/generic_baseblocks_v2_1_0
 vlib msim/axi_infrastructure_v1_1_0
 vlib msim/axi_register_slice_v2_1_13
 vlib msim/fifo_generator_v13_1_4
 vlib msim/axi_data_fifo_v2_1_12
 vlib msim/axi_crossbar_v2_1_14
-vlib msim/lmb_v10_v3_0_9
-vlib msim/lmb_bram_if_cntlr_v4_0_12
-vlib msim/blk_mem_gen_v8_3_6
 
 vmap xil_defaultlib msim/xil_defaultlib
 vmap xpm msim/xpm
@@ -31,15 +31,15 @@ vmap proc_sys_reset_v5_0_11 msim/proc_sys_reset_v5_0_11
 vmap lib_pkg_v1_0_2 msim/lib_pkg_v1_0_2
 vmap lib_srl_fifo_v1_0_2 msim/lib_srl_fifo_v1_0_2
 vmap axi_uartlite_v2_0_17 msim/axi_uartlite_v2_0_17
+vmap lmb_v10_v3_0_9 msim/lmb_v10_v3_0_9
+vmap lmb_bram_if_cntlr_v4_0_12 msim/lmb_bram_if_cntlr_v4_0_12
+vmap blk_mem_gen_v8_3_6 msim/blk_mem_gen_v8_3_6
 vmap generic_baseblocks_v2_1_0 msim/generic_baseblocks_v2_1_0
 vmap axi_infrastructure_v1_1_0 msim/axi_infrastructure_v1_1_0
 vmap axi_register_slice_v2_1_13 msim/axi_register_slice_v2_1_13
 vmap fifo_generator_v13_1_4 msim/fifo_generator_v13_1_4
 vmap axi_data_fifo_v2_1_12 msim/axi_data_fifo_v2_1_12
 vmap axi_crossbar_v2_1_14 msim/axi_crossbar_v2_1_14
-vmap lmb_v10_v3_0_9 msim/lmb_v10_v3_0_9
-vmap lmb_bram_if_cntlr_v4_0_12 msim/lmb_bram_if_cntlr_v4_0_12
-vmap blk_mem_gen_v8_3_6 msim/blk_mem_gen_v8_3_6
 
 vlog -work xil_defaultlib -64 -sv "+incdir+../../../../../../bd/design_gol/ipshared/9c7f" "+incdir+../../../../../../bd/design_gol/ipshared/7e3a/hdl" "+incdir+../../../../../../bd/design_gol/ipshared/9c7f" "+incdir+../../../../../../bd/design_gol/ipshared/7e3a/hdl" \
 "C:/Xilinx/Vivado/2017.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv" \
@@ -88,6 +88,33 @@ vcom -work axi_uartlite_v2_0_17 -64 -93 \
 vcom -work xil_defaultlib -64 -93 \
 "../../../bd/design_gol/ip/design_gol_axi_uartlite_0_0/sim/design_gol_axi_uartlite_0_0.vhd" \
 
+vcom -work lmb_v10_v3_0_9 -64 -93 \
+"../../../../../../bd/design_gol/ipshared/162e/hdl/lmb_v10_v3_0_vh_rfs.vhd" \
+
+vcom -work xil_defaultlib -64 -93 \
+"../../../bd/design_gol/ip/design_gol_dlmb_v10_0/sim/design_gol_dlmb_v10_0.vhd" \
+"../../../bd/design_gol/ip/design_gol_ilmb_v10_0/sim/design_gol_ilmb_v10_0.vhd" \
+
+vcom -work lmb_bram_if_cntlr_v4_0_12 -64 -93 \
+"../../../../../../bd/design_gol/ipshared/51e1/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd" \
+
+vcom -work xil_defaultlib -64 -93 \
+"../../../bd/design_gol/ip/design_gol_dlmb_bram_if_cntlr_0/sim/design_gol_dlmb_bram_if_cntlr_0.vhd" \
+"../../../bd/design_gol/ip/design_gol_ilmb_bram_if_cntlr_0/sim/design_gol_ilmb_bram_if_cntlr_0.vhd" \
+
+vlog -work blk_mem_gen_v8_3_6 -64 "+incdir+../../../../../../bd/design_gol/ipshared/9c7f" "+incdir+../../../../../../bd/design_gol/ipshared/7e3a/hdl" "+incdir+../../../../../../bd/design_gol/ipshared/9c7f" "+incdir+../../../../../../bd/design_gol/ipshared/7e3a/hdl" \
+"../../../../../../bd/design_gol/ipshared/4158/simulation/blk_mem_gen_v8_3.v" \
+
+vlog -work xil_defaultlib -64 "+incdir+../../../../../../bd/design_gol/ipshared/9c7f" "+incdir+../../../../../../bd/design_gol/ipshared/7e3a/hdl" "+incdir+../../../../../../bd/design_gol/ipshared/9c7f" "+incdir+../../../../../../bd/design_gol/ipshared/7e3a/hdl" \
+"../../../bd/design_gol/ip/design_gol_lmb_bram_0/sim/design_gol_lmb_bram_0.v" \
+
+vcom -work xil_defaultlib -64 -93 \
+"../../../bd/design_gol/ipshared/e972/src/ca_core.vhd" \
+"../../../bd/design_gol/ipshared/e972/src/cell.vhd" \
+"../../../bd/design_gol/ipshared/e972/src/grid.vhd" \
+"../../../bd/design_gol/ipshared/e972/hdl/game_of_life_v1_0.vhd" \
+"../../../bd/design_gol/ip/design_gol_game_of_life_0_0/sim/design_gol_game_of_life_0_0.vhd" \
+
 vlog -work generic_baseblocks_v2_1_0 -64 "+incdir+../../../../../../bd/design_gol/ipshared/9c7f" "+incdir+../../../../../../bd/design_gol/ipshared/7e3a/hdl" "+incdir+../../../../../../bd/design_gol/ipshared/9c7f" "+incdir+../../../../../../bd/design_gol/ipshared/7e3a/hdl" \
 "../../../../../../bd/design_gol/ipshared/f9c1/hdl/generic_baseblocks_v2_1_vl_rfs.v" \
 
@@ -115,32 +142,7 @@ vlog -work axi_crossbar_v2_1_14 -64 "+incdir+../../../../../../bd/design_gol/ips
 vlog -work xil_defaultlib -64 "+incdir+../../../../../../bd/design_gol/ipshared/9c7f" "+incdir+../../../../../../bd/design_gol/ipshared/7e3a/hdl" "+incdir+../../../../../../bd/design_gol/ipshared/9c7f" "+incdir+../../../../../../bd/design_gol/ipshared/7e3a/hdl" \
 "../../../bd/design_gol/ip/design_gol_xbar_0/sim/design_gol_xbar_0.v" \
 
-vcom -work lmb_v10_v3_0_9 -64 -93 \
-"../../../../../../bd/design_gol/ipshared/162e/hdl/lmb_v10_v3_0_vh_rfs.vhd" \
-
 vcom -work xil_defaultlib -64 -93 \
-"../../../bd/design_gol/ip/design_gol_dlmb_v10_0/sim/design_gol_dlmb_v10_0.vhd" \
-"../../../bd/design_gol/ip/design_gol_ilmb_v10_0/sim/design_gol_ilmb_v10_0.vhd" \
-
-vcom -work lmb_bram_if_cntlr_v4_0_12 -64 -93 \
-"../../../../../../bd/design_gol/ipshared/51e1/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd" \
-
-vcom -work xil_defaultlib -64 -93 \
-"../../../bd/design_gol/ip/design_gol_dlmb_bram_if_cntlr_0/sim/design_gol_dlmb_bram_if_cntlr_0.vhd" \
-"../../../bd/design_gol/ip/design_gol_ilmb_bram_if_cntlr_0/sim/design_gol_ilmb_bram_if_cntlr_0.vhd" \
-
-vlog -work blk_mem_gen_v8_3_6 -64 "+incdir+../../../../../../bd/design_gol/ipshared/9c7f" "+incdir+../../../../../../bd/design_gol/ipshared/7e3a/hdl" "+incdir+../../../../../../bd/design_gol/ipshared/9c7f" "+incdir+../../../../../../bd/design_gol/ipshared/7e3a/hdl" \
-"../../../../../../bd/design_gol/ipshared/4158/simulation/blk_mem_gen_v8_3.v" \
-
-vlog -work xil_defaultlib -64 "+incdir+../../../../../../bd/design_gol/ipshared/9c7f" "+incdir+../../../../../../bd/design_gol/ipshared/7e3a/hdl" "+incdir+../../../../../../bd/design_gol/ipshared/9c7f" "+incdir+../../../../../../bd/design_gol/ipshared/7e3a/hdl" \
-"../../../bd/design_gol/ip/design_gol_lmb_bram_0/sim/design_gol_lmb_bram_0.v" \
-
-vcom -work xil_defaultlib -64 -93 \
-"../../../bd/design_gol/ipshared/eb38/src/ca_core.vhd" \
-"../../../bd/design_gol/ipshared/eb38/src/cell.vhd" \
-"../../../bd/design_gol/ipshared/eb38/src/grid.vhd" \
-"../../../bd/design_gol/ipshared/eb38/hdl/game_of_life_v1_0.vhd" \
-"../../../bd/design_gol/ip/design_gol_game_of_life_0_0/sim/design_gol_game_of_life_0_0.vhd" \
 "../../../bd/design_gol/hdl/design_gol.vhd" \
 
 vlog -work xil_defaultlib \

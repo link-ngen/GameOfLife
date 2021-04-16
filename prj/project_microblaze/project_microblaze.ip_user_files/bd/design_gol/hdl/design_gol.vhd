@@ -1,7 +1,7 @@
 --Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
---Date        : Wed Mar 10 11:58:26 2021
+--Date        : Fri Apr 16 16:38:33 2021
 --Host        : DESKTOP-VC4VFJL running 64-bit major release  (build 9200)
 --Command     : generate_target design_gol.bd
 --Design      : design_gol
@@ -1389,7 +1389,7 @@ entity design_gol is
     tx : out STD_LOGIC
   );
   attribute CORE_GENERATION_INFO : string;
-  attribute CORE_GENERATION_INFO of design_gol : entity is "design_gol,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_gol,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=17,numReposBlks=12,numNonXlnxBlks=0,numHierBlks=5,maxHierDepth=1,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_board_cnt=9,da_clkrst_cnt=4,da_mb_cnt=1,synth_mode=Global}";
+  attribute CORE_GENERATION_INFO of design_gol : entity is "design_gol,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_gol,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=17,numReposBlks=12,numNonXlnxBlks=0,numHierBlks=5,maxHierDepth=1,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_board_cnt=2,da_clkrst_cnt=4,da_mb_cnt=1,synth_mode=Global}";
   attribute HW_HANDOFF : string;
   attribute HW_HANDOFF of design_gol : entity is "design_gol.hwdef";
 end design_gol;
@@ -1468,9 +1468,9 @@ architecture STRUCTURE of design_gol is
   component design_gol_clk_wiz_1_0 is
   port (
     reset : in STD_LOGIC;
+    clk_in1 : in STD_LOGIC;
     clk_out1 : out STD_LOGIC;
-    locked : out STD_LOGIC;
-    clk_in1 : in STD_LOGIC
+    locked : out STD_LOGIC
   );
   end component design_gol_clk_wiz_1_0;
   component design_gol_rst_clk_wiz_1_100M_0 is
@@ -1689,7 +1689,7 @@ axi_interconnect_0: entity work.design_gol_axi_interconnect_0_0
       M01_AXI_wstrb(3 downto 0) => axi_interconnect_0_M01_AXI_WSTRB(3 downto 0),
       M01_AXI_wvalid => axi_interconnect_0_M01_AXI_WVALID,
       S00_ACLK => microblaze_0_Clk,
-      S00_ARESETN => rst_clk_wiz_1_100M_peripheral_aresetn(0),
+      S00_ARESETN => rst_clk_wiz_1_100M_interconnect_aresetn(0),
       S00_AXI_araddr(31 downto 0) => microblaze_0_M_AXI_DP_ARADDR(31 downto 0),
       S00_AXI_arprot(2 downto 0) => microblaze_0_M_AXI_DP_ARPROT(2 downto 0),
       S00_AXI_arready(0) => microblaze_0_M_AXI_DP_ARREADY(0),

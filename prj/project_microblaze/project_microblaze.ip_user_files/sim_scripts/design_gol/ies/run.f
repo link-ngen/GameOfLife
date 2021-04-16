@@ -45,6 +45,33 @@
 -makelib ies/xil_defaultlib \
   "../../../bd/design_gol/ip/design_gol_axi_uartlite_0_0/sim/design_gol_axi_uartlite_0_0.vhd" \
 -endlib
+-makelib ies/lmb_v10_v3_0_9 \
+  "../../../../../../bd/design_gol/ipshared/162e/hdl/lmb_v10_v3_0_vh_rfs.vhd" \
+-endlib
+-makelib ies/xil_defaultlib \
+  "../../../bd/design_gol/ip/design_gol_dlmb_v10_0/sim/design_gol_dlmb_v10_0.vhd" \
+  "../../../bd/design_gol/ip/design_gol_ilmb_v10_0/sim/design_gol_ilmb_v10_0.vhd" \
+-endlib
+-makelib ies/lmb_bram_if_cntlr_v4_0_12 \
+  "../../../../../../bd/design_gol/ipshared/51e1/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd" \
+-endlib
+-makelib ies/xil_defaultlib \
+  "../../../bd/design_gol/ip/design_gol_dlmb_bram_if_cntlr_0/sim/design_gol_dlmb_bram_if_cntlr_0.vhd" \
+  "../../../bd/design_gol/ip/design_gol_ilmb_bram_if_cntlr_0/sim/design_gol_ilmb_bram_if_cntlr_0.vhd" \
+-endlib
+-makelib ies/blk_mem_gen_v8_3_6 \
+  "../../../../../../bd/design_gol/ipshared/4158/simulation/blk_mem_gen_v8_3.v" \
+-endlib
+-makelib ies/xil_defaultlib \
+  "../../../bd/design_gol/ip/design_gol_lmb_bram_0/sim/design_gol_lmb_bram_0.v" \
+-endlib
+-makelib ies/xil_defaultlib \
+  "../../../bd/design_gol/ipshared/e972/src/ca_core.vhd" \
+  "../../../bd/design_gol/ipshared/e972/src/cell.vhd" \
+  "../../../bd/design_gol/ipshared/e972/src/grid.vhd" \
+  "../../../bd/design_gol/ipshared/e972/hdl/game_of_life_v1_0.vhd" \
+  "../../../bd/design_gol/ip/design_gol_game_of_life_0_0/sim/design_gol_game_of_life_0_0.vhd" \
+-endlib
 -makelib ies/generic_baseblocks_v2_1_0 \
   "../../../../../../bd/design_gol/ipshared/f9c1/hdl/generic_baseblocks_v2_1_vl_rfs.v" \
 -endlib
@@ -72,32 +99,7 @@
 -makelib ies/xil_defaultlib \
   "../../../bd/design_gol/ip/design_gol_xbar_0/sim/design_gol_xbar_0.v" \
 -endlib
--makelib ies/lmb_v10_v3_0_9 \
-  "../../../../../../bd/design_gol/ipshared/162e/hdl/lmb_v10_v3_0_vh_rfs.vhd" \
--endlib
 -makelib ies/xil_defaultlib \
-  "../../../bd/design_gol/ip/design_gol_dlmb_v10_0/sim/design_gol_dlmb_v10_0.vhd" \
-  "../../../bd/design_gol/ip/design_gol_ilmb_v10_0/sim/design_gol_ilmb_v10_0.vhd" \
--endlib
--makelib ies/lmb_bram_if_cntlr_v4_0_12 \
-  "../../../../../../bd/design_gol/ipshared/51e1/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd" \
--endlib
--makelib ies/xil_defaultlib \
-  "../../../bd/design_gol/ip/design_gol_dlmb_bram_if_cntlr_0/sim/design_gol_dlmb_bram_if_cntlr_0.vhd" \
-  "../../../bd/design_gol/ip/design_gol_ilmb_bram_if_cntlr_0/sim/design_gol_ilmb_bram_if_cntlr_0.vhd" \
--endlib
--makelib ies/blk_mem_gen_v8_3_6 \
-  "../../../../../../bd/design_gol/ipshared/4158/simulation/blk_mem_gen_v8_3.v" \
--endlib
--makelib ies/xil_defaultlib \
-  "../../../bd/design_gol/ip/design_gol_lmb_bram_0/sim/design_gol_lmb_bram_0.v" \
--endlib
--makelib ies/xil_defaultlib \
-  "../../../bd/design_gol/ipshared/eb38/src/ca_core.vhd" \
-  "../../../bd/design_gol/ipshared/eb38/src/cell.vhd" \
-  "../../../bd/design_gol/ipshared/eb38/src/grid.vhd" \
-  "../../../bd/design_gol/ipshared/eb38/hdl/game_of_life_v1_0.vhd" \
-  "../../../bd/design_gol/ip/design_gol_game_of_life_0_0/sim/design_gol_game_of_life_0_0.vhd" \
   "../../../bd/design_gol/hdl/design_gol.vhd" \
 -endlib
 -makelib ies/xil_defaultlib \

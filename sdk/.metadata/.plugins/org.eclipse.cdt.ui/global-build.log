@@ -1,0 +1,23 @@
+16:47:43 **** Incremental Build of configuration Debug for project gol_app ****
+make all 
+'Building file: ../src/gol_demo.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/gol_demo.o" -I../../gol_app_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/gol_demo.d" -MT"src/gol_demo.o" -o "src/gol_demo.o" "../src/gol_demo.c"
+'Finished building: ../src/gol_demo.c'
+' '
+'Building file: ../src/gol_driver.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/gol_driver.o" -I../../gol_app_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/gol_driver.d" -MT"src/gol_driver.o" -o "src/gol_driver.o" "../src/gol_driver.c"
+'Finished building: ../src/gol_driver.c'
+' '
+'Building target: gol_app.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../gol_app_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "gol_app.elf"  ./src/gol_demo.o ./src/gol_driver.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: gol_app.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size gol_app.elf  |tee "gol_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6616	   2000	   3112	  11728	   2dd0	gol_app.elf
+'Finished building: gol_app.elf.size'
+' '

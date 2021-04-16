@@ -1,0 +1,58 @@
+/*
+ * gol_driver.c
+ *
+ *  Created on: 12.04.2021
+ *      Author: progr
+ */
+
+#include "gol_driver.h"
+
+static volatile unsigned int *pRegister;
+static unsigned int length;
+
+/**
+ * Load pattern to the game of life grid.
+ */
+void init_gol(unsigned int base_addr, unsigned int data_array[])
+{
+	pRegister = (volatile unsigned int*) base_addr;
+
+	// set default max iteration
+	ioctrl_changeMaxIterationValue(DEFAULT_ITERATION);
+//	length = 216;//sizeof(data_array) / sizeof(data_array[0]);
+//
+//	for (uint32_t idx = (length-1); idx >= 0; --idx)
+//	{
+//		write_bit_to_gol(data_array[idx]);
+//	}
+}
+
+void ioctrl_changeMaxIterationValue(unsigned int value)
+{
+	pRegister[GOL_CTRL_REGISTER] |= GSI;
+	pRegister[GOL_ITER_CTRL_REGISTER] = value;
+}
+
+void write_bit_to_gol(unsigned int data)
+{
+	pRegister[GOL_DATA_IN_REGISTER] = data & 0x01;
+}
+
+unsigned int read_bit_from_gol()
+{
+	write_bit_to_gol(0);
+	return pRegister[GOL_DATA_OUT_REGISTER];
+}
+
+void read_gol(unsigned int data_array[])
+{
+	for (unsigned int idx = (length-1); idx >= 0; --idx)
+	{
+		data_array[idx] = read_bit_from_gol();
+	}
+}
+
+unsigned int read_reg(unsigned int reg)
+{
+	return pRegister[reg];
+}
