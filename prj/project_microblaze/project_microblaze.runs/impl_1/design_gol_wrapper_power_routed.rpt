@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
-| Date             : Fri Apr 16 16:43:52 2021
+| Date             : Thu Apr 22 17:56:21 2021
 | Host             : DESKTOP-VC4VFJL running 64-bit major release  (build 9200)
 | Command          : report_power -file design_gol_wrapper_power_routed.rpt -pb design_gol_wrapper_power_summary_routed.pb -rpx design_gol_wrapper_power_routed.rpx
 | Design           : design_gol_wrapper
@@ -30,8 +30,8 @@ Table of Contents
 ----------
 
 +--------------------------+--------+
-| Total On-Chip Power (W)  | 0.252  |
-| Dynamic (W)              | 0.129  |
+| Total On-Chip Power (W)  | 0.249  |
+| Dynamic (W)              | 0.126  |
 | Device Static (W)        | 0.123  |
 | Effective TJA (C/W)      | 11.5   |
 | Max Ambient (C)          | 82.1   |
@@ -49,21 +49,21 @@ Table of Contents
 +--------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
-| Clocks                   |     0.011 |       10 |       --- |             --- |
-| Slice Logic              |     0.005 |     5458 |       --- |             --- |
-|   LUT as Logic           |     0.004 |     2285 |     53200 |            4.30 |
-|   CARRY4                 |    <0.001 |      273 |     13300 |            2.05 |
+| Clocks                   |     0.010 |       10 |       --- |             --- |
+| Slice Logic              |     0.004 |     5456 |       --- |             --- |
+|   LUT as Logic           |     0.003 |     2283 |     53200 |            4.29 |
 |   LUT as Distributed RAM |    <0.001 |       64 |     17400 |            0.37 |
+|   CARRY4                 |    <0.001 |      273 |     13300 |            2.05 |
 |   Register               |    <0.001 |     1654 |    106400 |            1.55 |
 |   F7/F8 Muxes            |    <0.001 |      108 |     53200 |            0.20 |
 |   LUT as Shift Register  |    <0.001 |       72 |     17400 |            0.41 |
 |   Others                 |    <0.001 |      640 |       --- |             --- |
-| Signals                  |     0.006 |     3875 |       --- |             --- |
-| Block RAM                |     0.001 |        4 |       140 |            2.86 |
+| Signals                  |     0.005 |     3876 |       --- |             --- |
+| Block RAM                |    <0.001 |        4 |       140 |            2.86 |
 | MMCM                     |     0.106 |        1 |         4 |           25.00 |
 | I/O                      |    <0.001 |        4 |       200 |            2.00 |
 | Static Power             |     0.123 |          |           |                 |
-| Total                    |     0.252 |          |           |                 |
+| Total                    |     0.249 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -73,7 +73,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.031 |       0.023 |      0.008 |
+| Vccint    |       1.000 |     0.028 |       0.020 |      0.008 |
 | Vccaux    |       1.800 |     0.077 |       0.059 |      0.019 |
 | Vcco33    |       3.300 |     0.001 |       0.000 |      0.001 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
@@ -156,8 +156,8 @@ Table of Contents
 +------------------------------------------------------------------------------------+-----------+
 | Name                                                                               | Power (W) |
 +------------------------------------------------------------------------------------+-----------+
-| design_gol_wrapper                                                                 |     0.129 |
-|   design_gol_i                                                                     |     0.129 |
+| design_gol_wrapper                                                                 |     0.126 |
+|   design_gol_i                                                                     |     0.126 |
 |     axi_interconnect_0                                                             |    <0.001 |
 |       xbar                                                                         |    <0.001 |
 |         inst                                                                       |    <0.001 |
@@ -191,10 +191,10 @@ Table of Contents
 |                 DYNSHREG_F_I                                                       |    <0.001 |
 |     clk_wiz_1                                                                      |     0.106 |
 |       inst                                                                         |     0.106 |
-|     game_of_life_0                                                                 |     0.007 |
-|       U0                                                                           |     0.007 |
-|         CACORE                                                                     |     0.006 |
-|           Field                                                                    |     0.006 |
+|     game_of_life_0                                                                 |     0.004 |
+|       U0                                                                           |     0.004 |
+|         CACORE                                                                     |     0.004 |
+|           Field                                                                    |     0.003 |
 |             ROW[0].COL[0].FL.LE.CELL_X0Y0                                          |    <0.001 |
 |             ROW[0].COL[10].FL.M.CELL_XIY0                                          |    <0.001 |
 |             ROW[0].COL[11].FL.M.CELL_XIY0                                          |    <0.001 |
@@ -423,10 +423,10 @@ Table of Contents
 |             Use_ID_SRL16E.SRL16E_ID_2                                              |    <0.001 |
 |         No_Dbg_Reg_Access.BUFG_DRCK                                                |    <0.001 |
 |         Use_E2.BSCAN_I                                                             |    <0.001 |
-|     microblaze_0                                                                   |     0.012 |
-|       U0                                                                           |     0.012 |
-|         MicroBlaze_Core_I                                                          |     0.012 |
-|           Performance.Core                                                         |     0.012 |
+|     microblaze_0                                                                   |     0.011 |
+|       U0                                                                           |     0.011 |
+|         MicroBlaze_Core_I                                                          |     0.011 |
+|           Performance.Core                                                         |     0.011 |
 |             Data_Flow_I                                                            |     0.005 |
 |               ALU_I                                                                |    <0.001 |
 |                 Using_FPGA.ALL_Bits[0].ALU_Bit_I1                                  |    <0.001 |
@@ -625,7 +625,7 @@ Table of Contents
 |                 Gen_Bit[7].MUXF7_I1                                                |    <0.001 |
 |                 Gen_Bit[8].MUXF7_I1                                                |    <0.001 |
 |                 Gen_Bit[9].MUXF7_I1                                                |    <0.001 |
-|               Register_File_I                                                      |     0.002 |
+|               Register_File_I                                                      |     0.001 |
 |                 Using_LUT6.All_RAM32M[0].ram32m_i                                  |    <0.001 |
 |                   Using_FPGA.Native                                                |    <0.001 |
 |                 Using_LUT6.All_RAM32M[10].ram32m_i                                 |    <0.001 |
@@ -804,7 +804,7 @@ Table of Contents
 |                 OF_EX_MSR_Bits[29].Using_FDR.MSR_ex_I                              |    <0.001 |
 |                 OF_EX_MSR_Bits[30].Using_FDR.MSR_ex_I                              |    <0.001 |
 |             Decode_I                                                               |     0.005 |
-|               PC_Module_I                                                          |     0.001 |
+|               PC_Module_I                                                          |    <0.001 |
 |                 Instruction_Prefetch_Mux[0].Gen_Instr_DFF                          |    <0.001 |
 |                 Instruction_Prefetch_Mux[0].PC_Mux_MUXF7                           |    <0.001 |
 |                 Instruction_Prefetch_Mux[10].Gen_Instr_DFF                         |    <0.001 |

@@ -36,14 +36,14 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_gol_ilmb
 # IP: C:/Workspace/GameOfLife/bd/design_gol/ip/design_gol_lmb_bram_0/design_gol_lmb_bram_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_gol_lmb_bram_0 || ORIG_REF_NAME==design_gol_lmb_bram_0}]
 
-# IP: C:/Workspace/GameOfLife/bd/design_gol/ip/design_gol_game_of_life_0_0/design_gol_game_of_life_0_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_gol_game_of_life_0_0 || ORIG_REF_NAME==design_gol_game_of_life_0_0}]
-
 # IP: C:/Workspace/GameOfLife/bd/design_gol/ip/design_gol_axi_interconnect_0_0/design_gol_axi_interconnect_0_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_gol_axi_interconnect_0_0 || ORIG_REF_NAME==design_gol_axi_interconnect_0_0}]
 
 # IP: C:/Workspace/GameOfLife/bd/design_gol/ip/design_gol_xbar_0/design_gol_xbar_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_gol_xbar_0 || ORIG_REF_NAME==design_gol_xbar_0}]
+
+# IP: c:/Workspace/GameOfLife/bd/design_gol/ip/design_gol_game_of_life_0_0/design_gol_game_of_life_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_gol_game_of_life_0_0 || ORIG_REF_NAME==design_gol_game_of_life_0_0}]
 
 # XDC: c:/Workspace/GameOfLife/bd/design_gol/ip/design_gol_microblaze_0_0/design_gol_microblaze_0_0.xdc
 set_property DONT_TOUCH TRUE [get_cells [split [join [get_cells -hier -filter {REF_NAME==design_gol_microblaze_0_0 || ORIG_REF_NAME==design_gol_microblaze_0_0}] {/U0 }]/U0 ]]

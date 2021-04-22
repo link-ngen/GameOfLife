@@ -1,7 +1,7 @@
 /*
  * gol_driver.h
  *
- *  Created on: 12.04.2021
+ *  Created on: 19.04.2021
  *      Author: progr
  */
 
@@ -13,12 +13,12 @@
 #define GOL_DATA_IN_REGISTER	(2)	// game of life data input register
 #define GOL_DATA_OUT_REGISTER	(3)	// game of life data output register
 
-#define GST (0x00000000)	// start iteration
-#define GSP (0x00000001)	// start stop
-#define GMI (0x00000002)	// max iteration
+#define GST (0x00000001)	// start iteration
+#define GSP (0x00000002)	// stop iteration
 #define GSI (0x00000004)	// set iteration
+#define GMI (0x00000008)	// max iteration
 
-#define DEFAULT_ITERATION	(11)
+#define DEFAULT_ITERATION	(2)
 
 /**
  * Load pattern to the game of life grid.
@@ -30,11 +30,7 @@ void init_gol(unsigned int base_addr, unsigned int data_array[]);
  */
 void ioctrl_changeMaxIterationValue(unsigned int value);
 
-
-/**
- * Read data from gol.
- */
-unsigned int read_bit_from_gol();
+void write_bit_to_gol(unsigned int data);
 
 /**
  * Read data from gol and put them to an array.
@@ -42,5 +38,7 @@ unsigned int read_bit_from_gol();
 void read_gol(unsigned int *data_array);
 
 unsigned int read_reg(unsigned int reg_addr);
+
+void run_gol(void);
 
 #endif /* SRC_GOL_DRIVER_H_ */

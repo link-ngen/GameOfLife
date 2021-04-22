@@ -108,13 +108,6 @@ vlog -work blk_mem_gen_v8_3_6 -64 "+incdir+../../../../../../bd/design_gol/ipsha
 vlog -work xil_defaultlib -64 "+incdir+../../../../../../bd/design_gol/ipshared/9c7f" "+incdir+../../../../../../bd/design_gol/ipshared/7e3a/hdl" "+incdir+../../../../../../bd/design_gol/ipshared/9c7f" "+incdir+../../../../../../bd/design_gol/ipshared/7e3a/hdl" \
 "../../../bd/design_gol/ip/design_gol_lmb_bram_0/sim/design_gol_lmb_bram_0.v" \
 
-vcom -work xil_defaultlib -64 -93 \
-"../../../bd/design_gol/ipshared/e972/src/ca_core.vhd" \
-"../../../bd/design_gol/ipshared/e972/src/cell.vhd" \
-"../../../bd/design_gol/ipshared/e972/src/grid.vhd" \
-"../../../bd/design_gol/ipshared/e972/hdl/game_of_life_v1_0.vhd" \
-"../../../bd/design_gol/ip/design_gol_game_of_life_0_0/sim/design_gol_game_of_life_0_0.vhd" \
-
 vlog -work generic_baseblocks_v2_1_0 -64 "+incdir+../../../../../../bd/design_gol/ipshared/9c7f" "+incdir+../../../../../../bd/design_gol/ipshared/7e3a/hdl" "+incdir+../../../../../../bd/design_gol/ipshared/9c7f" "+incdir+../../../../../../bd/design_gol/ipshared/7e3a/hdl" \
 "../../../../../../bd/design_gol/ipshared/f9c1/hdl/generic_baseblocks_v2_1_vl_rfs.v" \
 
@@ -144,6 +137,11 @@ vlog -work xil_defaultlib -64 "+incdir+../../../../../../bd/design_gol/ipshared/
 
 vcom -work xil_defaultlib -64 -93 \
 "../../../bd/design_gol/hdl/design_gol.vhd" \
+"../../../bd/design_gol/ipshared/e972/src/ca_core.vhd" \
+"../../../bd/design_gol/ipshared/e972/src/cell.vhd" \
+"../../../bd/design_gol/ipshared/e972/src/grid.vhd" \
+"../../../bd/design_gol/ipshared/e972/hdl/game_of_life_v1_0.vhd" \
+"../../../bd/design_gol/ip/design_gol_game_of_life_0_1/sim/design_gol_game_of_life_0_1.vhd" \
 
 vlog -work xil_defaultlib \
 "glbl.v"

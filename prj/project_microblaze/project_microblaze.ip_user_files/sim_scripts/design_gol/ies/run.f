@@ -65,13 +65,6 @@
 -makelib ies/xil_defaultlib \
   "../../../bd/design_gol/ip/design_gol_lmb_bram_0/sim/design_gol_lmb_bram_0.v" \
 -endlib
--makelib ies/xil_defaultlib \
-  "../../../bd/design_gol/ipshared/e972/src/ca_core.vhd" \
-  "../../../bd/design_gol/ipshared/e972/src/cell.vhd" \
-  "../../../bd/design_gol/ipshared/e972/src/grid.vhd" \
-  "../../../bd/design_gol/ipshared/e972/hdl/game_of_life_v1_0.vhd" \
-  "../../../bd/design_gol/ip/design_gol_game_of_life_0_0/sim/design_gol_game_of_life_0_0.vhd" \
--endlib
 -makelib ies/generic_baseblocks_v2_1_0 \
   "../../../../../../bd/design_gol/ipshared/f9c1/hdl/generic_baseblocks_v2_1_vl_rfs.v" \
 -endlib
@@ -101,6 +94,11 @@
 -endlib
 -makelib ies/xil_defaultlib \
   "../../../bd/design_gol/hdl/design_gol.vhd" \
+  "../../../bd/design_gol/ipshared/e972/src/ca_core.vhd" \
+  "../../../bd/design_gol/ipshared/e972/src/cell.vhd" \
+  "../../../bd/design_gol/ipshared/e972/src/grid.vhd" \
+  "../../../bd/design_gol/ipshared/e972/hdl/game_of_life_v1_0.vhd" \
+  "../../../bd/design_gol/ip/design_gol_game_of_life_0_1/sim/design_gol_game_of_life_0_1.vhd" \
 -endlib
 -makelib ies/xil_defaultlib \
   glbl.v

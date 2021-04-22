@@ -82,7 +82,7 @@ begin
                               HEIGHT => H)
                  port map (clk => clk,
                            ce => ce,
-                           n_iter => x"00000005",
+                           n_iter => x"00000001",
                            shift_ca => shift_ca,
                            d_in => ddata,
                            start_iter => start_iter,
@@ -117,7 +117,13 @@ begin
         end loop;
         wait until rising_edge(clk);
         wait for 200ns;
-
+        
+        start_iter <= '1';
+        wait for 20ns;
+        start_iter <= '0';
+        wait until max_iter = '1';
+        
+        wait for 200ns;
         for i in 0 to (TOTAL_CELL) loop
             wait until rising_edge(clk);
             shift_ca <= '1';

@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
-| Date             : Fri Apr 16 16:26:27 2021
+| Date             : Mon Apr 19 12:23:36 2021
 | Host             : DESKTOP-VC4VFJL running 64-bit major release  (build 9200)
 | Command          : report_power -file game_of_life_v1_0_power_routed.rpt -pb game_of_life_v1_0_power_summary_routed.pb -rpx game_of_life_v1_0_power_routed.rpx
 | Design           : game_of_life_v1_0
@@ -30,8 +30,8 @@ Table of Contents
 ----------
 
 +--------------------------+----------------------------------+
-| Total On-Chip Power (W)  | 18.790 (Junction temp exceeded!) |
-| Dynamic (W)              | 17.750                           |
+| Total On-Chip Power (W)  | 14.376 (Junction temp exceeded!) |
+| Dynamic (W)              | 13.336                           |
 | Device Static (W)        | 1.040                            |
 | Effective TJA (C/W)      | 11.5                             |
 | Max Ambient (C)          | 0.0                              |
@@ -49,16 +49,16 @@ Table of Contents
 +----------------+-----------+----------+-----------+-----------------+
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
-| Slice Logic    |     4.802 |     1774 |       --- |             --- |
-|   LUT as Logic |     4.159 |      917 |     53200 |            1.72 |
-|   CARRY4       |     0.559 |      235 |     13300 |            1.77 |
-|   Register     |     0.078 |      399 |    106400 |            0.38 |
+| Slice Logic    |     2.397 |     1775 |       --- |             --- |
+|   LUT as Logic |     1.957 |      918 |     53200 |            1.73 |
+|   CARRY4       |     0.394 |      235 |     13300 |            1.77 |
+|   Register     |     0.041 |      400 |    106400 |            0.38 |
 |   BUFG         |     0.006 |        1 |        32 |            3.13 |
 |   Others       |     0.000 |      220 |       --- |             --- |
-| Signals        |     4.865 |     1394 |       --- |             --- |
-| I/O            |     8.083 |       84 |       200 |           42.00 |
+| Signals        |     2.862 |     1395 |       --- |             --- |
+| I/O            |     8.076 |       84 |       200 |           42.00 |
 | Static Power   |     1.040 |          |           |                 |
-| Total          |    18.790 |          |           |                 |
+| Total          |    14.376 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -68,11 +68,11 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |    10.126 |       9.827 |      0.299 |
-| Vccaux    |       1.800 |     0.749 |       0.649 |      0.100 |
+| Vccint    |       1.000 |     5.719 |       5.421 |      0.299 |
+| Vccaux    |       1.800 |     0.748 |       0.648 |      0.100 |
 | Vcco33    |       3.300 |     0.000 |       0.000 |      0.000 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
-| Vcco18    |       1.800 |     3.754 |       3.753 |      0.001 |
+| Vcco18    |       1.800 |     3.750 |       3.749 |      0.001 |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |
 | Vcco135   |       1.350 |     0.000 |       0.000 |      0.000 |
 | Vcco12    |       1.200 |     0.000 |       0.000 |      0.000 |
@@ -142,225 +142,225 @@ Table of Contents
 +------------------------------------------+-----------+
 | Name                                     | Power (W) |
 +------------------------------------------+-----------+
-| game_of_life_v1_0                        |    17.750 |
-|   CACORE                                 |     8.955 |
-|     Field                                |     8.506 |
-|       ROW[0].COL[0].FL.LE.CELL_X0Y0      |     0.019 |
-|       ROW[0].COL[10].FL.M.CELL_XIY0      |     0.025 |
-|       ROW[0].COL[11].FL.M.CELL_XIY0      |     0.027 |
-|       ROW[0].COL[12].FL.M.CELL_XIY0      |     0.024 |
-|       ROW[0].COL[13].FL.M.CELL_XIY0      |     0.024 |
-|       ROW[0].COL[14].FL.M.CELL_XIY0      |     0.025 |
-|       ROW[0].COL[15].FL.M.CELL_XIY0      |     0.025 |
-|       ROW[0].COL[16].FL.M.CELL_XIY0      |     0.018 |
-|       ROW[0].COL[17].FL.RE.CELL_XWY0     |     0.007 |
-|       ROW[0].COL[1].FL.M.CELL_XIY0       |     0.024 |
-|       ROW[0].COL[2].FL.M.CELL_XIY0       |     0.025 |
-|       ROW[0].COL[3].FL.M.CELL_XIY0       |     0.023 |
-|       ROW[0].COL[4].FL.M.CELL_XIY0       |     0.022 |
-|       ROW[0].COL[5].FL.M.CELL_XIY0       |     0.022 |
-|       ROW[0].COL[6].FL.M.CELL_XIY0       |     0.022 |
-|       ROW[0].COL[7].FL.M.CELL_XIY0       |     0.024 |
-|       ROW[0].COL[8].FL.M.CELL_XIY0       |     0.025 |
-|       ROW[0].COL[9].FL.M.CELL_XIY0       |     0.022 |
-|       ROW[10].COL[0].EH.E_LS.CELL_X0YE   |     0.013 |
-|       ROW[10].COL[10].EH.E_M.CELL_XIYE   |     0.041 |
-|       ROW[10].COL[11].EH.E_M.CELL_XIYE   |     0.038 |
-|       ROW[10].COL[12].EH.E_M.CELL_XIYE   |     0.035 |
-|       ROW[10].COL[13].EH.E_M.CELL_XIYE   |     0.033 |
-|       ROW[10].COL[14].EH.E_M.CELL_XIYE   |     0.030 |
-|       ROW[10].COL[15].EH.E_M.CELL_XIYE   |     0.029 |
-|       ROW[10].COL[16].EH.E_M.CELL_XIYE   |     0.026 |
-|       ROW[10].COL[17].EH.E_RS.CELL_XWYE  |     0.012 |
-|       ROW[10].COL[1].EH.E_M.CELL_XIYE    |     0.025 |
-|       ROW[10].COL[2].EH.E_M.CELL_XIYE    |     0.026 |
-|       ROW[10].COL[3].EH.E_M.CELL_XIYE    |     0.031 |
-|       ROW[10].COL[4].EH.E_M.CELL_XIYE    |     0.030 |
-|       ROW[10].COL[5].EH.E_M.CELL_XIYE    |     0.031 |
-|       ROW[10].COL[6].EH.E_M.CELL_XIYE    |     0.034 |
-|       ROW[10].COL[7].EH.E_M.CELL_XIYE    |     0.037 |
-|       ROW[10].COL[8].EH.E_M.CELL_XIYE    |     0.036 |
-|       ROW[10].COL[9].EH.E_M.CELL_XIYE    |     0.041 |
-|       ROW[11].COL[0].EH.LL_LE.CELL_X0YH  |     0.016 |
-|       ROW[11].COL[10].EH.LL_M.CELL_XIYH  |     0.020 |
-|       ROW[11].COL[11].EH.LL_M.CELL_XIYH  |     0.017 |
-|       ROW[11].COL[12].EH.LL_M.CELL_XIYH  |     0.013 |
-|       ROW[11].COL[13].EH.LL_M.CELL_XIYH  |     0.014 |
-|       ROW[11].COL[14].EH.LL_M.CELL_XIYH  |     0.012 |
-|       ROW[11].COL[15].EH.LL_M.CELL_XIYH  |     0.015 |
-|       ROW[11].COL[16].EH.LL_M.CELL_XIYH  |     0.012 |
-|       ROW[11].COL[17].EH.LL_RE.CELL_XWYH |     0.005 |
-|       ROW[11].COL[1].EH.LL_M.CELL_XIYH   |     0.011 |
-|       ROW[11].COL[2].EH.LL_M.CELL_XIYH   |     0.012 |
-|       ROW[11].COL[3].EH.LL_M.CELL_XIYH   |     0.012 |
-|       ROW[11].COL[4].EH.LL_M.CELL_XIYH   |     0.014 |
-|       ROW[11].COL[5].EH.LL_M.CELL_XIYH   |     0.012 |
-|       ROW[11].COL[6].EH.LL_M.CELL_XIYH   |     0.015 |
-|       ROW[11].COL[7].EH.LL_M.CELL_XIYH   |     0.016 |
-|       ROW[11].COL[8].EH.LL_M.CELL_XIYH   |     0.022 |
-|       ROW[11].COL[9].EH.LL_M.CELL_XIYH   |     0.020 |
-|       ROW[1].COL[0].EH.O_LS.CELL_X0YO    |     0.029 |
-|       ROW[1].COL[10].EH.O_M.CELL_XIYO    |     0.053 |
-|       ROW[1].COL[11].EH.O_M.CELL_XIYO    |     0.042 |
-|       ROW[1].COL[12].EH.O_M.CELL_XIYO    |     0.044 |
-|       ROW[1].COL[13].EH.O_M.CELL_XIYO    |     0.047 |
-|       ROW[1].COL[14].EH.O_M.CELL_XIYO    |     0.049 |
-|       ROW[1].COL[15].EH.O_M.CELL_XIYO    |     0.044 |
-|       ROW[1].COL[16].EH.O_M.CELL_XIYO    |     0.037 |
-|       ROW[1].COL[17].EH.O_RS.CELL_XWYO   |     0.020 |
-|       ROW[1].COL[1].EH.O_M.CELL_XIYO     |     0.037 |
-|       ROW[1].COL[2].EH.O_M.CELL_XIYO     |     0.043 |
-|       ROW[1].COL[3].EH.O_M.CELL_XIYO     |     0.044 |
-|       ROW[1].COL[4].EH.O_M.CELL_XIYO     |     0.044 |
-|       ROW[1].COL[5].EH.O_M.CELL_XIYO     |     0.043 |
-|       ROW[1].COL[6].EH.O_M.CELL_XIYO     |     0.045 |
-|       ROW[1].COL[7].EH.O_M.CELL_XIYO     |     0.048 |
-|       ROW[1].COL[8].EH.O_M.CELL_XIYO     |     0.042 |
-|       ROW[1].COL[9].EH.O_M.CELL_XIYO     |     0.042 |
-|       ROW[2].COL[0].EH.E_LS.CELL_X0YE    |     0.029 |
-|       ROW[2].COL[10].EH.E_M.CELL_XIYE    |     0.051 |
-|       ROW[2].COL[11].EH.E_M.CELL_XIYE    |     0.046 |
-|       ROW[2].COL[12].EH.E_M.CELL_XIYE    |     0.048 |
-|       ROW[2].COL[13].EH.E_M.CELL_XIYE    |     0.057 |
-|       ROW[2].COL[14].EH.E_M.CELL_XIYE    |     0.047 |
-|       ROW[2].COL[15].EH.E_M.CELL_XIYE    |     0.045 |
-|       ROW[2].COL[16].EH.E_M.CELL_XIYE    |     0.038 |
-|       ROW[2].COL[17].EH.E_RS.CELL_XWYE   |     0.022 |
-|       ROW[2].COL[1].EH.E_M.CELL_XIYE     |     0.042 |
-|       ROW[2].COL[2].EH.E_M.CELL_XIYE     |     0.049 |
-|       ROW[2].COL[3].EH.E_M.CELL_XIYE     |     0.049 |
-|       ROW[2].COL[4].EH.E_M.CELL_XIYE     |     0.046 |
-|       ROW[2].COL[5].EH.E_M.CELL_XIYE     |     0.049 |
-|       ROW[2].COL[6].EH.E_M.CELL_XIYE     |     0.047 |
-|       ROW[2].COL[7].EH.E_M.CELL_XIYE     |     0.054 |
-|       ROW[2].COL[8].EH.E_M.CELL_XIYE     |     0.049 |
-|       ROW[2].COL[9].EH.E_M.CELL_XIYE     |     0.053 |
-|       ROW[3].COL[0].EH.O_LS.CELL_X0YO    |     0.023 |
-|       ROW[3].COL[10].EH.O_M.CELL_XIYO    |     0.051 |
-|       ROW[3].COL[11].EH.O_M.CELL_XIYO    |     0.052 |
-|       ROW[3].COL[12].EH.O_M.CELL_XIYO    |     0.053 |
-|       ROW[3].COL[13].EH.O_M.CELL_XIYO    |     0.046 |
-|       ROW[3].COL[14].EH.O_M.CELL_XIYO    |     0.047 |
-|       ROW[3].COL[15].EH.O_M.CELL_XIYO    |     0.051 |
-|       ROW[3].COL[16].EH.O_M.CELL_XIYO    |     0.045 |
-|       ROW[3].COL[17].EH.O_RS.CELL_XWYO   |     0.023 |
-|       ROW[3].COL[1].EH.O_M.CELL_XIYO     |     0.039 |
-|       ROW[3].COL[2].EH.O_M.CELL_XIYO     |     0.042 |
-|       ROW[3].COL[3].EH.O_M.CELL_XIYO     |     0.051 |
-|       ROW[3].COL[4].EH.O_M.CELL_XIYO     |     0.052 |
-|       ROW[3].COL[5].EH.O_M.CELL_XIYO     |     0.050 |
-|       ROW[3].COL[6].EH.O_M.CELL_XIYO     |     0.047 |
-|       ROW[3].COL[7].EH.O_M.CELL_XIYO     |     0.047 |
-|       ROW[3].COL[8].EH.O_M.CELL_XIYO     |     0.053 |
-|       ROW[3].COL[9].EH.O_M.CELL_XIYO     |     0.053 |
-|       ROW[4].COL[0].EH.E_LS.CELL_X0YE    |     0.029 |
-|       ROW[4].COL[10].EH.E_M.CELL_XIYE    |     0.049 |
-|       ROW[4].COL[11].EH.E_M.CELL_XIYE    |     0.063 |
-|       ROW[4].COL[12].EH.E_M.CELL_XIYE    |     0.051 |
-|       ROW[4].COL[13].EH.E_M.CELL_XIYE    |     0.053 |
-|       ROW[4].COL[14].EH.E_M.CELL_XIYE    |     0.053 |
-|       ROW[4].COL[15].EH.E_M.CELL_XIYE    |     0.049 |
-|       ROW[4].COL[16].EH.E_M.CELL_XIYE    |     0.041 |
-|       ROW[4].COL[17].EH.E_RS.CELL_XWYE   |     0.021 |
-|       ROW[4].COL[1].EH.E_M.CELL_XIYE     |     0.043 |
-|       ROW[4].COL[2].EH.E_M.CELL_XIYE     |     0.049 |
-|       ROW[4].COL[3].EH.E_M.CELL_XIYE     |     0.048 |
-|       ROW[4].COL[4].EH.E_M.CELL_XIYE     |     0.052 |
-|       ROW[4].COL[5].EH.E_M.CELL_XIYE     |     0.049 |
-|       ROW[4].COL[6].EH.E_M.CELL_XIYE     |     0.050 |
-|       ROW[4].COL[7].EH.E_M.CELL_XIYE     |     0.051 |
-|       ROW[4].COL[8].EH.E_M.CELL_XIYE     |     0.049 |
-|       ROW[4].COL[9].EH.E_M.CELL_XIYE     |     0.052 |
-|       ROW[5].COL[0].EH.O_LS.CELL_X0YO    |     0.023 |
-|       ROW[5].COL[10].EH.O_M.CELL_XIYO    |     0.057 |
-|       ROW[5].COL[11].EH.O_M.CELL_XIYO    |     0.055 |
-|       ROW[5].COL[12].EH.O_M.CELL_XIYO    |     0.053 |
-|       ROW[5].COL[13].EH.O_M.CELL_XIYO    |     0.050 |
-|       ROW[5].COL[14].EH.O_M.CELL_XIYO    |     0.051 |
-|       ROW[5].COL[15].EH.O_M.CELL_XIYO    |     0.048 |
-|       ROW[5].COL[16].EH.O_M.CELL_XIYO    |     0.045 |
-|       ROW[5].COL[17].EH.O_RS.CELL_XWYO   |     0.022 |
-|       ROW[5].COL[1].EH.O_M.CELL_XIYO     |     0.042 |
-|       ROW[5].COL[2].EH.O_M.CELL_XIYO     |     0.044 |
-|       ROW[5].COL[3].EH.O_M.CELL_XIYO     |     0.052 |
-|       ROW[5].COL[4].EH.O_M.CELL_XIYO     |     0.050 |
-|       ROW[5].COL[5].EH.O_M.CELL_XIYO     |     0.054 |
-|       ROW[5].COL[6].EH.O_M.CELL_XIYO     |     0.045 |
-|       ROW[5].COL[7].EH.O_M.CELL_XIYO     |     0.048 |
-|       ROW[5].COL[8].EH.O_M.CELL_XIYO     |     0.051 |
-|       ROW[5].COL[9].EH.O_M.CELL_XIYO     |     0.050 |
-|       ROW[6].COL[0].EH.E_LS.CELL_X0YE    |     0.029 |
-|       ROW[6].COL[10].EH.E_M.CELL_XIYE    |     0.050 |
-|       ROW[6].COL[11].EH.E_M.CELL_XIYE    |     0.052 |
-|       ROW[6].COL[12].EH.E_M.CELL_XIYE    |     0.051 |
-|       ROW[6].COL[13].EH.E_M.CELL_XIYE    |     0.054 |
-|       ROW[6].COL[14].EH.E_M.CELL_XIYE    |     0.050 |
-|       ROW[6].COL[15].EH.E_M.CELL_XIYE    |     0.048 |
-|       ROW[6].COL[16].EH.E_M.CELL_XIYE    |     0.046 |
-|       ROW[6].COL[17].EH.E_RS.CELL_XWYE   |     0.019 |
-|       ROW[6].COL[1].EH.E_M.CELL_XIYE     |     0.045 |
-|       ROW[6].COL[2].EH.E_M.CELL_XIYE     |     0.046 |
-|       ROW[6].COL[3].EH.E_M.CELL_XIYE     |     0.047 |
-|       ROW[6].COL[4].EH.E_M.CELL_XIYE     |     0.051 |
-|       ROW[6].COL[5].EH.E_M.CELL_XIYE     |     0.049 |
-|       ROW[6].COL[6].EH.E_M.CELL_XIYE     |     0.047 |
-|       ROW[6].COL[7].EH.E_M.CELL_XIYE     |     0.044 |
-|       ROW[6].COL[8].EH.E_M.CELL_XIYE     |     0.051 |
-|       ROW[6].COL[9].EH.E_M.CELL_XIYE     |     0.047 |
-|       ROW[7].COL[0].EH.O_LS.CELL_X0YO    |     0.024 |
-|       ROW[7].COL[10].EH.O_M.CELL_XIYO    |     0.049 |
-|       ROW[7].COL[11].EH.O_M.CELL_XIYO    |     0.052 |
-|       ROW[7].COL[12].EH.O_M.CELL_XIYO    |     0.053 |
-|       ROW[7].COL[13].EH.O_M.CELL_XIYO    |     0.051 |
-|       ROW[7].COL[14].EH.O_M.CELL_XIYO    |     0.052 |
-|       ROW[7].COL[15].EH.O_M.CELL_XIYO    |     0.047 |
-|       ROW[7].COL[16].EH.O_M.CELL_XIYO    |     0.045 |
-|       ROW[7].COL[17].EH.O_RS.CELL_XWYO   |     0.023 |
-|       ROW[7].COL[1].EH.O_M.CELL_XIYO     |     0.044 |
-|       ROW[7].COL[2].EH.O_M.CELL_XIYO     |     0.048 |
-|       ROW[7].COL[3].EH.O_M.CELL_XIYO     |     0.046 |
-|       ROW[7].COL[4].EH.O_M.CELL_XIYO     |     0.048 |
-|       ROW[7].COL[5].EH.O_M.CELL_XIYO     |     0.048 |
-|       ROW[7].COL[6].EH.O_M.CELL_XIYO     |     0.054 |
-|       ROW[7].COL[7].EH.O_M.CELL_XIYO     |     0.050 |
-|       ROW[7].COL[8].EH.O_M.CELL_XIYO     |     0.048 |
-|       ROW[7].COL[9].EH.O_M.CELL_XIYO     |     0.044 |
-|       ROW[8].COL[0].EH.E_LS.CELL_X0YE    |     0.027 |
-|       ROW[8].COL[10].EH.E_M.CELL_XIYE    |     0.052 |
-|       ROW[8].COL[11].EH.E_M.CELL_XIYE    |     0.045 |
-|       ROW[8].COL[12].EH.E_M.CELL_XIYE    |     0.052 |
-|       ROW[8].COL[13].EH.E_M.CELL_XIYE    |     0.052 |
-|       ROW[8].COL[14].EH.E_M.CELL_XIYE    |     0.043 |
-|       ROW[8].COL[15].EH.E_M.CELL_XIYE    |     0.046 |
-|       ROW[8].COL[16].EH.E_M.CELL_XIYE    |     0.039 |
-|       ROW[8].COL[17].EH.E_RS.CELL_XWYE   |     0.019 |
-|       ROW[8].COL[1].EH.E_M.CELL_XIYE     |     0.042 |
-|       ROW[8].COL[2].EH.E_M.CELL_XIYE     |     0.045 |
-|       ROW[8].COL[3].EH.E_M.CELL_XIYE     |     0.051 |
-|       ROW[8].COL[4].EH.E_M.CELL_XIYE     |     0.051 |
-|       ROW[8].COL[5].EH.E_M.CELL_XIYE     |     0.051 |
-|       ROW[8].COL[6].EH.E_M.CELL_XIYE     |     0.053 |
-|       ROW[8].COL[7].EH.E_M.CELL_XIYE     |     0.048 |
-|       ROW[8].COL[8].EH.E_M.CELL_XIYE     |     0.054 |
-|       ROW[8].COL[9].EH.E_M.CELL_XIYE     |     0.051 |
-|       ROW[9].COL[0].EH.O_LS.CELL_X0YO    |     0.021 |
-|       ROW[9].COL[10].EH.O_M.CELL_XIYO    |     0.048 |
-|       ROW[9].COL[11].EH.O_M.CELL_XIYO    |     0.044 |
-|       ROW[9].COL[12].EH.O_M.CELL_XIYO    |     0.049 |
-|       ROW[9].COL[13].EH.O_M.CELL_XIYO    |     0.044 |
-|       ROW[9].COL[14].EH.O_M.CELL_XIYO    |     0.043 |
-|       ROW[9].COL[15].EH.O_M.CELL_XIYO    |     0.040 |
-|       ROW[9].COL[16].EH.O_M.CELL_XIYO    |     0.034 |
-|       ROW[9].COL[17].EH.O_RS.CELL_XWYO   |     0.021 |
-|       ROW[9].COL[1].EH.O_M.CELL_XIYO     |     0.030 |
-|       ROW[9].COL[2].EH.O_M.CELL_XIYO     |     0.040 |
-|       ROW[9].COL[3].EH.O_M.CELL_XIYO     |     0.040 |
-|       ROW[9].COL[4].EH.O_M.CELL_XIYO     |     0.045 |
-|       ROW[9].COL[5].EH.O_M.CELL_XIYO     |     0.045 |
-|       ROW[9].COL[6].EH.O_M.CELL_XIYO     |     0.044 |
-|       ROW[9].COL[7].EH.O_M.CELL_XIYO     |     0.049 |
-|       ROW[9].COL[8].EH.O_M.CELL_XIYO     |     0.047 |
-|       ROW[9].COL[9].EH.O_M.CELL_XIYO     |     0.046 |
+| game_of_life_v1_0                        |    13.336 |
+|   CACORE                                 |     4.550 |
+|     Field                                |     4.009 |
+|       ROW[0].COL[0].FL.LE.CELL_X0Y0      |     0.009 |
+|       ROW[0].COL[10].FL.M.CELL_XIY0      |     0.007 |
+|       ROW[0].COL[11].FL.M.CELL_XIY0      |     0.011 |
+|       ROW[0].COL[12].FL.M.CELL_XIY0      |     0.006 |
+|       ROW[0].COL[13].FL.M.CELL_XIY0      |     0.007 |
+|       ROW[0].COL[14].FL.M.CELL_XIY0      |     0.007 |
+|       ROW[0].COL[15].FL.M.CELL_XIY0      |     0.013 |
+|       ROW[0].COL[16].FL.M.CELL_XIY0      |     0.009 |
+|       ROW[0].COL[17].FL.RE.CELL_XWY0     |     0.003 |
+|       ROW[0].COL[1].FL.M.CELL_XIY0       |     0.010 |
+|       ROW[0].COL[2].FL.M.CELL_XIY0       |     0.008 |
+|       ROW[0].COL[3].FL.M.CELL_XIY0       |     0.006 |
+|       ROW[0].COL[4].FL.M.CELL_XIY0       |     0.006 |
+|       ROW[0].COL[5].FL.M.CELL_XIY0       |     0.006 |
+|       ROW[0].COL[6].FL.M.CELL_XIY0       |     0.006 |
+|       ROW[0].COL[7].FL.M.CELL_XIY0       |     0.006 |
+|       ROW[0].COL[8].FL.M.CELL_XIY0       |     0.009 |
+|       ROW[0].COL[9].FL.M.CELL_XIY0       |     0.007 |
+|       ROW[10].COL[0].EH.E_LS.CELL_X0YE   |     0.004 |
+|       ROW[10].COL[10].EH.E_M.CELL_XIYE   |     0.021 |
+|       ROW[10].COL[11].EH.E_M.CELL_XIYE   |     0.021 |
+|       ROW[10].COL[12].EH.E_M.CELL_XIYE   |     0.013 |
+|       ROW[10].COL[13].EH.E_M.CELL_XIYE   |     0.012 |
+|       ROW[10].COL[14].EH.E_M.CELL_XIYE   |     0.013 |
+|       ROW[10].COL[15].EH.E_M.CELL_XIYE   |     0.015 |
+|       ROW[10].COL[16].EH.E_M.CELL_XIYE   |     0.022 |
+|       ROW[10].COL[17].EH.E_RS.CELL_XWYE  |     0.006 |
+|       ROW[10].COL[1].EH.E_M.CELL_XIYE    |     0.014 |
+|       ROW[10].COL[2].EH.E_M.CELL_XIYE    |     0.011 |
+|       ROW[10].COL[3].EH.E_M.CELL_XIYE    |     0.012 |
+|       ROW[10].COL[4].EH.E_M.CELL_XIYE    |     0.011 |
+|       ROW[10].COL[5].EH.E_M.CELL_XIYE    |     0.011 |
+|       ROW[10].COL[6].EH.E_M.CELL_XIYE    |     0.013 |
+|       ROW[10].COL[7].EH.E_M.CELL_XIYE    |     0.016 |
+|       ROW[10].COL[8].EH.E_M.CELL_XIYE    |     0.015 |
+|       ROW[10].COL[9].EH.E_M.CELL_XIYE    |     0.029 |
+|       ROW[11].COL[0].EH.LL_LE.CELL_X0YH  |     0.003 |
+|       ROW[11].COL[10].EH.LL_M.CELL_XIYH  |     0.019 |
+|       ROW[11].COL[11].EH.LL_M.CELL_XIYH  |     0.008 |
+|       ROW[11].COL[12].EH.LL_M.CELL_XIYH  |     0.007 |
+|       ROW[11].COL[13].EH.LL_M.CELL_XIYH  |     0.006 |
+|       ROW[11].COL[14].EH.LL_M.CELL_XIYH  |     0.007 |
+|       ROW[11].COL[15].EH.LL_M.CELL_XIYH  |     0.007 |
+|       ROW[11].COL[16].EH.LL_M.CELL_XIYH  |     0.013 |
+|       ROW[11].COL[17].EH.LL_RE.CELL_XWYH |     0.003 |
+|       ROW[11].COL[1].EH.LL_M.CELL_XIYH   |     0.004 |
+|       ROW[11].COL[2].EH.LL_M.CELL_XIYH   |     0.005 |
+|       ROW[11].COL[3].EH.LL_M.CELL_XIYH   |     0.006 |
+|       ROW[11].COL[4].EH.LL_M.CELL_XIYH   |     0.006 |
+|       ROW[11].COL[5].EH.LL_M.CELL_XIYH   |     0.005 |
+|       ROW[11].COL[6].EH.LL_M.CELL_XIYH   |     0.005 |
+|       ROW[11].COL[7].EH.LL_M.CELL_XIYH   |     0.007 |
+|       ROW[11].COL[8].EH.LL_M.CELL_XIYH   |     0.014 |
+|       ROW[11].COL[9].EH.LL_M.CELL_XIYH   |     0.015 |
+|       ROW[1].COL[0].EH.O_LS.CELL_X0YO    |     0.011 |
+|       ROW[1].COL[10].EH.O_M.CELL_XIYO    |     0.022 |
+|       ROW[1].COL[11].EH.O_M.CELL_XIYO    |     0.017 |
+|       ROW[1].COL[12].EH.O_M.CELL_XIYO    |     0.017 |
+|       ROW[1].COL[13].EH.O_M.CELL_XIYO    |     0.019 |
+|       ROW[1].COL[14].EH.O_M.CELL_XIYO    |     0.019 |
+|       ROW[1].COL[15].EH.O_M.CELL_XIYO    |     0.016 |
+|       ROW[1].COL[16].EH.O_M.CELL_XIYO    |     0.022 |
+|       ROW[1].COL[17].EH.O_RS.CELL_XWYO   |     0.008 |
+|       ROW[1].COL[1].EH.O_M.CELL_XIYO     |     0.020 |
+|       ROW[1].COL[2].EH.O_M.CELL_XIYO     |     0.017 |
+|       ROW[1].COL[3].EH.O_M.CELL_XIYO     |     0.018 |
+|       ROW[1].COL[4].EH.O_M.CELL_XIYO     |     0.017 |
+|       ROW[1].COL[5].EH.O_M.CELL_XIYO     |     0.014 |
+|       ROW[1].COL[6].EH.O_M.CELL_XIYO     |     0.020 |
+|       ROW[1].COL[7].EH.O_M.CELL_XIYO     |     0.020 |
+|       ROW[1].COL[8].EH.O_M.CELL_XIYO     |     0.020 |
+|       ROW[1].COL[9].EH.O_M.CELL_XIYO     |     0.018 |
+|       ROW[2].COL[0].EH.E_LS.CELL_X0YE    |     0.016 |
+|       ROW[2].COL[10].EH.E_M.CELL_XIYE    |     0.024 |
+|       ROW[2].COL[11].EH.E_M.CELL_XIYE    |     0.017 |
+|       ROW[2].COL[12].EH.E_M.CELL_XIYE    |     0.026 |
+|       ROW[2].COL[13].EH.E_M.CELL_XIYE    |     0.025 |
+|       ROW[2].COL[14].EH.E_M.CELL_XIYE    |     0.024 |
+|       ROW[2].COL[15].EH.E_M.CELL_XIYE    |     0.020 |
+|       ROW[2].COL[16].EH.E_M.CELL_XIYE    |     0.019 |
+|       ROW[2].COL[17].EH.E_RS.CELL_XWYE   |     0.007 |
+|       ROW[2].COL[1].EH.E_M.CELL_XIYE     |     0.022 |
+|       ROW[2].COL[2].EH.E_M.CELL_XIYE     |     0.022 |
+|       ROW[2].COL[3].EH.E_M.CELL_XIYE     |     0.023 |
+|       ROW[2].COL[4].EH.E_M.CELL_XIYE     |     0.020 |
+|       ROW[2].COL[5].EH.E_M.CELL_XIYE     |     0.020 |
+|       ROW[2].COL[6].EH.E_M.CELL_XIYE     |     0.023 |
+|       ROW[2].COL[7].EH.E_M.CELL_XIYE     |     0.023 |
+|       ROW[2].COL[8].EH.E_M.CELL_XIYE     |     0.022 |
+|       ROW[2].COL[9].EH.E_M.CELL_XIYE     |     0.017 |
+|       ROW[3].COL[0].EH.O_LS.CELL_X0YO    |     0.013 |
+|       ROW[3].COL[10].EH.O_M.CELL_XIYO    |     0.021 |
+|       ROW[3].COL[11].EH.O_M.CELL_XIYO    |     0.024 |
+|       ROW[3].COL[12].EH.O_M.CELL_XIYO    |     0.025 |
+|       ROW[3].COL[13].EH.O_M.CELL_XIYO    |     0.021 |
+|       ROW[3].COL[14].EH.O_M.CELL_XIYO    |     0.027 |
+|       ROW[3].COL[15].EH.O_M.CELL_XIYO    |     0.025 |
+|       ROW[3].COL[16].EH.O_M.CELL_XIYO    |     0.023 |
+|       ROW[3].COL[17].EH.O_RS.CELL_XWYO   |     0.009 |
+|       ROW[3].COL[1].EH.O_M.CELL_XIYO     |     0.021 |
+|       ROW[3].COL[2].EH.O_M.CELL_XIYO     |     0.024 |
+|       ROW[3].COL[3].EH.O_M.CELL_XIYO     |     0.021 |
+|       ROW[3].COL[4].EH.O_M.CELL_XIYO     |     0.024 |
+|       ROW[3].COL[5].EH.O_M.CELL_XIYO     |     0.027 |
+|       ROW[3].COL[6].EH.O_M.CELL_XIYO     |     0.020 |
+|       ROW[3].COL[7].EH.O_M.CELL_XIYO     |     0.020 |
+|       ROW[3].COL[8].EH.O_M.CELL_XIYO     |     0.023 |
+|       ROW[3].COL[9].EH.O_M.CELL_XIYO     |     0.026 |
+|       ROW[4].COL[0].EH.E_LS.CELL_X0YE    |     0.016 |
+|       ROW[4].COL[10].EH.E_M.CELL_XIYE    |     0.026 |
+|       ROW[4].COL[11].EH.E_M.CELL_XIYE    |     0.025 |
+|       ROW[4].COL[12].EH.E_M.CELL_XIYE    |     0.026 |
+|       ROW[4].COL[13].EH.E_M.CELL_XIYE    |     0.026 |
+|       ROW[4].COL[14].EH.E_M.CELL_XIYE    |     0.024 |
+|       ROW[4].COL[15].EH.E_M.CELL_XIYE    |     0.023 |
+|       ROW[4].COL[16].EH.E_M.CELL_XIYE    |     0.020 |
+|       ROW[4].COL[17].EH.E_RS.CELL_XWYE   |     0.006 |
+|       ROW[4].COL[1].EH.E_M.CELL_XIYE     |     0.020 |
+|       ROW[4].COL[2].EH.E_M.CELL_XIYE     |     0.022 |
+|       ROW[4].COL[3].EH.E_M.CELL_XIYE     |     0.024 |
+|       ROW[4].COL[4].EH.E_M.CELL_XIYE     |     0.022 |
+|       ROW[4].COL[5].EH.E_M.CELL_XIYE     |     0.025 |
+|       ROW[4].COL[6].EH.E_M.CELL_XIYE     |     0.027 |
+|       ROW[4].COL[7].EH.E_M.CELL_XIYE     |     0.024 |
+|       ROW[4].COL[8].EH.E_M.CELL_XIYE     |     0.024 |
+|       ROW[4].COL[9].EH.E_M.CELL_XIYE     |     0.024 |
+|       ROW[5].COL[0].EH.O_LS.CELL_X0YO    |     0.013 |
+|       ROW[5].COL[10].EH.O_M.CELL_XIYO    |     0.022 |
+|       ROW[5].COL[11].EH.O_M.CELL_XIYO    |     0.025 |
+|       ROW[5].COL[12].EH.O_M.CELL_XIYO    |     0.023 |
+|       ROW[5].COL[13].EH.O_M.CELL_XIYO    |     0.027 |
+|       ROW[5].COL[14].EH.O_M.CELL_XIYO    |     0.019 |
+|       ROW[5].COL[15].EH.O_M.CELL_XIYO    |     0.025 |
+|       ROW[5].COL[16].EH.O_M.CELL_XIYO    |     0.019 |
+|       ROW[5].COL[17].EH.O_RS.CELL_XWYO   |     0.008 |
+|       ROW[5].COL[1].EH.O_M.CELL_XIYO     |     0.017 |
+|       ROW[5].COL[2].EH.O_M.CELL_XIYO     |     0.023 |
+|       ROW[5].COL[3].EH.O_M.CELL_XIYO     |     0.025 |
+|       ROW[5].COL[4].EH.O_M.CELL_XIYO     |     0.024 |
+|       ROW[5].COL[5].EH.O_M.CELL_XIYO     |     0.021 |
+|       ROW[5].COL[6].EH.O_M.CELL_XIYO     |     0.018 |
+|       ROW[5].COL[7].EH.O_M.CELL_XIYO     |     0.025 |
+|       ROW[5].COL[8].EH.O_M.CELL_XIYO     |     0.024 |
+|       ROW[5].COL[9].EH.O_M.CELL_XIYO     |     0.026 |
+|       ROW[6].COL[0].EH.E_LS.CELL_X0YE    |     0.015 |
+|       ROW[6].COL[10].EH.E_M.CELL_XIYE    |     0.023 |
+|       ROW[6].COL[11].EH.E_M.CELL_XIYE    |     0.025 |
+|       ROW[6].COL[12].EH.E_M.CELL_XIYE    |     0.024 |
+|       ROW[6].COL[13].EH.E_M.CELL_XIYE    |     0.025 |
+|       ROW[6].COL[14].EH.E_M.CELL_XIYE    |     0.026 |
+|       ROW[6].COL[15].EH.E_M.CELL_XIYE    |     0.024 |
+|       ROW[6].COL[16].EH.E_M.CELL_XIYE    |     0.022 |
+|       ROW[6].COL[17].EH.E_RS.CELL_XWYE   |     0.006 |
+|       ROW[6].COL[1].EH.E_M.CELL_XIYE     |     0.022 |
+|       ROW[6].COL[2].EH.E_M.CELL_XIYE     |     0.026 |
+|       ROW[6].COL[3].EH.E_M.CELL_XIYE     |     0.024 |
+|       ROW[6].COL[4].EH.E_M.CELL_XIYE     |     0.028 |
+|       ROW[6].COL[5].EH.E_M.CELL_XIYE     |     0.027 |
+|       ROW[6].COL[6].EH.E_M.CELL_XIYE     |     0.023 |
+|       ROW[6].COL[7].EH.E_M.CELL_XIYE     |     0.023 |
+|       ROW[6].COL[8].EH.E_M.CELL_XIYE     |     0.021 |
+|       ROW[6].COL[9].EH.E_M.CELL_XIYE     |     0.022 |
+|       ROW[7].COL[0].EH.O_LS.CELL_X0YO    |     0.014 |
+|       ROW[7].COL[10].EH.O_M.CELL_XIYO    |     0.021 |
+|       ROW[7].COL[11].EH.O_M.CELL_XIYO    |     0.022 |
+|       ROW[7].COL[12].EH.O_M.CELL_XIYO    |     0.025 |
+|       ROW[7].COL[13].EH.O_M.CELL_XIYO    |     0.021 |
+|       ROW[7].COL[14].EH.O_M.CELL_XIYO    |     0.020 |
+|       ROW[7].COL[15].EH.O_M.CELL_XIYO    |     0.022 |
+|       ROW[7].COL[16].EH.O_M.CELL_XIYO    |     0.024 |
+|       ROW[7].COL[17].EH.O_RS.CELL_XWYO   |     0.009 |
+|       ROW[7].COL[1].EH.O_M.CELL_XIYO     |     0.029 |
+|       ROW[7].COL[2].EH.O_M.CELL_XIYO     |     0.025 |
+|       ROW[7].COL[3].EH.O_M.CELL_XIYO     |     0.022 |
+|       ROW[7].COL[4].EH.O_M.CELL_XIYO     |     0.022 |
+|       ROW[7].COL[5].EH.O_M.CELL_XIYO     |     0.024 |
+|       ROW[7].COL[6].EH.O_M.CELL_XIYO     |     0.020 |
+|       ROW[7].COL[7].EH.O_M.CELL_XIYO     |     0.023 |
+|       ROW[7].COL[8].EH.O_M.CELL_XIYO     |     0.027 |
+|       ROW[7].COL[9].EH.O_M.CELL_XIYO     |     0.022 |
+|       ROW[8].COL[0].EH.E_LS.CELL_X0YE    |     0.015 |
+|       ROW[8].COL[10].EH.E_M.CELL_XIYE    |     0.030 |
+|       ROW[8].COL[11].EH.E_M.CELL_XIYE    |     0.028 |
+|       ROW[8].COL[12].EH.E_M.CELL_XIYE    |     0.024 |
+|       ROW[8].COL[13].EH.E_M.CELL_XIYE    |     0.027 |
+|       ROW[8].COL[14].EH.E_M.CELL_XIYE    |     0.023 |
+|       ROW[8].COL[15].EH.E_M.CELL_XIYE    |     0.022 |
+|       ROW[8].COL[16].EH.E_M.CELL_XIYE    |     0.024 |
+|       ROW[8].COL[17].EH.E_RS.CELL_XWYE   |     0.008 |
+|       ROW[8].COL[1].EH.E_M.CELL_XIYE     |     0.023 |
+|       ROW[8].COL[2].EH.E_M.CELL_XIYE     |     0.024 |
+|       ROW[8].COL[3].EH.E_M.CELL_XIYE     |     0.028 |
+|       ROW[8].COL[4].EH.E_M.CELL_XIYE     |     0.026 |
+|       ROW[8].COL[5].EH.E_M.CELL_XIYE     |     0.022 |
+|       ROW[8].COL[6].EH.E_M.CELL_XIYE     |     0.021 |
+|       ROW[8].COL[7].EH.E_M.CELL_XIYE     |     0.028 |
+|       ROW[8].COL[8].EH.E_M.CELL_XIYE     |     0.028 |
+|       ROW[8].COL[9].EH.E_M.CELL_XIYE     |     0.027 |
+|       ROW[9].COL[0].EH.O_LS.CELL_X0YO    |     0.010 |
+|       ROW[9].COL[10].EH.O_M.CELL_XIYO    |     0.026 |
+|       ROW[9].COL[11].EH.O_M.CELL_XIYO    |     0.022 |
+|       ROW[9].COL[12].EH.O_M.CELL_XIYO    |     0.027 |
+|       ROW[9].COL[13].EH.O_M.CELL_XIYO    |     0.022 |
+|       ROW[9].COL[14].EH.O_M.CELL_XIYO    |     0.024 |
+|       ROW[9].COL[15].EH.O_M.CELL_XIYO    |     0.023 |
+|       ROW[9].COL[16].EH.O_M.CELL_XIYO    |     0.019 |
+|       ROW[9].COL[17].EH.O_RS.CELL_XWYO   |     0.013 |
+|       ROW[9].COL[1].EH.O_M.CELL_XIYO     |     0.015 |
+|       ROW[9].COL[2].EH.O_M.CELL_XIYO     |     0.023 |
+|       ROW[9].COL[3].EH.O_M.CELL_XIYO     |     0.024 |
+|       ROW[9].COL[4].EH.O_M.CELL_XIYO     |     0.022 |
+|       ROW[9].COL[5].EH.O_M.CELL_XIYO     |     0.019 |
+|       ROW[9].COL[6].EH.O_M.CELL_XIYO     |     0.020 |
+|       ROW[9].COL[7].EH.O_M.CELL_XIYO     |     0.023 |
+|       ROW[9].COL[8].EH.O_M.CELL_XIYO     |     0.022 |
+|       ROW[9].COL[9].EH.O_M.CELL_XIYO     |     0.024 |
 +------------------------------------------+-----------+
 
 

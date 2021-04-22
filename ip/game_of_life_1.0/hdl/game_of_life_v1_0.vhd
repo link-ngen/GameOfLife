@@ -106,8 +106,11 @@ architecture arch_imp of game_of_life_v1_0 is
     signal max_iter: std_logic;
     signal bitstream: std_logic;   
     
-    signal shift_delay: std_logic;
+    --signal start_iter_pulse: std_logic;
+    --signal stop_iter_pulse: std_logic;
     signal set_iteration_pulse: std_logic;
+    --signal ITER_TAKEN: std_logic_vector(31 downto 0);    -- game of life data output register           11 
+    --signal set_iter: std_logic;
     
     signal w_FF: std_logic;
     signal r_FF: std_logic;
@@ -205,7 +208,6 @@ begin
     WriteEnable_GOLICR <= '1' when (w_transfer='1' and Write_RegAddress="01") else '0';
     WriteEnable_GOLDIR  <= '1' when (w_transfer='1' and Write_RegAddress="10") else '0';
     WriteEnable_GOLDOR  <= '1' when (w_transfer='1' and Write_RegAddress="11") else '0';
-    
 -- #########################################################################################################
     ---- READ ACCESS (control flow) ----
     s00_axi_arready <= ar_ready;
@@ -248,11 +250,10 @@ begin
     
     -- Read Multiplexer - picks which register value to return
     with Read_RegAddress select
-        s00_axi_rdata <= (Register_GOLCR(31 downto 3) & GMI & GSP & GST) when "00", --GLD GSI & GRS & GRE &
-                         Register_GOLICR(31 downto 0) when "01",
+        s00_axi_rdata <= (Register_GOLCR(31 downto 4) & GMI & GSI & GSP & GST) when "00",
+                         std_logic_vector(n_iter) when "01",
                          Register_GOLDIR(31 downto 0) when "10",
-                         (Register_GOLDOR(31 downto 1) & r_FF) when others;  --TODO: maybe redesign
-
+                         (Register_GOLDOR(31 downto 1) & r_FF) when others;
 -- #########################################################################################################
     -- Get data from AXI-bus and write to register
     ---- REGISTERS (data flow) ----
@@ -286,14 +287,11 @@ begin
         if (rising_edge(clock)) then
             if (reset='1') then
                 Register_GOLDIR <= (others => '0');
-                --w_FF <= '0';
             elsif (WriteEnable_GOLDIR='1') then
                 Register_GOLDIR <= s00_axi_wdata;
-                --w_FF <= s00_axi_wdata(0);
             end if;
         end if;
     end process;
-    
 -- #########################################################################################################
     -- gol operation
     -- read input signal from control register
@@ -305,36 +303,38 @@ begin
                 stop_iter <= '0';         
                 set_iteration_pulse <= '0';
             else
-                GST <= Register_GOLCR(0);
+                GST <= Register_GOLCR(Register_GOLCR'right);
                 GST_old <= GST; -- rising flag detection
                 
-                GSP <= Register_GOLCR(1);
+                GSP <= Register_GOLCR(Register_GOLCR'right + 1);
                 GSP_old <= GSP; -- rising flag detection
                 
-                GSI <= Register_GOLCR(3);
+                GSI <= Register_GOLCR(Register_GOLCR'right + 2);
                 GSI_old <= GSI;
             end if;
-            start_iter <= not GST_old and GST;
+
+            start_iter  <= not GST_old and GST;
             stop_iter <= not GSP_old and GSP;
             set_iteration_pulse <= not GSI_old and GSI;
-            
-            GMI <= max_iter;
+
         end if;
     end process READ_GOLCR_SIG_PROC;
+    GMI <= max_iter;
+    
 -- #########################################################################################################    
-     -- set max iter from iteration control register
-       SET_ITER_PROC: process(clock)
-       begin
-           if rising_edge(clock) then
-               if (reset = '1') then
-                   n_iter <= (others => '0');
-               else
-                   if set_iteration_pulse = '1' then
-                       n_iter <= unsigned(Register_GOLICR);
-                   end if;
-               end if;
-           end if;
-       end process SET_ITER_PROC;
+ -- set max iter from iteration control register
+    SET_ITER_PROC: process(clock)
+    begin
+        if rising_edge(clock) then
+            if (reset = '1') then
+                n_iter <= x"00000001";--(others => '0');
+            else
+                if set_iteration_pulse = '1' then
+                    n_iter <= unsigned(Register_GOLICR(31 downto 0));
+                end if;
+            end if;
+        end if;
+    end process SET_ITER_PROC;
 -- #########################################################################################################
     SHIFT_WFF_PROC: process(clock)
     begin
@@ -342,33 +342,15 @@ begin
             if (reset = '1') then
                 shift_ca <= '0';
                 w_FF <= '0';
-            elsif (w_transfer = '1') then
+            elsif (WriteEnable_GOLDIR = '1') then
                 shift_ca <= w_transfer;
-                w_FF <= Register_GOLDIR(0);
+                w_FF <= Register_GOLDIR(Register_GOLDIR'right);
             else
                 shift_ca <= '0';
             end if;
         end if;
     end process SHIFT_WFF_PROC;
-    
     d_in <= w_FF;
-    
-    
---    SHIFT_WFF_PROC: process(clock)
---    begin
---        if rising_edge(clock) then
---            if (reset = '1') then
---                shift_ca <= '0';
---                d_in <= '0';
---            elsif (w_transfer = '1') then
---                shift_ca <= w_transfer;
---                d_in <= w_FF;
---            else
---                d_in <= d_in;
---                shift_ca <= w_transfer;
---            end if;
---        end if;
---    end process SHIFT_WFF_PROC;
 -- #########################################################################################################
    READ_CA_PROC: process(clock)
    begin
@@ -380,7 +362,6 @@ begin
            end if;
        end if;
    end process READ_CA_PROC;
-   --r_FF <= bitstream;
 -- #########################################################################################################
 
 end arch_imp;
