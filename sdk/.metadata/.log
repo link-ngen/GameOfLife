@@ -7343,3 +7343,52 @@ java.lang.NullPointerException
 
 !ENTRY com.xilinx.sdk.utils 0 0 2021-04-22 17:57:37.307
 !MESSAGE XSCT command with result: [::hsi::utils::get_bram_blocks C:/Workspace/GameOfLife/sdk/design_gol_wrapper_hw_platform_0/system.hdf ], Result: [null, microblaze_0_local_memory_dlmb_bram_if_cntlr microblaze_0_local_memory_ilmb_bram_if_cntlr]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-04-22 18:00:11.515
+!MESSAGE XSCT Command: [::hsi::utils::get_bram_blocks C:/Workspace/GameOfLife/sdk/design_gol_wrapper_hw_platform_0/system.hdf ], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-04-22 18:00:11.518
+!MESSAGE XSCT command with result: [::hsi::utils::get_bram_blocks C:/Workspace/GameOfLife/sdk/design_gol_wrapper_hw_platform_0/system.hdf ], Result: [null, microblaze_0_local_memory_dlmb_bram_if_cntlr microblaze_0_local_memory_ilmb_bram_if_cntlr]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-04-22 18:00:30.198
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-04-22 18:00:30.200
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#1]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-04-22 18:00:30.201
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-04-22 18:00:30.210
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1  Digilent Zed 210248722788]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-04-22 18:00:30.211
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-04-22 18:00:30.219
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1  Digilent Zed 210248722788]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-04-22 18:00:30.220
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248722788" && level==1}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-04-22 18:00:30.249
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Zed 210248722788" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 23727093 irlen 6 fpga)]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-04-22 18:00:30.250
+!MESSAGE XSCT Command: [targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248722788" && level==0} -index 1], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-04-22 18:00:30.287
+!MESSAGE XSCT command with result: [targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248722788" && level==0} -index 1], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-04-22 18:00:30.288
+!MESSAGE XSCT Command: [fpga -file C:/Workspace/GameOfLife/sdk/design_gol_wrapper_hw_platform_0/download.bit], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-04-22 18:00:32.726
+!MESSAGE XSCT command with result: [fpga -file C:/Workspace/GameOfLife/sdk/design_gol_wrapper_hw_platform_0/download.bit], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-04-22 18:00:33.527
+!MESSAGE XSCT Command: [::hsi::utils::get_bram_blocks C:/Workspace/GameOfLife/sdk/design_gol_wrapper_hw_platform_0/system.hdf ], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-04-22 18:00:33.532
+!MESSAGE XSCT command with result: [::hsi::utils::get_bram_blocks C:/Workspace/GameOfLife/sdk/design_gol_wrapper_hw_platform_0/system.hdf ], Result: [null, microblaze_0_local_memory_dlmb_bram_if_cntlr microblaze_0_local_memory_ilmb_bram_if_cntlr]. Thread: ModalContext
