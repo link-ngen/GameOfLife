@@ -50,10 +50,11 @@
 #include "xparameters.h"
 #include "xil_printf.h"
 #include "gol_driver.h"
+#include "gol_microblaze.h"
 
 #define SIZE_OF_GRID 216
 
-unsigned int pattern[SIZE_OF_GRID] = {
+Xuint8 pattern[SIZE_OF_GRID] = {
 		0,0,0,0,1,1,0,0,0,0,0,0,1,1,0,0,0,0,
 		0,0,0,1,0,1,0,0,0,0,0,0,1,0,1,0,0,0,
 		0,0,0,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0,
@@ -69,24 +70,24 @@ unsigned int pattern[SIZE_OF_GRID] = {
 };
 
 
-unsigned int ones[SIZE_OF_GRID] = {
-		1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
-		1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
-		1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
-		1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
-		1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
-		1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
-		1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
-		1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
-		1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
-		1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
-		1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
-		1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1
-};
+//unsigned int ones[SIZE_OF_GRID] = {
+//		1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+//		1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+//		1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+//		1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+//		1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+//		1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+//		1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+//		1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+//		1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+//		1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+//		1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
+//		1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1
+//};
 
-unsigned int outputs[SIZE_OF_GRID] = {0};
+Xuint8 outputs[SIZE_OF_GRID] = {0};
 
-void print_array(unsigned int*);
+void print_array(Xuint8*);
 
 int main()
 {
@@ -94,38 +95,54 @@ int main()
 	xil_printf("=====================================================\n");
 	xil_printf("Initialize the game of life pattern.\n");
 
-	init_gol(XPAR_GAME_OF_LIFE_0_S00_AXI_BASEADDR, pattern);
-	xil_printf("Init finish.\n");
+//	init_gol(XPAR_GAME_OF_LIFE_0_S00_AXI_BASEADDR, pattern);
+//	xil_printf("Init finish.\n");
+//
+//	xil_printf("Now, let the system run for n = %d iteration.\n", read_reg(GOL_ITER_CTRL_REGISTER));// will change later
+//
+//	run_gol();
+//	// polling
+//	while(1)
+//	{
+//		unsigned int max_iter = read_reg(GOL_CTRL_REGISTER) >> 3;
+//		//xil_printf("0x%08x\n", read_reg(GOL_CTRL_REGISTER));
+//		if (max_iter == 1) break;
+//	}
+//
+//	xil_printf("Reached max iteration.\n\r");
+//	xil_printf("Read the whole system data.\n\r");
+//
+//	read_gol(outputs);
+//
+//	xil_printf("Before\n");
+//	print_array(pattern);
+//	xil_printf("=========================\n");
+//	xil_printf("After\n");
+//	print_array(outputs);
+//
+//	xil_printf("Register_GOLCR: 0x%08x\n", read_reg(GOL_CTRL_REGISTER));
 
-	xil_printf("Now, let the system run for n = %d iteration.\n", read_reg(GOL_ITER_CTRL_REGISTER));// will change later
+	//=====================================================
+	microblaze_init_gol(pattern);
+	xil_printf("Now, let the system run for n = %d iteration.\n", 1);// will change later
 
-	run_gol();
-	// polling
-	while(1)
-	{
-		unsigned int max_iter = read_reg(GOL_CTRL_REGISTER) >> 3;
-		//xil_printf("0x%08x\n", read_reg(GOL_CTRL_REGISTER));
-		if (max_iter == 1) break;
-	}
+	microblaze_calc_next_iter(1);
 
-	xil_printf("Reached max iteration.\n\r");
 	xil_printf("Read the whole system data.\n\r");
 
-	read_gol(outputs);
-
+	microblaze_read_gol(outputs);
 	xil_printf("Before\n");
 	print_array(pattern);
 	xil_printf("=========================\n");
 	xil_printf("After\n");
 	print_array(outputs);
-
-	xil_printf("Register_GOLCR: 0x%08x\n", read_reg(GOL_CTRL_REGISTER));
+	microblaze_read_gol(outputs);
 
 	cleanup_platform();
 	return 0;
 }
 
-void print_array(unsigned int* array)
+void print_array(Xuint8* array)
 {
 	for (unsigned int idx = 0; idx < SIZE_OF_GRID; ++idx)
 	{

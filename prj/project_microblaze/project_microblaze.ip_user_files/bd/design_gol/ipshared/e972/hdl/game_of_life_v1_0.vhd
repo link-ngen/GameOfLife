@@ -327,7 +327,7 @@ begin
     begin
         if rising_edge(clock) then
             if (reset = '1') then
-                n_iter <= x"00000002";--(others => '0');
+                n_iter <= x"00000001";--(others => '0');
             else
                 if set_iteration_pulse = '1' then
                     n_iter <= unsigned(Register_GOLICR(31 downto 0));

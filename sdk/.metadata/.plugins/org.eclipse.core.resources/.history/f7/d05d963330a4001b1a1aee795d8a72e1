@@ -1,0 +1,18 @@
+/*
+ * gol_microblaze.h
+ *
+ *  Created on: 23.04.2021
+ *      Author: progr
+ */
+
+#ifndef SRC_GOL_MICROBLAZE_H_
+#define SRC_GOL_MICROBLAZE_H_
+
+#define WIDTH  18
+#define HEIGHT 12
+
+void microblaze_init_gol(unsigned int data_array[]);
+
+
+
+#endif /* SRC_GOL_MICROBLAZE_H_ */

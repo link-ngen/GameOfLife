@@ -2,8 +2,8 @@
 # Vivado v2017.2 (64-bit)
 # SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
 # IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
-# Start of session at: Thu Apr 22 17:51:24 2021
-# Process ID: 420
+# Start of session at: Fri Apr 23 14:03:25 2021
+# Process ID: 8440
 # Current directory: C:/Workspace/GameOfLife/prj/project_microblaze/project_microblaze.runs/synth_1
 # Command line: vivado.exe -log design_gol_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_gol_wrapper.tcl
 # Log file: C:/Workspace/GameOfLife/prj/project_microblaze/project_microblaze.runs/synth_1/design_gol_wrapper.vds
@@ -13,15 +13,15 @@ source design_gol_wrapper.tcl -notrace
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Workspace/GameOfLife/ip'.
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2017.2/data/ip'.
-add_files: Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 271.609 ; gain = 51.637
+add_files: Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 271.832 ; gain = 51.512
 Command: synth_design -top design_gol_wrapper -part xc7z020clg484-1
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020-clg484'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020-clg484'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 16016 
+INFO: Helper process launched with PID 12276 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 357.391 ; gain = 83.152
+Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 357.672 ; gain = 83.215
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'design_gol_wrapper' [C:/Workspace/GameOfLife/bd/design_gol/hdl/design_gol_wrapper.vhd:23]
 INFO: [Synth 8-3491] module 'design_gol' declared at 'C:/Workspace/GameOfLife/bd/design_gol/hdl/design_gol.vhd:1384' bound to instance 'design_gol_i' of component 'design_gol' [C:/Workspace/GameOfLife/bd/design_gol/hdl/design_gol_wrapper.vhd:33]
@@ -468,13 +468,13 @@ INFO: [Synth 8-638] synthesizing module 'BUFG' [C:/Xilinx/Vivado/2017.2/scripts/
 INFO: [Synth 8-256] done synthesizing module 'BUFG' (34#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:607]
 INFO: [Synth 8-256] done synthesizing module 'design_gol_clk_wiz_1_0_clk_wiz' (35#1) [c:/Workspace/GameOfLife/bd/design_gol/ip/design_gol_clk_wiz_1_0/design_gol_clk_wiz_1_0_clk_wiz.v:68]
 INFO: [Synth 8-256] done synthesizing module 'design_gol_clk_wiz_1_0' (36#1) [c:/Workspace/GameOfLife/bd/design_gol/ip/design_gol_clk_wiz_1_0/design_gol_clk_wiz_1_0.v:70]
-INFO: [Synth 8-3491] module 'design_gol_game_of_life_0_0' declared at 'c:/Workspace/GameOfLife/bd/design_gol/ip/design_gol_game_of_life_0_0/synth/design_gol_game_of_life_0_0.vhd:56' bound to instance 'game_of_life_0' of component 'design_gol_game_of_life_0_0' [C:/Workspace/GameOfLife/bd/design_gol/hdl/design_gol.vhd:1745]
-INFO: [Synth 8-638] synthesizing module 'design_gol_game_of_life_0_0' [c:/Workspace/GameOfLife/bd/design_gol/ip/design_gol_game_of_life_0_0/synth/design_gol_game_of_life_0_0.vhd:82]
+INFO: [Synth 8-3491] module 'design_gol_game_of_life_0_1' declared at 'c:/Workspace/GameOfLife/bd/design_gol/ip/design_gol_game_of_life_0_1/synth/design_gol_game_of_life_0_1.vhd:56' bound to instance 'game_of_life_0' of component 'design_gol_game_of_life_0_1' [C:/Workspace/GameOfLife/bd/design_gol/hdl/design_gol.vhd:1745]
+INFO: [Synth 8-638] synthesizing module 'design_gol_game_of_life_0_1' [c:/Workspace/GameOfLife/bd/design_gol/ip/design_gol_game_of_life_0_1/synth/design_gol_game_of_life_0_1.vhd:82]
 	Parameter C_S00_AXI_DATA_WIDTH bound to: 32 - type: integer 
 	Parameter C_S00_AXI_ADDR_WIDTH bound to: 4 - type: integer 
 	Parameter C_GOL_WIDTH bound to: 18 - type: integer 
 	Parameter C_GOL_HEIGHT bound to: 12 - type: integer 
-INFO: [Synth 8-3491] module 'game_of_life_v1_0' declared at 'c:/Workspace/GameOfLife/bd/design_gol/ipshared/e972/hdl/game_of_life_v1_0.vhd:5' bound to instance 'U0' of component 'game_of_life_v1_0' [c:/Workspace/GameOfLife/bd/design_gol/ip/design_gol_game_of_life_0_0/synth/design_gol_game_of_life_0_0.vhd:145]
+INFO: [Synth 8-3491] module 'game_of_life_v1_0' declared at 'c:/Workspace/GameOfLife/bd/design_gol/ipshared/e972/hdl/game_of_life_v1_0.vhd:5' bound to instance 'U0' of component 'game_of_life_v1_0' [c:/Workspace/GameOfLife/bd/design_gol/ip/design_gol_game_of_life_0_1/synth/design_gol_game_of_life_0_1.vhd:145]
 INFO: [Synth 8-638] synthesizing module 'game_of_life_v1_0' [c:/Workspace/GameOfLife/bd/design_gol/ipshared/e972/hdl/game_of_life_v1_0.vhd:48]
 	Parameter C_GOL_WIDTH bound to: 18 - type: integer 
 	Parameter C_GOL_HEIGHT bound to: 12 - type: integer 
@@ -826,7 +826,7 @@ WARNING: [Synth 8-6014] Unused sequential element ReadEnable_GOLICR_reg was remo
 WARNING: [Synth 8-6014] Unused sequential element ReadEnable_GOLDOR_reg was removed.  [c:/Workspace/GameOfLife/bd/design_gol/ipshared/e972/hdl/game_of_life_v1_0.vhd:249]
 WARNING: [Synth 8-3848] Net Register_GOLDOR in module/entity game_of_life_v1_0 does not have driver. [c:/Workspace/GameOfLife/bd/design_gol/ipshared/e972/hdl/game_of_life_v1_0.vhd:86]
 INFO: [Synth 8-256] done synthesizing module 'game_of_life_v1_0' (40#1) [c:/Workspace/GameOfLife/bd/design_gol/ipshared/e972/hdl/game_of_life_v1_0.vhd:48]
-INFO: [Synth 8-256] done synthesizing module 'design_gol_game_of_life_0_0' (41#1) [c:/Workspace/GameOfLife/bd/design_gol/ip/design_gol_game_of_life_0_0/synth/design_gol_game_of_life_0_0.vhd:82]
+INFO: [Synth 8-256] done synthesizing module 'design_gol_game_of_life_0_1' (41#1) [c:/Workspace/GameOfLife/bd/design_gol/ip/design_gol_game_of_life_0_1/synth/design_gol_game_of_life_0_1.vhd:82]
 INFO: [Synth 8-638] synthesizing module 'design_gol_mdm_1_0' [c:/Workspace/GameOfLife/bd/design_gol/ip/design_gol_mdm_1_0/synth/design_gol_mdm_1_0.vhd:74]
 	Parameter C_FAMILY bound to: zynq - type: string 
 	Parameter C_JTAG_CHAIN bound to: 2 - type: integer 
@@ -1650,7 +1650,7 @@ WARNING: [Synth 8-3331] design blk_mem_gen_prim_wrapper has unconnected port ECC
 WARNING: [Synth 8-3331] design blk_mem_gen_generic_cstr has unconnected port INJECTSBITERR
 INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:01:15 ; elapsed = 00:01:20 . Memory (MB): peak = 809.730 ; gain = 535.492
+Finished RTL Elaboration : Time (s): cpu = 00:01:14 ; elapsed = 00:01:18 . Memory (MB): peak = 810.020 ; gain = 535.562
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -1660,7 +1660,7 @@ Report Check Netlist:
 |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:01:17 ; elapsed = 00:01:22 . Memory (MB): peak = 809.730 ; gain = 535.492
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:01:16 ; elapsed = 00:01:21 . Memory (MB): peak = 810.020 ; gain = 535.562
 ---------------------------------------------------------------------------------
 INFO: [Netlist 29-17] Analyzing 749 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -1720,16 +1720,16 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   RAM32M => RAM32M (RAMS32, RAMS32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32): 16 instances
   SRL16 => SRL16E: 1 instances
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.027 . Memory (MB): peak = 969.734 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.025 . Memory (MB): peak = 969.016 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:01:42 ; elapsed = 00:01:48 . Memory (MB): peak = 969.734 ; gain = 695.496
+Finished Constraint Validation : Time (s): cpu = 00:01:40 ; elapsed = 00:01:50 . Memory (MB): peak = 969.016 ; gain = 694.559
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg484-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:01:42 ; elapsed = 00:01:48 . Memory (MB): peak = 969.734 ; gain = 695.496
+Finished Loading Part and Timing Information : Time (s): cpu = 00:01:40 ; elapsed = 00:01:50 . Memory (MB): peak = 969.016 ; gain = 694.559
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -1756,7 +1756,7 @@ Applied set_property DONT_TOUCH = true for design_gol_i/microblaze_0_local_memor
 Applied set_property DONT_TOUCH = true for design_gol_i/microblaze_0_local_memory/lmb_bram. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for design_gol_i/rst_clk_wiz_1_100M. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:01:42 ; elapsed = 00:01:48 . Memory (MB): peak = 969.734 ; gain = 695.496
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:01:40 ; elapsed = 00:01:50 . Memory (MB): peak = 969.016 ; gain = 694.559
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-4471] merging register 'gen_axilite.s_axi_wready_i_reg' into 'gen_axilite.s_axi_awready_i_reg' [c:/Workspace/GameOfLife/bd/design_gol/ipshared/f582/hdl/axi_crossbar_v2_1_vl_rfs.v:3572]
 WARNING: [Synth 8-6014] Unused sequential element gen_axilite.s_axi_wready_i_reg was removed.  [c:/Workspace/GameOfLife/bd/design_gol/ipshared/f582/hdl/axi_crossbar_v2_1_vl_rfs.v:3572]
@@ -1855,7 +1855,7 @@ WARNING: [Synth 8-6014] Unused sequential element q_int_reg was removed.  [c:/Wo
 INFO: [Synth 8-4471] merging register 'seq_cnt_en_reg' into 'from_sys_reg' [c:/Workspace/GameOfLife/bd/design_gol/ipshared/5db7/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:377]
 WARNING: [Synth 8-6014] Unused sequential element seq_cnt_en_reg was removed.  [c:/Workspace/GameOfLife/bd/design_gol/ipshared/5db7/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:377]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:49 ; elapsed = 00:01:56 . Memory (MB): peak = 969.734 ; gain = 695.496
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:47 ; elapsed = 00:01:57 . Memory (MB): peak = 969.016 ; gain = 694.559
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -2406,7 +2406,7 @@ INFO: [Synth 8-3332] Sequential element (UARTLITE_CORE_I/UARTLITE_TX_I/SRL_FIFO_
 INFO: [Synth 8-3332] Sequential element (UARTLITE_CORE_I/UARTLITE_TX_I/SRL_FIFO_I/I_SRL_FIFO_RBU_F/overflow_i_reg) is unused and will be removed from module axi_uartlite.
 INFO: [Synth 8-3332] Sequential element (AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_reg[1]) is unused and will be removed from module axi_uartlite.
 INFO: [Synth 8-3332] Sequential element (AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_reg[0]) is unused and will be removed from module axi_uartlite.
-INFO: [Synth 8-3332] Sequential element (U0/Register_GOLCR_reg[3]) is unused and will be removed from module design_gol_game_of_life_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/Register_GOLCR_reg[3]) is unused and will be removed from module design_gol_game_of_life_0_1.
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (design_gol_i/mdm_1/U0/\MDM_Core_I1/Use_BSCAN.Config_Reg_reg[31] )
 WARNING: [Synth 8-3332] Sequential element (MDM_Core_I1/Use_BSCAN.Config_Reg_reg[31]) is unused and will be removed from module MDM.
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (design_gol_i/microblaze_0/U0/\MicroBlaze_Core_I/Performance.Core/Use_Debug_Logic.Master_Core.Debug_Perf/Performace_Debug_Control.ex_watchpoint_brk_reg )
@@ -2660,7 +2660,7 @@ INFO: [Synth 8-3886] merging instance 'design_gol_i/microblaze_0/U0/LOCKSTEP_Out
 INFO: [Synth 8-3886] merging instance 'design_gol_i/microblaze_0/U0/LOCKSTEP_Out_reg[546]' (FDR) to 'design_gol_i/microblaze_0/U0/LOCKSTEP_Out_reg[539]'
 INFO: [Synth 8-3886] merging instance 'design_gol_i/microblaze_0/U0/LOCKSTEP_Out_reg[542]' (FDR) to 'design_gol_i/microblaze_0/U0/LOCKSTEP_Out_reg[539]'
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:02:04 ; elapsed = 00:02:12 . Memory (MB): peak = 969.734 ; gain = 695.496
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:02:02 ; elapsed = 00:02:13 . Memory (MB): peak = 969.016 ; gain = 694.559
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -2674,7 +2674,7 @@ Start Applying XDC Timing Constraints
 INFO: [Synth 8-5578] Moved timing constraint from pin 'design_gol_i/microblaze_0/U0/Reset' to pin 'design_gol_i/rst_clk_wiz_1_100M/U0/mb_reset_reg/Q'
 INFO: [Synth 8-5819] Moved 1 constraints on hierarchical pins to their respective driving/loading pins
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:02:16 ; elapsed = 00:02:24 . Memory (MB): peak = 969.734 ; gain = 695.496
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:02:14 ; elapsed = 00:02:26 . Memory (MB): peak = 969.016 ; gain = 694.559
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
@@ -2685,14 +2685,14 @@ Found timing loop:
      2: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[0].COL[0].FL.LE.CELL_X0Y0/LUT6_LAST_BIT1 /O (LUT6)
      3: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[0].COL[0].FL.LE.CELL_X0Y0/LUT6_LAST_BIT1 /I4 (LUT6)
      4: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[0].COL[0].FL.LE.CELL_X0Y0/CARRY4_obj /O[3] (CARRY4)
-CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Workspace/GameOfLife/bd/design_gol/ip/design_gol_game_of_life_0_0/synth/design_gol_game_of_life_0_0.vhd:56]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Workspace/GameOfLife/bd/design_gol/ip/design_gol_game_of_life_0_1/synth/design_gol_game_of_life_0_1.vhd:56]
 Inferred a: "set_disable_timing -from S[0] -to O[3] design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[0].COL[0].FL.LE.CELL_X0Y0/CARRY4_obj "
 Found timing loop:
      0: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[0].COL[0].FL.LE.CELL_X0Y0/LUT6_LAST_BIT1 /O (LUT6)
      1: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[0].COL[0].FL.LE.CELL_X0Y0/LUT6_LAST_BIT1 /I4 (LUT6)
      2: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[0].COL[0].FL.LE.CELL_X0Y0/CARRY4_obj /O[3] (CARRY4)
      3: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[0].COL[0].FL.LE.CELL_X0Y0/CARRY4_obj /O[3] (CARRY4)
-CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Workspace/GameOfLife/bd/design_gol/ip/design_gol_game_of_life_0_0/synth/design_gol_game_of_life_0_0.vhd:56]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Workspace/GameOfLife/bd/design_gol/ip/design_gol_game_of_life_0_1/synth/design_gol_game_of_life_0_1.vhd:56]
 Inferred a: "set_disable_timing -from I4 -to O design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[0].COL[0].FL.LE.CELL_X0Y0/LUT6_LAST_BIT1 "
 Found timing loop:
      0: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[0].COL[0].FL.LE.CELL_X0Y0/LUT6_LAST_BIT1 /O (LUT6)
@@ -2700,7 +2700,7 @@ Found timing loop:
      2: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[0].COL[0].FL.LE.CELL_X0Y0/CARRY4_obj /O[1] (CARRY4)
      3: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[0].COL[0].FL.LE.CELL_X0Y0/CARRY4_obj /S[0] (CARRY4)
      4: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[0].COL[0].FL.LE.CELL_X0Y0/LUT6_LAST_BIT1 /O (LUT6)
-CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Workspace/GameOfLife/bd/design_gol/ip/design_gol_game_of_life_0_0/synth/design_gol_game_of_life_0_0.vhd:56]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Workspace/GameOfLife/bd/design_gol/ip/design_gol_game_of_life_0_1/synth/design_gol_game_of_life_0_1.vhd:56]
 Inferred a: "set_disable_timing -from I2 -to O design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[0].COL[0].FL.LE.CELL_X0Y0/LUT6_LAST_BIT1 "
 Found timing loop:
      0: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[11].COL[17].EH.LL_RE.CELL_XWYH/CARRY4_obj /O[3] (CARRY4)
@@ -2708,14 +2708,14 @@ Found timing loop:
      2: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[11].COL[17].EH.LL_RE.CELL_XWYH/LUT6_LAST_BIT1 /O (LUT6)
      3: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[11].COL[17].EH.LL_RE.CELL_XWYH/LUT6_LAST_BIT1 /I4 (LUT6)
      4: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[11].COL[17].EH.LL_RE.CELL_XWYH/CARRY4_obj /O[3] (CARRY4)
-CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Workspace/GameOfLife/bd/design_gol/ip/design_gol_game_of_life_0_0/synth/design_gol_game_of_life_0_0.vhd:56]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Workspace/GameOfLife/bd/design_gol/ip/design_gol_game_of_life_0_1/synth/design_gol_game_of_life_0_1.vhd:56]
 Inferred a: "set_disable_timing -from S[0] -to O[3] design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[11].COL[17].EH.LL_RE.CELL_XWYH/CARRY4_obj "
 Found timing loop:
      0: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[11].COL[17].EH.LL_RE.CELL_XWYH/LUT6_LAST_BIT1 /O (LUT6)
      1: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[11].COL[17].EH.LL_RE.CELL_XWYH/LUT6_LAST_BIT1 /I4 (LUT6)
      2: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[11].COL[17].EH.LL_RE.CELL_XWYH/CARRY4_obj /O[3] (CARRY4)
      3: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[11].COL[17].EH.LL_RE.CELL_XWYH/CARRY4_obj /O[3] (CARRY4)
-CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Workspace/GameOfLife/bd/design_gol/ip/design_gol_game_of_life_0_0/synth/design_gol_game_of_life_0_0.vhd:56]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Workspace/GameOfLife/bd/design_gol/ip/design_gol_game_of_life_0_1/synth/design_gol_game_of_life_0_1.vhd:56]
 Inferred a: "set_disable_timing -from I4 -to O design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[11].COL[17].EH.LL_RE.CELL_XWYH/LUT6_LAST_BIT1 "
 Found timing loop:
      0: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[11].COL[17].EH.LL_RE.CELL_XWYH/LUT6_LAST_BIT1 /O (LUT6)
@@ -2723,7 +2723,7 @@ Found timing loop:
      2: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[11].COL[17].EH.LL_RE.CELL_XWYH/CARRY4_obj /O[1] (CARRY4)
      3: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[11].COL[17].EH.LL_RE.CELL_XWYH/CARRY4_obj /S[0] (CARRY4)
      4: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[11].COL[17].EH.LL_RE.CELL_XWYH/LUT6_LAST_BIT1 /O (LUT6)
-CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Workspace/GameOfLife/bd/design_gol/ip/design_gol_game_of_life_0_0/synth/design_gol_game_of_life_0_0.vhd:56]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Workspace/GameOfLife/bd/design_gol/ip/design_gol_game_of_life_0_1/synth/design_gol_game_of_life_0_1.vhd:56]
 Inferred a: "set_disable_timing -from I2 -to O design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[11].COL[17].EH.LL_RE.CELL_XWYH/LUT6_LAST_BIT1 "
 Found timing loop:
      0: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[11].COL[15].EH.LL_M.CELL_XIYH/CARRY4_obj /O[3] (CARRY4)
@@ -2731,14 +2731,14 @@ Found timing loop:
      2: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[11].COL[15].EH.LL_M.CELL_XIYH/LUT6_LAST_BIT1 /O (LUT6)
      3: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[11].COL[15].EH.LL_M.CELL_XIYH/LUT6_LAST_BIT1 /I4 (LUT6)
      4: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[11].COL[15].EH.LL_M.CELL_XIYH/CARRY4_obj /O[3] (CARRY4)
-CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Workspace/GameOfLife/bd/design_gol/ip/design_gol_game_of_life_0_0/synth/design_gol_game_of_life_0_0.vhd:56]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Workspace/GameOfLife/bd/design_gol/ip/design_gol_game_of_life_0_1/synth/design_gol_game_of_life_0_1.vhd:56]
 Inferred a: "set_disable_timing -from S[0] -to O[3] design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[11].COL[15].EH.LL_M.CELL_XIYH/CARRY4_obj "
 Found timing loop:
      0: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[11].COL[15].EH.LL_M.CELL_XIYH/LUT6_LAST_BIT1 /O (LUT6)
      1: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[11].COL[15].EH.LL_M.CELL_XIYH/LUT6_LAST_BIT1 /I4 (LUT6)
      2: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[11].COL[15].EH.LL_M.CELL_XIYH/CARRY4_obj /O[3] (CARRY4)
      3: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[11].COL[15].EH.LL_M.CELL_XIYH/CARRY4_obj /O[3] (CARRY4)
-CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Workspace/GameOfLife/bd/design_gol/ip/design_gol_game_of_life_0_0/synth/design_gol_game_of_life_0_0.vhd:56]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Workspace/GameOfLife/bd/design_gol/ip/design_gol_game_of_life_0_1/synth/design_gol_game_of_life_0_1.vhd:56]
 Inferred a: "set_disable_timing -from I4 -to O design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[11].COL[15].EH.LL_M.CELL_XIYH/LUT6_LAST_BIT1 "
 Found timing loop:
      0: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[11].COL[15].EH.LL_M.CELL_XIYH/LUT6_LAST_BIT1 /O (LUT6)
@@ -2746,7 +2746,7 @@ Found timing loop:
      2: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[11].COL[15].EH.LL_M.CELL_XIYH/CARRY4_obj /O[1] (CARRY4)
      3: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[11].COL[15].EH.LL_M.CELL_XIYH/CARRY4_obj /S[0] (CARRY4)
      4: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[11].COL[15].EH.LL_M.CELL_XIYH/LUT6_LAST_BIT1 /O (LUT6)
-CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Workspace/GameOfLife/bd/design_gol/ip/design_gol_game_of_life_0_0/synth/design_gol_game_of_life_0_0.vhd:56]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Workspace/GameOfLife/bd/design_gol/ip/design_gol_game_of_life_0_1/synth/design_gol_game_of_life_0_1.vhd:56]
 Inferred a: "set_disable_timing -from I2 -to O design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[11].COL[15].EH.LL_M.CELL_XIYH/LUT6_LAST_BIT1 "
 Found timing loop:
      0: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[11].COL[13].EH.LL_M.CELL_XIYH/CARRY4_obj /O[3] (CARRY4)
@@ -2754,14 +2754,14 @@ Found timing loop:
      2: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[11].COL[13].EH.LL_M.CELL_XIYH/LUT6_LAST_BIT1 /O (LUT6)
      3: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[11].COL[13].EH.LL_M.CELL_XIYH/LUT6_LAST_BIT1 /I4 (LUT6)
      4: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[11].COL[13].EH.LL_M.CELL_XIYH/CARRY4_obj /O[3] (CARRY4)
-CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Workspace/GameOfLife/bd/design_gol/ip/design_gol_game_of_life_0_0/synth/design_gol_game_of_life_0_0.vhd:56]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Workspace/GameOfLife/bd/design_gol/ip/design_gol_game_of_life_0_1/synth/design_gol_game_of_life_0_1.vhd:56]
 Inferred a: "set_disable_timing -from S[0] -to O[3] design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[11].COL[13].EH.LL_M.CELL_XIYH/CARRY4_obj "
 Found timing loop:
      0: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[11].COL[13].EH.LL_M.CELL_XIYH/LUT6_LAST_BIT1 /O (LUT6)
      1: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[11].COL[13].EH.LL_M.CELL_XIYH/LUT6_LAST_BIT1 /I4 (LUT6)
      2: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[11].COL[13].EH.LL_M.CELL_XIYH/CARRY4_obj /O[3] (CARRY4)
      3: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[11].COL[13].EH.LL_M.CELL_XIYH/CARRY4_obj /O[3] (CARRY4)
-CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Workspace/GameOfLife/bd/design_gol/ip/design_gol_game_of_life_0_0/synth/design_gol_game_of_life_0_0.vhd:56]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Workspace/GameOfLife/bd/design_gol/ip/design_gol_game_of_life_0_1/synth/design_gol_game_of_life_0_1.vhd:56]
 Inferred a: "set_disable_timing -from I4 -to O design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[11].COL[13].EH.LL_M.CELL_XIYH/LUT6_LAST_BIT1 "
 Found timing loop:
      0: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[11].COL[13].EH.LL_M.CELL_XIYH/LUT6_LAST_BIT1 /O (LUT6)
@@ -2769,7 +2769,7 @@ Found timing loop:
      2: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[11].COL[13].EH.LL_M.CELL_XIYH/CARRY4_obj /O[1] (CARRY4)
      3: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[11].COL[13].EH.LL_M.CELL_XIYH/CARRY4_obj /S[0] (CARRY4)
      4: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[11].COL[13].EH.LL_M.CELL_XIYH/LUT6_LAST_BIT1 /O (LUT6)
-CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Workspace/GameOfLife/bd/design_gol/ip/design_gol_game_of_life_0_0/synth/design_gol_game_of_life_0_0.vhd:56]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Workspace/GameOfLife/bd/design_gol/ip/design_gol_game_of_life_0_1/synth/design_gol_game_of_life_0_1.vhd:56]
 Inferred a: "set_disable_timing -from I2 -to O design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[11].COL[13].EH.LL_M.CELL_XIYH/LUT6_LAST_BIT1 "
 Found timing loop:
      0: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[11].COL[11].EH.LL_M.CELL_XIYH/CARRY4_obj /O[3] (CARRY4)
@@ -2777,14 +2777,14 @@ Found timing loop:
      2: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[11].COL[11].EH.LL_M.CELL_XIYH/LUT6_LAST_BIT1 /O (LUT6)
      3: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[11].COL[11].EH.LL_M.CELL_XIYH/LUT6_LAST_BIT1 /I4 (LUT6)
      4: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[11].COL[11].EH.LL_M.CELL_XIYH/CARRY4_obj /O[3] (CARRY4)
-CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Workspace/GameOfLife/bd/design_gol/ip/design_gol_game_of_life_0_0/synth/design_gol_game_of_life_0_0.vhd:56]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Workspace/GameOfLife/bd/design_gol/ip/design_gol_game_of_life_0_1/synth/design_gol_game_of_life_0_1.vhd:56]
 Inferred a: "set_disable_timing -from S[0] -to O[3] design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[11].COL[11].EH.LL_M.CELL_XIYH/CARRY4_obj "
 Found timing loop:
      0: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[11].COL[11].EH.LL_M.CELL_XIYH/LUT6_LAST_BIT1 /O (LUT6)
      1: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[11].COL[11].EH.LL_M.CELL_XIYH/LUT6_LAST_BIT1 /I4 (LUT6)
      2: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[11].COL[11].EH.LL_M.CELL_XIYH/CARRY4_obj /O[3] (CARRY4)
      3: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[11].COL[11].EH.LL_M.CELL_XIYH/CARRY4_obj /O[3] (CARRY4)
-CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Workspace/GameOfLife/bd/design_gol/ip/design_gol_game_of_life_0_0/synth/design_gol_game_of_life_0_0.vhd:56]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Workspace/GameOfLife/bd/design_gol/ip/design_gol_game_of_life_0_1/synth/design_gol_game_of_life_0_1.vhd:56]
 Inferred a: "set_disable_timing -from I4 -to O design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[11].COL[11].EH.LL_M.CELL_XIYH/LUT6_LAST_BIT1 "
 Found timing loop:
      0: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[11].COL[11].EH.LL_M.CELL_XIYH/LUT6_LAST_BIT1 /O (LUT6)
@@ -2792,7 +2792,7 @@ Found timing loop:
      2: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[11].COL[11].EH.LL_M.CELL_XIYH/CARRY4_obj /O[1] (CARRY4)
      3: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[11].COL[11].EH.LL_M.CELL_XIYH/CARRY4_obj /S[0] (CARRY4)
      4: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[11].COL[11].EH.LL_M.CELL_XIYH/LUT6_LAST_BIT1 /O (LUT6)
-CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Workspace/GameOfLife/bd/design_gol/ip/design_gol_game_of_life_0_0/synth/design_gol_game_of_life_0_0.vhd:56]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Workspace/GameOfLife/bd/design_gol/ip/design_gol_game_of_life_0_1/synth/design_gol_game_of_life_0_1.vhd:56]
 Inferred a: "set_disable_timing -from I2 -to O design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[11].COL[11].EH.LL_M.CELL_XIYH/LUT6_LAST_BIT1 "
 Found timing loop:
      0: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[11].COL[9].EH.LL_M.CELL_XIYH/CARRY4_obj /O[3] (CARRY4)
@@ -2800,14 +2800,14 @@ Found timing loop:
      2: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[11].COL[9].EH.LL_M.CELL_XIYH/LUT6_LAST_BIT1 /O (LUT6)
      3: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[11].COL[9].EH.LL_M.CELL_XIYH/LUT6_LAST_BIT1 /I4 (LUT6)
      4: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[11].COL[9].EH.LL_M.CELL_XIYH/CARRY4_obj /O[3] (CARRY4)
-CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Workspace/GameOfLife/bd/design_gol/ip/design_gol_game_of_life_0_0/synth/design_gol_game_of_life_0_0.vhd:56]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Workspace/GameOfLife/bd/design_gol/ip/design_gol_game_of_life_0_1/synth/design_gol_game_of_life_0_1.vhd:56]
 Inferred a: "set_disable_timing -from S[0] -to O[3] design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[11].COL[9].EH.LL_M.CELL_XIYH/CARRY4_obj "
 Found timing loop:
      0: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[11].COL[9].EH.LL_M.CELL_XIYH/LUT6_LAST_BIT1 /O (LUT6)
      1: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[11].COL[9].EH.LL_M.CELL_XIYH/LUT6_LAST_BIT1 /I4 (LUT6)
      2: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[11].COL[9].EH.LL_M.CELL_XIYH/CARRY4_obj /O[3] (CARRY4)
      3: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[11].COL[9].EH.LL_M.CELL_XIYH/CARRY4_obj /O[3] (CARRY4)
-CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Workspace/GameOfLife/bd/design_gol/ip/design_gol_game_of_life_0_0/synth/design_gol_game_of_life_0_0.vhd:56]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Workspace/GameOfLife/bd/design_gol/ip/design_gol_game_of_life_0_1/synth/design_gol_game_of_life_0_1.vhd:56]
 Inferred a: "set_disable_timing -from I4 -to O design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[11].COL[9].EH.LL_M.CELL_XIYH/LUT6_LAST_BIT1 "
 Found timing loop:
      0: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[11].COL[9].EH.LL_M.CELL_XIYH/LUT6_LAST_BIT1 /O (LUT6)
@@ -2815,7 +2815,7 @@ Found timing loop:
      2: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[11].COL[9].EH.LL_M.CELL_XIYH/CARRY4_obj /O[1] (CARRY4)
      3: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[11].COL[9].EH.LL_M.CELL_XIYH/CARRY4_obj /S[0] (CARRY4)
      4: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[11].COL[9].EH.LL_M.CELL_XIYH/LUT6_LAST_BIT1 /O (LUT6)
-CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Workspace/GameOfLife/bd/design_gol/ip/design_gol_game_of_life_0_0/synth/design_gol_game_of_life_0_0.vhd:56]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Workspace/GameOfLife/bd/design_gol/ip/design_gol_game_of_life_0_1/synth/design_gol_game_of_life_0_1.vhd:56]
 Inferred a: "set_disable_timing -from I2 -to O design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[11].COL[9].EH.LL_M.CELL_XIYH/LUT6_LAST_BIT1 "
 Found timing loop:
      0: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[11].COL[7].EH.LL_M.CELL_XIYH/CARRY4_obj /O[3] (CARRY4)
@@ -2823,14 +2823,14 @@ Found timing loop:
      2: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[11].COL[7].EH.LL_M.CELL_XIYH/LUT6_LAST_BIT1 /O (LUT6)
      3: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[11].COL[7].EH.LL_M.CELL_XIYH/LUT6_LAST_BIT1 /I4 (LUT6)
      4: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[11].COL[7].EH.LL_M.CELL_XIYH/CARRY4_obj /O[3] (CARRY4)
-CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Workspace/GameOfLife/bd/design_gol/ip/design_gol_game_of_life_0_0/synth/design_gol_game_of_life_0_0.vhd:56]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Workspace/GameOfLife/bd/design_gol/ip/design_gol_game_of_life_0_1/synth/design_gol_game_of_life_0_1.vhd:56]
 Inferred a: "set_disable_timing -from S[0] -to O[3] design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[11].COL[7].EH.LL_M.CELL_XIYH/CARRY4_obj "
 Found timing loop:
      0: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[11].COL[7].EH.LL_M.CELL_XIYH/LUT6_LAST_BIT1 /O (LUT6)
      1: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[11].COL[7].EH.LL_M.CELL_XIYH/LUT6_LAST_BIT1 /I4 (LUT6)
      2: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[11].COL[7].EH.LL_M.CELL_XIYH/CARRY4_obj /O[3] (CARRY4)
      3: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[11].COL[7].EH.LL_M.CELL_XIYH/CARRY4_obj /O[3] (CARRY4)
-CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Workspace/GameOfLife/bd/design_gol/ip/design_gol_game_of_life_0_0/synth/design_gol_game_of_life_0_0.vhd:56]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Workspace/GameOfLife/bd/design_gol/ip/design_gol_game_of_life_0_1/synth/design_gol_game_of_life_0_1.vhd:56]
 Inferred a: "set_disable_timing -from I4 -to O design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[11].COL[7].EH.LL_M.CELL_XIYH/LUT6_LAST_BIT1 "
 Found timing loop:
      0: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[11].COL[7].EH.LL_M.CELL_XIYH/LUT6_LAST_BIT1 /O (LUT6)
@@ -2838,7 +2838,7 @@ Found timing loop:
      2: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[11].COL[7].EH.LL_M.CELL_XIYH/CARRY4_obj /O[1] (CARRY4)
      3: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[11].COL[7].EH.LL_M.CELL_XIYH/CARRY4_obj /S[0] (CARRY4)
      4: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[11].COL[7].EH.LL_M.CELL_XIYH/LUT6_LAST_BIT1 /O (LUT6)
-CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Workspace/GameOfLife/bd/design_gol/ip/design_gol_game_of_life_0_0/synth/design_gol_game_of_life_0_0.vhd:56]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Workspace/GameOfLife/bd/design_gol/ip/design_gol_game_of_life_0_1/synth/design_gol_game_of_life_0_1.vhd:56]
 Inferred a: "set_disable_timing -from I2 -to O design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[11].COL[7].EH.LL_M.CELL_XIYH/LUT6_LAST_BIT1 "
 Found timing loop:
      0: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[11].COL[5].EH.LL_M.CELL_XIYH/CARRY4_obj /O[3] (CARRY4)
@@ -2846,14 +2846,14 @@ Found timing loop:
      2: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[11].COL[5].EH.LL_M.CELL_XIYH/LUT6_LAST_BIT1 /O (LUT6)
      3: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[11].COL[5].EH.LL_M.CELL_XIYH/LUT6_LAST_BIT1 /I4 (LUT6)
      4: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[11].COL[5].EH.LL_M.CELL_XIYH/CARRY4_obj /O[3] (CARRY4)
-CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Workspace/GameOfLife/bd/design_gol/ip/design_gol_game_of_life_0_0/synth/design_gol_game_of_life_0_0.vhd:56]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Workspace/GameOfLife/bd/design_gol/ip/design_gol_game_of_life_0_1/synth/design_gol_game_of_life_0_1.vhd:56]
 Inferred a: "set_disable_timing -from S[0] -to O[3] design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[11].COL[5].EH.LL_M.CELL_XIYH/CARRY4_obj "
 Found timing loop:
      0: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[11].COL[5].EH.LL_M.CELL_XIYH/LUT6_LAST_BIT1 /O (LUT6)
      1: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[11].COL[5].EH.LL_M.CELL_XIYH/LUT6_LAST_BIT1 /I4 (LUT6)
      2: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[11].COL[5].EH.LL_M.CELL_XIYH/CARRY4_obj /O[3] (CARRY4)
      3: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[11].COL[5].EH.LL_M.CELL_XIYH/CARRY4_obj /O[3] (CARRY4)
-CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Workspace/GameOfLife/bd/design_gol/ip/design_gol_game_of_life_0_0/synth/design_gol_game_of_life_0_0.vhd:56]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Workspace/GameOfLife/bd/design_gol/ip/design_gol_game_of_life_0_1/synth/design_gol_game_of_life_0_1.vhd:56]
 Inferred a: "set_disable_timing -from I4 -to O design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[11].COL[5].EH.LL_M.CELL_XIYH/LUT6_LAST_BIT1 "
 Found timing loop:
      0: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[11].COL[5].EH.LL_M.CELL_XIYH/LUT6_LAST_BIT1 /O (LUT6)
@@ -2861,7 +2861,7 @@ Found timing loop:
      2: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[11].COL[5].EH.LL_M.CELL_XIYH/CARRY4_obj /O[1] (CARRY4)
      3: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[11].COL[5].EH.LL_M.CELL_XIYH/CARRY4_obj /S[0] (CARRY4)
      4: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[11].COL[5].EH.LL_M.CELL_XIYH/LUT6_LAST_BIT1 /O (LUT6)
-CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Workspace/GameOfLife/bd/design_gol/ip/design_gol_game_of_life_0_0/synth/design_gol_game_of_life_0_0.vhd:56]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Workspace/GameOfLife/bd/design_gol/ip/design_gol_game_of_life_0_1/synth/design_gol_game_of_life_0_1.vhd:56]
 Inferred a: "set_disable_timing -from I2 -to O design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[11].COL[5].EH.LL_M.CELL_XIYH/LUT6_LAST_BIT1 "
 Found timing loop:
      0: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[11].COL[3].EH.LL_M.CELL_XIYH/CARRY4_obj /O[3] (CARRY4)
@@ -2869,14 +2869,14 @@ Found timing loop:
      2: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[11].COL[3].EH.LL_M.CELL_XIYH/LUT6_LAST_BIT1 /O (LUT6)
      3: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[11].COL[3].EH.LL_M.CELL_XIYH/LUT6_LAST_BIT1 /I4 (LUT6)
      4: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[11].COL[3].EH.LL_M.CELL_XIYH/CARRY4_obj /O[3] (CARRY4)
-CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Workspace/GameOfLife/bd/design_gol/ip/design_gol_game_of_life_0_0/synth/design_gol_game_of_life_0_0.vhd:56]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Workspace/GameOfLife/bd/design_gol/ip/design_gol_game_of_life_0_1/synth/design_gol_game_of_life_0_1.vhd:56]
 Inferred a: "set_disable_timing -from S[0] -to O[3] design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[11].COL[3].EH.LL_M.CELL_XIYH/CARRY4_obj "
 Found timing loop:
      0: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[11].COL[3].EH.LL_M.CELL_XIYH/LUT6_LAST_BIT1 /O (LUT6)
      1: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[11].COL[3].EH.LL_M.CELL_XIYH/LUT6_LAST_BIT1 /I4 (LUT6)
      2: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[11].COL[3].EH.LL_M.CELL_XIYH/CARRY4_obj /O[3] (CARRY4)
      3: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[11].COL[3].EH.LL_M.CELL_XIYH/CARRY4_obj /O[3] (CARRY4)
-CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Workspace/GameOfLife/bd/design_gol/ip/design_gol_game_of_life_0_0/synth/design_gol_game_of_life_0_0.vhd:56]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Workspace/GameOfLife/bd/design_gol/ip/design_gol_game_of_life_0_1/synth/design_gol_game_of_life_0_1.vhd:56]
 Inferred a: "set_disable_timing -from I4 -to O design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[11].COL[3].EH.LL_M.CELL_XIYH/LUT6_LAST_BIT1 "
 Found timing loop:
      0: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[11].COL[3].EH.LL_M.CELL_XIYH/LUT6_LAST_BIT1 /O (LUT6)
@@ -2884,7 +2884,7 @@ Found timing loop:
      2: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[11].COL[3].EH.LL_M.CELL_XIYH/CARRY4_obj /O[1] (CARRY4)
      3: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[11].COL[3].EH.LL_M.CELL_XIYH/CARRY4_obj /S[0] (CARRY4)
      4: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[11].COL[3].EH.LL_M.CELL_XIYH/LUT6_LAST_BIT1 /O (LUT6)
-CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Workspace/GameOfLife/bd/design_gol/ip/design_gol_game_of_life_0_0/synth/design_gol_game_of_life_0_0.vhd:56]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Workspace/GameOfLife/bd/design_gol/ip/design_gol_game_of_life_0_1/synth/design_gol_game_of_life_0_1.vhd:56]
 Inferred a: "set_disable_timing -from I2 -to O design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[11].COL[3].EH.LL_M.CELL_XIYH/LUT6_LAST_BIT1 "
 Found timing loop:
      0: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[11].COL[1].EH.LL_M.CELL_XIYH/CARRY4_obj /O[3] (CARRY4)
@@ -2892,14 +2892,14 @@ Found timing loop:
      2: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[11].COL[1].EH.LL_M.CELL_XIYH/LUT6_LAST_BIT1 /O (LUT6)
      3: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[11].COL[1].EH.LL_M.CELL_XIYH/LUT6_LAST_BIT1 /I4 (LUT6)
      4: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[11].COL[1].EH.LL_M.CELL_XIYH/CARRY4_obj /O[3] (CARRY4)
-CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Workspace/GameOfLife/bd/design_gol/ip/design_gol_game_of_life_0_0/synth/design_gol_game_of_life_0_0.vhd:56]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Workspace/GameOfLife/bd/design_gol/ip/design_gol_game_of_life_0_1/synth/design_gol_game_of_life_0_1.vhd:56]
 Inferred a: "set_disable_timing -from S[0] -to O[3] design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[11].COL[1].EH.LL_M.CELL_XIYH/CARRY4_obj "
 Found timing loop:
      0: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[11].COL[1].EH.LL_M.CELL_XIYH/LUT6_LAST_BIT1 /O (LUT6)
      1: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[11].COL[1].EH.LL_M.CELL_XIYH/LUT6_LAST_BIT1 /I4 (LUT6)
      2: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[11].COL[1].EH.LL_M.CELL_XIYH/CARRY4_obj /O[3] (CARRY4)
      3: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[11].COL[1].EH.LL_M.CELL_XIYH/CARRY4_obj /O[3] (CARRY4)
-CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Workspace/GameOfLife/bd/design_gol/ip/design_gol_game_of_life_0_0/synth/design_gol_game_of_life_0_0.vhd:56]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Workspace/GameOfLife/bd/design_gol/ip/design_gol_game_of_life_0_1/synth/design_gol_game_of_life_0_1.vhd:56]
 Inferred a: "set_disable_timing -from I4 -to O design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[11].COL[1].EH.LL_M.CELL_XIYH/LUT6_LAST_BIT1 "
 Found timing loop:
      0: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[11].COL[1].EH.LL_M.CELL_XIYH/LUT6_LAST_BIT1 /O (LUT6)
@@ -2907,7 +2907,7 @@ Found timing loop:
      2: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[11].COL[1].EH.LL_M.CELL_XIYH/CARRY4_obj /O[1] (CARRY4)
      3: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[11].COL[1].EH.LL_M.CELL_XIYH/CARRY4_obj /S[0] (CARRY4)
      4: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[11].COL[1].EH.LL_M.CELL_XIYH/LUT6_LAST_BIT1 /O (LUT6)
-CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Workspace/GameOfLife/bd/design_gol/ip/design_gol_game_of_life_0_0/synth/design_gol_game_of_life_0_0.vhd:56]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Workspace/GameOfLife/bd/design_gol/ip/design_gol_game_of_life_0_1/synth/design_gol_game_of_life_0_1.vhd:56]
 Inferred a: "set_disable_timing -from I2 -to O design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[11].COL[1].EH.LL_M.CELL_XIYH/LUT6_LAST_BIT1 "
 Found timing loop:
      0: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[10].COL[17].EH.E_RS.CELL_XWYE/CARRY4_obj /O[3] (CARRY4)
@@ -2915,14 +2915,14 @@ Found timing loop:
      2: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[10].COL[17].EH.E_RS.CELL_XWYE/LUT6_LAST_BIT1 /O (LUT6)
      3: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[10].COL[17].EH.E_RS.CELL_XWYE/LUT6_LAST_BIT1 /I4 (LUT6)
      4: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[10].COL[17].EH.E_RS.CELL_XWYE/CARRY4_obj /O[3] (CARRY4)
-CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Workspace/GameOfLife/bd/design_gol/ip/design_gol_game_of_life_0_0/synth/design_gol_game_of_life_0_0.vhd:56]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Workspace/GameOfLife/bd/design_gol/ip/design_gol_game_of_life_0_1/synth/design_gol_game_of_life_0_1.vhd:56]
 Inferred a: "set_disable_timing -from S[0] -to O[3] design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[10].COL[17].EH.E_RS.CELL_XWYE/CARRY4_obj "
 Found timing loop:
      0: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[10].COL[17].EH.E_RS.CELL_XWYE/LUT6_LAST_BIT1 /O (LUT6)
      1: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[10].COL[17].EH.E_RS.CELL_XWYE/LUT6_LAST_BIT1 /I4 (LUT6)
      2: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[10].COL[17].EH.E_RS.CELL_XWYE/CARRY4_obj /O[3] (CARRY4)
      3: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[10].COL[17].EH.E_RS.CELL_XWYE/CARRY4_obj /O[3] (CARRY4)
-CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Workspace/GameOfLife/bd/design_gol/ip/design_gol_game_of_life_0_0/synth/design_gol_game_of_life_0_0.vhd:56]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Workspace/GameOfLife/bd/design_gol/ip/design_gol_game_of_life_0_1/synth/design_gol_game_of_life_0_1.vhd:56]
 Inferred a: "set_disable_timing -from I4 -to O design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[10].COL[17].EH.E_RS.CELL_XWYE/LUT6_LAST_BIT1 "
 Found timing loop:
      0: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[10].COL[17].EH.E_RS.CELL_XWYE/LUT6_LAST_BIT1 /O (LUT6)
@@ -2930,7 +2930,7 @@ Found timing loop:
      2: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[10].COL[17].EH.E_RS.CELL_XWYE/CARRY4_obj /O[1] (CARRY4)
      3: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[10].COL[17].EH.E_RS.CELL_XWYE/CARRY4_obj /S[0] (CARRY4)
      4: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[10].COL[17].EH.E_RS.CELL_XWYE/LUT6_LAST_BIT1 /O (LUT6)
-CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Workspace/GameOfLife/bd/design_gol/ip/design_gol_game_of_life_0_0/synth/design_gol_game_of_life_0_0.vhd:56]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Workspace/GameOfLife/bd/design_gol/ip/design_gol_game_of_life_0_1/synth/design_gol_game_of_life_0_1.vhd:56]
 Inferred a: "set_disable_timing -from I2 -to O design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[10].COL[17].EH.E_RS.CELL_XWYE/LUT6_LAST_BIT1 "
 Found timing loop:
      0: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[10].COL[15].EH.E_M.CELL_XIYE/CARRY4_obj /O[3] (CARRY4)
@@ -2938,14 +2938,14 @@ Found timing loop:
      2: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[10].COL[15].EH.E_M.CELL_XIYE/LUT6_LAST_BIT1 /O (LUT6)
      3: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[10].COL[15].EH.E_M.CELL_XIYE/LUT6_LAST_BIT1 /I4 (LUT6)
      4: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[10].COL[15].EH.E_M.CELL_XIYE/CARRY4_obj /O[3] (CARRY4)
-CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Workspace/GameOfLife/bd/design_gol/ip/design_gol_game_of_life_0_0/synth/design_gol_game_of_life_0_0.vhd:56]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Workspace/GameOfLife/bd/design_gol/ip/design_gol_game_of_life_0_1/synth/design_gol_game_of_life_0_1.vhd:56]
 Inferred a: "set_disable_timing -from S[0] -to O[3] design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[10].COL[15].EH.E_M.CELL_XIYE/CARRY4_obj "
 Found timing loop:
      0: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[10].COL[15].EH.E_M.CELL_XIYE/LUT6_LAST_BIT1 /O (LUT6)
      1: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[10].COL[15].EH.E_M.CELL_XIYE/LUT6_LAST_BIT1 /I4 (LUT6)
      2: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[10].COL[15].EH.E_M.CELL_XIYE/CARRY4_obj /O[3] (CARRY4)
      3: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[10].COL[15].EH.E_M.CELL_XIYE/CARRY4_obj /O[3] (CARRY4)
-CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Workspace/GameOfLife/bd/design_gol/ip/design_gol_game_of_life_0_0/synth/design_gol_game_of_life_0_0.vhd:56]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Workspace/GameOfLife/bd/design_gol/ip/design_gol_game_of_life_0_1/synth/design_gol_game_of_life_0_1.vhd:56]
 Inferred a: "set_disable_timing -from I4 -to O design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[10].COL[15].EH.E_M.CELL_XIYE/LUT6_LAST_BIT1 "
 Found timing loop:
      0: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[10].COL[15].EH.E_M.CELL_XIYE/LUT6_LAST_BIT1 /O (LUT6)
@@ -2953,7 +2953,7 @@ Found timing loop:
      2: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[10].COL[15].EH.E_M.CELL_XIYE/CARRY4_obj /O[1] (CARRY4)
      3: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[10].COL[15].EH.E_M.CELL_XIYE/CARRY4_obj /S[0] (CARRY4)
      4: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[10].COL[15].EH.E_M.CELL_XIYE/LUT6_LAST_BIT1 /O (LUT6)
-CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Workspace/GameOfLife/bd/design_gol/ip/design_gol_game_of_life_0_0/synth/design_gol_game_of_life_0_0.vhd:56]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Workspace/GameOfLife/bd/design_gol/ip/design_gol_game_of_life_0_1/synth/design_gol_game_of_life_0_1.vhd:56]
 Inferred a: "set_disable_timing -from I2 -to O design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[10].COL[15].EH.E_M.CELL_XIYE/LUT6_LAST_BIT1 "
 Found timing loop:
      0: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[10].COL[13].EH.E_M.CELL_XIYE/CARRY4_obj /O[3] (CARRY4)
@@ -2961,14 +2961,14 @@ Found timing loop:
      2: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[10].COL[13].EH.E_M.CELL_XIYE/LUT6_LAST_BIT1 /O (LUT6)
      3: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[10].COL[13].EH.E_M.CELL_XIYE/LUT6_LAST_BIT1 /I4 (LUT6)
      4: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[10].COL[13].EH.E_M.CELL_XIYE/CARRY4_obj /O[3] (CARRY4)
-CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Workspace/GameOfLife/bd/design_gol/ip/design_gol_game_of_life_0_0/synth/design_gol_game_of_life_0_0.vhd:56]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Workspace/GameOfLife/bd/design_gol/ip/design_gol_game_of_life_0_1/synth/design_gol_game_of_life_0_1.vhd:56]
 Inferred a: "set_disable_timing -from S[0] -to O[3] design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[10].COL[13].EH.E_M.CELL_XIYE/CARRY4_obj "
 Found timing loop:
      0: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[10].COL[13].EH.E_M.CELL_XIYE/LUT6_LAST_BIT1 /O (LUT6)
      1: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[10].COL[13].EH.E_M.CELL_XIYE/LUT6_LAST_BIT1 /I4 (LUT6)
      2: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[10].COL[13].EH.E_M.CELL_XIYE/CARRY4_obj /O[3] (CARRY4)
      3: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[10].COL[13].EH.E_M.CELL_XIYE/CARRY4_obj /O[3] (CARRY4)
-CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Workspace/GameOfLife/bd/design_gol/ip/design_gol_game_of_life_0_0/synth/design_gol_game_of_life_0_0.vhd:56]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Workspace/GameOfLife/bd/design_gol/ip/design_gol_game_of_life_0_1/synth/design_gol_game_of_life_0_1.vhd:56]
 Inferred a: "set_disable_timing -from I4 -to O design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[10].COL[13].EH.E_M.CELL_XIYE/LUT6_LAST_BIT1 "
 Found timing loop:
      0: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[10].COL[13].EH.E_M.CELL_XIYE/LUT6_LAST_BIT1 /O (LUT6)
@@ -2976,7 +2976,7 @@ Found timing loop:
      2: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[10].COL[13].EH.E_M.CELL_XIYE/CARRY4_obj /O[1] (CARRY4)
      3: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[10].COL[13].EH.E_M.CELL_XIYE/CARRY4_obj /S[0] (CARRY4)
      4: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[10].COL[13].EH.E_M.CELL_XIYE/LUT6_LAST_BIT1 /O (LUT6)
-CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Workspace/GameOfLife/bd/design_gol/ip/design_gol_game_of_life_0_0/synth/design_gol_game_of_life_0_0.vhd:56]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Workspace/GameOfLife/bd/design_gol/ip/design_gol_game_of_life_0_1/synth/design_gol_game_of_life_0_1.vhd:56]
 Inferred a: "set_disable_timing -from I2 -to O design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[10].COL[13].EH.E_M.CELL_XIYE/LUT6_LAST_BIT1 "
 Found timing loop:
      0: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[10].COL[11].EH.E_M.CELL_XIYE/CARRY4_obj /O[3] (CARRY4)
@@ -2984,14 +2984,14 @@ Found timing loop:
      2: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[10].COL[11].EH.E_M.CELL_XIYE/LUT6_LAST_BIT1 /O (LUT6)
      3: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[10].COL[11].EH.E_M.CELL_XIYE/LUT6_LAST_BIT1 /I4 (LUT6)
      4: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[10].COL[11].EH.E_M.CELL_XIYE/CARRY4_obj /O[3] (CARRY4)
-CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Workspace/GameOfLife/bd/design_gol/ip/design_gol_game_of_life_0_0/synth/design_gol_game_of_life_0_0.vhd:56]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Workspace/GameOfLife/bd/design_gol/ip/design_gol_game_of_life_0_1/synth/design_gol_game_of_life_0_1.vhd:56]
 Inferred a: "set_disable_timing -from S[0] -to O[3] design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[10].COL[11].EH.E_M.CELL_XIYE/CARRY4_obj "
 Found timing loop:
      0: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[10].COL[11].EH.E_M.CELL_XIYE/LUT6_LAST_BIT1 /O (LUT6)
      1: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[10].COL[11].EH.E_M.CELL_XIYE/LUT6_LAST_BIT1 /I4 (LUT6)
      2: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[10].COL[11].EH.E_M.CELL_XIYE/CARRY4_obj /O[3] (CARRY4)
      3: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[10].COL[11].EH.E_M.CELL_XIYE/CARRY4_obj /O[3] (CARRY4)
-CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Workspace/GameOfLife/bd/design_gol/ip/design_gol_game_of_life_0_0/synth/design_gol_game_of_life_0_0.vhd:56]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Workspace/GameOfLife/bd/design_gol/ip/design_gol_game_of_life_0_1/synth/design_gol_game_of_life_0_1.vhd:56]
 Inferred a: "set_disable_timing -from I4 -to O design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[10].COL[11].EH.E_M.CELL_XIYE/LUT6_LAST_BIT1 "
 Found timing loop:
      0: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[10].COL[11].EH.E_M.CELL_XIYE/LUT6_LAST_BIT1 /O (LUT6)
@@ -2999,7 +2999,7 @@ Found timing loop:
      2: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[10].COL[11].EH.E_M.CELL_XIYE/CARRY4_obj /O[1] (CARRY4)
      3: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[10].COL[11].EH.E_M.CELL_XIYE/CARRY4_obj /S[0] (CARRY4)
      4: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[10].COL[11].EH.E_M.CELL_XIYE/LUT6_LAST_BIT1 /O (LUT6)
-CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Workspace/GameOfLife/bd/design_gol/ip/design_gol_game_of_life_0_0/synth/design_gol_game_of_life_0_0.vhd:56]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Workspace/GameOfLife/bd/design_gol/ip/design_gol_game_of_life_0_1/synth/design_gol_game_of_life_0_1.vhd:56]
 Inferred a: "set_disable_timing -from I2 -to O design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[10].COL[11].EH.E_M.CELL_XIYE/LUT6_LAST_BIT1 "
 Found timing loop:
      0: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[10].COL[9].EH.E_M.CELL_XIYE/CARRY4_obj /O[3] (CARRY4)
@@ -3007,14 +3007,14 @@ Found timing loop:
      2: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[10].COL[9].EH.E_M.CELL_XIYE/LUT6_LAST_BIT1 /O (LUT6)
      3: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[10].COL[9].EH.E_M.CELL_XIYE/LUT6_LAST_BIT1 /I4 (LUT6)
      4: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[10].COL[9].EH.E_M.CELL_XIYE/CARRY4_obj /O[3] (CARRY4)
-CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Workspace/GameOfLife/bd/design_gol/ip/design_gol_game_of_life_0_0/synth/design_gol_game_of_life_0_0.vhd:56]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Workspace/GameOfLife/bd/design_gol/ip/design_gol_game_of_life_0_1/synth/design_gol_game_of_life_0_1.vhd:56]
 Inferred a: "set_disable_timing -from S[0] -to O[3] design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[10].COL[9].EH.E_M.CELL_XIYE/CARRY4_obj "
 Found timing loop:
      0: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[10].COL[9].EH.E_M.CELL_XIYE/LUT6_LAST_BIT1 /O (LUT6)
      1: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[10].COL[9].EH.E_M.CELL_XIYE/LUT6_LAST_BIT1 /I4 (LUT6)
      2: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[10].COL[9].EH.E_M.CELL_XIYE/CARRY4_obj /O[3] (CARRY4)
      3: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[10].COL[9].EH.E_M.CELL_XIYE/CARRY4_obj /O[3] (CARRY4)
-CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Workspace/GameOfLife/bd/design_gol/ip/design_gol_game_of_life_0_0/synth/design_gol_game_of_life_0_0.vhd:56]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Workspace/GameOfLife/bd/design_gol/ip/design_gol_game_of_life_0_1/synth/design_gol_game_of_life_0_1.vhd:56]
 Inferred a: "set_disable_timing -from I4 -to O design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[10].COL[9].EH.E_M.CELL_XIYE/LUT6_LAST_BIT1 "
 Found timing loop:
      0: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[10].COL[9].EH.E_M.CELL_XIYE/LUT6_LAST_BIT1 /O (LUT6)
@@ -3022,7 +3022,7 @@ Found timing loop:
      2: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[10].COL[9].EH.E_M.CELL_XIYE/CARRY4_obj /O[1] (CARRY4)
      3: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[10].COL[9].EH.E_M.CELL_XIYE/CARRY4_obj /S[0] (CARRY4)
      4: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[10].COL[9].EH.E_M.CELL_XIYE/LUT6_LAST_BIT1 /O (LUT6)
-CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Workspace/GameOfLife/bd/design_gol/ip/design_gol_game_of_life_0_0/synth/design_gol_game_of_life_0_0.vhd:56]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Workspace/GameOfLife/bd/design_gol/ip/design_gol_game_of_life_0_1/synth/design_gol_game_of_life_0_1.vhd:56]
 Inferred a: "set_disable_timing -from I2 -to O design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[10].COL[9].EH.E_M.CELL_XIYE/LUT6_LAST_BIT1 "
 Found timing loop:
      0: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[10].COL[7].EH.E_M.CELL_XIYE/CARRY4_obj /O[3] (CARRY4)
@@ -3030,14 +3030,14 @@ Found timing loop:
      2: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[10].COL[7].EH.E_M.CELL_XIYE/LUT6_LAST_BIT1 /O (LUT6)
      3: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[10].COL[7].EH.E_M.CELL_XIYE/LUT6_LAST_BIT1 /I4 (LUT6)
      4: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[10].COL[7].EH.E_M.CELL_XIYE/CARRY4_obj /O[3] (CARRY4)
-CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Workspace/GameOfLife/bd/design_gol/ip/design_gol_game_of_life_0_0/synth/design_gol_game_of_life_0_0.vhd:56]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Workspace/GameOfLife/bd/design_gol/ip/design_gol_game_of_life_0_1/synth/design_gol_game_of_life_0_1.vhd:56]
 Inferred a: "set_disable_timing -from S[0] -to O[3] design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[10].COL[7].EH.E_M.CELL_XIYE/CARRY4_obj "
 Found timing loop:
      0: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[10].COL[7].EH.E_M.CELL_XIYE/LUT6_LAST_BIT1 /O (LUT6)
      1: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[10].COL[7].EH.E_M.CELL_XIYE/LUT6_LAST_BIT1 /I4 (LUT6)
      2: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[10].COL[7].EH.E_M.CELL_XIYE/CARRY4_obj /O[3] (CARRY4)
      3: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[10].COL[7].EH.E_M.CELL_XIYE/CARRY4_obj /O[3] (CARRY4)
-CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Workspace/GameOfLife/bd/design_gol/ip/design_gol_game_of_life_0_0/synth/design_gol_game_of_life_0_0.vhd:56]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Workspace/GameOfLife/bd/design_gol/ip/design_gol_game_of_life_0_1/synth/design_gol_game_of_life_0_1.vhd:56]
 Inferred a: "set_disable_timing -from I4 -to O design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[10].COL[7].EH.E_M.CELL_XIYE/LUT6_LAST_BIT1 "
 Found timing loop:
      0: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[10].COL[7].EH.E_M.CELL_XIYE/LUT6_LAST_BIT1 /O (LUT6)
@@ -3045,7 +3045,7 @@ Found timing loop:
      2: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[10].COL[7].EH.E_M.CELL_XIYE/CARRY4_obj /O[1] (CARRY4)
      3: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[10].COL[7].EH.E_M.CELL_XIYE/CARRY4_obj /S[0] (CARRY4)
      4: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[10].COL[7].EH.E_M.CELL_XIYE/LUT6_LAST_BIT1 /O (LUT6)
-CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Workspace/GameOfLife/bd/design_gol/ip/design_gol_game_of_life_0_0/synth/design_gol_game_of_life_0_0.vhd:56]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Workspace/GameOfLife/bd/design_gol/ip/design_gol_game_of_life_0_1/synth/design_gol_game_of_life_0_1.vhd:56]
 Inferred a: "set_disable_timing -from I2 -to O design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[10].COL[7].EH.E_M.CELL_XIYE/LUT6_LAST_BIT1 "
 Found timing loop:
      0: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[10].COL[5].EH.E_M.CELL_XIYE/CARRY4_obj /O[3] (CARRY4)
@@ -3053,14 +3053,14 @@ Found timing loop:
      2: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[10].COL[5].EH.E_M.CELL_XIYE/LUT6_LAST_BIT1 /O (LUT6)
      3: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[10].COL[5].EH.E_M.CELL_XIYE/LUT6_LAST_BIT1 /I4 (LUT6)
      4: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[10].COL[5].EH.E_M.CELL_XIYE/CARRY4_obj /O[3] (CARRY4)
-CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Workspace/GameOfLife/bd/design_gol/ip/design_gol_game_of_life_0_0/synth/design_gol_game_of_life_0_0.vhd:56]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Workspace/GameOfLife/bd/design_gol/ip/design_gol_game_of_life_0_1/synth/design_gol_game_of_life_0_1.vhd:56]
 Inferred a: "set_disable_timing -from S[0] -to O[3] design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[10].COL[5].EH.E_M.CELL_XIYE/CARRY4_obj "
 Found timing loop:
      0: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[10].COL[5].EH.E_M.CELL_XIYE/LUT6_LAST_BIT1 /O (LUT6)
      1: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[10].COL[5].EH.E_M.CELL_XIYE/LUT6_LAST_BIT1 /I4 (LUT6)
      2: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[10].COL[5].EH.E_M.CELL_XIYE/CARRY4_obj /O[3] (CARRY4)
      3: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[10].COL[5].EH.E_M.CELL_XIYE/CARRY4_obj /O[3] (CARRY4)
-CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Workspace/GameOfLife/bd/design_gol/ip/design_gol_game_of_life_0_0/synth/design_gol_game_of_life_0_0.vhd:56]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Workspace/GameOfLife/bd/design_gol/ip/design_gol_game_of_life_0_1/synth/design_gol_game_of_life_0_1.vhd:56]
 Inferred a: "set_disable_timing -from I4 -to O design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[10].COL[5].EH.E_M.CELL_XIYE/LUT6_LAST_BIT1 "
 Found timing loop:
      0: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[10].COL[5].EH.E_M.CELL_XIYE/LUT6_LAST_BIT1 /O (LUT6)
@@ -3068,7 +3068,7 @@ Found timing loop:
      2: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[10].COL[5].EH.E_M.CELL_XIYE/CARRY4_obj /O[1] (CARRY4)
      3: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[10].COL[5].EH.E_M.CELL_XIYE/CARRY4_obj /S[0] (CARRY4)
      4: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[10].COL[5].EH.E_M.CELL_XIYE/LUT6_LAST_BIT1 /O (LUT6)
-CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Workspace/GameOfLife/bd/design_gol/ip/design_gol_game_of_life_0_0/synth/design_gol_game_of_life_0_0.vhd:56]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Workspace/GameOfLife/bd/design_gol/ip/design_gol_game_of_life_0_1/synth/design_gol_game_of_life_0_1.vhd:56]
 Inferred a: "set_disable_timing -from I2 -to O design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[10].COL[5].EH.E_M.CELL_XIYE/LUT6_LAST_BIT1 "
 Found timing loop:
      0: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[10].COL[3].EH.E_M.CELL_XIYE/CARRY4_obj /O[3] (CARRY4)
@@ -3076,14 +3076,14 @@ Found timing loop:
      2: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[10].COL[3].EH.E_M.CELL_XIYE/LUT6_LAST_BIT1 /O (LUT6)
      3: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[10].COL[3].EH.E_M.CELL_XIYE/LUT6_LAST_BIT1 /I4 (LUT6)
      4: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[10].COL[3].EH.E_M.CELL_XIYE/CARRY4_obj /O[3] (CARRY4)
-CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Workspace/GameOfLife/bd/design_gol/ip/design_gol_game_of_life_0_0/synth/design_gol_game_of_life_0_0.vhd:56]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Workspace/GameOfLife/bd/design_gol/ip/design_gol_game_of_life_0_1/synth/design_gol_game_of_life_0_1.vhd:56]
 Inferred a: "set_disable_timing -from S[0] -to O[3] design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[10].COL[3].EH.E_M.CELL_XIYE/CARRY4_obj "
 Found timing loop:
      0: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[10].COL[3].EH.E_M.CELL_XIYE/LUT6_LAST_BIT1 /O (LUT6)
      1: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[10].COL[3].EH.E_M.CELL_XIYE/LUT6_LAST_BIT1 /I4 (LUT6)
      2: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[10].COL[3].EH.E_M.CELL_XIYE/CARRY4_obj /O[3] (CARRY4)
      3: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[10].COL[3].EH.E_M.CELL_XIYE/CARRY4_obj /O[3] (CARRY4)
-CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Workspace/GameOfLife/bd/design_gol/ip/design_gol_game_of_life_0_0/synth/design_gol_game_of_life_0_0.vhd:56]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Workspace/GameOfLife/bd/design_gol/ip/design_gol_game_of_life_0_1/synth/design_gol_game_of_life_0_1.vhd:56]
 Inferred a: "set_disable_timing -from I4 -to O design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[10].COL[3].EH.E_M.CELL_XIYE/LUT6_LAST_BIT1 "
 Found timing loop:
      0: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[10].COL[3].EH.E_M.CELL_XIYE/LUT6_LAST_BIT1 /O (LUT6)
@@ -3091,7 +3091,7 @@ Found timing loop:
      2: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[10].COL[3].EH.E_M.CELL_XIYE/CARRY4_obj /O[1] (CARRY4)
      3: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[10].COL[3].EH.E_M.CELL_XIYE/CARRY4_obj /S[0] (CARRY4)
      4: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[10].COL[3].EH.E_M.CELL_XIYE/LUT6_LAST_BIT1 /O (LUT6)
-CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Workspace/GameOfLife/bd/design_gol/ip/design_gol_game_of_life_0_0/synth/design_gol_game_of_life_0_0.vhd:56]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Workspace/GameOfLife/bd/design_gol/ip/design_gol_game_of_life_0_1/synth/design_gol_game_of_life_0_1.vhd:56]
 Inferred a: "set_disable_timing -from I2 -to O design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[10].COL[3].EH.E_M.CELL_XIYE/LUT6_LAST_BIT1 "
 Found timing loop:
      0: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[10].COL[1].EH.E_M.CELL_XIYE/CARRY4_obj /O[3] (CARRY4)
@@ -3099,14 +3099,14 @@ Found timing loop:
      2: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[10].COL[1].EH.E_M.CELL_XIYE/LUT6_LAST_BIT1 /O (LUT6)
      3: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[10].COL[1].EH.E_M.CELL_XIYE/LUT6_LAST_BIT1 /I4 (LUT6)
      4: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[10].COL[1].EH.E_M.CELL_XIYE/CARRY4_obj /O[3] (CARRY4)
-CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Workspace/GameOfLife/bd/design_gol/ip/design_gol_game_of_life_0_0/synth/design_gol_game_of_life_0_0.vhd:56]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Workspace/GameOfLife/bd/design_gol/ip/design_gol_game_of_life_0_1/synth/design_gol_game_of_life_0_1.vhd:56]
 Inferred a: "set_disable_timing -from S[0] -to O[3] design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[10].COL[1].EH.E_M.CELL_XIYE/CARRY4_obj "
 Found timing loop:
      0: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[10].COL[1].EH.E_M.CELL_XIYE/LUT6_LAST_BIT1 /O (LUT6)
      1: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[10].COL[1].EH.E_M.CELL_XIYE/LUT6_LAST_BIT1 /I4 (LUT6)
      2: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[10].COL[1].EH.E_M.CELL_XIYE/CARRY4_obj /O[3] (CARRY4)
      3: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[10].COL[1].EH.E_M.CELL_XIYE/CARRY4_obj /O[3] (CARRY4)
-CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Workspace/GameOfLife/bd/design_gol/ip/design_gol_game_of_life_0_0/synth/design_gol_game_of_life_0_0.vhd:56]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Workspace/GameOfLife/bd/design_gol/ip/design_gol_game_of_life_0_1/synth/design_gol_game_of_life_0_1.vhd:56]
 Inferred a: "set_disable_timing -from I4 -to O design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[10].COL[1].EH.E_M.CELL_XIYE/LUT6_LAST_BIT1 "
 Found timing loop:
      0: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[10].COL[1].EH.E_M.CELL_XIYE/LUT6_LAST_BIT1 /O (LUT6)
@@ -3114,7 +3114,7 @@ Found timing loop:
      2: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[10].COL[1].EH.E_M.CELL_XIYE/CARRY4_obj /O[1] (CARRY4)
      3: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[10].COL[1].EH.E_M.CELL_XIYE/CARRY4_obj /S[0] (CARRY4)
      4: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[10].COL[1].EH.E_M.CELL_XIYE/LUT6_LAST_BIT1 /O (LUT6)
-CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Workspace/GameOfLife/bd/design_gol/ip/design_gol_game_of_life_0_0/synth/design_gol_game_of_life_0_0.vhd:56]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Workspace/GameOfLife/bd/design_gol/ip/design_gol_game_of_life_0_1/synth/design_gol_game_of_life_0_1.vhd:56]
 Inferred a: "set_disable_timing -from I2 -to O design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[10].COL[1].EH.E_M.CELL_XIYE/LUT6_LAST_BIT1 "
 Found timing loop:
      0: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[9].COL[17].EH.O_RS.CELL_XWYO/CARRY4_obj /O[3] (CARRY4)
@@ -3122,14 +3122,14 @@ Found timing loop:
      2: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[9].COL[17].EH.O_RS.CELL_XWYO/LUT6_LAST_BIT1 /O (LUT6)
      3: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[9].COL[17].EH.O_RS.CELL_XWYO/LUT6_LAST_BIT1 /I4 (LUT6)
      4: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[9].COL[17].EH.O_RS.CELL_XWYO/CARRY4_obj /O[3] (CARRY4)
-CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Workspace/GameOfLife/bd/design_gol/ip/design_gol_game_of_life_0_0/synth/design_gol_game_of_life_0_0.vhd:56]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Workspace/GameOfLife/bd/design_gol/ip/design_gol_game_of_life_0_1/synth/design_gol_game_of_life_0_1.vhd:56]
 Inferred a: "set_disable_timing -from S[0] -to O[3] design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[9].COL[17].EH.O_RS.CELL_XWYO/CARRY4_obj "
 Found timing loop:
      0: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[9].COL[17].EH.O_RS.CELL_XWYO/LUT6_LAST_BIT1 /O (LUT6)
      1: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[9].COL[17].EH.O_RS.CELL_XWYO/LUT6_LAST_BIT1 /I4 (LUT6)
      2: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[9].COL[17].EH.O_RS.CELL_XWYO/CARRY4_obj /O[3] (CARRY4)
      3: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[9].COL[17].EH.O_RS.CELL_XWYO/CARRY4_obj /O[3] (CARRY4)
-CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Workspace/GameOfLife/bd/design_gol/ip/design_gol_game_of_life_0_0/synth/design_gol_game_of_life_0_0.vhd:56]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Workspace/GameOfLife/bd/design_gol/ip/design_gol_game_of_life_0_1/synth/design_gol_game_of_life_0_1.vhd:56]
 Inferred a: "set_disable_timing -from I4 -to O design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[9].COL[17].EH.O_RS.CELL_XWYO/LUT6_LAST_BIT1 "
 Found timing loop:
      0: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[9].COL[17].EH.O_RS.CELL_XWYO/LUT6_LAST_BIT1 /O (LUT6)
@@ -3137,7 +3137,7 @@ Found timing loop:
      2: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[9].COL[17].EH.O_RS.CELL_XWYO/CARRY4_obj /O[1] (CARRY4)
      3: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[9].COL[17].EH.O_RS.CELL_XWYO/CARRY4_obj /S[0] (CARRY4)
      4: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[9].COL[17].EH.O_RS.CELL_XWYO/LUT6_LAST_BIT1 /O (LUT6)
-CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Workspace/GameOfLife/bd/design_gol/ip/design_gol_game_of_life_0_0/synth/design_gol_game_of_life_0_0.vhd:56]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Workspace/GameOfLife/bd/design_gol/ip/design_gol_game_of_life_0_1/synth/design_gol_game_of_life_0_1.vhd:56]
 Inferred a: "set_disable_timing -from I2 -to O design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[9].COL[17].EH.O_RS.CELL_XWYO/LUT6_LAST_BIT1 "
 Found timing loop:
      0: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[9].COL[15].EH.O_M.CELL_XIYO/CARRY4_obj /O[3] (CARRY4)
@@ -3145,14 +3145,14 @@ Found timing loop:
      2: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[9].COL[15].EH.O_M.CELL_XIYO/LUT6_LAST_BIT1 /O (LUT6)
      3: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[9].COL[15].EH.O_M.CELL_XIYO/LUT6_LAST_BIT1 /I4 (LUT6)
      4: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[9].COL[15].EH.O_M.CELL_XIYO/CARRY4_obj /O[3] (CARRY4)
-CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Workspace/GameOfLife/bd/design_gol/ip/design_gol_game_of_life_0_0/synth/design_gol_game_of_life_0_0.vhd:56]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Workspace/GameOfLife/bd/design_gol/ip/design_gol_game_of_life_0_1/synth/design_gol_game_of_life_0_1.vhd:56]
 Inferred a: "set_disable_timing -from S[0] -to O[3] design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[9].COL[15].EH.O_M.CELL_XIYO/CARRY4_obj "
 Found timing loop:
      0: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[9].COL[15].EH.O_M.CELL_XIYO/LUT6_LAST_BIT1 /O (LUT6)
      1: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[9].COL[15].EH.O_M.CELL_XIYO/LUT6_LAST_BIT1 /I4 (LUT6)
      2: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[9].COL[15].EH.O_M.CELL_XIYO/CARRY4_obj /O[3] (CARRY4)
      3: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[9].COL[15].EH.O_M.CELL_XIYO/CARRY4_obj /O[3] (CARRY4)
-CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Workspace/GameOfLife/bd/design_gol/ip/design_gol_game_of_life_0_0/synth/design_gol_game_of_life_0_0.vhd:56]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Workspace/GameOfLife/bd/design_gol/ip/design_gol_game_of_life_0_1/synth/design_gol_game_of_life_0_1.vhd:56]
 Inferred a: "set_disable_timing -from I4 -to O design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[9].COL[15].EH.O_M.CELL_XIYO/LUT6_LAST_BIT1 "
 Found timing loop:
      0: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[9].COL[15].EH.O_M.CELL_XIYO/LUT6_LAST_BIT1 /O (LUT6)
@@ -3160,7 +3160,7 @@ Found timing loop:
      2: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[9].COL[15].EH.O_M.CELL_XIYO/CARRY4_obj /O[1] (CARRY4)
      3: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[9].COL[15].EH.O_M.CELL_XIYO/CARRY4_obj /S[0] (CARRY4)
      4: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[9].COL[15].EH.O_M.CELL_XIYO/LUT6_LAST_BIT1 /O (LUT6)
-CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Workspace/GameOfLife/bd/design_gol/ip/design_gol_game_of_life_0_0/synth/design_gol_game_of_life_0_0.vhd:56]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Workspace/GameOfLife/bd/design_gol/ip/design_gol_game_of_life_0_1/synth/design_gol_game_of_life_0_1.vhd:56]
 Inferred a: "set_disable_timing -from I2 -to O design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[9].COL[15].EH.O_M.CELL_XIYO/LUT6_LAST_BIT1 "
 Found timing loop:
      0: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[9].COL[13].EH.O_M.CELL_XIYO/CARRY4_obj /O[3] (CARRY4)
@@ -3168,14 +3168,14 @@ Found timing loop:
      2: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[9].COL[13].EH.O_M.CELL_XIYO/LUT6_LAST_BIT1 /O (LUT6)
      3: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[9].COL[13].EH.O_M.CELL_XIYO/LUT6_LAST_BIT1 /I4 (LUT6)
      4: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[9].COL[13].EH.O_M.CELL_XIYO/CARRY4_obj /O[3] (CARRY4)
-CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Workspace/GameOfLife/bd/design_gol/ip/design_gol_game_of_life_0_0/synth/design_gol_game_of_life_0_0.vhd:56]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Workspace/GameOfLife/bd/design_gol/ip/design_gol_game_of_life_0_1/synth/design_gol_game_of_life_0_1.vhd:56]
 Inferred a: "set_disable_timing -from S[0] -to O[3] design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[9].COL[13].EH.O_M.CELL_XIYO/CARRY4_obj "
 Found timing loop:
      0: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[9].COL[13].EH.O_M.CELL_XIYO/LUT6_LAST_BIT1 /O (LUT6)
      1: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[9].COL[13].EH.O_M.CELL_XIYO/LUT6_LAST_BIT1 /I4 (LUT6)
      2: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[9].COL[13].EH.O_M.CELL_XIYO/CARRY4_obj /O[3] (CARRY4)
      3: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[9].COL[13].EH.O_M.CELL_XIYO/CARRY4_obj /O[3] (CARRY4)
-CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Workspace/GameOfLife/bd/design_gol/ip/design_gol_game_of_life_0_0/synth/design_gol_game_of_life_0_0.vhd:56]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Workspace/GameOfLife/bd/design_gol/ip/design_gol_game_of_life_0_1/synth/design_gol_game_of_life_0_1.vhd:56]
 Inferred a: "set_disable_timing -from I4 -to O design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[9].COL[13].EH.O_M.CELL_XIYO/LUT6_LAST_BIT1 "
 Found timing loop:
      0: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[9].COL[13].EH.O_M.CELL_XIYO/LUT6_LAST_BIT1 /O (LUT6)
@@ -3183,7 +3183,7 @@ Found timing loop:
      2: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[9].COL[13].EH.O_M.CELL_XIYO/CARRY4_obj /O[1] (CARRY4)
      3: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[9].COL[13].EH.O_M.CELL_XIYO/CARRY4_obj /S[0] (CARRY4)
      4: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[9].COL[13].EH.O_M.CELL_XIYO/LUT6_LAST_BIT1 /O (LUT6)
-CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Workspace/GameOfLife/bd/design_gol/ip/design_gol_game_of_life_0_0/synth/design_gol_game_of_life_0_0.vhd:56]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Workspace/GameOfLife/bd/design_gol/ip/design_gol_game_of_life_0_1/synth/design_gol_game_of_life_0_1.vhd:56]
 Inferred a: "set_disable_timing -from I2 -to O design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[9].COL[13].EH.O_M.CELL_XIYO/LUT6_LAST_BIT1 "
 Found timing loop:
      0: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[9].COL[11].EH.O_M.CELL_XIYO/CARRY4_obj /O[3] (CARRY4)
@@ -3191,14 +3191,14 @@ Found timing loop:
      2: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[9].COL[11].EH.O_M.CELL_XIYO/LUT6_LAST_BIT1 /O (LUT6)
      3: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[9].COL[11].EH.O_M.CELL_XIYO/LUT6_LAST_BIT1 /I4 (LUT6)
      4: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[9].COL[11].EH.O_M.CELL_XIYO/CARRY4_obj /O[3] (CARRY4)
-CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Workspace/GameOfLife/bd/design_gol/ip/design_gol_game_of_life_0_0/synth/design_gol_game_of_life_0_0.vhd:56]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Workspace/GameOfLife/bd/design_gol/ip/design_gol_game_of_life_0_1/synth/design_gol_game_of_life_0_1.vhd:56]
 Inferred a: "set_disable_timing -from S[0] -to O[3] design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[9].COL[11].EH.O_M.CELL_XIYO/CARRY4_obj "
 Found timing loop:
      0: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[9].COL[11].EH.O_M.CELL_XIYO/LUT6_LAST_BIT1 /O (LUT6)
      1: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[9].COL[11].EH.O_M.CELL_XIYO/LUT6_LAST_BIT1 /I4 (LUT6)
      2: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[9].COL[11].EH.O_M.CELL_XIYO/CARRY4_obj /O[3] (CARRY4)
      3: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[9].COL[11].EH.O_M.CELL_XIYO/CARRY4_obj /O[3] (CARRY4)
-CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Workspace/GameOfLife/bd/design_gol/ip/design_gol_game_of_life_0_0/synth/design_gol_game_of_life_0_0.vhd:56]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Workspace/GameOfLife/bd/design_gol/ip/design_gol_game_of_life_0_1/synth/design_gol_game_of_life_0_1.vhd:56]
 Inferred a: "set_disable_timing -from I4 -to O design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[9].COL[11].EH.O_M.CELL_XIYO/LUT6_LAST_BIT1 "
 Found timing loop:
      0: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[9].COL[11].EH.O_M.CELL_XIYO/LUT6_LAST_BIT1 /O (LUT6)
@@ -3206,7 +3206,7 @@ Found timing loop:
      2: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[9].COL[11].EH.O_M.CELL_XIYO/CARRY4_obj /O[1] (CARRY4)
      3: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[9].COL[11].EH.O_M.CELL_XIYO/CARRY4_obj /S[0] (CARRY4)
      4: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[9].COL[11].EH.O_M.CELL_XIYO/LUT6_LAST_BIT1 /O (LUT6)
-CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Workspace/GameOfLife/bd/design_gol/ip/design_gol_game_of_life_0_0/synth/design_gol_game_of_life_0_0.vhd:56]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Workspace/GameOfLife/bd/design_gol/ip/design_gol_game_of_life_0_1/synth/design_gol_game_of_life_0_1.vhd:56]
 Inferred a: "set_disable_timing -from I2 -to O design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[9].COL[11].EH.O_M.CELL_XIYO/LUT6_LAST_BIT1 "
 Found timing loop:
      0: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[9].COL[9].EH.O_M.CELL_XIYO/CARRY4_obj /O[3] (CARRY4)
@@ -3214,14 +3214,14 @@ Found timing loop:
      2: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[9].COL[9].EH.O_M.CELL_XIYO/LUT6_LAST_BIT1 /O (LUT6)
      3: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[9].COL[9].EH.O_M.CELL_XIYO/LUT6_LAST_BIT1 /I4 (LUT6)
      4: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[9].COL[9].EH.O_M.CELL_XIYO/CARRY4_obj /O[3] (CARRY4)
-CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Workspace/GameOfLife/bd/design_gol/ip/design_gol_game_of_life_0_0/synth/design_gol_game_of_life_0_0.vhd:56]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Workspace/GameOfLife/bd/design_gol/ip/design_gol_game_of_life_0_1/synth/design_gol_game_of_life_0_1.vhd:56]
 Inferred a: "set_disable_timing -from S[0] -to O[3] design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[9].COL[9].EH.O_M.CELL_XIYO/CARRY4_obj "
 Found timing loop:
      0: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[9].COL[9].EH.O_M.CELL_XIYO/LUT6_LAST_BIT1 /O (LUT6)
      1: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[9].COL[9].EH.O_M.CELL_XIYO/LUT6_LAST_BIT1 /I4 (LUT6)
      2: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[9].COL[9].EH.O_M.CELL_XIYO/CARRY4_obj /O[3] (CARRY4)
      3: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[9].COL[9].EH.O_M.CELL_XIYO/CARRY4_obj /O[3] (CARRY4)
-CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Workspace/GameOfLife/bd/design_gol/ip/design_gol_game_of_life_0_0/synth/design_gol_game_of_life_0_0.vhd:56]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Workspace/GameOfLife/bd/design_gol/ip/design_gol_game_of_life_0_1/synth/design_gol_game_of_life_0_1.vhd:56]
 Inferred a: "set_disable_timing -from I4 -to O design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[9].COL[9].EH.O_M.CELL_XIYO/LUT6_LAST_BIT1 "
 Found timing loop:
      0: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[9].COL[9].EH.O_M.CELL_XIYO/LUT6_LAST_BIT1 /O (LUT6)
@@ -3229,7 +3229,7 @@ Found timing loop:
      2: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[9].COL[9].EH.O_M.CELL_XIYO/CARRY4_obj /O[1] (CARRY4)
      3: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[9].COL[9].EH.O_M.CELL_XIYO/CARRY4_obj /S[0] (CARRY4)
      4: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[9].COL[9].EH.O_M.CELL_XIYO/LUT6_LAST_BIT1 /O (LUT6)
-CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Workspace/GameOfLife/bd/design_gol/ip/design_gol_game_of_life_0_0/synth/design_gol_game_of_life_0_0.vhd:56]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Workspace/GameOfLife/bd/design_gol/ip/design_gol_game_of_life_0_1/synth/design_gol_game_of_life_0_1.vhd:56]
 Inferred a: "set_disable_timing -from I2 -to O design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[9].COL[9].EH.O_M.CELL_XIYO/LUT6_LAST_BIT1 "
 Found timing loop:
      0: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[9].COL[7].EH.O_M.CELL_XIYO/CARRY4_obj /O[3] (CARRY4)
@@ -3237,14 +3237,14 @@ Found timing loop:
      2: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[9].COL[7].EH.O_M.CELL_XIYO/LUT6_LAST_BIT1 /O (LUT6)
      3: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[9].COL[7].EH.O_M.CELL_XIYO/LUT6_LAST_BIT1 /I4 (LUT6)
      4: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[9].COL[7].EH.O_M.CELL_XIYO/CARRY4_obj /O[3] (CARRY4)
-CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Workspace/GameOfLife/bd/design_gol/ip/design_gol_game_of_life_0_0/synth/design_gol_game_of_life_0_0.vhd:56]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Workspace/GameOfLife/bd/design_gol/ip/design_gol_game_of_life_0_1/synth/design_gol_game_of_life_0_1.vhd:56]
 Inferred a: "set_disable_timing -from S[0] -to O[3] design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[9].COL[7].EH.O_M.CELL_XIYO/CARRY4_obj "
 Found timing loop:
      0: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[9].COL[7].EH.O_M.CELL_XIYO/LUT6_LAST_BIT1 /O (LUT6)
      1: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[9].COL[7].EH.O_M.CELL_XIYO/LUT6_LAST_BIT1 /I4 (LUT6)
      2: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[9].COL[7].EH.O_M.CELL_XIYO/CARRY4_obj /O[3] (CARRY4)
      3: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[9].COL[7].EH.O_M.CELL_XIYO/CARRY4_obj /O[3] (CARRY4)
-CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Workspace/GameOfLife/bd/design_gol/ip/design_gol_game_of_life_0_0/synth/design_gol_game_of_life_0_0.vhd:56]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Workspace/GameOfLife/bd/design_gol/ip/design_gol_game_of_life_0_1/synth/design_gol_game_of_life_0_1.vhd:56]
 Inferred a: "set_disable_timing -from I4 -to O design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[9].COL[7].EH.O_M.CELL_XIYO/LUT6_LAST_BIT1 "
 Found timing loop:
      0: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[9].COL[7].EH.O_M.CELL_XIYO/LUT6_LAST_BIT1 /O (LUT6)
@@ -3252,7 +3252,7 @@ Found timing loop:
      2: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[9].COL[7].EH.O_M.CELL_XIYO/CARRY4_obj /O[1] (CARRY4)
      3: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[9].COL[7].EH.O_M.CELL_XIYO/CARRY4_obj /S[0] (CARRY4)
      4: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[9].COL[7].EH.O_M.CELL_XIYO/LUT6_LAST_BIT1 /O (LUT6)
-CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Workspace/GameOfLife/bd/design_gol/ip/design_gol_game_of_life_0_0/synth/design_gol_game_of_life_0_0.vhd:56]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Workspace/GameOfLife/bd/design_gol/ip/design_gol_game_of_life_0_1/synth/design_gol_game_of_life_0_1.vhd:56]
 Inferred a: "set_disable_timing -from I2 -to O design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[9].COL[7].EH.O_M.CELL_XIYO/LUT6_LAST_BIT1 "
 Found timing loop:
      0: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[9].COL[5].EH.O_M.CELL_XIYO/CARRY4_obj /O[3] (CARRY4)
@@ -3260,14 +3260,14 @@ Found timing loop:
      2: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[9].COL[5].EH.O_M.CELL_XIYO/LUT6_LAST_BIT1 /O (LUT6)
      3: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[9].COL[5].EH.O_M.CELL_XIYO/LUT6_LAST_BIT1 /I4 (LUT6)
      4: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[9].COL[5].EH.O_M.CELL_XIYO/CARRY4_obj /O[3] (CARRY4)
-CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Workspace/GameOfLife/bd/design_gol/ip/design_gol_game_of_life_0_0/synth/design_gol_game_of_life_0_0.vhd:56]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Workspace/GameOfLife/bd/design_gol/ip/design_gol_game_of_life_0_1/synth/design_gol_game_of_life_0_1.vhd:56]
 Inferred a: "set_disable_timing -from S[0] -to O[3] design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[9].COL[5].EH.O_M.CELL_XIYO/CARRY4_obj "
 Found timing loop:
      0: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[9].COL[5].EH.O_M.CELL_XIYO/LUT6_LAST_BIT1 /O (LUT6)
      1: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[9].COL[5].EH.O_M.CELL_XIYO/LUT6_LAST_BIT1 /I4 (LUT6)
      2: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[9].COL[5].EH.O_M.CELL_XIYO/CARRY4_obj /O[3] (CARRY4)
      3: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[9].COL[5].EH.O_M.CELL_XIYO/CARRY4_obj /O[3] (CARRY4)
-CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Workspace/GameOfLife/bd/design_gol/ip/design_gol_game_of_life_0_0/synth/design_gol_game_of_life_0_0.vhd:56]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Workspace/GameOfLife/bd/design_gol/ip/design_gol_game_of_life_0_1/synth/design_gol_game_of_life_0_1.vhd:56]
 Inferred a: "set_disable_timing -from I4 -to O design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[9].COL[5].EH.O_M.CELL_XIYO/LUT6_LAST_BIT1 "
 Found timing loop:
      0: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[9].COL[5].EH.O_M.CELL_XIYO/LUT6_LAST_BIT1 /O (LUT6)
@@ -3275,7 +3275,7 @@ Found timing loop:
      2: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[9].COL[5].EH.O_M.CELL_XIYO/CARRY4_obj /O[1] (CARRY4)
      3: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[9].COL[5].EH.O_M.CELL_XIYO/CARRY4_obj /S[0] (CARRY4)
      4: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[9].COL[5].EH.O_M.CELL_XIYO/LUT6_LAST_BIT1 /O (LUT6)
-CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Workspace/GameOfLife/bd/design_gol/ip/design_gol_game_of_life_0_0/synth/design_gol_game_of_life_0_0.vhd:56]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Workspace/GameOfLife/bd/design_gol/ip/design_gol_game_of_life_0_1/synth/design_gol_game_of_life_0_1.vhd:56]
 Inferred a: "set_disable_timing -from I2 -to O design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[9].COL[5].EH.O_M.CELL_XIYO/LUT6_LAST_BIT1 "
 Found timing loop:
      0: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[9].COL[3].EH.O_M.CELL_XIYO/CARRY4_obj /O[3] (CARRY4)
@@ -3283,14 +3283,14 @@ Found timing loop:
      2: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[9].COL[3].EH.O_M.CELL_XIYO/LUT6_LAST_BIT1 /O (LUT6)
      3: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[9].COL[3].EH.O_M.CELL_XIYO/LUT6_LAST_BIT1 /I4 (LUT6)
      4: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[9].COL[3].EH.O_M.CELL_XIYO/CARRY4_obj /O[3] (CARRY4)
-CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Workspace/GameOfLife/bd/design_gol/ip/design_gol_game_of_life_0_0/synth/design_gol_game_of_life_0_0.vhd:56]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Workspace/GameOfLife/bd/design_gol/ip/design_gol_game_of_life_0_1/synth/design_gol_game_of_life_0_1.vhd:56]
 Inferred a: "set_disable_timing -from S[0] -to O[3] design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[9].COL[3].EH.O_M.CELL_XIYO/CARRY4_obj "
 Found timing loop:
      0: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[9].COL[3].EH.O_M.CELL_XIYO/LUT6_LAST_BIT1 /O (LUT6)
      1: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[9].COL[3].EH.O_M.CELL_XIYO/LUT6_LAST_BIT1 /I4 (LUT6)
      2: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[9].COL[3].EH.O_M.CELL_XIYO/CARRY4_obj /O[3] (CARRY4)
      3: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[9].COL[3].EH.O_M.CELL_XIYO/CARRY4_obj /O[3] (CARRY4)
-CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Workspace/GameOfLife/bd/design_gol/ip/design_gol_game_of_life_0_0/synth/design_gol_game_of_life_0_0.vhd:56]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Workspace/GameOfLife/bd/design_gol/ip/design_gol_game_of_life_0_1/synth/design_gol_game_of_life_0_1.vhd:56]
 Inferred a: "set_disable_timing -from I4 -to O design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[9].COL[3].EH.O_M.CELL_XIYO/LUT6_LAST_BIT1 "
 Found timing loop:
      0: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[9].COL[3].EH.O_M.CELL_XIYO/LUT6_LAST_BIT1 /O (LUT6)
@@ -3298,7 +3298,7 @@ Found timing loop:
      2: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[9].COL[3].EH.O_M.CELL_XIYO/CARRY4_obj /O[1] (CARRY4)
      3: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[9].COL[3].EH.O_M.CELL_XIYO/CARRY4_obj /S[0] (CARRY4)
      4: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[9].COL[3].EH.O_M.CELL_XIYO/LUT6_LAST_BIT1 /O (LUT6)
-CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Workspace/GameOfLife/bd/design_gol/ip/design_gol_game_of_life_0_0/synth/design_gol_game_of_life_0_0.vhd:56]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Workspace/GameOfLife/bd/design_gol/ip/design_gol_game_of_life_0_1/synth/design_gol_game_of_life_0_1.vhd:56]
 Inferred a: "set_disable_timing -from I2 -to O design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[9].COL[3].EH.O_M.CELL_XIYO/LUT6_LAST_BIT1 "
 Found timing loop:
      0: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[9].COL[1].EH.O_M.CELL_XIYO/CARRY4_obj /O[3] (CARRY4)
@@ -3306,14 +3306,14 @@ Found timing loop:
      2: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[9].COL[1].EH.O_M.CELL_XIYO/LUT6_LAST_BIT1 /O (LUT6)
      3: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[9].COL[1].EH.O_M.CELL_XIYO/LUT6_LAST_BIT1 /I4 (LUT6)
      4: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[9].COL[1].EH.O_M.CELL_XIYO/CARRY4_obj /O[3] (CARRY4)
-CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Workspace/GameOfLife/bd/design_gol/ip/design_gol_game_of_life_0_0/synth/design_gol_game_of_life_0_0.vhd:56]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Workspace/GameOfLife/bd/design_gol/ip/design_gol_game_of_life_0_1/synth/design_gol_game_of_life_0_1.vhd:56]
 Inferred a: "set_disable_timing -from S[0] -to O[3] design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[9].COL[1].EH.O_M.CELL_XIYO/CARRY4_obj "
 Found timing loop:
      0: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[9].COL[1].EH.O_M.CELL_XIYO/LUT6_LAST_BIT1 /O (LUT6)
      1: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[9].COL[1].EH.O_M.CELL_XIYO/LUT6_LAST_BIT1 /I4 (LUT6)
      2: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[9].COL[1].EH.O_M.CELL_XIYO/CARRY4_obj /O[3] (CARRY4)
      3: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[9].COL[1].EH.O_M.CELL_XIYO/CARRY4_obj /O[3] (CARRY4)
-CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Workspace/GameOfLife/bd/design_gol/ip/design_gol_game_of_life_0_0/synth/design_gol_game_of_life_0_0.vhd:56]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Workspace/GameOfLife/bd/design_gol/ip/design_gol_game_of_life_0_1/synth/design_gol_game_of_life_0_1.vhd:56]
 Inferred a: "set_disable_timing -from I4 -to O design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[9].COL[1].EH.O_M.CELL_XIYO/LUT6_LAST_BIT1 "
 Found timing loop:
      0: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[9].COL[1].EH.O_M.CELL_XIYO/LUT6_LAST_BIT1 /O (LUT6)
@@ -3321,7 +3321,7 @@ Found timing loop:
      2: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[9].COL[1].EH.O_M.CELL_XIYO/CARRY4_obj /O[1] (CARRY4)
      3: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[9].COL[1].EH.O_M.CELL_XIYO/CARRY4_obj /S[0] (CARRY4)
      4: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[9].COL[1].EH.O_M.CELL_XIYO/LUT6_LAST_BIT1 /O (LUT6)
-CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Workspace/GameOfLife/bd/design_gol/ip/design_gol_game_of_life_0_0/synth/design_gol_game_of_life_0_0.vhd:56]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Workspace/GameOfLife/bd/design_gol/ip/design_gol_game_of_life_0_1/synth/design_gol_game_of_life_0_1.vhd:56]
 Inferred a: "set_disable_timing -from I2 -to O design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[9].COL[1].EH.O_M.CELL_XIYO/LUT6_LAST_BIT1 "
 Found timing loop:
      0: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[8].COL[17].EH.E_RS.CELL_XWYE/CARRY4_obj /O[3] (CARRY4)
@@ -3329,14 +3329,14 @@ Found timing loop:
      2: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[8].COL[17].EH.E_RS.CELL_XWYE/LUT6_LAST_BIT1 /O (LUT6)
      3: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[8].COL[17].EH.E_RS.CELL_XWYE/LUT6_LAST_BIT1 /I4 (LUT6)
      4: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[8].COL[17].EH.E_RS.CELL_XWYE/CARRY4_obj /O[3] (CARRY4)
-CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Workspace/GameOfLife/bd/design_gol/ip/design_gol_game_of_life_0_0/synth/design_gol_game_of_life_0_0.vhd:56]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Workspace/GameOfLife/bd/design_gol/ip/design_gol_game_of_life_0_1/synth/design_gol_game_of_life_0_1.vhd:56]
 Inferred a: "set_disable_timing -from S[0] -to O[3] design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[8].COL[17].EH.E_RS.CELL_XWYE/CARRY4_obj "
 Found timing loop:
      0: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[8].COL[17].EH.E_RS.CELL_XWYE/LUT6_LAST_BIT1 /O (LUT6)
      1: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[8].COL[17].EH.E_RS.CELL_XWYE/LUT6_LAST_BIT1 /I4 (LUT6)
      2: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[8].COL[17].EH.E_RS.CELL_XWYE/CARRY4_obj /O[3] (CARRY4)
      3: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[8].COL[17].EH.E_RS.CELL_XWYE/CARRY4_obj /O[3] (CARRY4)
-CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Workspace/GameOfLife/bd/design_gol/ip/design_gol_game_of_life_0_0/synth/design_gol_game_of_life_0_0.vhd:56]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Workspace/GameOfLife/bd/design_gol/ip/design_gol_game_of_life_0_1/synth/design_gol_game_of_life_0_1.vhd:56]
 Inferred a: "set_disable_timing -from I4 -to O design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[8].COL[17].EH.E_RS.CELL_XWYE/LUT6_LAST_BIT1 "
 Found timing loop:
      0: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[8].COL[17].EH.E_RS.CELL_XWYE/LUT6_LAST_BIT1 /O (LUT6)
@@ -3344,7 +3344,7 @@ Found timing loop:
      2: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[8].COL[17].EH.E_RS.CELL_XWYE/CARRY4_obj /O[1] (CARRY4)
      3: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[8].COL[17].EH.E_RS.CELL_XWYE/CARRY4_obj /S[0] (CARRY4)
      4: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[8].COL[17].EH.E_RS.CELL_XWYE/LUT6_LAST_BIT1 /O (LUT6)
-CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Workspace/GameOfLife/bd/design_gol/ip/design_gol_game_of_life_0_0/synth/design_gol_game_of_life_0_0.vhd:56]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Workspace/GameOfLife/bd/design_gol/ip/design_gol_game_of_life_0_1/synth/design_gol_game_of_life_0_1.vhd:56]
 Inferred a: "set_disable_timing -from I2 -to O design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[8].COL[17].EH.E_RS.CELL_XWYE/LUT6_LAST_BIT1 "
 Found timing loop:
      0: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[8].COL[15].EH.E_M.CELL_XIYE/CARRY4_obj /O[3] (CARRY4)
@@ -3352,14 +3352,14 @@ Found timing loop:
      2: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[8].COL[15].EH.E_M.CELL_XIYE/LUT6_LAST_BIT1 /O (LUT6)
      3: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[8].COL[15].EH.E_M.CELL_XIYE/LUT6_LAST_BIT1 /I4 (LUT6)
      4: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[8].COL[15].EH.E_M.CELL_XIYE/CARRY4_obj /O[3] (CARRY4)
-CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Workspace/GameOfLife/bd/design_gol/ip/design_gol_game_of_life_0_0/synth/design_gol_game_of_life_0_0.vhd:56]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Workspace/GameOfLife/bd/design_gol/ip/design_gol_game_of_life_0_1/synth/design_gol_game_of_life_0_1.vhd:56]
 Inferred a: "set_disable_timing -from S[0] -to O[3] design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[8].COL[15].EH.E_M.CELL_XIYE/CARRY4_obj "
 Found timing loop:
      0: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[8].COL[15].EH.E_M.CELL_XIYE/LUT6_LAST_BIT1 /O (LUT6)
      1: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[8].COL[15].EH.E_M.CELL_XIYE/LUT6_LAST_BIT1 /I4 (LUT6)
      2: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[8].COL[15].EH.E_M.CELL_XIYE/CARRY4_obj /O[3] (CARRY4)
      3: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[8].COL[15].EH.E_M.CELL_XIYE/CARRY4_obj /O[3] (CARRY4)
-CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Workspace/GameOfLife/bd/design_gol/ip/design_gol_game_of_life_0_0/synth/design_gol_game_of_life_0_0.vhd:56]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Workspace/GameOfLife/bd/design_gol/ip/design_gol_game_of_life_0_1/synth/design_gol_game_of_life_0_1.vhd:56]
 Inferred a: "set_disable_timing -from I4 -to O design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[8].COL[15].EH.E_M.CELL_XIYE/LUT6_LAST_BIT1 "
 Found timing loop:
      0: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[8].COL[15].EH.E_M.CELL_XIYE/LUT6_LAST_BIT1 /O (LUT6)
@@ -3367,7 +3367,7 @@ Found timing loop:
      2: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[8].COL[15].EH.E_M.CELL_XIYE/CARRY4_obj /O[1] (CARRY4)
      3: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[8].COL[15].EH.E_M.CELL_XIYE/CARRY4_obj /S[0] (CARRY4)
      4: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[8].COL[15].EH.E_M.CELL_XIYE/LUT6_LAST_BIT1 /O (LUT6)
-CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Workspace/GameOfLife/bd/design_gol/ip/design_gol_game_of_life_0_0/synth/design_gol_game_of_life_0_0.vhd:56]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Workspace/GameOfLife/bd/design_gol/ip/design_gol_game_of_life_0_1/synth/design_gol_game_of_life_0_1.vhd:56]
 Inferred a: "set_disable_timing -from I2 -to O design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[8].COL[15].EH.E_M.CELL_XIYE/LUT6_LAST_BIT1 "
 Found timing loop:
      0: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[8].COL[13].EH.E_M.CELL_XIYE/CARRY4_obj /O[3] (CARRY4)
@@ -3375,14 +3375,14 @@ Found timing loop:
      2: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[8].COL[13].EH.E_M.CELL_XIYE/LUT6_LAST_BIT1 /O (LUT6)
      3: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[8].COL[13].EH.E_M.CELL_XIYE/LUT6_LAST_BIT1 /I4 (LUT6)
      4: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[8].COL[13].EH.E_M.CELL_XIYE/CARRY4_obj /O[3] (CARRY4)
-CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Workspace/GameOfLife/bd/design_gol/ip/design_gol_game_of_life_0_0/synth/design_gol_game_of_life_0_0.vhd:56]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Workspace/GameOfLife/bd/design_gol/ip/design_gol_game_of_life_0_1/synth/design_gol_game_of_life_0_1.vhd:56]
 Inferred a: "set_disable_timing -from S[0] -to O[3] design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[8].COL[13].EH.E_M.CELL_XIYE/CARRY4_obj "
 Found timing loop:
      0: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[8].COL[13].EH.E_M.CELL_XIYE/LUT6_LAST_BIT1 /O (LUT6)
      1: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[8].COL[13].EH.E_M.CELL_XIYE/LUT6_LAST_BIT1 /I4 (LUT6)
      2: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[8].COL[13].EH.E_M.CELL_XIYE/CARRY4_obj /O[3] (CARRY4)
      3: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[8].COL[13].EH.E_M.CELL_XIYE/CARRY4_obj /O[3] (CARRY4)
-CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Workspace/GameOfLife/bd/design_gol/ip/design_gol_game_of_life_0_0/synth/design_gol_game_of_life_0_0.vhd:56]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Workspace/GameOfLife/bd/design_gol/ip/design_gol_game_of_life_0_1/synth/design_gol_game_of_life_0_1.vhd:56]
 Inferred a: "set_disable_timing -from I4 -to O design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[8].COL[13].EH.E_M.CELL_XIYE/LUT6_LAST_BIT1 "
 Found timing loop:
      0: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[8].COL[13].EH.E_M.CELL_XIYE/LUT6_LAST_BIT1 /O (LUT6)
@@ -3390,7 +3390,7 @@ Found timing loop:
      2: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[8].COL[13].EH.E_M.CELL_XIYE/CARRY4_obj /O[1] (CARRY4)
      3: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[8].COL[13].EH.E_M.CELL_XIYE/CARRY4_obj /S[0] (CARRY4)
      4: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[8].COL[13].EH.E_M.CELL_XIYE/LUT6_LAST_BIT1 /O (LUT6)
-CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Workspace/GameOfLife/bd/design_gol/ip/design_gol_game_of_life_0_0/synth/design_gol_game_of_life_0_0.vhd:56]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Workspace/GameOfLife/bd/design_gol/ip/design_gol_game_of_life_0_1/synth/design_gol_game_of_life_0_1.vhd:56]
 Inferred a: "set_disable_timing -from I2 -to O design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[8].COL[13].EH.E_M.CELL_XIYE/LUT6_LAST_BIT1 "
 Found timing loop:
      0: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[8].COL[11].EH.E_M.CELL_XIYE/CARRY4_obj /O[3] (CARRY4)
@@ -3398,14 +3398,14 @@ Found timing loop:
      2: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[8].COL[11].EH.E_M.CELL_XIYE/LUT6_LAST_BIT1 /O (LUT6)
      3: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[8].COL[11].EH.E_M.CELL_XIYE/LUT6_LAST_BIT1 /I4 (LUT6)
      4: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[8].COL[11].EH.E_M.CELL_XIYE/CARRY4_obj /O[3] (CARRY4)
-CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Workspace/GameOfLife/bd/design_gol/ip/design_gol_game_of_life_0_0/synth/design_gol_game_of_life_0_0.vhd:56]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Workspace/GameOfLife/bd/design_gol/ip/design_gol_game_of_life_0_1/synth/design_gol_game_of_life_0_1.vhd:56]
 Inferred a: "set_disable_timing -from S[0] -to O[3] design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[8].COL[11].EH.E_M.CELL_XIYE/CARRY4_obj "
 Found timing loop:
      0: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[8].COL[11].EH.E_M.CELL_XIYE/LUT6_LAST_BIT1 /O (LUT6)
      1: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[8].COL[11].EH.E_M.CELL_XIYE/LUT6_LAST_BIT1 /I4 (LUT6)
      2: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[8].COL[11].EH.E_M.CELL_XIYE/CARRY4_obj /O[3] (CARRY4)
      3: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[8].COL[11].EH.E_M.CELL_XIYE/CARRY4_obj /O[3] (CARRY4)
-CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Workspace/GameOfLife/bd/design_gol/ip/design_gol_game_of_life_0_0/synth/design_gol_game_of_life_0_0.vhd:56]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Workspace/GameOfLife/bd/design_gol/ip/design_gol_game_of_life_0_1/synth/design_gol_game_of_life_0_1.vhd:56]
 Inferred a: "set_disable_timing -from I4 -to O design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[8].COL[11].EH.E_M.CELL_XIYE/LUT6_LAST_BIT1 "
 Found timing loop:
      0: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[8].COL[11].EH.E_M.CELL_XIYE/LUT6_LAST_BIT1 /O (LUT6)
@@ -3413,7 +3413,7 @@ Found timing loop:
      2: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[8].COL[11].EH.E_M.CELL_XIYE/CARRY4_obj /O[1] (CARRY4)
      3: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[8].COL[11].EH.E_M.CELL_XIYE/CARRY4_obj /S[0] (CARRY4)
      4: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[8].COL[11].EH.E_M.CELL_XIYE/LUT6_LAST_BIT1 /O (LUT6)
-CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Workspace/GameOfLife/bd/design_gol/ip/design_gol_game_of_life_0_0/synth/design_gol_game_of_life_0_0.vhd:56]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Workspace/GameOfLife/bd/design_gol/ip/design_gol_game_of_life_0_1/synth/design_gol_game_of_life_0_1.vhd:56]
 Inferred a: "set_disable_timing -from I2 -to O design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[8].COL[11].EH.E_M.CELL_XIYE/LUT6_LAST_BIT1 "
 Found timing loop:
      0: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[8].COL[9].EH.E_M.CELL_XIYE/CARRY4_obj /O[3] (CARRY4)
@@ -3421,14 +3421,14 @@ Found timing loop:
      2: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[8].COL[9].EH.E_M.CELL_XIYE/LUT6_LAST_BIT1 /O (LUT6)
      3: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[8].COL[9].EH.E_M.CELL_XIYE/LUT6_LAST_BIT1 /I4 (LUT6)
      4: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[8].COL[9].EH.E_M.CELL_XIYE/CARRY4_obj /O[3] (CARRY4)
-CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Workspace/GameOfLife/bd/design_gol/ip/design_gol_game_of_life_0_0/synth/design_gol_game_of_life_0_0.vhd:56]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Workspace/GameOfLife/bd/design_gol/ip/design_gol_game_of_life_0_1/synth/design_gol_game_of_life_0_1.vhd:56]
 Inferred a: "set_disable_timing -from S[0] -to O[3] design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[8].COL[9].EH.E_M.CELL_XIYE/CARRY4_obj "
 Found timing loop:
      0: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[8].COL[9].EH.E_M.CELL_XIYE/LUT6_LAST_BIT1 /O (LUT6)
      1: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[8].COL[9].EH.E_M.CELL_XIYE/LUT6_LAST_BIT1 /I4 (LUT6)
      2: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[8].COL[9].EH.E_M.CELL_XIYE/CARRY4_obj /O[3] (CARRY4)
      3: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[8].COL[9].EH.E_M.CELL_XIYE/CARRY4_obj /O[3] (CARRY4)
-CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Workspace/GameOfLife/bd/design_gol/ip/design_gol_game_of_life_0_0/synth/design_gol_game_of_life_0_0.vhd:56]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Workspace/GameOfLife/bd/design_gol/ip/design_gol_game_of_life_0_1/synth/design_gol_game_of_life_0_1.vhd:56]
 Inferred a: "set_disable_timing -from I4 -to O design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[8].COL[9].EH.E_M.CELL_XIYE/LUT6_LAST_BIT1 "
 Found timing loop:
      0: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[8].COL[9].EH.E_M.CELL_XIYE/LUT6_LAST_BIT1 /O (LUT6)
@@ -3436,7 +3436,7 @@ Found timing loop:
      2: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[8].COL[9].EH.E_M.CELL_XIYE/CARRY4_obj /O[1] (CARRY4)
      3: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[8].COL[9].EH.E_M.CELL_XIYE/CARRY4_obj /S[0] (CARRY4)
      4: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[8].COL[9].EH.E_M.CELL_XIYE/LUT6_LAST_BIT1 /O (LUT6)
-CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Workspace/GameOfLife/bd/design_gol/ip/design_gol_game_of_life_0_0/synth/design_gol_game_of_life_0_0.vhd:56]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Workspace/GameOfLife/bd/design_gol/ip/design_gol_game_of_life_0_1/synth/design_gol_game_of_life_0_1.vhd:56]
 Inferred a: "set_disable_timing -from I2 -to O design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[8].COL[9].EH.E_M.CELL_XIYE/LUT6_LAST_BIT1 "
 Found timing loop:
      0: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[8].COL[7].EH.E_M.CELL_XIYE/CARRY4_obj /O[3] (CARRY4)
@@ -3444,7 +3444,7 @@ Found timing loop:
      2: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[8].COL[7].EH.E_M.CELL_XIYE/LUT6_LAST_BIT1 /O (LUT6)
      3: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[8].COL[7].EH.E_M.CELL_XIYE/LUT6_LAST_BIT1 /I4 (LUT6)
      4: design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[8].COL[7].EH.E_M.CELL_XIYE/CARRY4_obj /O[3] (CARRY4)
-CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Workspace/GameOfLife/bd/design_gol/ip/design_gol_game_of_life_0_0/synth/design_gol_game_of_life_0_0.vhd:56]
+CRITICAL WARNING: [Synth 8-295] found timing loop. [c:/Workspace/GameOfLife/bd/design_gol/ip/design_gol_game_of_life_0_1/synth/design_gol_game_of_life_0_1.vhd:56]
 INFO: [Common 17-14] Message 'Synth 8-295' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 Inferred a: "set_disable_timing -from S[0] -to O[3] design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[8].COL[7].EH.E_M.CELL_XIYE/CARRY4_obj "
 Found timing loop:
@@ -7202,7 +7202,7 @@ WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path 
 WARNING: [Synth 8-326] inferred exception to break timing loop: 'set_false_path -through design_gol_i/game_of_life_0/\U0/CACORE/Field/ROW[1].COL[12].EH.O_M.CELL_XIYO/CARRY4_obj /O[2]'
 INFO: [Common 17-14] Message 'Synth 8-326' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:02:29 ; elapsed = 00:02:38 . Memory (MB): peak = 969.734 ; gain = 695.496
+Finished Timing Optimization : Time (s): cpu = 00:02:28 ; elapsed = 00:02:40 . Memory (MB): peak = 969.016 ; gain = 694.559
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -7226,7 +7226,7 @@ INFO: [Synth 8-3886] merging instance 'design_gol_i/microblaze_0/U0/MicroBlaze_C
 INFO: [Synth 8-3886] merging instance 'design_gol_i/microblaze_0/U0/MicroBlaze_Core_I/Performance.Core/Use_Debug_Logic.Master_Core.Debug_Perf/Performace_Debug_Control.dbg_hit_reg[5]' (FDRE) to 'design_gol_i/microblaze_0/U0/MicroBlaze_Core_I/Performance.Core/Use_Debug_Logic.Master_Core.Debug_Perf/Performace_Debug_Control.dbg_hit_reg[4]'
 INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:02:32 ; elapsed = 00:02:42 . Memory (MB): peak = 969.734 ; gain = 695.496
+Finished Technology Mapping : Time (s): cpu = 00:02:32 ; elapsed = 00:02:43 . Memory (MB): peak = 969.016 ; gain = 694.559
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -7250,7 +7250,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:02:33 ; elapsed = 00:02:43 . Memory (MB): peak = 969.734 ; gain = 695.496
+Finished IO Insertion : Time (s): cpu = 00:02:33 ; elapsed = 00:02:44 . Memory (MB): peak = 969.016 ; gain = 694.559
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -7263,7 +7263,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:02:34 ; elapsed = 00:02:43 . Memory (MB): peak = 969.734 ; gain = 695.496
+Finished Renaming Generated Instances : Time (s): cpu = 00:02:33 ; elapsed = 00:02:44 . Memory (MB): peak = 969.016 ; gain = 694.559
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -7275,25 +7275,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:02:34 ; elapsed = 00:02:44 . Memory (MB): peak = 969.734 ; gain = 695.496
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:02:33 ; elapsed = 00:02:45 . Memory (MB): peak = 969.016 ; gain = 694.559
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:02:35 ; elapsed = 00:02:44 . Memory (MB): peak = 969.734 ; gain = 695.496
+Finished Renaming Generated Ports : Time (s): cpu = 00:02:34 ; elapsed = 00:02:45 . Memory (MB): peak = 969.016 ; gain = 694.559
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:02:35 ; elapsed = 00:02:44 . Memory (MB): peak = 969.734 ; gain = 695.496
+Finished Handling Custom Attributes : Time (s): cpu = 00:02:34 ; elapsed = 00:02:46 . Memory (MB): peak = 969.016 ; gain = 694.559
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:02:35 ; elapsed = 00:02:44 . Memory (MB): peak = 969.734 ; gain = 695.496
+Finished Renaming Generated Nets : Time (s): cpu = 00:02:34 ; elapsed = 00:02:46 . Memory (MB): peak = 969.016 ; gain = 694.559
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -7412,7 +7412,7 @@ Report Instance Areas:
 |33    |                DYNSHREG_F_I                                                         |dynshreg_f                                      |    13|
 |34    |    clk_wiz_1                                                                        |design_gol_clk_wiz_1_0                          |     4|
 |35    |      inst                                                                           |design_gol_clk_wiz_1_0_clk_wiz                  |     4|
-|36    |    game_of_life_0                                                                   |design_gol_game_of_life_0_0                     |  1626|
+|36    |    game_of_life_0                                                                   |design_gol_game_of_life_0_1                     |  1626|
 |37    |      U0                                                                             |game_of_life_v1_0                               |  1626|
 |38    |        CACORE                                                                       |ca_core                                         |  1434|
 |39    |          Field                                                                      |grid                                            |  1296|
@@ -8320,11 +8320,11 @@ Report Instance Areas:
 |941   |                  \prim_noinit.ram                                                   |blk_mem_gen_prim_wrapper__parameterized2        |     1|
 +------+-------------------------------------------------------------------------------------+------------------------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:02:35 ; elapsed = 00:02:44 . Memory (MB): peak = 969.734 ; gain = 695.496
+Finished Writing Synthesis Report : Time (s): cpu = 00:02:34 ; elapsed = 00:02:46 . Memory (MB): peak = 969.016 ; gain = 694.559
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 648 critical warnings and 31858 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:58 ; elapsed = 00:02:23 . Memory (MB): peak = 969.734 ; gain = 535.492
-Synthesis Optimization Complete : Time (s): cpu = 00:02:35 ; elapsed = 00:02:44 . Memory (MB): peak = 969.734 ; gain = 695.496
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:58 ; elapsed = 00:02:22 . Memory (MB): peak = 969.016 ; gain = 535.562
+Synthesis Optimization Complete : Time (s): cpu = 00:02:34 ; elapsed = 00:02:46 . Memory (MB): peak = 969.016 ; gain = 694.559
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 707 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -8345,7 +8345,7 @@ INFO: [Project 1-111] Unisim Transformation Summary:
 
 694 Infos, 302 Warnings, 100 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:02:41 ; elapsed = 00:02:53 . Memory (MB): peak = 969.734 ; gain = 698.125
+synth_design: Time (s): cpu = 00:02:40 ; elapsed = 00:02:54 . Memory (MB): peak = 969.016 ; gain = 697.184
 INFO: [Common 17-1381] The checkpoint 'C:/Workspace/GameOfLife/prj/project_microblaze/project_microblaze.runs/synth_1/design_gol_wrapper.dcp' has been generated.
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.066 . Memory (MB): peak = 969.734 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Thu Apr 22 17:54:28 2021...
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.056 . Memory (MB): peak = 969.016 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Fri Apr 23 14:06:31 2021...
