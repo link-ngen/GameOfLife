@@ -1,7 +1,374 @@
-15:51:50 **** Incremental Build of configuration Debug for project gol_app ****
+17:01:54 **** Clean-only build of configuration Debug for project gol_app ****
+make clean 
+rm -rf  ./src/gol_driver.o ./src/gol_microblaze.o ./src/main.o ./src/platform.o  ./src/gol_driver.d ./src/gol_microblaze.d ./src/main.d ./src/platform.d  gol_app.elf.size  gol_app.elf
+' '
+17:01:54 **** Clean-only build of project gol_app_bsp ****
+make -k clean 
+make -C microblaze_0/libsrc/bram_v4_1/src -s clean 
+make -C microblaze_0/libsrc/cpu_v2_6/src -s clean 
+make -C microblaze_0/libsrc/game_of_life_v1_0/src -s clean 
+rm: Aufruf von lstat für „*.o“ nicht möglich: Invalid argument
+make[1]: *** [clean] Fehler 1
+make: *** [microblaze_0/libsrc/game_of_life_v1_0/src/make.clean] Fehler 2
+make -C microblaze_0/libsrc/standalone_v6_3/src -s clean 
+make -C microblaze_0/libsrc/uartlite_v3_2/src -s clean 
+make: Das Target »clean« wurde wegen Fehlern nicht aktualisiert.
+17:01:55 **** Build of project gol_app_bsp ****
+make -k all 
+"Running Make include in microblaze_0/libsrc/bram_v4_1/src"
+make -C microblaze_0/libsrc/bram_v4_1/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/cpu_v2_6/src"
+make -C microblaze_0/libsrc/cpu_v2_6/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/game_of_life_v1_0/src"
+make -C microblaze_0/libsrc/game_of_life_v1_0/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/standalone_v6_3/src"
+make -C microblaze_0/libsrc/standalone_v6_3/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/uartlite_v3_2/src"
+make -C microblaze_0/libsrc/uartlite_v3_2/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make libs in microblaze_0/libsrc/bram_v4_1/src"
+make -C microblaze_0/libsrc/bram_v4_1/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling bram"
+"Running Make libs in microblaze_0/libsrc/cpu_v2_6/src"
+make -C microblaze_0/libsrc/cpu_v2_6/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling cpu"
+"Running Make libs in microblaze_0/libsrc/game_of_life_v1_0/src"
+make -C microblaze_0/libsrc/game_of_life_v1_0/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling game_of_life..."
+game_of_life_selftest.c: In function 'GAME_OF_LIFE_Reg_SelfTest':
+game_of_life_selftest.c:52:61: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+    if ( GAME_OF_LIFE_mReadReg (baseaddr, read_loop_index*4) != (read_loop_index+1)*READ_WRITE_MUL_FACTOR){
+                                                             ^~
+game_of_life_selftest.c:36:6: warning: unused variable 'Index' [-Wunused-variable]
+  int Index;
+      ^~~~~
+"Running Make libs in microblaze_0/libsrc/standalone_v6_3/src"
+make -C microblaze_0/libsrc/standalone_v6_3/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling standalone";
+"Running Make libs in microblaze_0/libsrc/uartlite_v3_2/src"
+make -C microblaze_0/libsrc/uartlite_v3_2/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling uartlite"
+'Finished building libraries'
+17:02:02 **** Build of configuration Debug for project gol_app ****
 make all 
-make: Für das Ziel »all« ist nichts zu tun.
-15:52:40 **** Auto Build of configuration Debug for project gol_app ****
+'Building file: ../src/gol_driver.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/gol_driver.o" -I../../gol_app_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/gol_driver.d" -MT"src/gol_driver.o" -o "src/gol_driver.o" "../src/gol_driver.c"
+In file included from ../src/gol_driver.h:11:0,
+                 from ../src/gol_driver.c:8:
+../../gol_app_bsp/microblaze_0/include/xbasic_types.h:115:2: warning: #warning The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert. [-Wcpp]
+ #warning  The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert.
+  ^~~~~~~
+../../gol_app_bsp/microblaze_0/include/xbasic_types.h:116:2: warning: #warning Please refer the Standalone BSP UG647 for further details [-Wcpp]
+ #warning  Please refer the Standalone BSP UG647 for further details
+  ^~~~~~~
+'Finished building: ../src/gol_driver.c'
+' '
+'Building file: ../src/gol_microblaze.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/gol_microblaze.o" -I../../gol_app_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/gol_microblaze.d" -MT"src/gol_microblaze.o" -o "src/gol_microblaze.o" "../src/gol_microblaze.c"
+In file included from ../src/gol_microblaze.h:11:0,
+                 from ../src/gol_microblaze.c:8:
+../../gol_app_bsp/microblaze_0/include/xbasic_types.h:115:2: warning: #warning The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert. [-Wcpp]
+ #warning  The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert.
+  ^~~~~~~
+../../gol_app_bsp/microblaze_0/include/xbasic_types.h:116:2: warning: #warning Please refer the Standalone BSP UG647 for further details [-Wcpp]
+ #warning  Please refer the Standalone BSP UG647 for further details
+  ^~~~~~~
+'Finished building: ../src/gol_microblaze.c'
+' '
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../gol_app_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/gol_microblaze.h:11:0,
+                 from ../src/main.c:56:
+../../gol_app_bsp/microblaze_0/include/xbasic_types.h:115:2: warning: #warning The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert. [-Wcpp]
+ #warning  The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert.
+  ^~~~~~~
+../../gol_app_bsp/microblaze_0/include/xbasic_types.h:116:2: warning: #warning Please refer the Standalone BSP UG647 for further details [-Wcpp]
+ #warning  Please refer the Standalone BSP UG647 for further details
+  ^~~~~~~
+../src/main.c: In function 'main':
+../src/main.c:127:22: warning: passing argument 1 of 'microblaze_read_gol' from incompatible pointer type [-Wincompatible-pointer-types]
+  microblaze_read_gol(outputs);
+                      ^~~~~~~
+In file included from ../src/main.c:56:0:
+../src/gol_microblaze.h:19:6: note: expected 'Xuint32 * {aka long unsigned int *}' but argument is of type 'Xuint8 * {aka unsigned char *}'
+ void microblaze_read_gol(Xuint32 data_array[]);
+      ^~~~~~~~~~~~~~~~~~~
+../src/main.c:132:14: warning: passing argument 1 of 'print_array' from incompatible pointer type [-Wincompatible-pointer-types]
+  print_array(outputs);
+              ^~~~~~~
+../src/main.c:110:6: note: expected 'Xuint32 * {aka long unsigned int *}' but argument is of type 'Xuint8 * {aka unsigned char *}'
+ void print_array(Xuint32*);
+      ^~~~~~~~~~~
+../src/main.c:154:11: warning: passing argument 1 of 'read_gol' from incompatible pointer type [-Wincompatible-pointer-types]
+  read_gol(outputs);
+           ^~~~~~~
+In file included from ../src/main.c:58:0:
+../src/gol_driver.h:40:6: note: expected 'Xuint32 * {aka long unsigned int *}' but argument is of type 'Xuint8 * {aka unsigned char *}'
+ void read_gol(Xuint32 *data_array);
+      ^~~~~~~~
+../src/main.c:160:14: warning: passing argument 1 of 'print_array' from incompatible pointer type [-Wincompatible-pointer-types]
+  print_array(outputs);
+              ^~~~~~~
+../src/main.c:110:6: note: expected 'Xuint32 * {aka long unsigned int *}' but argument is of type 'Xuint8 * {aka unsigned char *}'
+ void print_array(Xuint32*);
+      ^~~~~~~~~~~
+'Finished building: ../src/main.c'
+' '
+'Building file: ../src/platform.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -I../../gol_app_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building target: gol_app.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../gol_app_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "gol_app.elf"  ./src/gol_driver.o ./src/gol_microblaze.o ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+c:/xilinx/sdk/2017.2/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/6.2.0/../../../../microblaze-xilinx-elf/bin/ld.exe: gol_app.elf section `.stack' will not fit in region `microblaze_0_local_memory_ilmb_bram_if_cntlr_Mem_microblaze_0_local_memory_dlmb_bram_if_cntlr_Mem'
+c:/xilinx/sdk/2017.2/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/6.2.0/../../../../microblaze-xilinx-elf/bin/ld.exe: region `microblaze_0_local_memory_ilmb_bram_if_cntlr_Mem_microblaze_0_local_memory_dlmb_bram_if_cntlr_Mem' overflowed by 15840 bytes
+collect2.exe: error: ld returned 1 exit status
+make: *** [gol_app.elf] Fehler 1
+17:03:12 **** Auto Build of configuration Debug for project gol_app ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../gol_app_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/gol_microblaze.h:11:0,
+                 from ../src/main.c:56:
+../../gol_app_bsp/microblaze_0/include/xbasic_types.h:115:2: warning: #warning The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert. [-Wcpp]
+ #warning  The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert.
+  ^~~~~~~
+../../gol_app_bsp/microblaze_0/include/xbasic_types.h:116:2: warning: #warning Please refer the Standalone BSP UG647 for further details [-Wcpp]
+ #warning  Please refer the Standalone BSP UG647 for further details
+  ^~~~~~~
+../src/main.c: In function 'main':
+../src/main.c:115:49: warning: passing argument 2 of 'init_gol' from incompatible pointer type [-Wincompatible-pointer-types]
+  init_gol(XPAR_GAME_OF_LIFE_0_S00_AXI_BASEADDR, oszil);
+                                                 ^~~~~
+In file included from ../src/main.c:58:0:
+../src/gol_driver.h:28:6: note: expected 'Xuint32 * {aka long unsigned int *}' but argument is of type 'Xuint8 * {aka unsigned char *}'
+ void init_gol(Xuint32 base_addr, Xuint32 data_array[]);
+      ^~~~~~~~
+../src/main.c:120:22: warning: passing argument 1 of 'microblaze_init_gol' from incompatible pointer type [-Wincompatible-pointer-types]
+  microblaze_init_gol(oszil);
+                      ^~~~~
+In file included from ../src/main.c:56:0:
+../src/gol_microblaze.h:17:6: note: expected 'Xuint32 * {aka long unsigned int *}' but argument is of type 'Xuint8 * {aka unsigned char *}'
+ void microblaze_init_gol(Xuint32 data_array[]);
+      ^~~~~~~~~~~~~~~~~~~
+../src/main.c:127:22: warning: passing argument 1 of 'microblaze_read_gol' from incompatible pointer type [-Wincompatible-pointer-types]
+  microblaze_read_gol(outputs);
+                      ^~~~~~~
+In file included from ../src/main.c:56:0:
+../src/gol_microblaze.h:19:6: note: expected 'Xuint32 * {aka long unsigned int *}' but argument is of type 'Xuint8 * {aka unsigned char *}'
+ void microblaze_read_gol(Xuint32 data_array[]);
+      ^~~~~~~~~~~~~~~~~~~
+../src/main.c:129:14: warning: passing argument 1 of 'print_array' from incompatible pointer type [-Wincompatible-pointer-types]
+  print_array(oszil);
+              ^~~~~
+../src/main.c:110:6: note: expected 'Xuint32 * {aka long unsigned int *}' but argument is of type 'Xuint8 * {aka unsigned char *}'
+ void print_array(Xuint32*);
+      ^~~~~~~~~~~
+../src/main.c:132:14: warning: passing argument 1 of 'print_array' from incompatible pointer type [-Wincompatible-pointer-types]
+  print_array(outputs);
+              ^~~~~~~
+../src/main.c:110:6: note: expected 'Xuint32 * {aka long unsigned int *}' but argument is of type 'Xuint8 * {aka unsigned char *}'
+ void print_array(Xuint32*);
+      ^~~~~~~~~~~
+../src/main.c:154:11: warning: passing argument 1 of 'read_gol' from incompatible pointer type [-Wincompatible-pointer-types]
+  read_gol(outputs);
+           ^~~~~~~
+In file included from ../src/main.c:58:0:
+../src/gol_driver.h:40:6: note: expected 'Xuint32 * {aka long unsigned int *}' but argument is of type 'Xuint8 * {aka unsigned char *}'
+ void read_gol(Xuint32 *data_array);
+      ^~~~~~~~
+../src/main.c:160:14: warning: passing argument 1 of 'print_array' from incompatible pointer type [-Wincompatible-pointer-types]
+  print_array(outputs);
+              ^~~~~~~
+../src/main.c:110:6: note: expected 'Xuint32 * {aka long unsigned int *}' but argument is of type 'Xuint8 * {aka unsigned char *}'
+ void print_array(Xuint32*);
+      ^~~~~~~~~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: gol_app.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../gol_app_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "gol_app.elf"  ./src/gol_driver.o ./src/gol_microblaze.o ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+c:/xilinx/sdk/2017.2/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/6.2.0/../../../../microblaze-xilinx-elf/bin/ld.exe: gol_app.elf section `.stack' will not fit in region `microblaze_0_local_memory_ilmb_bram_if_cntlr_Mem_microblaze_0_local_memory_dlmb_bram_if_cntlr_Mem'
+c:/xilinx/sdk/2017.2/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/6.2.0/../../../../microblaze-xilinx-elf/bin/ld.exe: region `microblaze_0_local_memory_ilmb_bram_if_cntlr_Mem_microblaze_0_local_memory_dlmb_bram_if_cntlr_Mem' overflowed by 15192 bytes
+collect2.exe: error: ld returned 1 exit status
+make: *** [gol_app.elf] Fehler 1
+17:03:28 **** Auto Build of configuration Debug for project gol_app ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../gol_app_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/gol_microblaze.h:11:0,
+                 from ../src/main.c:56:
+../../gol_app_bsp/microblaze_0/include/xbasic_types.h:115:2: warning: #warning The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert. [-Wcpp]
+ #warning  The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert.
+  ^~~~~~~
+../../gol_app_bsp/microblaze_0/include/xbasic_types.h:116:2: warning: #warning Please refer the Standalone BSP UG647 for further details [-Wcpp]
+ #warning  Please refer the Standalone BSP UG647 for further details
+  ^~~~~~~
+../src/main.c: In function 'main':
+../src/main.c:115:49: warning: passing argument 2 of 'init_gol' from incompatible pointer type [-Wincompatible-pointer-types]
+  init_gol(XPAR_GAME_OF_LIFE_0_S00_AXI_BASEADDR, oszil);
+                                                 ^~~~~
+In file included from ../src/main.c:58:0:
+../src/gol_driver.h:28:6: note: expected 'Xuint32 * {aka long unsigned int *}' but argument is of type 'Xuint8 * {aka unsigned char *}'
+ void init_gol(Xuint32 base_addr, Xuint32 data_array[]);
+      ^~~~~~~~
+../src/main.c:120:22: warning: passing argument 1 of 'microblaze_init_gol' from incompatible pointer type [-Wincompatible-pointer-types]
+  microblaze_init_gol(oszil);
+                      ^~~~~
+In file included from ../src/main.c:56:0:
+../src/gol_microblaze.h:17:6: note: expected 'Xuint32 * {aka long unsigned int *}' but argument is of type 'Xuint8 * {aka unsigned char *}'
+ void microblaze_init_gol(Xuint32 data_array[]);
+      ^~~~~~~~~~~~~~~~~~~
+../src/main.c:127:22: warning: passing argument 1 of 'microblaze_read_gol' from incompatible pointer type [-Wincompatible-pointer-types]
+  microblaze_read_gol(outputs);
+                      ^~~~~~~
+In file included from ../src/main.c:56:0:
+../src/gol_microblaze.h:19:6: note: expected 'Xuint32 * {aka long unsigned int *}' but argument is of type 'Xuint8 * {aka unsigned char *}'
+ void microblaze_read_gol(Xuint32 data_array[]);
+      ^~~~~~~~~~~~~~~~~~~
+../src/main.c:154:11: warning: passing argument 1 of 'read_gol' from incompatible pointer type [-Wincompatible-pointer-types]
+  read_gol(outputs);
+           ^~~~~~~
+In file included from ../src/main.c:58:0:
+../src/gol_driver.h:40:6: note: expected 'Xuint32 * {aka long unsigned int *}' but argument is of type 'Xuint8 * {aka unsigned char *}'
+ void read_gol(Xuint32 *data_array);
+      ^~~~~~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: gol_app.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../gol_app_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "gol_app.elf"  ./src/gol_driver.o ./src/gol_microblaze.o ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+c:/xilinx/sdk/2017.2/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/6.2.0/../../../../microblaze-xilinx-elf/bin/ld.exe: gol_app.elf section `.stack' will not fit in region `microblaze_0_local_memory_ilmb_bram_if_cntlr_Mem_microblaze_0_local_memory_dlmb_bram_if_cntlr_Mem'
+c:/xilinx/sdk/2017.2/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/6.2.0/../../../../microblaze-xilinx-elf/bin/ld.exe: region `microblaze_0_local_memory_ilmb_bram_if_cntlr_Mem_microblaze_0_local_memory_dlmb_bram_if_cntlr_Mem' overflowed by 15184 bytes
+collect2.exe: error: ld returned 1 exit status
+make: *** [gol_app.elf] Fehler 1
+17:22:53 **** Auto Build of configuration Debug for project gol_app ****
+make all 
+'Building file: ../src/gol_driver.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/gol_driver.o" -I../../gol_app_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/gol_driver.d" -MT"src/gol_driver.o" -o "src/gol_driver.o" "../src/gol_driver.c"
+In file included from ../src/gol_driver.h:11:0,
+                 from ../src/gol_driver.c:8:
+../../gol_app_bsp/microblaze_0/include/xbasic_types.h:115:2: warning: #warning The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert. [-Wcpp]
+ #warning  The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert.
+  ^~~~~~~
+../../gol_app_bsp/microblaze_0/include/xbasic_types.h:116:2: warning: #warning Please refer the Standalone BSP UG647 for further details [-Wcpp]
+ #warning  Please refer the Standalone BSP UG647 for further details
+  ^~~~~~~
+../src/gol_driver.c:16:6: error: conflicting types for 'init_gol'
+ void init_gol(Xuint32 base_addr, Xuint8 data_array[])
+      ^~~~~~~~
+In file included from ../src/gol_driver.c:8:0:
+../src/gol_driver.h:28:6: note: previous declaration of 'init_gol' was here
+ void init_gol(Xuint32 base_addr, Xuint32 data_array[]);
+      ^~~~~~~~
+../src/gol_driver.c:33:6: error: conflicting types for 'ioctrl_changeMaxIterationValue'
+ void ioctrl_changeMaxIterationValue(Xuint8 value)
+      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from ../src/gol_driver.c:8:0:
+../src/gol_driver.h:33:6: note: previous declaration of 'ioctrl_changeMaxIterationValue' was here
+ void ioctrl_changeMaxIterationValue(Xuint32 value);
+      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/gol_driver.c:40:6: error: conflicting types for 'write_bit_to_gol'
+ void write_bit_to_gol(Xuint8 data)
+      ^~~~~~~~~~~~~~~~
+In file included from ../src/gol_driver.c:8:0:
+../src/gol_driver.h:35:6: note: previous declaration of 'write_bit_to_gol' was here
+ void write_bit_to_gol(Xuint32 data);
+      ^~~~~~~~~~~~~~~~
+../src/gol_driver.c:45:6: error: conflicting types for 'read_gol'
+ void read_gol(Xuint8* data_array)
+      ^~~~~~~~
+In file included from ../src/gol_driver.c:8:0:
+../src/gol_driver.h:40:6: note: previous declaration of 'read_gol' was here
+ void read_gol(Xuint32 *data_array);
+      ^~~~~~~~
+make: *** [src/gol_driver.o] Fehler 1
+17:23:25 **** Auto Build of configuration Debug for project gol_app ****
+make all 
+'Building file: ../src/gol_driver.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/gol_driver.o" -I../../gol_app_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/gol_driver.d" -MT"src/gol_driver.o" -o "src/gol_driver.o" "../src/gol_driver.c"
+In file included from ../src/gol_driver.h:11:0,
+                 from ../src/gol_driver.c:8:
+../../gol_app_bsp/microblaze_0/include/xbasic_types.h:115:2: warning: #warning The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert. [-Wcpp]
+ #warning  The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert.
+  ^~~~~~~
+../../gol_app_bsp/microblaze_0/include/xbasic_types.h:116:2: warning: #warning Please refer the Standalone BSP UG647 for further details [-Wcpp]
+ #warning  Please refer the Standalone BSP UG647 for further details
+  ^~~~~~~
+'Finished building: ../src/gol_driver.c'
+' '
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../gol_app_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/gol_microblaze.h:11:0,
+                 from ../src/main.c:56:
+../../gol_app_bsp/microblaze_0/include/xbasic_types.h:115:2: warning: #warning The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert. [-Wcpp]
+ #warning  The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert.
+  ^~~~~~~
+../../gol_app_bsp/microblaze_0/include/xbasic_types.h:116:2: warning: #warning Please refer the Standalone BSP UG647 for further details [-Wcpp]
+ #warning  Please refer the Standalone BSP UG647 for further details
+  ^~~~~~~
+../src/main.c: In function 'main':
+../src/main.c:120:22: warning: passing argument 1 of 'microblaze_init_gol' from incompatible pointer type [-Wincompatible-pointer-types]
+  microblaze_init_gol(oszil);
+                      ^~~~~
+In file included from ../src/main.c:56:0:
+../src/gol_microblaze.h:17:6: note: expected 'Xuint32 * {aka long unsigned int *}' but argument is of type 'Xuint8 * {aka unsigned char *}'
+ void microblaze_init_gol(Xuint32 data_array[]);
+      ^~~~~~~~~~~~~~~~~~~
+../src/main.c:127:22: warning: passing argument 1 of 'microblaze_read_gol' from incompatible pointer type [-Wincompatible-pointer-types]
+  microblaze_read_gol(outputs);
+                      ^~~~~~~
+In file included from ../src/main.c:56:0:
+../src/gol_microblaze.h:19:6: note: expected 'Xuint32 * {aka long unsigned int *}' but argument is of type 'Xuint8 * {aka unsigned char *}'
+ void microblaze_read_gol(Xuint32 data_array[]);
+      ^~~~~~~~~~~~~~~~~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: gol_app.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../gol_app_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "gol_app.elf"  ./src/gol_driver.o ./src/gol_microblaze.o ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+c:/xilinx/sdk/2017.2/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/6.2.0/../../../../microblaze-xilinx-elf/bin/ld.exe: gol_app.elf section `.stack' will not fit in region `microblaze_0_local_memory_ilmb_bram_if_cntlr_Mem_microblaze_0_local_memory_dlmb_bram_if_cntlr_Mem'
+c:/xilinx/sdk/2017.2/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/6.2.0/../../../../microblaze-xilinx-elf/bin/ld.exe: region `microblaze_0_local_memory_ilmb_bram_if_cntlr_Mem_microblaze_0_local_memory_dlmb_bram_if_cntlr_Mem' overflowed by 15192 bytes
+collect2.exe: error: ld returned 1 exit status
+make: *** [gol_app.elf] Fehler 1
+17:23:58 **** Auto Build of configuration Debug for project gol_app ****
+make all 
+'Building file: ../src/gol_microblaze.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/gol_microblaze.o" -I../../gol_app_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/gol_microblaze.d" -MT"src/gol_microblaze.o" -o "src/gol_microblaze.o" "../src/gol_microblaze.c"
+In file included from ../src/gol_microblaze.h:11:0,
+                 from ../src/gol_microblaze.c:8:
+../../gol_app_bsp/microblaze_0/include/xbasic_types.h:115:2: warning: #warning The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert. [-Wcpp]
+ #warning  The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert.
+  ^~~~~~~
+../../gol_app_bsp/microblaze_0/include/xbasic_types.h:116:2: warning: #warning Please refer the Standalone BSP UG647 for further details [-Wcpp]
+ #warning  Please refer the Standalone BSP UG647 for further details
+  ^~~~~~~
+../src/gol_microblaze.c:13:6: error: conflicting types for 'microblaze_init_gol'
+ void microblaze_init_gol(Xuint8 data_array[])
+      ^~~~~~~~~~~~~~~~~~~
+In file included from ../src/gol_microblaze.c:8:0:
+../src/gol_microblaze.h:17:6: note: previous declaration of 'microblaze_init_gol' was here
+ void microblaze_init_gol(Xuint32 data_array[]);
+      ^~~~~~~~~~~~~~~~~~~
+../src/gol_microblaze.c:26:6: error: conflicting types for 'microblaze_read_gol'
+ void microblaze_read_gol(Xuint8 data_array[])
+      ^~~~~~~~~~~~~~~~~~~
+In file included from ../src/gol_microblaze.c:8:0:
+../src/gol_microblaze.h:19:6: note: previous declaration of 'microblaze_read_gol' was here
+ void microblaze_read_gol(Xuint32 data_array[]);
+      ^~~~~~~~~~~~~~~~~~~
+make: *** [src/gol_microblaze.o] Fehler 1
+17:24:00 **** Auto Build of configuration Debug for project gol_app ****
 make all 
 'Building file: ../src/gol_microblaze.c'
 'Invoking: MicroBlaze gcc compiler'
@@ -16,6 +383,28 @@ In file included from ../src/gol_microblaze.h:11:0,
   ^~~~~~~
 'Finished building: ../src/gol_microblaze.c'
 ' '
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../gol_app_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/gol_microblaze.h:11:0,
+                 from ../src/main.c:56:
+../../gol_app_bsp/microblaze_0/include/xbasic_types.h:115:2: warning: #warning The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert. [-Wcpp]
+ #warning  The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert.
+  ^~~~~~~
+../../gol_app_bsp/microblaze_0/include/xbasic_types.h:116:2: warning: #warning Please refer the Standalone BSP UG647 for further details [-Wcpp]
+ #warning  Please refer the Standalone BSP UG647 for further details
+  ^~~~~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: gol_app.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../gol_app_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "gol_app.elf"  ./src/gol_driver.o ./src/gol_microblaze.o ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+c:/xilinx/sdk/2017.2/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/6.2.0/../../../../microblaze-xilinx-elf/bin/ld.exe: gol_app.elf section `.stack' will not fit in region `microblaze_0_local_memory_ilmb_bram_if_cntlr_Mem_microblaze_0_local_memory_dlmb_bram_if_cntlr_Mem'
+c:/xilinx/sdk/2017.2/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/6.2.0/../../../../microblaze-xilinx-elf/bin/ld.exe: region `microblaze_0_local_memory_ilmb_bram_if_cntlr_Mem_microblaze_0_local_memory_dlmb_bram_if_cntlr_Mem' overflowed by 15168 bytes
+collect2.exe: error: ld returned 1 exit status
+make: *** [gol_app.elf] Fehler 1
+17:24:20 **** Auto Build of configuration Debug for project gol_app ****
+make all 
 'Building target: gol_app.elf'
 'Invoking: MicroBlaze gcc linker'
 mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../gol_app_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "gol_app.elf"  ./src/gol_driver.o ./src/gol_microblaze.o ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
@@ -24,6 +413,685 @@ mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../gol_app_bsp/microblaze_0/lib -mlittl
 'Invoking: MicroBlaze Print Size'
 mb-size gol_app.elf  |tee "gol_app.elf.size"
    text	   data	    bss	    dec	    hex	filename
-   8812	    488	   3756	  13056	   3300	gol_app.elf
+  11892	    488	   3764	  16144	   3f10	gol_app.elf
+'Finished building: gol_app.elf.size'
+' '
+17:25:02 **** Auto Build of configuration Debug for project gol_app ****
+make all 
+'Building file: ../src/gol_driver.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/gol_driver.o" -I../../gol_app_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/gol_driver.d" -MT"src/gol_driver.o" -o "src/gol_driver.o" "../src/gol_driver.c"
+In file included from ../src/gol_driver.h:11:0,
+                 from ../src/gol_driver.c:8:
+../../gol_app_bsp/microblaze_0/include/xbasic_types.h:115:2: warning: #warning The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert. [-Wcpp]
+ #warning  The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert.
+  ^~~~~~~
+../../gol_app_bsp/microblaze_0/include/xbasic_types.h:116:2: warning: #warning Please refer the Standalone BSP UG647 for further details [-Wcpp]
+ #warning  Please refer the Standalone BSP UG647 for further details
+  ^~~~~~~
+'Finished building: ../src/gol_driver.c'
+' '
+'Building target: gol_app.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../gol_app_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "gol_app.elf"  ./src/gol_driver.o ./src/gol_microblaze.o ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: gol_app.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size gol_app.elf  |tee "gol_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  12036	    488	   3764	  16288	   3fa0	gol_app.elf
+'Finished building: gol_app.elf.size'
+' '
+17:26:08 **** Auto Build of configuration Debug for project gol_app ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../gol_app_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/gol_microblaze.h:11:0,
+                 from ../src/main.c:56:
+../../gol_app_bsp/microblaze_0/include/xbasic_types.h:115:2: warning: #warning The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert. [-Wcpp]
+ #warning  The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert.
+  ^~~~~~~
+../../gol_app_bsp/microblaze_0/include/xbasic_types.h:116:2: warning: #warning Please refer the Standalone BSP UG647 for further details [-Wcpp]
+ #warning  Please refer the Standalone BSP UG647 for further details
+  ^~~~~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: gol_app.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../gol_app_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "gol_app.elf"  ./src/gol_driver.o ./src/gol_microblaze.o ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: gol_app.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size gol_app.elf  |tee "gol_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  12076	    488	   3764	  16328	   3fc8	gol_app.elf
+'Finished building: gol_app.elf.size'
+' '
+17:31:28 **** Auto Build of configuration Debug for project gol_app ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../gol_app_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/gol_microblaze.h:11:0,
+                 from ../src/main.c:56:
+../../gol_app_bsp/microblaze_0/include/xbasic_types.h:115:2: warning: #warning The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert. [-Wcpp]
+ #warning  The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert.
+  ^~~~~~~
+../../gol_app_bsp/microblaze_0/include/xbasic_types.h:116:2: warning: #warning Please refer the Standalone BSP UG647 for further details [-Wcpp]
+ #warning  Please refer the Standalone BSP UG647 for further details
+  ^~~~~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: gol_app.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../gol_app_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "gol_app.elf"  ./src/gol_driver.o ./src/gol_microblaze.o ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: gol_app.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size gol_app.elf  |tee "gol_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  12076	    488	   3764	  16328	   3fc8	gol_app.elf
+'Finished building: gol_app.elf.size'
+' '
+17:36:59 **** Auto Build of configuration Debug for project gol_app ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../gol_app_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/gol_microblaze.h:11:0,
+                 from ../src/main.c:56:
+../../gol_app_bsp/microblaze_0/include/xbasic_types.h:115:2: warning: #warning The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert. [-Wcpp]
+ #warning  The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert.
+  ^~~~~~~
+../../gol_app_bsp/microblaze_0/include/xbasic_types.h:116:2: warning: #warning Please refer the Standalone BSP UG647 for further details [-Wcpp]
+ #warning  Please refer the Standalone BSP UG647 for further details
+  ^~~~~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: gol_app.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../gol_app_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "gol_app.elf"  ./src/gol_driver.o ./src/gol_microblaze.o ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+c:/xilinx/sdk/2017.2/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/6.2.0/../../../../microblaze-xilinx-elf/bin/ld.exe: gol_app.elf section `.stack' will not fit in region `microblaze_0_local_memory_ilmb_bram_if_cntlr_Mem_microblaze_0_local_memory_dlmb_bram_if_cntlr_Mem'
+c:/xilinx/sdk/2017.2/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/6.2.0/../../../../microblaze-xilinx-elf/bin/ld.exe: region `microblaze_0_local_memory_ilmb_bram_if_cntlr_Mem_microblaze_0_local_memory_dlmb_bram_if_cntlr_Mem' overflowed by 32 bytes
+collect2.exe: error: ld returned 1 exit status
+make: *** [gol_app.elf] Fehler 1
+17:37:14 **** Auto Build of configuration Debug for project gol_app ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../gol_app_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/gol_microblaze.h:11:0,
+                 from ../src/main.c:56:
+../../gol_app_bsp/microblaze_0/include/xbasic_types.h:115:2: warning: #warning The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert. [-Wcpp]
+ #warning  The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert.
+  ^~~~~~~
+../../gol_app_bsp/microblaze_0/include/xbasic_types.h:116:2: warning: #warning Please refer the Standalone BSP UG647 for further details [-Wcpp]
+ #warning  Please refer the Standalone BSP UG647 for further details
+  ^~~~~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: gol_app.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../gol_app_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "gol_app.elf"  ./src/gol_driver.o ./src/gol_microblaze.o ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+c:/xilinx/sdk/2017.2/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/6.2.0/../../../../microblaze-xilinx-elf/bin/ld.exe: gol_app.elf section `.stack' will not fit in region `microblaze_0_local_memory_ilmb_bram_if_cntlr_Mem_microblaze_0_local_memory_dlmb_bram_if_cntlr_Mem'
+c:/xilinx/sdk/2017.2/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/6.2.0/../../../../microblaze-xilinx-elf/bin/ld.exe: region `microblaze_0_local_memory_ilmb_bram_if_cntlr_Mem_microblaze_0_local_memory_dlmb_bram_if_cntlr_Mem' overflowed by 32 bytes
+collect2.exe: error: ld returned 1 exit status
+make: *** [gol_app.elf] Fehler 1
+17:37:18 **** Auto Build of configuration Debug for project gol_app ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../gol_app_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/gol_microblaze.h:11:0,
+                 from ../src/main.c:56:
+../../gol_app_bsp/microblaze_0/include/xbasic_types.h:115:2: warning: #warning The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert. [-Wcpp]
+ #warning  The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert.
+  ^~~~~~~
+../../gol_app_bsp/microblaze_0/include/xbasic_types.h:116:2: warning: #warning Please refer the Standalone BSP UG647 for further details [-Wcpp]
+ #warning  Please refer the Standalone BSP UG647 for further details
+  ^~~~~~~
+../src/main.c: In function 'main':
+../src/main.c:126:28: error: 'NITER' undeclared (first use in this function)
+  microblaze_calc_next_iter(NITER);
+                            ^~~~~
+../src/main.c:126:28: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [src/main.o] Fehler 1
+17:37:32 **** Auto Build of configuration Debug for project gol_app ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../gol_app_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/gol_microblaze.h:11:0,
+                 from ../src/main.c:56:
+../../gol_app_bsp/microblaze_0/include/xbasic_types.h:115:2: warning: #warning The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert. [-Wcpp]
+ #warning  The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert.
+  ^~~~~~~
+../../gol_app_bsp/microblaze_0/include/xbasic_types.h:116:2: warning: #warning Please refer the Standalone BSP UG647 for further details [-Wcpp]
+ #warning  Please refer the Standalone BSP UG647 for further details
+  ^~~~~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: gol_app.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../gol_app_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "gol_app.elf"  ./src/gol_driver.o ./src/gol_microblaze.o ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: gol_app.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size gol_app.elf  |tee "gol_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  12076	    488	   3764	  16328	   3fc8	gol_app.elf
+'Finished building: gol_app.elf.size'
+' '
+17:37:38 **** Auto Build of configuration Debug for project gol_app ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../gol_app_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/gol_microblaze.h:11:0,
+                 from ../src/main.c:56:
+../../gol_app_bsp/microblaze_0/include/xbasic_types.h:115:2: warning: #warning The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert. [-Wcpp]
+ #warning  The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert.
+  ^~~~~~~
+../../gol_app_bsp/microblaze_0/include/xbasic_types.h:116:2: warning: #warning Please refer the Standalone BSP UG647 for further details [-Wcpp]
+ #warning  Please refer the Standalone BSP UG647 for further details
+  ^~~~~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: gol_app.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../gol_app_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "gol_app.elf"  ./src/gol_driver.o ./src/gol_microblaze.o ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: gol_app.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size gol_app.elf  |tee "gol_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  12076	    488	   3764	  16328	   3fc8	gol_app.elf
+'Finished building: gol_app.elf.size'
+' '
+17:37:46 **** Auto Build of configuration Debug for project gol_app ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../gol_app_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/gol_microblaze.h:11:0,
+                 from ../src/main.c:56:
+../../gol_app_bsp/microblaze_0/include/xbasic_types.h:115:2: warning: #warning The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert. [-Wcpp]
+ #warning  The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert.
+  ^~~~~~~
+../../gol_app_bsp/microblaze_0/include/xbasic_types.h:116:2: warning: #warning Please refer the Standalone BSP UG647 for further details [-Wcpp]
+ #warning  Please refer the Standalone BSP UG647 for further details
+  ^~~~~~~
+../src/main.c: In function 'main':
+../src/main.c:142:2: error: expected ';' before 'run_gol'
+  run_gol();
+  ^~~~~~~
+make: *** [src/main.o] Fehler 1
+17:37:50 **** Auto Build of configuration Debug for project gol_app ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../gol_app_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/gol_microblaze.h:11:0,
+                 from ../src/main.c:56:
+../../gol_app_bsp/microblaze_0/include/xbasic_types.h:115:2: warning: #warning The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert. [-Wcpp]
+ #warning  The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert.
+  ^~~~~~~
+../../gol_app_bsp/microblaze_0/include/xbasic_types.h:116:2: warning: #warning Please refer the Standalone BSP UG647 for further details [-Wcpp]
+ #warning  Please refer the Standalone BSP UG647 for further details
+  ^~~~~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: gol_app.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../gol_app_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "gol_app.elf"  ./src/gol_driver.o ./src/gol_microblaze.o ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+c:/xilinx/sdk/2017.2/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/6.2.0/../../../../microblaze-xilinx-elf/bin/ld.exe: gol_app.elf section `.stack' will not fit in region `microblaze_0_local_memory_ilmb_bram_if_cntlr_Mem_microblaze_0_local_memory_dlmb_bram_if_cntlr_Mem'
+c:/xilinx/sdk/2017.2/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/6.2.0/../../../../microblaze-xilinx-elf/bin/ld.exe: region `microblaze_0_local_memory_ilmb_bram_if_cntlr_Mem_microblaze_0_local_memory_dlmb_bram_if_cntlr_Mem' overflowed by 8 bytes
+collect2.exe: error: ld returned 1 exit status
+make: *** [gol_app.elf] Fehler 1
+17:37:55 **** Auto Build of configuration Debug for project gol_app ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../gol_app_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/gol_microblaze.h:11:0,
+                 from ../src/main.c:56:
+../../gol_app_bsp/microblaze_0/include/xbasic_types.h:115:2: warning: #warning The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert. [-Wcpp]
+ #warning  The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert.
+  ^~~~~~~
+../../gol_app_bsp/microblaze_0/include/xbasic_types.h:116:2: warning: #warning Please refer the Standalone BSP UG647 for further details [-Wcpp]
+ #warning  Please refer the Standalone BSP UG647 for further details
+  ^~~~~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: gol_app.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../gol_app_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "gol_app.elf"  ./src/gol_driver.o ./src/gol_microblaze.o ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: gol_app.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size gol_app.elf  |tee "gol_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  12076	    488	   3764	  16328	   3fc8	gol_app.elf
+'Finished building: gol_app.elf.size'
+' '
+17:38:08 **** Auto Build of configuration Debug for project gol_app ****
+make all 
+'Building file: ../src/gol_driver.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/gol_driver.o" -I../../gol_app_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/gol_driver.d" -MT"src/gol_driver.o" -o "src/gol_driver.o" "../src/gol_driver.c"
+In file included from ../src/gol_driver.h:11:0,
+                 from ../src/gol_driver.c:8:
+../../gol_app_bsp/microblaze_0/include/xbasic_types.h:115:2: warning: #warning The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert. [-Wcpp]
+ #warning  The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert.
+  ^~~~~~~
+../../gol_app_bsp/microblaze_0/include/xbasic_types.h:116:2: warning: #warning Please refer the Standalone BSP UG647 for further details [-Wcpp]
+ #warning  Please refer the Standalone BSP UG647 for further details
+  ^~~~~~~
+'Finished building: ../src/gol_driver.c'
+' '
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../gol_app_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/gol_microblaze.h:11:0,
+                 from ../src/main.c:56:
+../../gol_app_bsp/microblaze_0/include/xbasic_types.h:115:2: warning: #warning The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert. [-Wcpp]
+ #warning  The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert.
+  ^~~~~~~
+../../gol_app_bsp/microblaze_0/include/xbasic_types.h:116:2: warning: #warning Please refer the Standalone BSP UG647 for further details [-Wcpp]
+ #warning  Please refer the Standalone BSP UG647 for further details
+  ^~~~~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: gol_app.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../gol_app_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "gol_app.elf"  ./src/gol_driver.o ./src/gol_microblaze.o ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: gol_app.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size gol_app.elf  |tee "gol_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  12076	    488	   3764	  16328	   3fc8	gol_app.elf
+'Finished building: gol_app.elf.size'
+' '
+17:38:53 **** Auto Build of configuration Debug for project gol_app ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../gol_app_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/gol_microblaze.h:11:0,
+                 from ../src/main.c:56:
+../../gol_app_bsp/microblaze_0/include/xbasic_types.h:115:2: warning: #warning The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert. [-Wcpp]
+ #warning  The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert.
+  ^~~~~~~
+../../gol_app_bsp/microblaze_0/include/xbasic_types.h:116:2: warning: #warning Please refer the Standalone BSP UG647 for further details [-Wcpp]
+ #warning  Please refer the Standalone BSP UG647 for further details
+  ^~~~~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: gol_app.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../gol_app_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "gol_app.elf"  ./src/gol_driver.o ./src/gol_microblaze.o ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: gol_app.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size gol_app.elf  |tee "gol_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  12076	    488	   3764	  16328	   3fc8	gol_app.elf
+'Finished building: gol_app.elf.size'
+' '
+17:39:48 **** Auto Build of configuration Debug for project gol_app ****
+make all 
+'Building file: ../src/gol_driver.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/gol_driver.o" -I../../gol_app_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/gol_driver.d" -MT"src/gol_driver.o" -o "src/gol_driver.o" "../src/gol_driver.c"
+In file included from ../src/gol_driver.h:11:0,
+                 from ../src/gol_driver.c:8:
+../../gol_app_bsp/microblaze_0/include/xbasic_types.h:115:2: warning: #warning The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert. [-Wcpp]
+ #warning  The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert.
+  ^~~~~~~
+../../gol_app_bsp/microblaze_0/include/xbasic_types.h:116:2: warning: #warning Please refer the Standalone BSP UG647 for further details [-Wcpp]
+ #warning  Please refer the Standalone BSP UG647 for further details
+  ^~~~~~~
+'Finished building: ../src/gol_driver.c'
+' '
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../gol_app_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/gol_microblaze.h:11:0,
+                 from ../src/main.c:56:
+../../gol_app_bsp/microblaze_0/include/xbasic_types.h:115:2: warning: #warning The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert. [-Wcpp]
+ #warning  The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert.
+  ^~~~~~~
+../../gol_app_bsp/microblaze_0/include/xbasic_types.h:116:2: warning: #warning Please refer the Standalone BSP UG647 for further details [-Wcpp]
+ #warning  Please refer the Standalone BSP UG647 for further details
+  ^~~~~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: gol_app.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../gol_app_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "gol_app.elf"  ./src/gol_driver.o ./src/gol_microblaze.o ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: gol_app.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size gol_app.elf  |tee "gol_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  12076	    488	   3764	  16328	   3fc8	gol_app.elf
+'Finished building: gol_app.elf.size'
+' '
+17:39:51 **** Auto Build of configuration Debug for project gol_app ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../gol_app_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/gol_microblaze.h:11:0,
+                 from ../src/main.c:56:
+../../gol_app_bsp/microblaze_0/include/xbasic_types.h:115:2: warning: #warning The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert. [-Wcpp]
+ #warning  The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert.
+  ^~~~~~~
+../../gol_app_bsp/microblaze_0/include/xbasic_types.h:116:2: warning: #warning Please refer the Standalone BSP UG647 for further details [-Wcpp]
+ #warning  Please refer the Standalone BSP UG647 for further details
+  ^~~~~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: gol_app.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../gol_app_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "gol_app.elf"  ./src/gol_driver.o ./src/gol_microblaze.o ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: gol_app.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size gol_app.elf  |tee "gol_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  12076	    488	   3764	  16328	   3fc8	gol_app.elf
+'Finished building: gol_app.elf.size'
+' '
+17:42:03 **** Auto Build of configuration Debug for project gol_app ****
+make all 
+'Building file: ../src/gol_driver.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/gol_driver.o" -I../../gol_app_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/gol_driver.d" -MT"src/gol_driver.o" -o "src/gol_driver.o" "../src/gol_driver.c"
+In file included from ../src/gol_driver.h:11:0,
+                 from ../src/gol_driver.c:8:
+../../gol_app_bsp/microblaze_0/include/xbasic_types.h:115:2: warning: #warning The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert. [-Wcpp]
+ #warning  The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert.
+  ^~~~~~~
+../../gol_app_bsp/microblaze_0/include/xbasic_types.h:116:2: warning: #warning Please refer the Standalone BSP UG647 for further details [-Wcpp]
+ #warning  Please refer the Standalone BSP UG647 for further details
+  ^~~~~~~
+'Finished building: ../src/gol_driver.c'
+' '
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../gol_app_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/gol_microblaze.h:11:0,
+                 from ../src/main.c:56:
+../../gol_app_bsp/microblaze_0/include/xbasic_types.h:115:2: warning: #warning The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert. [-Wcpp]
+ #warning  The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert.
+  ^~~~~~~
+../../gol_app_bsp/microblaze_0/include/xbasic_types.h:116:2: warning: #warning Please refer the Standalone BSP UG647 for further details [-Wcpp]
+ #warning  Please refer the Standalone BSP UG647 for further details
+  ^~~~~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: gol_app.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../gol_app_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "gol_app.elf"  ./src/gol_driver.o ./src/gol_microblaze.o ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: gol_app.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size gol_app.elf  |tee "gol_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  12076	    488	   3764	  16328	   3fc8	gol_app.elf
+'Finished building: gol_app.elf.size'
+' '
+17:45:11 **** Auto Build of configuration Debug for project gol_app ****
+make all 
+'Building file: ../src/gol_driver.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/gol_driver.o" -I../../gol_app_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/gol_driver.d" -MT"src/gol_driver.o" -o "src/gol_driver.o" "../src/gol_driver.c"
+In file included from ../src/gol_driver.h:11:0,
+                 from ../src/gol_driver.c:8:
+../../gol_app_bsp/microblaze_0/include/xbasic_types.h:115:2: warning: #warning The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert. [-Wcpp]
+ #warning  The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert.
+  ^~~~~~~
+../../gol_app_bsp/microblaze_0/include/xbasic_types.h:116:2: warning: #warning Please refer the Standalone BSP UG647 for further details [-Wcpp]
+ #warning  Please refer the Standalone BSP UG647 for further details
+  ^~~~~~~
+'Finished building: ../src/gol_driver.c'
+' '
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../gol_app_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/gol_microblaze.h:11:0,
+                 from ../src/main.c:56:
+../../gol_app_bsp/microblaze_0/include/xbasic_types.h:115:2: warning: #warning The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert. [-Wcpp]
+ #warning  The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert.
+  ^~~~~~~
+../../gol_app_bsp/microblaze_0/include/xbasic_types.h:116:2: warning: #warning Please refer the Standalone BSP UG647 for further details [-Wcpp]
+ #warning  Please refer the Standalone BSP UG647 for further details
+  ^~~~~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: gol_app.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../gol_app_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "gol_app.elf"  ./src/gol_driver.o ./src/gol_microblaze.o ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: gol_app.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size gol_app.elf  |tee "gol_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  12076	    488	   3764	  16328	   3fc8	gol_app.elf
+'Finished building: gol_app.elf.size'
+' '
+17:47:18 **** Auto Build of configuration Debug for project gol_app ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../gol_app_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/gol_microblaze.h:11:0,
+                 from ../src/main.c:56:
+../../gol_app_bsp/microblaze_0/include/xbasic_types.h:115:2: warning: #warning The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert. [-Wcpp]
+ #warning  The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert.
+  ^~~~~~~
+../../gol_app_bsp/microblaze_0/include/xbasic_types.h:116:2: warning: #warning Please refer the Standalone BSP UG647 for further details [-Wcpp]
+ #warning  Please refer the Standalone BSP UG647 for further details
+  ^~~~~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: gol_app.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../gol_app_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "gol_app.elf"  ./src/gol_driver.o ./src/gol_microblaze.o ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: gol_app.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size gol_app.elf  |tee "gol_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  12004	    488	   3764	  16256	   3f80	gol_app.elf
+'Finished building: gol_app.elf.size'
+' '
+17:47:48 **** Auto Build of configuration Debug for project gol_app ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../gol_app_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/gol_microblaze.h:11:0,
+                 from ../src/main.c:56:
+../../gol_app_bsp/microblaze_0/include/xbasic_types.h:115:2: warning: #warning The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert. [-Wcpp]
+ #warning  The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert.
+  ^~~~~~~
+../../gol_app_bsp/microblaze_0/include/xbasic_types.h:116:2: warning: #warning Please refer the Standalone BSP UG647 for further details [-Wcpp]
+ #warning  Please refer the Standalone BSP UG647 for further details
+  ^~~~~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: gol_app.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../gol_app_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "gol_app.elf"  ./src/gol_driver.o ./src/gol_microblaze.o ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: gol_app.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size gol_app.elf  |tee "gol_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  11992	    488	   3760	  16240	   3f70	gol_app.elf
+'Finished building: gol_app.elf.size'
+' '
+17:48:05 **** Auto Build of configuration Debug for project gol_app ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../gol_app_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/gol_microblaze.h:11:0,
+                 from ../src/main.c:56:
+../../gol_app_bsp/microblaze_0/include/xbasic_types.h:115:2: warning: #warning The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert. [-Wcpp]
+ #warning  The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert.
+  ^~~~~~~
+../../gol_app_bsp/microblaze_0/include/xbasic_types.h:116:2: warning: #warning Please refer the Standalone BSP UG647 for further details [-Wcpp]
+ #warning  Please refer the Standalone BSP UG647 for further details
+  ^~~~~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: gol_app.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../gol_app_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "gol_app.elf"  ./src/gol_driver.o ./src/gol_microblaze.o ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: gol_app.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size gol_app.elf  |tee "gol_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  11924	    488	   3764	  16176	   3f30	gol_app.elf
+'Finished building: gol_app.elf.size'
+' '
+17:49:23 **** Auto Build of configuration Debug for project gol_app ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../gol_app_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/gol_microblaze.h:11:0,
+                 from ../src/main.c:52:
+../../gol_app_bsp/microblaze_0/include/xbasic_types.h:115:2: warning: #warning The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert. [-Wcpp]
+ #warning  The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert.
+  ^~~~~~~
+../../gol_app_bsp/microblaze_0/include/xbasic_types.h:116:2: warning: #warning Please refer the Standalone BSP UG647 for further details [-Wcpp]
+ #warning  Please refer the Standalone BSP UG647 for further details
+  ^~~~~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: gol_app.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../gol_app_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "gol_app.elf"  ./src/gol_driver.o ./src/gol_microblaze.o ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: gol_app.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size gol_app.elf  |tee "gol_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  11872	    488	   3760	  16120	   3ef8	gol_app.elf
+'Finished building: gol_app.elf.size'
+' '
+17:49:37 **** Auto Build of configuration Debug for project gol_app ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../gol_app_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/gol_microblaze.h:11:0,
+                 from ../src/main.c:52:
+../../gol_app_bsp/microblaze_0/include/xbasic_types.h:115:2: warning: #warning The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert. [-Wcpp]
+ #warning  The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert.
+  ^~~~~~~
+../../gol_app_bsp/microblaze_0/include/xbasic_types.h:116:2: warning: #warning Please refer the Standalone BSP UG647 for further details [-Wcpp]
+ #warning  Please refer the Standalone BSP UG647 for further details
+  ^~~~~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: gol_app.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../gol_app_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "gol_app.elf"  ./src/gol_driver.o ./src/gol_microblaze.o ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: gol_app.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size gol_app.elf  |tee "gol_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  11872	    488	   3760	  16120	   3ef8	gol_app.elf
+'Finished building: gol_app.elf.size'
+' '
+17:49:58 **** Auto Build of configuration Debug for project gol_app ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../gol_app_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/gol_microblaze.h:11:0,
+                 from ../src/main.c:52:
+../../gol_app_bsp/microblaze_0/include/xbasic_types.h:115:2: warning: #warning The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert. [-Wcpp]
+ #warning  The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert.
+  ^~~~~~~
+../../gol_app_bsp/microblaze_0/include/xbasic_types.h:116:2: warning: #warning Please refer the Standalone BSP UG647 for further details [-Wcpp]
+ #warning  Please refer the Standalone BSP UG647 for further details
+  ^~~~~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: gol_app.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../gol_app_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "gol_app.elf"  ./src/gol_driver.o ./src/gol_microblaze.o ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: gol_app.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size gol_app.elf  |tee "gol_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  11872	    488	   3760	  16120	   3ef8	gol_app.elf
+'Finished building: gol_app.elf.size'
+' '
+17:50:15 **** Auto Build of configuration Debug for project gol_app ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../gol_app_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/gol_microblaze.h:11:0,
+                 from ../src/main.c:52:
+../../gol_app_bsp/microblaze_0/include/xbasic_types.h:115:2: warning: #warning The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert. [-Wcpp]
+ #warning  The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert.
+  ^~~~~~~
+../../gol_app_bsp/microblaze_0/include/xbasic_types.h:116:2: warning: #warning Please refer the Standalone BSP UG647 for further details [-Wcpp]
+ #warning  Please refer the Standalone BSP UG647 for further details
+  ^~~~~~~
+../src/main.c: In function 'main':
+../src/main.c:109:15: warning: unused variable 'NITER' [-Wunused-variable]
+  const Xuint8 NITER = 1;
+               ^~~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: gol_app.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../gol_app_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "gol_app.elf"  ./src/gol_driver.o ./src/gol_microblaze.o ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: gol_app.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size gol_app.elf  |tee "gol_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  11880	    488	   3760	  16128	   3f00	gol_app.elf
+'Finished building: gol_app.elf.size'
+' '
+17:50:44 **** Auto Build of configuration Debug for project gol_app ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../gol_app_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/gol_microblaze.h:11:0,
+                 from ../src/main.c:52:
+../../gol_app_bsp/microblaze_0/include/xbasic_types.h:115:2: warning: #warning The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert. [-Wcpp]
+ #warning  The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert.
+  ^~~~~~~
+../../gol_app_bsp/microblaze_0/include/xbasic_types.h:116:2: warning: #warning Please refer the Standalone BSP UG647 for further details [-Wcpp]
+ #warning  Please refer the Standalone BSP UG647 for further details
+  ^~~~~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: gol_app.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../gol_app_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "gol_app.elf"  ./src/gol_driver.o ./src/gol_microblaze.o ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: gol_app.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size gol_app.elf  |tee "gol_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  11912	    488	   3760	  16160	   3f20	gol_app.elf
 'Finished building: gol_app.elf.size'
 ' '

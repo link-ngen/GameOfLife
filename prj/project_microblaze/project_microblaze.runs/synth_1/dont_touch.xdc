@@ -42,7 +42,7 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_gol_axi_
 # IP: C:/Workspace/GameOfLife/bd/design_gol/ip/design_gol_xbar_0/design_gol_xbar_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_gol_xbar_0 || ORIG_REF_NAME==design_gol_xbar_0}]
 
-# IP: c:/Workspace/GameOfLife/bd/design_gol/ip/design_gol_game_of_life_0_1/design_gol_game_of_life_0_1.xci
+# IP: C:/Workspace/GameOfLife/bd/design_gol/ip/design_gol_game_of_life_0_1/design_gol_game_of_life_0_1.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_gol_game_of_life_0_1 || ORIG_REF_NAME==design_gol_game_of_life_0_1}]
 
 # XDC: c:/Workspace/GameOfLife/bd/design_gol/ip/design_gol_microblaze_0_0/design_gol_microblaze_0_0.xdc

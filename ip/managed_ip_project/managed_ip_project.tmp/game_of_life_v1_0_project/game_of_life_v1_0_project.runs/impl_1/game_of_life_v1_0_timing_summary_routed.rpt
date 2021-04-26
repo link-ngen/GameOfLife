@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
-| Date         : Mon Apr 19 12:23:37 2021
+| Date         : Mon Apr 26 14:48:11 2021
 | Host         : DESKTOP-VC4VFJL running 64-bit major release  (build 9200)
 | Command      : report_timing_summary -warn_on_violation -max_paths 10 -file game_of_life_v1_0_timing_summary_routed.rpt -rpx game_of_life_v1_0_timing_summary_routed.rpx
 | Design       : game_of_life_v1_0
@@ -52,7 +52,7 @@ Table of Contents
 
 1. checking no_clock
 --------------------
- There are 400 register/latch pins with no clock driven by root clock pin: s00_axi_aclk (HIGH)
+ There are 399 register/latch pins with no clock driven by root clock pin: s00_axi_aclk (HIGH)
 
 
 2. checking constant_clock
@@ -67,7 +67,7 @@ Table of Contents
 
 4. checking unconstrained_internal_endpoints
 --------------------------------------------
- There are 927 pins that are not constrained for maximum delay. (HIGH)
+ There are 926 pins that are not constrained for maximum delay. (HIGH)
 
  There are 0 pins that are not constrained for maximum delay due to constant clock.
 

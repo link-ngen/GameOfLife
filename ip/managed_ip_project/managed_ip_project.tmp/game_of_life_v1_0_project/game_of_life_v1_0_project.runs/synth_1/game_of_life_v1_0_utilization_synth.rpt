@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
-| Date         : Mon Apr 19 12:22:25 2021
+| Date         : Mon Apr 26 14:46:56 2021
 | Host         : DESKTOP-VC4VFJL running 64-bit major release  (build 9200)
 | Command      : report_utilization -file game_of_life_v1_0_utilization_synth.rpt -pb game_of_life_v1_0_utilization_synth.pb
 | Design       : game_of_life_v1_0
@@ -33,8 +33,8 @@ Table of Contents
 | Slice LUTs*             |  988 |     0 |     53200 |  1.86 |
 |   LUT as Logic          |  988 |     0 |     53200 |  1.86 |
 |   LUT as Memory         |    0 |     0 |     17400 |  0.00 |
-| Slice Registers         |  400 |     0 |    106400 |  0.38 |
-|   Register as Flip Flop |  400 |     0 |    106400 |  0.38 |
+| Slice Registers         |  399 |     0 |    106400 |  0.38 |
+|   Register as Flip Flop |  399 |     0 |    106400 |  0.38 |
 |   Register as Latch     |    0 |     0 |    106400 |  0.00 |
 | F7 Muxes                |    0 |     0 |     26600 |  0.00 |
 | F8 Muxes                |    0 |     0 |     13300 |  0.00 |
@@ -56,8 +56,8 @@ Table of Contents
 | 0     |          Yes |           - |            - |
 | 0     |          Yes |           - |          Set |
 | 0     |          Yes |           - |        Reset |
-| 2     |          Yes |         Set |            - |
-| 398   |          Yes |       Reset |            - |
+| 3     |          Yes |         Set |            - |
+| 396   |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -147,7 +147,7 @@ Table of Contents
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
 | LUT6     |  878 |                 LUT |
-| FDRE     |  398 |        Flop & Latch |
+| FDRE     |  396 |        Flop & Latch |
 | CARRY4   |  235 |          CarryLogic |
 | LUT1     |   64 |                 LUT |
 | IBUF     |   43 |                  IO |
@@ -155,8 +155,8 @@ Table of Contents
 | LUT5     |   35 |                 LUT |
 | LUT4     |    5 |                 LUT |
 | LUT2     |    5 |                 LUT |
+| FDSE     |    3 |        Flop & Latch |
 | LUT3     |    2 |                 LUT |
-| FDSE     |    2 |        Flop & Latch |
 | BUFG     |    1 |               Clock |
 +----------+------+---------------------+
 

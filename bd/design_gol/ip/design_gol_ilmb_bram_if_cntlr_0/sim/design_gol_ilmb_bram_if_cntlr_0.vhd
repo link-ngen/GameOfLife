@@ -213,7 +213,7 @@ BEGIN
   U0 : lmb_bram_if_cntlr
     GENERIC MAP (
       C_FAMILY => "zynq",
-      C_HIGHADDR => X"0000000000003FFF",
+      C_HIGHADDR => X"000000000000FFFF",
       C_BASEADDR => X"0000000000000000",
       C_NUM_LMB => 1,
       C_MASK => X"0000000000000000",

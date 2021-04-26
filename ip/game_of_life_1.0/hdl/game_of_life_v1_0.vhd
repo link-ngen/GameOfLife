@@ -46,6 +46,9 @@ entity game_of_life_v1_0 is
 end game_of_life_v1_0;
 
 architecture arch_imp of game_of_life_v1_0 is   
+
+    attribute MARK_DEBUG: string;
+    
     signal clock : std_logic;
     signal reset : std_logic;
     
@@ -106,11 +109,13 @@ architecture arch_imp of game_of_life_v1_0 is
     signal max_iter: std_logic;
     signal bitstream: std_logic;   
     
-    --signal start_iter_pulse: std_logic;
-    --signal stop_iter_pulse: std_logic;
+    attribute MARK_DEBUG of ce : signal is "true";
+    attribute MARK_DEBUG of shift_ca : signal is "true";
+    attribute MARK_DEBUG of d_in : signal is "true";
+    attribute MARK_DEBUG of bitstream : signal is "true";
+    
     signal set_iteration_pulse: std_logic;
     --signal ITER_TAKEN: std_logic_vector(31 downto 0);    -- game of life data output register           11 
-    --signal set_iter: std_logic;
     
     signal w_FF: std_logic;
     signal r_FF: std_logic;
@@ -343,7 +348,7 @@ begin
                 shift_ca <= '0';
                 w_FF <= '0';
             elsif (WriteEnable_GOLDIR = '1') then
-                shift_ca <= w_transfer;
+                shift_ca <= WriteEnable_GOLDIR;
                 w_FF <= Register_GOLDIR(Register_GOLDIR'right);
             else
                 shift_ca <= '0';

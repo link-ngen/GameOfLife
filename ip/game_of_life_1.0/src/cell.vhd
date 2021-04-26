@@ -120,7 +120,7 @@ begin
       Q  => internal_state,-- [out std_logic]
       C  => clk,           -- [in  std_logic]
       CE => ce,            -- [in  std_logic]
-      D  => lut6_2_last_o6,    -- [in  std_logic]
+      D  => lut6_2_last_o6,-- [in  std_logic]
       R  => '0');          -- [in  std_logic]
 
     Q <= internal_state;
