@@ -18,8 +18,6 @@ void init_gol(Xuint32 base_addr, Xuint8 data_array[])
 	pRegister = (volatile Xuint32*) base_addr;
 
 	// set default max iteration
-	//pRegister[GOL_ITER_CTRL_REGISTER] = DEFAULT_ITERATION;
-
 	ioctrl_changeMaxIterationValue(DEFAULT_ITERATION);
 
 	length = 216; //sizeof(data_array) / sizeof(data_array[0]);
@@ -44,10 +42,10 @@ void write_bit_to_gol(Xuint8 data)
 
 void read_gol(Xuint8* data_array)
 {
-	for (unsigned int idx = 0; idx < length; ++idx)
+	for (Xuint32 idx = 0; idx < length; ++idx)
 	{
 		pRegister[GOL_DATA_IN_REGISTER] = 0;
-		data_array[idx] = pRegister[GOL_DATA_OUT_REGISTER];
+		data_array[idx] = (Xuint8)pRegister[GOL_DATA_OUT_REGISTER];
 	}
 }
 

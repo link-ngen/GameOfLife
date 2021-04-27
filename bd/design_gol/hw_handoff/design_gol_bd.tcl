@@ -261,7 +261,13 @@ CONFIG.C_BAUDRATE {115200} \
   # Create instance: clk_wiz_1, and set properties
   set clk_wiz_1 [ create_bd_cell -type ip -vlnv xilinx.com:ip:clk_wiz:5.4 clk_wiz_1 ]
   set_property -dict [ list \
+CONFIG.CLKOUT1_JITTER {193.154} \
+CONFIG.CLKOUT1_PHASE_ERROR {109.126} \
+CONFIG.CLKOUT1_REQUESTED_OUT_FREQ {20.000} \
 CONFIG.CLK_IN1_BOARD_INTERFACE {sys_clock} \
+CONFIG.MMCM_CLKFBOUT_MULT_F {8.500} \
+CONFIG.MMCM_CLKOUT0_DIVIDE_F {42.500} \
+CONFIG.MMCM_DIVCLK_DIVIDE {1} \
 CONFIG.PRIM_SOURCE {Single_ended_clock_capable_pin} \
 CONFIG.USE_BOARD_FLOW {true} \
  ] $clk_wiz_1

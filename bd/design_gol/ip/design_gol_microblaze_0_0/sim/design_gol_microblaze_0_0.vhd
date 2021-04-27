@@ -784,7 +784,7 @@ BEGIN
   U0 : MicroBlaze
     GENERIC MAP (
       C_SCO => 0,
-      C_FREQ => 100000000,
+      C_FREQ => 20000000,
       C_USE_CONFIG_RESET => 0,
       C_NUM_SYNC_FF_CLK => 2,
       C_NUM_SYNC_FF_CLK_IRQ => 1,

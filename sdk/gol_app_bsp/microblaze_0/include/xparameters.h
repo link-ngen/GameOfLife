@@ -2,14 +2,14 @@
 #define XPARAMETERS_H   /* by using protection macros */
 
 /* Definitions for bus frequencies */
-#define XPAR_CPU_M_AXI_DP_FREQ_HZ 100000000
+#define XPAR_CPU_M_AXI_DP_FREQ_HZ 20000000
 /******************************************************************/
 
 /* Canonical definitions for bus frequencies */
 /******************************************************************/
 
-#define XPAR_CPU_CORE_CLOCK_FREQ_HZ 100000000
-#define XPAR_MICROBLAZE_CORE_CLOCK_FREQ_HZ 100000000
+#define XPAR_CPU_CORE_CLOCK_FREQ_HZ 20000000
+#define XPAR_MICROBLAZE_CORE_CLOCK_FREQ_HZ 20000000
 
 /******************************************************************/
 
@@ -60,7 +60,7 @@
 #define XPAR_MICROBLAZE_0_ENDIANNESS 1
 #define XPAR_MICROBLAZE_0_FAULT_TOLERANT 0
 #define XPAR_MICROBLAZE_0_FPU_EXCEPTION 0
-#define XPAR_MICROBLAZE_0_FREQ 100000000
+#define XPAR_MICROBLAZE_0_FREQ 20000000
 #define XPAR_MICROBLAZE_0_FSL_EXCEPTION 0
 #define XPAR_MICROBLAZE_0_FSL_LINKS 0
 #define XPAR_MICROBLAZE_0_IADDR_SIZE 32
@@ -283,7 +283,7 @@
 #define XPAR_MICROBLAZE_ENDIANNESS 1
 #define XPAR_MICROBLAZE_FAULT_TOLERANT 0
 #define XPAR_MICROBLAZE_FPU_EXCEPTION 0
-#define XPAR_MICROBLAZE_FREQ 100000000
+#define XPAR_MICROBLAZE_FREQ 20000000
 #define XPAR_MICROBLAZE_FSL_EXCEPTION 0
 #define XPAR_MICROBLAZE_FSL_LINKS 0
 #define XPAR_MICROBLAZE_IADDR_SIZE 32

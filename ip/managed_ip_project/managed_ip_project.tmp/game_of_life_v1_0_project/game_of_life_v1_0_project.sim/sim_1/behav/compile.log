@@ -1,8 +1,0 @@
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Workspace/GameOfLife/ip/game_of_life_1.0/src/ca_core.vhd" into library xil_defaultlib
-INFO: [VRFC 10-307] analyzing entity ca_core
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Workspace/GameOfLife/ip/game_of_life_1.0/src/cell.vhd" into library xil_defaultlib
-INFO: [VRFC 10-307] analyzing entity cell
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Workspace/GameOfLife/ip/game_of_life_1.0/src/grid.vhd" into library xil_defaultlib
-INFO: [VRFC 10-307] analyzing entity grid
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Workspace/GameOfLife/sim/ca_core_tb.vhd" into library xil_defaultlib
-INFO: [VRFC 10-307] analyzing entity ca_core_tb

@@ -1,8 +1,0 @@
-# compile vhdl design source files
-vhdl xil_defaultlib  "../../../../../../game_of_life_1.0/src/ca_core.vhd"
-vhdl xil_defaultlib  "../../../../../../game_of_life_1.0/src/cell.vhd"
-vhdl xil_defaultlib  "../../../../../../game_of_life_1.0/src/grid.vhd"
-vhdl xil_defaultlib  "../../../../../../../sim/ca_core_tb.vhd"
-
-# Do not sort compile order
-nosort

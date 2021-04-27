@@ -1,8 +1,8 @@
 --Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
---Date        : Mon Apr 26 16:29:46 2021
---Host        : DESKTOP-VC4VFJL running 64-bit major release  (build 9200)
+--Date        : Tue Apr 27 14:13:24 2021
+--Host        : DEVPC running 64-bit major release  (build 9200)
 --Command     : generate_target design_gol.bd
 --Design      : design_gol
 --Purpose     : IP block netlist
@@ -1513,7 +1513,7 @@ architecture STRUCTURE of design_gol is
     tx : out STD_LOGIC
   );
   end component design_gol_axi_uartlite_0_0;
-  component design_gol_game_of_life_0_1 is
+  component design_gol_game_of_life_0_0 is
   port (
     s00_axi_awaddr : in STD_LOGIC_VECTOR ( 3 downto 0 );
     s00_axi_awprot : in STD_LOGIC_VECTOR ( 2 downto 0 );
@@ -1537,7 +1537,7 @@ architecture STRUCTURE of design_gol is
     s00_axi_aclk : in STD_LOGIC;
     s00_axi_aresetn : in STD_LOGIC
   );
-  end component design_gol_game_of_life_0_1;
+  end component design_gol_game_of_life_0_0;
   signal axi_interconnect_0_M00_AXI_ARADDR : STD_LOGIC_VECTOR ( 31 downto 0 );
   signal axi_interconnect_0_M00_AXI_ARREADY : STD_LOGIC;
   signal axi_interconnect_0_M00_AXI_ARVALID : STD_LOGIC_VECTOR ( 0 to 0 );
@@ -1742,7 +1742,7 @@ clk_wiz_1: component design_gol_clk_wiz_1_0
       locked => clk_wiz_1_locked,
       reset => reset_rtl_1
     );
-game_of_life_0: component design_gol_game_of_life_0_1
+game_of_life_0: component design_gol_game_of_life_0_0
      port map (
       s00_axi_aclk => microblaze_0_Clk,
       s00_axi_araddr(3 downto 0) => axi_interconnect_0_M01_AXI_ARADDR(3 downto 0),

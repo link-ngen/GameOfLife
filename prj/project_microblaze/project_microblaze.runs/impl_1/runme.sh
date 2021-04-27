@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/Workspace/GameOfLife/prj/project_microblaze/project_microblaze.runs/impl_1'
+HD_PWD='C:/Project/GameOfLife/prj/project_microblaze/project_microblaze.runs/impl_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

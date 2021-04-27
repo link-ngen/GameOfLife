@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="ca_core_tb_time_impl.wdb" id="1">
+         <top_modules>
+            <top_module name="ca_core_tb" />
+            <top_module name="glbl" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="7888000000fs"></ZoomStartTime>
+      <ZoomEndTime time="10164000001fs"></ZoomEndTime>
+      <Cursor1Time time="8900000000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="161"></NameColumnWidth>
+      <ValueColumnWidth column_width="289"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="19" />
+   <wvobject fp_name="/ca_core_tb/counter" type="other">
+      <obj_property name="ElementShortName">counter</obj_property>
+      <obj_property name="ObjectShortName">counter</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ca_core_tb/output_data" type="array">
+      <obj_property name="ElementShortName">output_data[215:0]</obj_property>
+      <obj_property name="ObjectShortName">output_data[215:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ca_core_tb/debug_data" type="array">
+      <obj_property name="ElementShortName">debug_data[215:0]</obj_property>
+      <obj_property name="ObjectShortName">debug_data[215:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ca_core_tb/debug_out" type="array">
+      <obj_property name="ElementShortName">debug_out[215:0]</obj_property>
+      <obj_property name="ObjectShortName">debug_out[215:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ca_core_tb/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ca_core_tb/ce" type="logic">
+      <obj_property name="ElementShortName">ce</obj_property>
+      <obj_property name="ObjectShortName">ce</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ca_core_tb/shift_ca" type="logic">
+      <obj_property name="ElementShortName">shift_ca</obj_property>
+      <obj_property name="ObjectShortName">shift_ca</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ca_core_tb/start_iter" type="logic">
+      <obj_property name="ElementShortName">start_iter</obj_property>
+      <obj_property name="ObjectShortName">start_iter</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ca_core_tb/stop_iter" type="logic">
+      <obj_property name="ElementShortName">stop_iter</obj_property>
+      <obj_property name="ObjectShortName">stop_iter</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ca_core_tb/max_iter" type="logic">
+      <obj_property name="ElementShortName">max_iter</obj_property>
+      <obj_property name="ObjectShortName">max_iter</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ca_core_tb/ddata" type="logic">
+      <obj_property name="ElementShortName">ddata</obj_property>
+      <obj_property name="ObjectShortName">ddata</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ca_core_tb/bitstream" type="logic">
+      <obj_property name="ElementShortName">bitstream</obj_property>
+      <obj_property name="ObjectShortName">bitstream</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ca_core_tb/W" type="other">
+      <obj_property name="ElementShortName">W</obj_property>
+      <obj_property name="ObjectShortName">W</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ca_core_tb/H" type="other">
+      <obj_property name="ElementShortName">H</obj_property>
+      <obj_property name="ObjectShortName">H</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ca_core_tb/TOTAL_CELL" type="other">
+      <obj_property name="ElementShortName">TOTAL_CELL</obj_property>
+      <obj_property name="ObjectShortName">TOTAL_CELL</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ca_core_tb/cpu_data" type="array">
+      <obj_property name="ElementShortName">cpu_data[215:0]</obj_property>
+      <obj_property name="ObjectShortName">cpu_data[215:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ca_core_tb/dut/cnt_iter" type="array">
+      <obj_property name="ElementShortName">cnt_iter[31:0]</obj_property>
+      <obj_property name="ObjectShortName">cnt_iter[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ca_core_tb/dut/n_iter" type="array">
+      <obj_property name="ElementShortName">n_iter[31:0]</obj_property>
+      <obj_property name="ObjectShortName">n_iter[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/ca_core_tb/dut/state" type="other">
+      <obj_property name="ElementShortName">state</obj_property>
+      <obj_property name="ObjectShortName">state</obj_property>
+   </wvobject>
+</wave_config>
