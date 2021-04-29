@@ -213,6 +213,7 @@ begin
     WriteEnable_GOLICR <= '1' when (w_transfer='1' and Write_RegAddress="01") else '0';
     WriteEnable_GOLDIR  <= '1' when (w_transfer='1' and Write_RegAddress="10") else '0';
     WriteEnable_GOLDOR  <= '1' when (w_transfer='1' and Write_RegAddress="11") else '0';
+    
 -- #########################################################################################################
     ---- READ ACCESS (control flow) ----
     s00_axi_arready <= ar_ready;

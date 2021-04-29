@@ -22,7 +22,7 @@ void microblaze_init_gol(Xuint8 data_array[])
 		}
 	}
 }
-
+//
 void microblaze_read_gol(Xuint8 data_array[])
 {
 	Xuint16 idx_1d = 0;

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7z020clg484-1" LaunchTime="1619525613">
+<GenRun Id="synth_1" LaunchPart="xc7z020clg484-1" LaunchTime="1619711595">
   <File Type="RDS-PROPCONSTRS" Name="design_gol_wrapper_drc_synth.rpt"/>
   <File Type="PA-TCL" Name="design_gol_wrapper.tcl"/>
   <File Type="RDS-RDS" Name="design_gol_wrapper.vds"/>

@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
-| Date         : Tue Apr 27 13:33:51 2021
+| Date         : Thu Apr 29 17:31:37 2021
 | Host         : DEVPC running 64-bit major release  (build 9200)
 | Command      : report_utilization -file game_of_life_v1_0_utilization_synth.rpt -pb game_of_life_v1_0_utilization_synth.pb
 | Design       : game_of_life_v1_0
@@ -146,15 +146,15 @@ Table of Contents
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| LUT6     |  881 |                 LUT |
+| LUT6     |  880 |                 LUT |
 | FDRE     |  398 |        Flop & Latch |
 | CARRY4   |  235 |          CarryLogic |
 | LUT1     |   64 |                 LUT |
 | IBUF     |   43 |                  IO |
 | OBUF     |   41 |                  IO |
 | LUT5     |   33 |                 LUT |
-| LUT2     |    6 |                 LUT |
-| LUT4     |    4 |                 LUT |
+| LUT4     |    6 |                 LUT |
+| LUT2     |    5 |                 LUT |
 | LUT3     |    3 |                 LUT |
 | FDSE     |    1 |        Flop & Latch |
 | BUFG     |    1 |               Clock |

@@ -36,8 +36,8 @@ entity ca_core is
              HEIGHT: integer := 12);
     Port ( clk:         in std_logic;   
            ce:          in std_logic;   -- chip enable
-           n_iter:      in unsigned (31 downto 0); 
            shift_ca:    in std_logic;
+           n_iter:      in unsigned (31 downto 0);
            d_in:        in std_logic;
            start_iter:  in std_logic;   -- flag
            stop_iter:   in std_logic;   -- flag
@@ -57,6 +57,7 @@ architecture Behavioral of ca_core is
     
     -- counter
     constant TOTAL_CELLS : integer := WIDTH * HEIGHT;
+    --constant n_iter: unsigned (31 downto 0) := x"00000005"; 
     signal cnt_iter: unsigned(n_iter'range) := (others => '0');
     
     --signal shift_bit_counter: natural range 0 to (TOTAL_CELLS-1);
@@ -130,10 +131,12 @@ begin
         if rising_edge(clk) then
             if ce = '0' or state = IDLE then
                 cnt_iter <= (others => '0');
-            elsif state = ITERATION then
-                cnt_iter <= cnt_iter + 1;
             else
-                cnt_iter <= cnt_iter;
+                if state = ITERATION then
+                    cnt_iter <= cnt_iter + 1;
+                else
+                    cnt_iter <= cnt_iter;
+                end if;
             end if;
         end if;
     end process ITER_CNT_PROC;

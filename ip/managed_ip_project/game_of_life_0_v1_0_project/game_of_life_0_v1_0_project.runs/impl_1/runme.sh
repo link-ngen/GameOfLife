@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='c:/project/gameoflife/ip/managed_ip_project/game_of_life_0_v1_0_project/game_of_life_0_v1_0_project.runs/impl_1'
+HD_PWD='C:/Project/GameOfLife/ip/managed_ip_project/game_of_life_0_v1_0_project/game_of_life_0_v1_0_project.runs/impl_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

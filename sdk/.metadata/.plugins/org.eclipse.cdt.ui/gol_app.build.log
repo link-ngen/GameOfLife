@@ -1,4 +1,4 @@
-15:20:27 **** Auto Build of configuration Debug for project gol_app ****
+20:47:27 **** Auto Build of configuration Debug for project gol_app ****
 make all 
 'Building file: ../src/main.c'
 'Invoking: MicroBlaze gcc compiler'
@@ -21,9 +21,9 @@ mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../gol_app_bsp/microblaze_0/lib -mlittl
 'Invoking: MicroBlaze Print Size'
 mb-size gol_app.elf  |tee "gol_app.elf.size"
    text	   data	    bss	    dec	    hex	filename
-  11760	    488	   3976	  16224	   3f60	gol_app.elf
+  11912	    488	   3976	  16376	   3ff8	gol_app.elf
 'Finished building: gol_app.elf.size'
 ' '
 
-15:20:28 Build Finished (took 987ms)
+20:47:28 Build Finished (took 921ms)
 

@@ -7,14 +7,10 @@ create_clock -period 8.000 -name sys_clk_pin -waveform {0.000 4.000} -add [get_p
 
 ##Buttons
 set_property -dict {PACKAGE_PIN W12 IOSTANDARD LVCMOS33} [get_ports ce]
-set_property -dict { PACKAGE_PIN W12   IOSTANDARD LVCMOS33 } [get_ports { shift }]; #"JB1"
-set_property -dict {PACKAGE_PIN W12 IOSTANDARD LVCMOS33} [get_ports ce]
-
 set_property -dict {PACKAGE_PIN Y11 IOSTANDARD LVCMOS33} [get_ports d_in]
-set_property -dict {PACKAGE_PIN AA11 IOSTANDARD LVCMOS33} [get_ports load_ca]
+set_property -dict {PACKAGE_PIN AA11 IOSTANDARD LVCMOS33} [get_ports shift_ca]
 set_property -dict {PACKAGE_PIN Y10 IOSTANDARD LVCMOS33} [get_ports start_iter]
 set_property -dict {PACKAGE_PIN AA9 IOSTANDARD LVCMOS33} [get_ports stop_iter]
-set_property -dict {PACKAGE_PIN AB11 IOSTANDARD LVCMOS33} [get_ports read]
 set_property -dict {PACKAGE_PIN AB10 IOSTANDARD LVCMOS33} [get_ports max_iter]
 set_property -dict {PACKAGE_PIN AB9 IOSTANDARD LVCMOS33} [get_ports bitstream]
 

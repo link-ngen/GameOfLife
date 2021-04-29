@@ -12,15 +12,14 @@ source design_gol_wrapper.tcl -notrace
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Project/GameOfLife/ip'.
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2017.2/data/ip'.
-add_files: Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 273.832 ; gain = 53.516
 Command: synth_design -top design_gol_wrapper -part xc7z020clg484-1
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020-clg484'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020-clg484'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 3260 
+INFO: Helper process launched with PID 12792 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 359.098 ; gain = 82.637
+Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 359.539 ; gain = 83.398
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'design_gol_wrapper' [C:/Project/GameOfLife/bd/design_gol/hdl/design_gol_wrapper.vhd:23]
 INFO: [Synth 8-3491] module 'design_gol' declared at 'C:/Project/GameOfLife/bd/design_gol/hdl/design_gol.vhd:1384' bound to instance 'design_gol_i' of component 'design_gol' [C:/Project/GameOfLife/bd/design_gol/hdl/design_gol_wrapper.vhd:33]
@@ -241,7 +240,7 @@ INFO: [Synth 8-256] done synthesizing module 'design_gol_axi_interconnect_0_0' (
 INFO: [Synth 8-3491] module 'design_gol_axi_uartlite_0_0' declared at 'c:/Project/GameOfLife/bd/design_gol/ip/design_gol_axi_uartlite_0_0/synth/design_gol_axi_uartlite_0_0.vhd:59' bound to instance 'axi_uartlite_0' of component 'design_gol_axi_uartlite_0_0' [C:/Project/GameOfLife/bd/design_gol/hdl/design_gol.vhd:1713]
 INFO: [Synth 8-638] synthesizing module 'design_gol_axi_uartlite_0_0' [c:/Project/GameOfLife/bd/design_gol/ip/design_gol_axi_uartlite_0_0/synth/design_gol_axi_uartlite_0_0.vhd:86]
 	Parameter C_FAMILY bound to: zynq - type: string 
-	Parameter C_S_AXI_ACLK_FREQ_HZ bound to: 20000000 - type: integer 
+	Parameter C_S_AXI_ACLK_FREQ_HZ bound to: 100000000 - type: integer 
 	Parameter C_S_AXI_ADDR_WIDTH bound to: 4 - type: integer 
 	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
 	Parameter C_BAUDRATE bound to: 115200 - type: integer 
@@ -251,7 +250,7 @@ INFO: [Synth 8-638] synthesizing module 'design_gol_axi_uartlite_0_0' [c:/Projec
 INFO: [Synth 8-3491] module 'axi_uartlite' declared at 'c:/Project/GameOfLife/bd/design_gol/ipshared/1b8b/hdl/axi_uartlite_v2_0_vh_rfs.vhd:2090' bound to instance 'U0' of component 'axi_uartlite' [c:/Project/GameOfLife/bd/design_gol/ip/design_gol_axi_uartlite_0_0/synth/design_gol_axi_uartlite_0_0.vhd:155]
 INFO: [Synth 8-638] synthesizing module 'axi_uartlite' [c:/Project/GameOfLife/bd/design_gol/ipshared/1b8b/hdl/axi_uartlite_v2_0_vh_rfs.vhd:2160]
 	Parameter C_FAMILY bound to: zynq - type: string 
-	Parameter C_S_AXI_ACLK_FREQ_HZ bound to: 20000000 - type: integer 
+	Parameter C_S_AXI_ACLK_FREQ_HZ bound to: 100000000 - type: integer 
 	Parameter C_S_AXI_ADDR_WIDTH bound to: 4 - type: integer 
 	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
 	Parameter C_BAUDRATE bound to: 115200 - type: integer 
@@ -262,13 +261,13 @@ INFO: [Synth 8-5534] Detected attribute (* max_fanout = "10000" *) [c:/Project/G
 INFO: [Synth 8-5534] Detected attribute (* max_fanout = "10000" *) [c:/Project/GameOfLife/bd/design_gol/ipshared/1b8b/hdl/axi_uartlite_v2_0_vh_rfs.vhd:2110]
 INFO: [Synth 8-638] synthesizing module 'uartlite_core' [c:/Project/GameOfLife/bd/design_gol/ipshared/1b8b/hdl/axi_uartlite_v2_0_vh_rfs.vhd:1615]
 	Parameter C_FAMILY bound to: zynq - type: string 
-	Parameter C_S_AXI_ACLK_FREQ_HZ bound to: 20000000 - type: integer 
+	Parameter C_S_AXI_ACLK_FREQ_HZ bound to: 100000000 - type: integer 
 	Parameter C_BAUDRATE bound to: 115200 - type: integer 
 	Parameter C_DATA_BITS bound to: 8 - type: integer 
 	Parameter C_USE_PARITY bound to: 0 - type: integer 
 	Parameter C_ODD_PARITY bound to: 0 - type: integer 
 INFO: [Synth 8-638] synthesizing module 'baudrate' [c:/Project/GameOfLife/bd/design_gol/ipshared/1b8b/hdl/axi_uartlite_v2_0_vh_rfs.vhd:1418]
-	Parameter C_RATIO bound to: 11 - type: integer 
+	Parameter C_RATIO bound to: 54 - type: integer 
 INFO: [Synth 8-256] done synthesizing module 'baudrate' (16#1) [c:/Project/GameOfLife/bd/design_gol/ipshared/1b8b/hdl/axi_uartlite_v2_0_vh_rfs.vhd:1418]
 INFO: [Synth 8-3919] null assignment ignored [c:/Project/GameOfLife/bd/design_gol/ipshared/1b8b/hdl/axi_uartlite_v2_0_vh_rfs.vhd:1881]
 INFO: [Synth 8-638] synthesizing module 'uartlite_rx' [c:/Project/GameOfLife/bd/design_gol/ipshared/1b8b/hdl/axi_uartlite_v2_0_vh_rfs.vhd:909]
@@ -415,12 +414,12 @@ INFO: [Synth 8-638] synthesizing module 'IBUF' [C:/Xilinx/Vivado/2017.2/scripts/
 INFO: [Synth 8-256] done synthesizing module 'IBUF' (32#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:14470]
 INFO: [Synth 8-638] synthesizing module 'MMCME2_ADV' [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:20759]
 	Parameter BANDWIDTH bound to: OPTIMIZED - type: string 
-	Parameter CLKFBOUT_MULT_F bound to: 8.500000 - type: float 
+	Parameter CLKFBOUT_MULT_F bound to: 10.000000 - type: float 
 	Parameter CLKFBOUT_PHASE bound to: 0.000000 - type: float 
 	Parameter CLKFBOUT_USE_FINE_PS bound to: FALSE - type: string 
 	Parameter CLKIN1_PERIOD bound to: 10.000000 - type: float 
 	Parameter CLKIN2_PERIOD bound to: 0.000000 - type: float 
-	Parameter CLKOUT0_DIVIDE_F bound to: 42.500000 - type: float 
+	Parameter CLKOUT0_DIVIDE_F bound to: 10.000000 - type: float 
 	Parameter CLKOUT0_DUTY_CYCLE bound to: 0.500000 - type: float 
 	Parameter CLKOUT0_PHASE bound to: 0.000000 - type: float 
 	Parameter CLKOUT0_USE_FINE_PS bound to: FALSE - type: string 
@@ -467,13 +466,13 @@ INFO: [Synth 8-638] synthesizing module 'BUFG' [C:/Xilinx/Vivado/2017.2/scripts/
 INFO: [Synth 8-256] done synthesizing module 'BUFG' (34#1) [C:/Xilinx/Vivado/2017.2/scripts/rt/data/unisim_comp.v:607]
 INFO: [Synth 8-256] done synthesizing module 'design_gol_clk_wiz_1_0_clk_wiz' (35#1) [c:/Project/GameOfLife/bd/design_gol/ip/design_gol_clk_wiz_1_0/design_gol_clk_wiz_1_0_clk_wiz.v:68]
 INFO: [Synth 8-256] done synthesizing module 'design_gol_clk_wiz_1_0' (36#1) [c:/Project/GameOfLife/bd/design_gol/ip/design_gol_clk_wiz_1_0/design_gol_clk_wiz_1_0.v:70]
-INFO: [Synth 8-3491] module 'design_gol_game_of_life_0_0' declared at 'c:/Project/GameOfLife/bd/design_gol/ip/design_gol_game_of_life_0_0/synth/design_gol_game_of_life_0_0.vhd:56' bound to instance 'game_of_life_0' of component 'design_gol_game_of_life_0_0' [C:/Project/GameOfLife/bd/design_gol/hdl/design_gol.vhd:1745]
-INFO: [Synth 8-638] synthesizing module 'design_gol_game_of_life_0_0' [c:/Project/GameOfLife/bd/design_gol/ip/design_gol_game_of_life_0_0/synth/design_gol_game_of_life_0_0.vhd:82]
+INFO: [Synth 8-3491] module 'design_gol_game_of_life_0_1' declared at 'c:/Project/GameOfLife/bd/design_gol/ip/design_gol_game_of_life_0_1/synth/design_gol_game_of_life_0_1.vhd:56' bound to instance 'game_of_life_0' of component 'design_gol_game_of_life_0_1' [C:/Project/GameOfLife/bd/design_gol/hdl/design_gol.vhd:1745]
+INFO: [Synth 8-638] synthesizing module 'design_gol_game_of_life_0_1' [c:/Project/GameOfLife/bd/design_gol/ip/design_gol_game_of_life_0_1/synth/design_gol_game_of_life_0_1.vhd:82]
 	Parameter C_S00_AXI_DATA_WIDTH bound to: 32 - type: integer 
 	Parameter C_S00_AXI_ADDR_WIDTH bound to: 4 - type: integer 
 	Parameter C_GOL_WIDTH bound to: 18 - type: integer 
 	Parameter C_GOL_HEIGHT bound to: 12 - type: integer 
-INFO: [Synth 8-3491] module 'game_of_life_v1_0' declared at 'c:/Project/GameOfLife/bd/design_gol/ipshared/c001/hdl/game_of_life_v1_0.vhd:5' bound to instance 'U0' of component 'game_of_life_v1_0' [c:/Project/GameOfLife/bd/design_gol/ip/design_gol_game_of_life_0_0/synth/design_gol_game_of_life_0_0.vhd:145]
+INFO: [Synth 8-3491] module 'game_of_life_v1_0' declared at 'c:/Project/GameOfLife/bd/design_gol/ipshared/c001/hdl/game_of_life_v1_0.vhd:5' bound to instance 'U0' of component 'game_of_life_v1_0' [c:/Project/GameOfLife/bd/design_gol/ip/design_gol_game_of_life_0_1/synth/design_gol_game_of_life_0_1.vhd:145]
 INFO: [Synth 8-638] synthesizing module 'game_of_life_v1_0' [c:/Project/GameOfLife/bd/design_gol/ipshared/c001/hdl/game_of_life_v1_0.vhd:48]
 	Parameter C_GOL_WIDTH bound to: 18 - type: integer 
 	Parameter C_GOL_HEIGHT bound to: 12 - type: integer 
@@ -824,12 +823,12 @@ INFO: [Synth 8-256] done synthesizing module 'grid' (38#1) [c:/Project/GameOfLif
 INFO: [Synth 8-226] default block is never used [c:/Project/GameOfLife/bd/design_gol/hdlscr/ca_core.vhd:92]
 INFO: [Synth 8-256] done synthesizing module 'ca_core' (39#1) [c:/Project/GameOfLife/bd/design_gol/hdlscr/ca_core.vhd:48]
 WARNING: [Synth 8-6014] Unused sequential element WriteEnable_GOLDOR_reg was removed.  [c:/Project/GameOfLife/bd/design_gol/ipshared/c001/hdl/game_of_life_v1_0.vhd:215]
-WARNING: [Synth 8-6014] Unused sequential element ReadEnable_GOLCR_reg was removed.  [c:/Project/GameOfLife/bd/design_gol/ipshared/c001/hdl/game_of_life_v1_0.vhd:252]
-WARNING: [Synth 8-6014] Unused sequential element ReadEnable_GOLICR_reg was removed.  [c:/Project/GameOfLife/bd/design_gol/ipshared/c001/hdl/game_of_life_v1_0.vhd:253]
-WARNING: [Synth 8-6014] Unused sequential element ReadEnable_GOLDOR_reg was removed.  [c:/Project/GameOfLife/bd/design_gol/ipshared/c001/hdl/game_of_life_v1_0.vhd:254]
+WARNING: [Synth 8-6014] Unused sequential element ReadEnable_GOLCR_reg was removed.  [c:/Project/GameOfLife/bd/design_gol/ipshared/c001/hdl/game_of_life_v1_0.vhd:253]
+WARNING: [Synth 8-6014] Unused sequential element ReadEnable_GOLICR_reg was removed.  [c:/Project/GameOfLife/bd/design_gol/ipshared/c001/hdl/game_of_life_v1_0.vhd:254]
+WARNING: [Synth 8-6014] Unused sequential element ReadEnable_GOLDOR_reg was removed.  [c:/Project/GameOfLife/bd/design_gol/ipshared/c001/hdl/game_of_life_v1_0.vhd:255]
 WARNING: [Synth 8-3848] Net Register_GOLDOR in module/entity game_of_life_v1_0 does not have driver. [c:/Project/GameOfLife/bd/design_gol/ipshared/c001/hdl/game_of_life_v1_0.vhd:89]
 INFO: [Synth 8-256] done synthesizing module 'game_of_life_v1_0' (40#1) [c:/Project/GameOfLife/bd/design_gol/ipshared/c001/hdl/game_of_life_v1_0.vhd:48]
-INFO: [Synth 8-256] done synthesizing module 'design_gol_game_of_life_0_0' (41#1) [c:/Project/GameOfLife/bd/design_gol/ip/design_gol_game_of_life_0_0/synth/design_gol_game_of_life_0_0.vhd:82]
+INFO: [Synth 8-256] done synthesizing module 'design_gol_game_of_life_0_1' (41#1) [c:/Project/GameOfLife/bd/design_gol/ip/design_gol_game_of_life_0_1/synth/design_gol_game_of_life_0_1.vhd:82]
 INFO: [Synth 8-638] synthesizing module 'design_gol_mdm_1_0' [c:/Project/GameOfLife/bd/design_gol/ip/design_gol_mdm_1_0/synth/design_gol_mdm_1_0.vhd:74]
 	Parameter C_FAMILY bound to: zynq - type: string 
 	Parameter C_JTAG_CHAIN bound to: 2 - type: integer 
@@ -1062,7 +1061,7 @@ INFO: [Synth 8-256] done synthesizing module 'MDM' (49#1) [c:/Project/GameOfLife
 INFO: [Synth 8-256] done synthesizing module 'design_gol_mdm_1_0' (50#1) [c:/Project/GameOfLife/bd/design_gol/ip/design_gol_mdm_1_0/synth/design_gol_mdm_1_0.vhd:74]
 INFO: [Synth 8-638] synthesizing module 'design_gol_microblaze_0_0' [c:/Project/GameOfLife/bd/design_gol/ip/design_gol_microblaze_0_0/synth/design_gol_microblaze_0_0.vhd:116]
 	Parameter C_SCO bound to: 0 - type: integer 
-	Parameter C_FREQ bound to: 20000000 - type: integer 
+	Parameter C_FREQ bound to: 100000000 - type: integer 
 	Parameter C_USE_CONFIG_RESET bound to: 0 - type: integer 
 	Parameter C_NUM_SYNC_FF_CLK bound to: 2 - type: integer 
 	Parameter C_NUM_SYNC_FF_CLK_IRQ bound to: 1 - type: integer 
@@ -1653,7 +1652,7 @@ WARNING: [Synth 8-3331] design blk_mem_gen_mux has unconnected port ADDR_IN[11]
 WARNING: [Synth 8-3331] design blk_mem_gen_mux has unconnected port ADDR_IN[10]
 INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:01:26 ; elapsed = 00:01:31 . Memory (MB): peak = 812.141 ; gain = 535.680
+Finished RTL Elaboration : Time (s): cpu = 00:01:22 ; elapsed = 00:01:26 . Memory (MB): peak = 811.887 ; gain = 535.746
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -1663,7 +1662,7 @@ Report Check Netlist:
 |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:01:27 ; elapsed = 00:01:33 . Memory (MB): peak = 812.141 ; gain = 535.680
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:01:24 ; elapsed = 00:01:27 . Memory (MB): peak = 811.887 ; gain = 535.746
 ---------------------------------------------------------------------------------
 INFO: [Netlist 29-17] Analyzing 761 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -1723,16 +1722,16 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   RAM32M => RAM32M (RAMS32, RAMS32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32, RAMD32): 16 instances
   SRL16 => SRL16E: 1 instances
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.029 . Memory (MB): peak = 975.391 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.033 . Memory (MB): peak = 976.930 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:01:53 ; elapsed = 00:01:59 . Memory (MB): peak = 975.391 ; gain = 698.930
+Finished Constraint Validation : Time (s): cpu = 00:01:48 ; elapsed = 00:01:53 . Memory (MB): peak = 976.930 ; gain = 700.789
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg484-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:01:53 ; elapsed = 00:01:59 . Memory (MB): peak = 975.391 ; gain = 698.930
+Finished Loading Part and Timing Information : Time (s): cpu = 00:01:48 ; elapsed = 00:01:53 . Memory (MB): peak = 976.930 ; gain = 700.789
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -1759,7 +1758,7 @@ Applied set_property DONT_TOUCH = true for design_gol_i/microblaze_0_local_memor
 Applied set_property DONT_TOUCH = true for design_gol_i/microblaze_0_local_memory/lmb_bram. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for design_gol_i/rst_clk_wiz_1_100M. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:01:53 ; elapsed = 00:01:59 . Memory (MB): peak = 975.391 ; gain = 698.930
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:01:48 ; elapsed = 00:01:53 . Memory (MB): peak = 976.930 ; gain = 700.789
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-4471] merging register 'gen_axilite.s_axi_wready_i_reg' into 'gen_axilite.s_axi_awready_i_reg' [c:/Project/GameOfLife/bd/design_gol/ipshared/f582/hdl/axi_crossbar_v2_1_vl_rfs.v:3572]
 WARNING: [Synth 8-6014] Unused sequential element gen_axilite.s_axi_wready_i_reg was removed.  [c:/Project/GameOfLife/bd/design_gol/ipshared/f582/hdl/axi_crossbar_v2_1_vl_rfs.v:3572]
@@ -1772,7 +1771,7 @@ INFO: [Synth 8-5544] ROM "f_mux_return1" won't be mapped to Block RAM because ad
 INFO: [Synth 8-5544] ROM "f_mux_return2" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "f_mux_return2" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "f_mux_return1" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "EN_16x_Baud" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5546] ROM "EN_16x_Baud" won't be mapped to RAM because it is too sparse
 WARNING: [Synth 8-6014] Unused sequential element INFERRED_GEN.data_reg[0] was removed.  [c:/Project/GameOfLife/bd/design_gol/ipshared/1b8b/hdl/axi_uartlite_v2_0_vh_rfs.vhd:243]
 WARNING: [Synth 8-6014] Unused sequential element INFERRED_GEN.data_reg[1] was removed.  [c:/Project/GameOfLife/bd/design_gol/ipshared/1b8b/hdl/axi_uartlite_v2_0_vh_rfs.vhd:243]
 WARNING: [Synth 8-6014] Unused sequential element INFERRED_GEN.data_reg[2] was removed.  [c:/Project/GameOfLife/bd/design_gol/ipshared/1b8b/hdl/axi_uartlite_v2_0_vh_rfs.vhd:243]
@@ -1858,7 +1857,7 @@ WARNING: [Synth 8-6014] Unused sequential element q_int_reg was removed.  [c:/Pr
 INFO: [Synth 8-4471] merging register 'seq_cnt_en_reg' into 'from_sys_reg' [c:/Project/GameOfLife/bd/design_gol/ipshared/5db7/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:377]
 WARNING: [Synth 8-6014] Unused sequential element seq_cnt_en_reg was removed.  [c:/Project/GameOfLife/bd/design_gol/ipshared/5db7/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:377]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:02:00 ; elapsed = 00:02:07 . Memory (MB): peak = 975.391 ; gain = 698.930
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:55 ; elapsed = 00:02:00 . Memory (MB): peak = 976.930 ; gain = 700.789
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1874,10 +1873,9 @@ Detailed RTL Component Info :
 	   2 Input     32 Bit       Adders := 1     
 	   2 Input     10 Bit       Adders := 1     
 	   2 Input      8 Bit       Adders := 1     
-	   2 Input      6 Bit       Adders := 3     
+	   2 Input      6 Bit       Adders := 4     
 	   3 Input      5 Bit       Adders := 2     
 	   2 Input      5 Bit       Adders := 2     
-	   2 Input      4 Bit       Adders := 1     
 	   2 Input      3 Bit       Adders := 1     
 	   2 Input      2 Bit       Adders := 2     
 +---XORs : 
@@ -1896,9 +1894,9 @@ Detailed RTL Component Info :
 	               13 Bit    Registers := 2     
 	               10 Bit    Registers := 2     
 	                8 Bit    Registers := 3     
-	                6 Bit    Registers := 4     
+	                6 Bit    Registers := 5     
 	                5 Bit    Registers := 7     
-	                4 Bit    Registers := 10    
+	                4 Bit    Registers := 9     
 	                3 Bit    Registers := 10    
 	                2 Bit    Registers := 32    
 	                1 Bit    Registers := 368   
@@ -1914,10 +1912,10 @@ Detailed RTL Component Info :
 	   2 Input     10 Bit        Muxes := 3     
 	   2 Input      8 Bit        Muxes := 11    
 	   4 Input      8 Bit        Muxes := 2     
-	   2 Input      6 Bit        Muxes := 2     
+	   2 Input      6 Bit        Muxes := 3     
 	   2 Input      5 Bit        Muxes := 3     
 	   4 Input      5 Bit        Muxes := 1     
-	   2 Input      4 Bit        Muxes := 2     
+	   2 Input      4 Bit        Muxes := 1     
 	   7 Input      4 Bit        Muxes := 1     
 	   2 Input      3 Bit        Muxes := 5     
 	   2 Input      2 Bit        Muxes := 19    
@@ -1996,12 +1994,12 @@ Detailed RTL Component Info :
 Module baudrate 
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input      4 Bit       Adders := 1     
+	   2 Input      6 Bit       Adders := 1     
 +---Registers : 
-	                4 Bit    Registers := 1     
+	                6 Bit    Registers := 1     
 	                1 Bit    Registers := 1     
 +---Muxes : 
-	   2 Input      4 Bit        Muxes := 1     
+	   2 Input      6 Bit        Muxes := 1     
 	   2 Input      1 Bit        Muxes := 1     
 Module cntr_incr_decr_addn_f 
 Detailed RTL Component Info : 
@@ -2410,7 +2408,7 @@ INFO: [Synth 8-3332] Sequential element (UARTLITE_CORE_I/UARTLITE_TX_I/SRL_FIFO_
 INFO: [Synth 8-3332] Sequential element (UARTLITE_CORE_I/UARTLITE_TX_I/SRL_FIFO_I/I_SRL_FIFO_RBU_F/overflow_i_reg) is unused and will be removed from module axi_uartlite.
 INFO: [Synth 8-3332] Sequential element (AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_reg[1]) is unused and will be removed from module axi_uartlite.
 INFO: [Synth 8-3332] Sequential element (AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/bus2ip_addr_i_reg[0]) is unused and will be removed from module axi_uartlite.
-INFO: [Synth 8-3332] Sequential element (U0/Register_GOLCR_reg[3]) is unused and will be removed from module design_gol_game_of_life_0_0.
+INFO: [Synth 8-3332] Sequential element (U0/Register_GOLCR_reg[3]) is unused and will be removed from module design_gol_game_of_life_0_1.
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (design_gol_i/mdm_1/U0/\MDM_Core_I1/Use_BSCAN.Config_Reg_reg[31] )
 WARNING: [Synth 8-3332] Sequential element (MDM_Core_I1/Use_BSCAN.Config_Reg_reg[31]) is unused and will be removed from module MDM.
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (design_gol_i/microblaze_0/U0/\MicroBlaze_Core_I/Performance.Core/Use_Debug_Logic.Master_Core.Debug_Perf/Performace_Debug_Control.ex_watchpoint_brk_reg )
@@ -2664,7 +2662,7 @@ INFO: [Synth 8-3886] merging instance 'design_gol_i/microblaze_0/U0/LOCKSTEP_Out
 INFO: [Synth 8-3886] merging instance 'design_gol_i/microblaze_0/U0/LOCKSTEP_Out_reg[546]' (FDR) to 'design_gol_i/microblaze_0/U0/LOCKSTEP_Out_reg[539]'
 INFO: [Synth 8-3886] merging instance 'design_gol_i/microblaze_0/U0/LOCKSTEP_Out_reg[542]' (FDR) to 'design_gol_i/microblaze_0/U0/LOCKSTEP_Out_reg[539]'
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:02:15 ; elapsed = 00:02:23 . Memory (MB): peak = 975.391 ; gain = 698.930
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:02:10 ; elapsed = 00:02:15 . Memory (MB): peak = 976.930 ; gain = 700.789
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -2678,7 +2676,7 @@ Start Applying XDC Timing Constraints
 INFO: [Synth 8-5578] Moved timing constraint from pin 'design_gol_i/microblaze_0/U0/Reset' to pin 'design_gol_i/rst_clk_wiz_1_100M/U0/mb_reset_reg/Q'
 INFO: [Synth 8-5819] Moved 1 constraints on hierarchical pins to their respective driving/loading pins
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:02:28 ; elapsed = 00:02:36 . Memory (MB): peak = 975.391 ; gain = 698.930
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:02:22 ; elapsed = 00:02:27 . Memory (MB): peak = 976.930 ; gain = 700.789
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
@@ -7321,7 +7319,7 @@ Found timing loop:
      4: design_gol_i/game_of_life_0/\U0/CACORE /\Field/ROW[11].COL[17].EH.LL_RE.CELL_XWYH/LUT6_LAST_BIT1 /O (LUT6)
 Inferred a: "set_disable_timing -from I2 -to O design_gol_i/game_of_life_0/\U0/CACORE /\Field/ROW[11].COL[17].EH.LL_RE.CELL_XWYH/LUT6_LAST_BIT1 "
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:02:41 ; elapsed = 00:02:49 . Memory (MB): peak = 975.391 ; gain = 698.930
+Finished Timing Optimization : Time (s): cpu = 00:02:34 ; elapsed = 00:02:40 . Memory (MB): peak = 976.930 ; gain = 700.789
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -7345,7 +7343,7 @@ INFO: [Synth 8-3886] merging instance 'design_gol_i/microblaze_0/U0/MicroBlaze_C
 INFO: [Synth 8-3886] merging instance 'design_gol_i/microblaze_0/U0/MicroBlaze_Core_I/Performance.Core/Use_Debug_Logic.Master_Core.Debug_Perf/Performace_Debug_Control.dbg_hit_reg[5]' (FDRE) to 'design_gol_i/microblaze_0/U0/MicroBlaze_Core_I/Performance.Core/Use_Debug_Logic.Master_Core.Debug_Perf/Performace_Debug_Control.dbg_hit_reg[4]'
 INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:02:45 ; elapsed = 00:02:53 . Memory (MB): peak = 975.391 ; gain = 698.930
+Finished Technology Mapping : Time (s): cpu = 00:02:38 ; elapsed = 00:02:43 . Memory (MB): peak = 976.930 ; gain = 700.789
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -7369,7 +7367,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:02:46 ; elapsed = 00:02:54 . Memory (MB): peak = 975.391 ; gain = 698.930
+Finished IO Insertion : Time (s): cpu = 00:02:39 ; elapsed = 00:02:44 . Memory (MB): peak = 976.930 ; gain = 700.789
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -7382,7 +7380,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:02:46 ; elapsed = 00:02:54 . Memory (MB): peak = 975.391 ; gain = 698.930
+Finished Renaming Generated Instances : Time (s): cpu = 00:02:39 ; elapsed = 00:02:44 . Memory (MB): peak = 976.930 ; gain = 700.789
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -7394,25 +7392,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:02:47 ; elapsed = 00:02:55 . Memory (MB): peak = 975.391 ; gain = 698.930
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:02:40 ; elapsed = 00:02:45 . Memory (MB): peak = 976.930 ; gain = 700.789
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:02:47 ; elapsed = 00:02:55 . Memory (MB): peak = 975.391 ; gain = 698.930
+Finished Renaming Generated Ports : Time (s): cpu = 00:02:40 ; elapsed = 00:02:45 . Memory (MB): peak = 976.930 ; gain = 700.789
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:02:47 ; elapsed = 00:02:55 . Memory (MB): peak = 975.391 ; gain = 698.930
+Finished Handling Custom Attributes : Time (s): cpu = 00:02:40 ; elapsed = 00:02:46 . Memory (MB): peak = 976.930 ; gain = 700.789
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:02:47 ; elapsed = 00:02:55 . Memory (MB): peak = 975.391 ; gain = 698.930
+Finished Renaming Generated Nets : Time (s): cpu = 00:02:40 ; elapsed = 00:02:46 . Memory (MB): peak = 976.930 ; gain = 700.789
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -7462,12 +7460,12 @@ Report Cell Usage:
 |2     |BSCANE2    |     1|
 |3     |BUFG       |     4|
 |4     |CARRY4     |   235|
-|5     |LUT1       |    92|
-|6     |LUT2       |   161|
-|7     |LUT3       |   411|
-|8     |LUT4       |   235|
-|9     |LUT5       |   334|
-|10    |LUT6       |  1314|
+|5     |LUT1       |    93|
+|6     |LUT2       |   160|
+|7     |LUT3       |   412|
+|8     |LUT4       |   231|
+|9     |LUT5       |   335|
+|10    |LUT6       |  1318|
 |11    |LUT6_2     |    80|
 |12    |MMCME2_ADV |     1|
 |13    |MULT_AND   |     1|
@@ -7484,7 +7482,7 @@ Report Cell Usage:
 |24    |FDE        |    32|
 |25    |FDPE       |     7|
 |26    |FDR        |    99|
-|27    |FDRE       |  1840|
+|27    |FDRE       |  1842|
 |28    |FDRE_1     |     1|
 |29    |FDS        |     3|
 |30    |FDSE       |    57|
@@ -7496,8 +7494,8 @@ Report Instance Areas:
 +------+-------------------------------------------------------------------------------------+------------------------------------------------+------+
 |      |Instance                                                                             |Module                                          |Cells |
 +------+-------------------------------------------------------------------------------------+------------------------------------------------+------+
-|1     |top                                                                                  |                                                |  5650|
-|2     |  design_gol_i                                                                       |design_gol                                      |  5647|
+|1     |top                                                                                  |                                                |  5654|
+|2     |  design_gol_i                                                                       |design_gol                                      |  5651|
 |3     |    axi_interconnect_0                                                               |design_gol_axi_interconnect_0_0                 |   301|
 |4     |      xbar                                                                           |design_gol_xbar_0                               |   301|
 |5     |        inst                                                                         |axi_crossbar_v2_1_14_axi_crossbar               |   301|
@@ -7507,15 +7505,15 @@ Report Instance Areas:
 |9     |            reg_slice_r                                                              |axi_register_slice_v2_1_13_axic_register_slice  |   146|
 |10    |            splitter_ar                                                              |axi_crossbar_v2_1_14_splitter__parameterized0   |     4|
 |11    |            splitter_aw                                                              |axi_crossbar_v2_1_14_splitter                   |     7|
-|12    |    axi_uartlite_0                                                                   |design_gol_axi_uartlite_0_0                     |   211|
-|13    |      U0                                                                             |axi_uartlite                                    |   211|
+|12    |    axi_uartlite_0                                                                   |design_gol_axi_uartlite_0_0                     |   215|
+|13    |      U0                                                                             |axi_uartlite                                    |   215|
 |14    |        AXI_LITE_IPIF_I                                                              |axi_lite_ipif                                   |    65|
 |15    |          I_SLAVE_ATTACHMENT                                                         |slave_attachment                                |    65|
 |16    |            I_DECODER                                                                |address_decoder                                 |    37|
 |17    |              \MEM_DECODE_GEN[0].PER_CE_GEN[0].MULTIPLE_CES_THIS_CS_GEN.CE_I         |pselect_f                                       |     1|
 |18    |              \MEM_DECODE_GEN[0].PER_CE_GEN[2].MULTIPLE_CES_THIS_CS_GEN.CE_I         |pselect_f__parameterized1                       |     1|
-|19    |        UARTLITE_CORE_I                                                              |uartlite_core                                   |   146|
-|20    |          BAUD_RATE_I                                                                |baudrate                                        |    10|
+|19    |        UARTLITE_CORE_I                                                              |uartlite_core                                   |   150|
+|20    |          BAUD_RATE_I                                                                |baudrate                                        |    14|
 |21    |          UARTLITE_RX_I                                                              |uartlite_rx                                     |    76|
 |22    |            DELAY_16_I                                                               |dynshreg_i_f                                    |    17|
 |23    |            INPUT_DOUBLE_REGS3                                                       |cdc_sync                                        |     5|
@@ -7531,7 +7529,7 @@ Report Instance Areas:
 |33    |                DYNSHREG_F_I                                                         |dynshreg_f                                      |    13|
 |34    |    clk_wiz_1                                                                        |design_gol_clk_wiz_1_0                          |     4|
 |35    |      inst                                                                           |design_gol_clk_wiz_1_0_clk_wiz                  |     4|
-|36    |    game_of_life_0                                                                   |design_gol_game_of_life_0_0                     |  1626|
+|36    |    game_of_life_0                                                                   |design_gol_game_of_life_0_1                     |  1626|
 |37    |      U0                                                                             |game_of_life_v1_0                               |  1626|
 |38    |        CACORE                                                                       |ca_core                                         |  1434|
 |39    |          Field                                                                      |grid                                            |  1296|
@@ -8463,14 +8461,14 @@ Report Instance Areas:
 |965   |                  \prim_noinit.ram                                                   |blk_mem_gen_prim_wrapper__parameterized8        |     1|
 +------+-------------------------------------------------------------------------------------+------------------------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:02:47 ; elapsed = 00:02:56 . Memory (MB): peak = 975.391 ; gain = 698.930
+Finished Writing Synthesis Report : Time (s): cpu = 00:02:40 ; elapsed = 00:02:46 . Memory (MB): peak = 976.930 ; gain = 700.789
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 648 critical warnings and 31638 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:01:00 ; elapsed = 00:02:34 . Memory (MB): peak = 975.391 ; gain = 535.680
-Synthesis Optimization Complete : Time (s): cpu = 00:02:48 ; elapsed = 00:02:56 . Memory (MB): peak = 975.391 ; gain = 698.930
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:56 ; elapsed = 00:02:25 . Memory (MB): peak = 976.930 ; gain = 535.746
+Synthesis Optimization Complete : Time (s): cpu = 00:02:40 ; elapsed = 00:02:46 . Memory (MB): peak = 976.930 ; gain = 700.789
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 719 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
 INFO: [Project 1-111] Unisim Transformation Summary:
@@ -8488,7 +8486,7 @@ INFO: [Project 1-111] Unisim Transformation Summary:
 
 697 Infos, 202 Warnings, 100 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:02:54 ; elapsed = 00:03:04 . Memory (MB): peak = 975.391 ; gain = 701.559
+synth_design: Time (s): cpu = 00:02:47 ; elapsed = 00:02:54 . Memory (MB): peak = 976.930 ; gain = 703.418
 INFO: [Common 17-1381] The checkpoint 'C:/Project/GameOfLife/prj/project_microblaze/project_microblaze.runs/synth_1/design_gol_wrapper.dcp' has been generated.
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.068 . Memory (MB): peak = 975.391 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Tue Apr 27 14:16:52 2021...
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.057 . Memory (MB): peak = 976.930 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Thu Apr 29 17:52:35 2021...

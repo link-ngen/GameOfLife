@@ -1,6 +1,90 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
+| Date         : Thu Apr 29 17:35:10 2021
+| Host         : DEVPC running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg484-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_gol_game_of_life_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of design_gol_game_of_life_0_0 (xilinx.com:user:game_of_life:1.0 (Rev. 2)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
+| Date         : Thu Apr 29 17:04:29 2021
+| Host         : DEVPC running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg484-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_gol_game_of_life_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of design_gol_game_of_life_0_0 (xilinx.com:user:game_of_life:1.0 (Rev. 2)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
+| Date         : Tue Apr 27 20:43:14 2021
+| Host         : DEVPC running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg484-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_gol_game_of_life_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of design_gol_game_of_life_0_0 (xilinx.com:user:game_of_life:1.0 (Rev. 2)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
+| Date         : Tue Apr 27 18:38:27 2021
+| Host         : DEVPC running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg484-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_gol_game_of_life_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of design_gol_game_of_life_0_0 (xilinx.com:user:game_of_life:1.0 (Rev. 2)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
 | Date         : Mon Apr 26 20:02:45 2021
 | Host         : DEVPC running 64-bit major release  (build 9200)
 | Command      : upgrade_ip

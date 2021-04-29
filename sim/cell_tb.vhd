@@ -49,7 +49,9 @@ architecture Behavioral of cell_tb is
     signal prox: std_logic_vector(7 downto 0) := "00000000";
     signal clk_en: std_logic := '0';
     signal Q: std_logic := '0';
+    
 begin
+
     uut: cell generic map(init_state => '0')
               port map(prox => prox,
                        ce => clk_en,
@@ -63,39 +65,42 @@ begin
        wait for 10ns;
    end process;
    
-   SIMU: process
-   begin
-       wait for 20ns;
-       clk_en <= '1';  
-       wait for 20ns; -- 0  40ns
-       prox <= "00000001"; -- 54h
-       wait for 20ns; -- 1  60ns
-       prox <= "01010100"; -- 54h
-       wait for 20ns; -- 1  60ns
-       prox <= "01011100"; -- 5ch
-       wait for 20ns; -- 0  80ns
-       prox <= "01010001"; -- 51h
-       wait for 20ns; -- 1  100ns
-       prox <= "11110000"; -- f0h
-       wait for 20ns; -- 0  120ns
-       prox <= "11100000"; -- e0h
-       wait for 20ns; -- 1  140ns
-       prox <= "10101010"; -- aah
-       wait for 20ns; -- 0  160ns
-       prox <= "00000111"; -- 07h
-       wait for 20ns; -- 1
-       wait;
-   end process;
+--   SIMU: process
+--   begin
+--       wait for 20ns;
+--       clk_en <= '1';  
+--       wait for 20ns; -- 0  40ns
+--       prox <= "10000001"; -- 54h
+--       wait for 20ns; -- 1  60ns
+--       prox <= "01010100"; -- 54h
+--       wait for 20ns; -- 1  60ns
+--       prox <= "01011100"; -- 5ch
+--       wait for 20ns; -- 0  80ns
+--       prox <= "01010001"; -- 51h
+--       wait for 20ns; -- 1  100ns
+--       prox <= "11110000"; -- f0h
+--       wait for 20ns; -- 0  120ns
+--       prox <= "11100000"; -- e0h
+--       wait for 20ns; -- 1  140ns
+--       prox <= "10101010"; -- aah
+--       wait for 20ns; -- 0  160ns
+--       prox <= "00000111"; -- 07h
+--       wait for 20ns; -- 1
+--       wait;
+--   end process;
 
---    SIMU: process
---    begin
---        wait for 28ns;
---        clk_en <= '1';  
---        wait for 20ns; -- 0  40ns
---        prox <= "00111000";
---        wait for 20ns; -- 0  60ns
---        wait;
---    end process;
-
+    SIMU: process
+    begin
+        clk_en <= '0';
+        wait for 20ns;
+        clk_en <= '1';
+        prox <= "00111000";
+        wait for 40ns;
+        wait until rising_edge(clk);
+        prox <= "00000011"; -- 54h
+        wait for 40ns;
+        prox <= "00100001";
+        wait;
+    end process;
 
 end Behavioral;

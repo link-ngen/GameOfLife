@@ -12,17 +12,17 @@ def main(argv):
     column = 3
     rows = 3
 
-    ap = argparse.ArgumentParser(description="A little program to generate XDC-file for a game of life on a Xilinx fpga.")
-    ap.add_argument('-c', '--column', required=True, help='grid width')
-    ap.add_argument('-r', '--rows', required=True, help='grid height')
-    ap.add_argument('-x', '--xpos', required=True, help='x position on zedboard')
-    ap.add_argument('-y', '--ypos', required=True, help='y position on zedboard')
-    args = vars(ap.parse_args())
+    #ap = argparse.ArgumentParser(description="A little program to generate XDC-file for a game of life on a Xilinx fpga.")
+    #ap.add_argument('-c', '--column', required=True, help='grid width')
+    #ap.add_argument('-r', '--rows', required=True, help='grid height')
+    #ap.add_argument('-x', '--xpos', required=True, help='x position on zedboard')
+    #ap.add_argument('-y', '--ypos', required=True, help='y position on zedboard')
+    #args = vars(ap.parse_args())
 
-    column = int(args['column'])
-    rows = int(args['rows'])
-    fx = int(args['xpos'])
-    fy = int(args['ypos'])
+    column = 18 #int(args['column'])
+    rows = 12   #int(args['rows'])
+    fx = 56     #int(args['xpos'])
+    fy = 40     #int(args['ypos'])
 
     print("width:", column, "height:", rows)
     

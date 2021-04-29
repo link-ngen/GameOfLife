@@ -41,7 +41,7 @@ architecture Behavioral of ca_core_tb is
                  HEIGHT: integer := 12);
         Port ( clk:         in std_logic;   
                ce:          in std_logic;   -- chip enable
-               n_iter:      in unsigned (31 downto 0); 
+               n_iter:      in unsigned (31 downto 0);  
                shift_ca:    in std_logic;
                d_in:        in std_logic;
                start_iter:  in std_logic;   -- flag
@@ -63,7 +63,8 @@ architecture Behavioral of ca_core_tb is
                                                                   -- 00000010110001000000000010000001_
                                                                   -- 01000000101000000011000000110000";
     constant cpu_data: std_logic_vector(TOTAL_CELL-1 downto 0) := "000011000000110000000101000000101000000100000000001000110100000000001011110101001100101011000101010010101000000101010010101000110101001100101011110100000000001011000100000000001000000101000000101000000011000000110000";
-
+    --constant cpu_data: std_logic_vector(TOTAL_CELL-1 downto 0) := "000000000000000000000000000000001110000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000";    
+    
     signal output_data : std_logic_vector(TOTAL_CELL-1 downto 0) := (others => '0');
     signal debug_data : std_logic_vector(TOTAL_CELL-1 downto 0) := (others => '0');
     signal debug_out : std_logic_vector(TOTAL_CELL-1 downto 0) := (others => '0');
@@ -114,6 +115,7 @@ begin
             debug_data <= cpu_data(i) & debug_data(TOTAL_CELL-1 downto 1);
             wait until rising_edge(clk);
             shift_ca <= '0';
+            wait for 20ns;
         end loop;
         wait until rising_edge(clk);
         wait for 200ns;
@@ -124,13 +126,14 @@ begin
         wait until max_iter = '1';
         
         wait for 200ns;
-        for i in 0 to (TOTAL_CELL) loop
+        for i in 0 to (TOTAL_CELL-1) loop
             wait until rising_edge(clk);
             shift_ca <= '1';
             ddata <= '0';
-            output_data <= bitstream & output_data(TOTAL_CELL-1 downto 1);
+            output_data(i) <= bitstream;-- & output_data(TOTAL_CELL-1 downto 1);
             wait until rising_edge(clk);
             shift_ca <= '0';
+            wait for 20ns;
         end loop;        
         wait until rising_edge(clk);
         wait;

@@ -1,7 +1,7 @@
 --Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
---Date        : Tue Apr 27 14:13:24 2021
+--Date        : Thu Apr 29 17:49:25 2021
 --Host        : DEVPC running 64-bit major release  (build 9200)
 --Command     : generate_target design_gol_wrapper.bd
 --Design      : design_gol_wrapper
