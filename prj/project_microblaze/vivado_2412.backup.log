@@ -1,0 +1,25 @@
+#-----------------------------------------------------------
+# Vivado v2017.2 (64-bit)
+# SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
+# IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+# Start of session at: Mon May  3 12:29:22 2021
+# Process ID: 2412
+# Current directory: C:/Project/GameOfLife/prj/project_microblaze
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent2168 C:\Project\GameOfLife\prj\project_microblaze\project_microblaze.xpr
+# Log file: C:/Project/GameOfLife/prj/project_microblaze/vivado.log
+# Journal file: C:/Project/GameOfLife/prj/project_microblaze\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Project/GameOfLife/prj/project_microblaze/project_microblaze.xpr
+CRITICAL WARNING: [Project 1-19] Could not find the file 'C:/Workspace/GameOfLife/ip/game_of_life_0/game_of_life_0.xci'.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Project/GameOfLife/ip'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2017.2/data/ip'.
+ERROR: [IP_Flow 19-993] Could not find IP file for IP 'game_of_life_0'.
+CRITICAL WARNING: [IP_Flow 19-5097] Unable to determine VLNV from IP file; verify it has the correct syntax: 
+open_project: Time (s): cpu = 00:00:18 ; elapsed = 00:00:09 . Memory (MB): peak = 851.625 ; gain = 68.293
+ERROR: [Common 17-39] 'open_project' failed due to earlier errors.
+exit
+INFO: [Common 17-206] Exiting Vivado at Mon May  3 12:29:47 2021...

@@ -22,7 +22,7 @@ void microblaze_init_gol(Xuint8 data_array[])
 		}
 	}
 }
-//
+
 void microblaze_read_gol(Xuint8 data_array[])
 {
 	Xuint16 idx_1d = 0;
@@ -61,7 +61,7 @@ void microblaze_calc_next_iter(Xuint16 n_iter)
 			}
 		}
 
-		// copy data from new _grid to grid
+		// copy data from new_grid to grid
 		for (Xuint16 r = 0; r < HEIGHT; ++r)
 		{
 			for (Xuint16 c = 0; c < WIDTH; ++c)

@@ -2,67 +2,160 @@
 # Vivado v2017.2 (64-bit)
 # SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
 # IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
-# Start of session at: Mon Apr 26 19:26:45 2021
-# Process ID: 1264
+# Start of session at: Mon May  3 12:31:10 2021
+# Process ID: 4956
 # Current directory: C:/Project/GameOfLife/prj/project_microblaze
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent11556 C:\Project\GameOfLife\prj\project_microblaze\project_microblaze.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent8888 C:\Project\GameOfLife\prj\project_microblaze\project_microblaze.xpr
 # Log file: C:/Project/GameOfLife/prj/project_microblaze/vivado.log
 # Journal file: C:/Project/GameOfLife/prj/project_microblaze\vivado.jou
 #-----------------------------------------------------------
 start_gui
 open_project C:/Project/GameOfLife/prj/project_microblaze/project_microblaze.xpr
 update_compile_order -fileset sources_1
-reset_run synth_1
-launch_runs synth_1 -jobs 8
-wait_on_run synth_1
-open_run synth_1 -name synth_1
-show_objects -name NET_ONLY [get_nets -hierarchical -top_net_of_hierarchical_group -filter { MARK_DEBUG == "TRUE" } ]
-reset_run synth_1
-launch_runs synth_1 -jobs 8
-wait_on_run synth_1
-close_design
-open_run synth_1 -name synth_1
-show_objects -name NET_ONLY [get_nets -hierarchical -top_net_of_hierarchical_group "*" ]
-reset_run synth_1
-launch_runs synth_1 -jobs 8
-wait_on_run synth_1
-close_design
-open_run synth_1 -name synth_1
-show_objects -name NET_ONLY [get_nets -hierarchical -top_net_of_hierarchical_group "*ce*" ]
-show_objects -name NET_ONLY [get_nets -hierarchical -top_net_of_hierarchical_group -filter { MARK_DEBUG == "TRUE" } ]
-show_objects -name NET_ONLY [get_nets -hierarchical -top_net_of_hierarchical_group "*shift_ca*" ]
-reset_run synth_1
-launch_runs synth_1 -jobs 8
-wait_on_run synth_1
-refresh_design
 open_bd_design {C:/Project/GameOfLife/bd/design_gol/design_gol.bd}
-update_ip_catalog -rebuild -scan_changes
-report_ip_status -name ip_status
-upgrade_ip -vlnv xilinx.com:user:game_of_life:1.0 [get_ips  design_gol_game_of_life_0_1] -log ip_upgrade.log
-export_ip_user_files -of_objects [get_ips design_gol_game_of_life_0_1] -no_script -sync -force -quiet
-report_ip_status -name ip_status 
+file copy -force C:/Project/GameOfLife/prj/project_microblaze/project_microblaze.runs/impl_1/design_gol_wrapper.sysdef C:/Project/GameOfLife/ip_export/design_gol_wrapper.hdf
+
+launch_sdk -workspace C:/Project/GameOfLife/sdk -hwspec C:/Project/GameOfLife/ip_export/design_gol_wrapper.hdf
+delete_bd_objs [get_bd_intf_nets axi_interconnect_0_M01_AXI] [get_bd_cells game_of_life_0]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:user:game_of_life:1.0 game_of_life_0
+endgroup
+set_property location {6 1720 415} [get_bd_cells game_of_life_0]
+connect_bd_intf_net [get_bd_intf_pins game_of_life_0/S00_AXI] -boundary_type upper [get_bd_intf_pins axi_interconnect_0/M01_AXI]
+connect_bd_net [get_bd_pins game_of_life_0/s00_axi_aclk] [get_bd_pins clk_wiz_1/clk_out1]
+connect_bd_net [get_bd_pins game_of_life_0/s00_axi_aresetn] [get_bd_pins rst_clk_wiz_1_100M/peripheral_aresetn]
+regenerate_bd_layout
+save_bd_design
+open_run synth_1 -name synth_1
+generate_target all [get_files C:/Project/GameOfLife/bd/design_gol/design_gol.bd]
+refresh_design
+close_design
+open_bd_design {C:/Project/GameOfLife/bd/design_gol/design_gol.bd}
+delete_bd_objs [get_bd_intf_nets axi_interconnect_0_M01_AXI] [get_bd_cells game_of_life_0]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:user:game_of_life:1.0 game_of_life_0
+endgroup
+set_property location {6 1669 375} [get_bd_cells game_of_life_0]
+connect_bd_intf_net [get_bd_intf_pins game_of_life_0/S00_AXI] -boundary_type upper [get_bd_intf_pins axi_interconnect_0/M01_AXI]
+connect_bd_net [get_bd_pins game_of_life_0/s00_axi_aclk] [get_bd_pins clk_wiz_1/clk_out1]
+connect_bd_net [get_bd_pins game_of_life_0/s00_axi_aresetn] [get_bd_pins rst_clk_wiz_1_100M/peripheral_aresetn]
+regenerate_bd_layout
+assign_bd_address
+save_bd_design
 reset_run synth_1
+launch_runs synth_1 -jobs 8
+wait_on_run synth_1
+launch_runs impl_1 -jobs 8
+wait_on_run impl_1
+open_run impl_1
 launch_runs impl_1 -to_step write_bitstream -jobs 8
 wait_on_run impl_1
 file copy -force C:/Project/GameOfLife/prj/project_microblaze/project_microblaze.runs/impl_1/design_gol_wrapper.sysdef C:/Project/GameOfLife/ip_export/design_gol_wrapper.hdf
 
-launch_sdk -workspace C:/Project/GameOfLife/sdk -hwspec C:/Project/GameOfLife/ip_export/design_gol_wrapper.hdf
-launch_sdk -workspace C:/Project/GameOfLife/sdk -hwspec C:/Project/GameOfLife/ip_export/design_gol_wrapper.hdf
-update_ip_catalog -rebuild -scan_changes
-report_ip_status -name ip_status
-upgrade_ip -vlnv xilinx.com:user:game_of_life:1.0 [get_ips  design_gol_game_of_life_0_1] -log ip_upgrade.log
-export_ip_user_files -of_objects [get_ips design_gol_game_of_life_0_1] -no_script -sync -force -quiet
-report_ip_status -name ip_status 
+open_bd_design {C:/Project/GameOfLife/bd/design_gol/design_gol.bd}
+open_bd_design {C:/Project/GameOfLife/bd/design_gol/design_gol.bd}
+startgroup
+set_property -dict [list CONFIG.C_GOL_WIDTH {80} CONFIG.C_GOL_HEIGHT {80}] [get_bd_cells game_of_life_0]
+endgroup
+save_bd_design
 reset_run synth_1
 launch_runs synth_1 -jobs 8
 wait_on_run synth_1
-show_objects -name NET_ONLY [get_nets -hierarchical -top_net_of_hierarchical_group "*" ]
-show_objects -name NET_ONLY [get_nets -hierarchical -top_net_of_hierarchical_group -filter { MARK_DEBUG == "TRUE" } ]
-show_objects -name NET_ONLY [get_nets -hierarchical -top_net_of_hierarchical_group -filter { MARK_DEBUG == "TRUE" } ]
+launch_runs impl_1 -jobs 8
+wait_on_run impl_1
+refresh_design
+open_bd_design {C:/Project/GameOfLife/bd/design_gol/design_gol.bd}
+startgroup
+set_property -dict [list CONFIG.C_GOL_WIDTH {90} CONFIG.C_GOL_HEIGHT {90}] [get_bd_cells game_of_life_0]
+endgroup
+save_bd_design
+reset_run synth_1
+launch_runs impl_1 -jobs 8
+wait_on_run impl_1
+startgroup
+set_property -dict [list CONFIG.C_GOL_WIDTH {85} CONFIG.C_GOL_HEIGHT {85}] [get_bd_cells game_of_life_0]
+endgroup
+save_bd_design
+reset_run synth_1
+launch_runs impl_1 -jobs 8
+wait_on_run impl_1
+refresh_design
+open_bd_design {C:/Project/GameOfLife/bd/design_gol/design_gol.bd}
+startgroup
+set_property -dict [list CONFIG.C_GOL_WIDTH {90}] [get_bd_cells game_of_life_0]
+endgroup
+save_bd_design
 reset_run synth_1
 launch_runs synth_1 -jobs 8
 wait_on_run synth_1
-show_objects -name NET_ONLY [get_nets -hierarchical -top_net_of_hierarchical_group -filter { MARK_DEBUG == "TRUE" } ]
-show_objects -name NET_ONLY [get_nets -hierarchical -top_net_of_hierarchical_group -filter { MARK_DEBUG == "TRUE" } ]
-show_objects -name find_1 [get_cells -hierarchical -filter { PRIMITIVE_TYPE =~ FLOP_LATCH.*.* } ]
-show_objects -name NET_ONLY [get_nets -hierarchical -top_net_of_hierarchical_group "*" ]
+launch_runs impl_1 -jobs 8
+wait_on_run impl_1
+refresh_design
+open_bd_design {C:/Project/GameOfLife/bd/design_gol/design_gol.bd}
+open_bd_design {C:/Project/GameOfLife/bd/design_gol/design_gol.bd}
+regenerate_bd_layout
+startgroup
+set_property -dict [list CONFIG.C_GOL_HEIGHT {88}] [get_bd_cells game_of_life_0]
+endgroup
+save_bd_design
+reset_run synth_1
+launch_runs impl_1 -jobs 8
+wait_on_run impl_1
+startgroup
+set_property -dict [list CONFIG.C_GOL_HEIGHT {86}] [get_bd_cells game_of_life_0]
+endgroup
+save_bd_design
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+wait_on_run synth_1
+startgroup
+set_property -dict [list CONFIG.C_GOL_WIDTH {85} CONFIG.C_GOL_HEIGHT {90}] [get_bd_cells game_of_life_0]
+endgroup
+save_bd_design
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+wait_on_run synth_1
+launch_runs impl_1 -jobs 8
+wait_on_run impl_1
+refresh_design
+open_bd_design {C:/Project/GameOfLife/bd/design_gol/design_gol.bd}
+startgroup
+set_property -dict [list CONFIG.C_GOL_HEIGHT {93}] [get_bd_cells game_of_life_0]
+endgroup
+save_bd_design
+reset_run synth_1
+launch_runs impl_1 -jobs 8
+wait_on_run impl_1
+startgroup
+set_property -dict [list CONFIG.C_GOL_WIDTH {86} CONFIG.C_GOL_HEIGHT {90}] [get_bd_cells game_of_life_0]
+endgroup
+save_bd_design
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+wait_on_run synth_1
+launch_runs impl_1 -jobs 8
+wait_on_run impl_1
+refresh_design
+open_bd_design {C:/Project/GameOfLife/bd/design_gol/design_gol.bd}
+startgroup
+set_property -dict [list CONFIG.C_GOL_HEIGHT {91}] [get_bd_cells game_of_life_0]
+endgroup
+save_bd_design
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+wait_on_run synth_1
+startgroup
+set_property -dict [list CONFIG.C_GOL_WIDTH {87} CONFIG.C_GOL_HEIGHT {90}] [get_bd_cells game_of_life_0]
+endgroup
+save_bd_design
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+wait_on_run synth_1
+startgroup
+set_property -dict [list CONFIG.C_GOL_WIDTH {86}] [get_bd_cells game_of_life_0]
+endgroup
+save_bd_design
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+refresh_design

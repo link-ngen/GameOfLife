@@ -2,8 +2,8 @@
 # Vivado v2017.2 (64-bit)
 # SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
 # IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
-# Start of session at: Thu Apr 29 17:30:56 2021
-# Process ID: 3288
+# Start of session at: Mon May  3 13:07:03 2021
+# Process ID: 7368
 # Current directory: C:/Project/GameOfLife/ip/managed_ip_project/game_of_life_0_v1_0_project/game_of_life_0_v1_0_project.runs/synth_1
 # Command line: vivado.exe -log game_of_life_v1_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source game_of_life_v1_0.tcl
 # Log file: C:/Project/GameOfLife/ip/managed_ip_project/game_of_life_0_v1_0_project/game_of_life_0_v1_0_project.runs/synth_1/game_of_life_v1_0.vds

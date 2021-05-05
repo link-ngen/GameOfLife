@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# updatemem v2017.2 (64-bit)
+# SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
+# 
+# Start of session at: Mon Apr 26 19:58:27 2021
+# Process ID: 13180
+# Current directory: C:/Project/GameOfLife/prj/project_microblaze
+# Command line: updatemem.exe -mode batch -source C:/Xilinx/SDK/2017.2/scripts/updatemem/main.tcl -notrace -tclargs -meminfo C:/Project/GameOfLife/sdk/design_gol_wrapper_hw_platform_0/design_gol_wrapper.mmi -data C:/Project/GameOfLife/sdk/gol_app/Debug/gol_app.elf -proc design_gol_i/microblaze_0 -bit C:/Project/GameOfLife/sdk/design_gol_wrapper_hw_platform_0/design_gol_wrapper.bit -out C:/Project/GameOfLife/sdk/design_gol_wrapper_hw_platform_0/download.bit -force
+# Log file: C:/Project/GameOfLife/prj/project_microblaze/updatemem.log
+# Journal file: C:/Project/GameOfLife/prj/project_microblaze\updatemem.jou
+#-----------------------------------------------------------
+source C:/Xilinx/SDK/2017.2/scripts/updatemem/main.tcl -notrace

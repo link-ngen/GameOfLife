@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7z020clg484-1" LaunchTime="1619710333">
-  <File Type="PLACE-DCP" Name="game_of_life_v1_0_placed.dcp"/>
-  <File Type="PA-DCP" Name="game_of_life_v1_0.dcp"/>
+<GenRun Id="impl_1" LaunchPart="xc7z020clg484-1" LaunchTime="1620040075">
+  <File Type="PWROPT-DRC" Name="game_of_life_v1_0_drc_pwropted.rpt"/>
   <File Type="OPT-METHODOLOGY-DRC" Name="game_of_life_v1_0_methodology_drc_opted.rpt"/>
   <File Type="INIT-TIMING" Name="game_of_life_v1_0_timing_summary_init.rpt"/>
   <File Type="ROUTE-PWR-RPX" Name="game_of_life_v1_0_power_routed.rpx"/>
@@ -12,8 +11,8 @@
   <File Type="OPT-DRC" Name="game_of_life_v1_0_drc_opted.rpt"/>
   <File Type="OPT-TIMING" Name="game_of_life_v1_0_timing_summary_opted.rpt"/>
   <File Type="PWROPT-DCP" Name="game_of_life_v1_0_pwropt.dcp"/>
-  <File Type="PWROPT-DRC" Name="game_of_life_v1_0_drc_pwropted.rpt"/>
   <File Type="PWROPT-TIMING" Name="game_of_life_v1_0_timing_summary_pwropted.rpt"/>
+  <File Type="PLACE-DCP" Name="game_of_life_v1_0_placed.dcp"/>
   <File Type="PLACE-IO" Name="game_of_life_v1_0_io_placed.rpt"/>
   <File Type="PLACE-CLK" Name="game_of_life_v1_0_clock_utilization_placed.rpt"/>
   <File Type="PLACE-UTIL" Name="game_of_life_v1_0_utilization_placed.rpt"/>

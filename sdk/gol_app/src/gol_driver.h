@@ -32,15 +32,29 @@ void init_gol(Xuint32 base_addr, Xuint8 data_array[]);
  */
 void ioctrl_changeMaxIterationValue(Xuint8 value);
 
-void write_bit_to_gol(Xuint8 data);
+/**
+ * write a single bit to gol.
+ */
+static void write_bit_to_gol(Xuint8 data);
 
 /**
  * Read data from gol and put them to an array.
  */
 void read_gol(Xuint8 *data_array);
 
-unsigned int read_reg(Xuint32 reg_addr);
+/**
+ * Write data to gol by giving an data array
+ */
+void write_gol(Xuint8 *data_array);
 
+/**
+ * Read register by giving register address.
+ */
+Xuint32 read_reg(Xuint32 reg_addr);
+
+/**
+ * Start the gol.
+ */
 void run_gol(void);
 
 #endif /* SRC_GOL_DRIVER_H_ */

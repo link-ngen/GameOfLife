@@ -47,13 +47,18 @@ start_step init_design
 set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
-  reset_param project.defaultXPMLibraries 
-  open_checkpoint C:/Project/GameOfLife/ip/managed_ip_project/game_of_life_0_v1_0_project/game_of_life_0_v1_0_project.runs/impl_1/game_of_life_v1_0.dcp
+  create_project -in_memory -part xc7z020clg484-1
+  set_property board_part em.avnet.com:zed:part0:1.3 [current_project]
+  set_property design_mode GateLvl [current_fileset]
+  set_param project.singleFileAddWarning.threshold 0
   set_property webtalk.parent_dir C:/Project/GameOfLife/ip/managed_ip_project/game_of_life_0_v1_0_project/game_of_life_0_v1_0_project.cache/wt [current_project]
   set_property parent.project_path C:/Project/GameOfLife/ip/managed_ip_project/game_of_life_0_v1_0_project/game_of_life_0_v1_0_project.xpr [current_project]
   set_property ip_repo_paths C:/Project/GameOfLife/ip/game_of_life_1.0 [current_project]
   set_property ip_output_repo C:/Project/GameOfLife/ip/managed_ip_project/game_of_life_0_v1_0_project/game_of_life_0_v1_0_project.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
+  add_files -quiet C:/Project/GameOfLife/ip/managed_ip_project/game_of_life_0_v1_0_project/game_of_life_0_v1_0_project.runs/synth_1/game_of_life_v1_0.dcp
+  read_xdc C:/Project/GameOfLife/ip/managed_ip_project/game_of_life_0_v1_0_project/game_of_life_0_v1_0_project.srcs/constrs_1/new/game_of_life_v1_0.xdc
+  link_design -top game_of_life_v1_0 -part xc7z020clg484-1
   close_msg_db -file init_design.pb
 } RESULT]
 if {$rc} {

@@ -2,8 +2,8 @@
 # Vivado v2017.2 (64-bit)
 # SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
 # IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
-# Start of session at: Thu Apr 29 17:30:56 2021
-# Process ID: 3288
+# Start of session at: Mon May  3 13:07:03 2021
+# Process ID: 7368
 # Current directory: C:/Project/GameOfLife/ip/managed_ip_project/game_of_life_0_v1_0_project/game_of_life_0_v1_0_project.runs/synth_1
 # Command line: vivado.exe -log game_of_life_v1_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source game_of_life_v1_0.tcl
 # Log file: C:/Project/GameOfLife/ip/managed_ip_project/game_of_life_0_v1_0_project/game_of_life_0_v1_0_project.runs/synth_1/game_of_life_v1_0.vds
@@ -15,22 +15,18 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020-clg484'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020-clg484'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 12240 
+INFO: Helper process launched with PID 6400 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 303.312 ; gain = 78.156
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 303.445 ; gain = 78.262
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'game_of_life_v1_0' [C:/Project/GameOfLife/ip/game_of_life_1.0/hdl/game_of_life_v1_0.vhd:48]
 	Parameter C_GOL_WIDTH bound to: 18 - type: integer 
 	Parameter C_GOL_HEIGHT bound to: 12 - type: integer 
 	Parameter C_S00_AXI_DATA_WIDTH bound to: 32 - type: integer 
 	Parameter C_S00_AXI_ADDR_WIDTH bound to: 4 - type: integer 
-INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [C:/Project/GameOfLife/ip/game_of_life_1.0/hdl/game_of_life_v1_0.vhd:103]
-INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [C:/Project/GameOfLife/ip/game_of_life_1.0/hdl/game_of_life_v1_0.vhd:105]
-INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [C:/Project/GameOfLife/ip/game_of_life_1.0/hdl/game_of_life_v1_0.vhd:106]
-INFO: [Synth 8-5534] Detected attribute (* mark_debug = "true" *) [C:/Project/GameOfLife/ip/game_of_life_1.0/hdl/game_of_life_v1_0.vhd:110]
 	Parameter WIDTH bound to: 18 - type: integer 
 	Parameter HEIGHT bound to: 12 - type: integer 
-INFO: [Synth 8-3491] module 'ca_core' declared at 'C:/Project/GameOfLife/hdlscr/ca_core.vhd:34' bound to instance 'CACORE' of component 'ca_core' [C:/Project/GameOfLife/ip/game_of_life_1.0/hdl/game_of_life_v1_0.vhd:141]
+INFO: [Synth 8-3491] module 'ca_core' declared at 'C:/Project/GameOfLife/hdlscr/ca_core.vhd:34' bound to instance 'CACORE' of component 'ca_core' [C:/Project/GameOfLife/ip/game_of_life_1.0/hdl/game_of_life_v1_0.vhd:133]
 INFO: [Synth 8-638] synthesizing module 'ca_core' [C:/Project/GameOfLife/hdlscr/ca_core.vhd:48]
 	Parameter WIDTH bound to: 18 - type: integer 
 	Parameter HEIGHT bound to: 12 - type: integer 
@@ -375,11 +371,11 @@ INFO: [Common 17-14] Message 'Synth 8-3491' appears 100 times and further instan
 INFO: [Synth 8-256] done synthesizing module 'grid' (2#1) [C:/Project/GameOfLife/hdlscr/grid.vhd:44]
 INFO: [Synth 8-226] default block is never used [C:/Project/GameOfLife/hdlscr/ca_core.vhd:93]
 INFO: [Synth 8-256] done synthesizing module 'ca_core' (3#1) [C:/Project/GameOfLife/hdlscr/ca_core.vhd:48]
-WARNING: [Synth 8-6014] Unused sequential element WriteEnable_GOLDOR_reg was removed.  [C:/Project/GameOfLife/ip/game_of_life_1.0/hdl/game_of_life_v1_0.vhd:215]
-WARNING: [Synth 8-6014] Unused sequential element ReadEnable_GOLCR_reg was removed.  [C:/Project/GameOfLife/ip/game_of_life_1.0/hdl/game_of_life_v1_0.vhd:253]
-WARNING: [Synth 8-6014] Unused sequential element ReadEnable_GOLICR_reg was removed.  [C:/Project/GameOfLife/ip/game_of_life_1.0/hdl/game_of_life_v1_0.vhd:254]
-WARNING: [Synth 8-6014] Unused sequential element ReadEnable_GOLDOR_reg was removed.  [C:/Project/GameOfLife/ip/game_of_life_1.0/hdl/game_of_life_v1_0.vhd:255]
-WARNING: [Synth 8-3848] Net Register_GOLDOR in module/entity game_of_life_v1_0 does not have driver. [C:/Project/GameOfLife/ip/game_of_life_1.0/hdl/game_of_life_v1_0.vhd:89]
+WARNING: [Synth 8-6014] Unused sequential element WriteEnable_GOLDOR_reg was removed.  [C:/Project/GameOfLife/ip/game_of_life_1.0/hdl/game_of_life_v1_0.vhd:207]
+WARNING: [Synth 8-6014] Unused sequential element ReadEnable_GOLCR_reg was removed.  [C:/Project/GameOfLife/ip/game_of_life_1.0/hdl/game_of_life_v1_0.vhd:245]
+WARNING: [Synth 8-6014] Unused sequential element ReadEnable_GOLICR_reg was removed.  [C:/Project/GameOfLife/ip/game_of_life_1.0/hdl/game_of_life_v1_0.vhd:246]
+WARNING: [Synth 8-6014] Unused sequential element ReadEnable_GOLDOR_reg was removed.  [C:/Project/GameOfLife/ip/game_of_life_1.0/hdl/game_of_life_v1_0.vhd:247]
+WARNING: [Synth 8-3848] Net Register_GOLDOR in module/entity game_of_life_v1_0 does not have driver. [C:/Project/GameOfLife/ip/game_of_life_1.0/hdl/game_of_life_v1_0.vhd:87]
 INFO: [Synth 8-256] done synthesizing module 'game_of_life_v1_0' (4#1) [C:/Project/GameOfLife/ip/game_of_life_1.0/hdl/game_of_life_v1_0.vhd:48]
 WARNING: [Synth 8-3917] design game_of_life_v1_0 has port s00_axi_awready driven by constant 1
 WARNING: [Synth 8-3917] design game_of_life_v1_0 has port s00_axi_bresp[1] driven by constant 0
@@ -402,7 +398,7 @@ WARNING: [Synth 8-3331] design game_of_life_v1_0 has unconnected port s00_axi_ar
 WARNING: [Synth 8-3331] design game_of_life_v1_0 has unconnected port s00_axi_arprot[1]
 WARNING: [Synth 8-3331] design game_of_life_v1_0 has unconnected port s00_axi_arprot[0]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 364.430 ; gain = 139.273
+Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 364.562 ; gain = 139.379
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -412,7 +408,7 @@ Report Check Netlist:
 |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:08 . Memory (MB): peak = 364.430 ; gain = 139.273
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 364.562 ; gain = 139.379
 ---------------------------------------------------------------------------------
 INFO: [Netlist 29-17] Analyzing 216 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -423,33 +419,31 @@ Processing XDC Constraints
 Initializing timing engine
 Parsing XDC File [C:/Project/GameOfLife/ip/managed_ip_project/game_of_life_0_v1_0_project/game_of_life_0_v1_0_project.srcs/constrs_1/new/game_of_life_v1_0.xdc]
 Finished Parsing XDC File [C:/Project/GameOfLife/ip/managed_ip_project/game_of_life_0_v1_0_project/game_of_life_0_v1_0_project.srcs/constrs_1/new/game_of_life_v1_0.xdc]
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Project/GameOfLife/ip/managed_ip_project/game_of_life_0_v1_0_project/game_of_life_0_v1_0_project.srcs/constrs_1/new/game_of_life_v1_0.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/game_of_life_v1_0_propImpl.xdc].
-Resolution: To avoid this warning, move constraints listed in [.Xil/game_of_life_v1_0_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 663.859 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 663.957 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 663.859 ; gain = 438.703
+Finished Constraint Validation : Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 663.957 ; gain = 438.773
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg484-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 663.859 ; gain = 438.703
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 663.957 ; gain = 438.773
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 663.859 ; gain = 438.703
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 663.957 ; gain = 438.773
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-6014] Unused sequential element cnt_iter_reg was removed.  [C:/Project/GameOfLife/hdlscr/ca_core.vhd:115]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 663.859 ; gain = 438.703
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:20 ; elapsed = 00:00:23 . Memory (MB): peak = 663.957 ; gain = 438.773
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -466,7 +460,7 @@ Detailed RTL Component Info :
 +---Registers : 
 	               32 Bit    Registers := 4     
 	                2 Bit    Registers := 2     
-	                1 Bit    Registers := 19    
+	                1 Bit    Registers := 18    
 +---Muxes : 
 	   4 Input     32 Bit        Muxes := 1     
 	   2 Input      1 Bit        Muxes := 12    
@@ -482,7 +476,7 @@ Detailed RTL Component Info :
 +---Registers : 
 	               32 Bit    Registers := 4     
 	                2 Bit    Registers := 2     
-	                1 Bit    Registers := 15    
+	                1 Bit    Registers := 14    
 +---Muxes : 
 	   4 Input     32 Bit        Muxes := 1     
 	   2 Input      1 Bit        Muxes := 3     
@@ -509,7 +503,7 @@ Finished Part Resource Summary
 ---------------------------------------------------------------------------------
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
-WARNING: [Synth 8-6014] Unused sequential element cnt_iter_reg was removed.  [C:/Project/GameOfLife/hdlscr/ca_core.vhd:115]
+WARNING: [Synth 8-6014] Unused sequential element CACORE/cnt_iter_reg was removed.  [C:/Project/GameOfLife/hdlscr/ca_core.vhd:115]
 WARNING: [Synth 8-3917] design game_of_life_v1_0 has port s00_axi_awready driven by constant 1
 WARNING: [Synth 8-3917] design game_of_life_v1_0 has port s00_axi_bresp[1] driven by constant 0
 WARNING: [Synth 8-3917] design game_of_life_v1_0 has port s00_axi_bresp[0] driven by constant 0
@@ -532,7 +526,7 @@ WARNING: [Synth 8-3331] design game_of_life_v1_0 has unconnected port s00_axi_ar
 WARNING: [Synth 8-3331] design game_of_life_v1_0 has unconnected port s00_axi_arprot[0]
 WARNING: [Synth 8-3332] Sequential element (Register_GOLCR_reg[3]) is unused and will be removed from module game_of_life_v1_0.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 663.859 ; gain = 438.703
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:21 ; elapsed = 00:00:24 . Memory (MB): peak = 663.957 ; gain = 438.773
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -544,13 +538,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:31 ; elapsed = 00:00:32 . Memory (MB): peak = 663.859 ; gain = 438.703
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:35 ; elapsed = 00:00:38 . Memory (MB): peak = 663.957 ; gain = 438.773
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:32 ; elapsed = 00:00:32 . Memory (MB): peak = 663.859 ; gain = 438.703
+Finished Timing Optimization : Time (s): cpu = 00:00:35 ; elapsed = 00:00:38 . Memory (MB): peak = 663.957 ; gain = 438.773
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -562,7 +556,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:32 ; elapsed = 00:00:32 . Memory (MB): peak = 663.859 ; gain = 438.703
+Finished Technology Mapping : Time (s): cpu = 00:00:35 ; elapsed = 00:00:38 . Memory (MB): peak = 663.957 ; gain = 438.773
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -586,7 +580,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:33 ; elapsed = 00:00:33 . Memory (MB): peak = 663.859 ; gain = 438.703
+Finished IO Insertion : Time (s): cpu = 00:00:36 ; elapsed = 00:00:39 . Memory (MB): peak = 663.957 ; gain = 438.773
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -599,7 +593,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:33 ; elapsed = 00:00:33 . Memory (MB): peak = 663.859 ; gain = 438.703
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:36 ; elapsed = 00:00:39 . Memory (MB): peak = 663.957 ; gain = 438.773
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -611,25 +605,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:33 ; elapsed = 00:00:33 . Memory (MB): peak = 663.859 ; gain = 438.703
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:36 ; elapsed = 00:00:39 . Memory (MB): peak = 663.957 ; gain = 438.773
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:33 ; elapsed = 00:00:33 . Memory (MB): peak = 663.859 ; gain = 438.703
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:36 ; elapsed = 00:00:39 . Memory (MB): peak = 663.957 ; gain = 438.773
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:33 ; elapsed = 00:00:33 . Memory (MB): peak = 663.859 ; gain = 438.703
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:36 ; elapsed = 00:00:39 . Memory (MB): peak = 663.957 ; gain = 438.773
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:33 ; elapsed = 00:00:33 . Memory (MB): peak = 663.859 ; gain = 438.703
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:36 ; elapsed = 00:00:39 . Memory (MB): peak = 663.957 ; gain = 438.773
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -650,11 +644,11 @@ Report Cell Usage:
 |3     |LUT1   |    64|
 |4     |LUT2   |     5|
 |5     |LUT3   |     3|
-|6     |LUT4   |     6|
-|7     |LUT5   |    33|
-|8     |LUT6   |   880|
-|9     |FDRE   |   398|
-|10    |FDSE   |     1|
+|6     |LUT4   |     5|
+|7     |LUT5   |    34|
+|8     |LUT6   |   877|
+|9     |FDRE   |   395|
+|10    |FDSE   |     3|
 |11    |IBUF   |    43|
 |12    |OBUF   |    41|
 +------+-------+------+
@@ -663,9 +657,9 @@ Report Instance Areas:
 +------+-------------------------------------------+---------+------+
 |      |Instance                                   |Module   |Cells |
 +------+-------------------------------------------+---------+------+
-|1     |top                                        |         |  1710|
-|2     |  CACORE                                   |ca_core  |  1434|
-|3     |    Field                                  |grid     |  1296|
+|1     |top                                        |         |  1706|
+|2     |  CACORE                                   |ca_core  |  1436|
+|3     |    Field                                  |grid     |  1297|
 |4     |      \ROW[0].COL[0].FL.LE.CELL_X0Y0       |\cell    |     6|
 |5     |      \ROW[0].COL[10].FL.M.CELL_XIY0       |cell_0   |     6|
 |6     |      \ROW[0].COL[11].FL.M.CELL_XIY0       |cell_1   |     6|
@@ -702,7 +696,7 @@ Report Instance Areas:
 |37    |      \ROW[10].COL[7].EH.E_M.CELL_XIYE     |cell_32  |     6|
 |38    |      \ROW[10].COL[8].EH.E_M.CELL_XIYE     |cell_33  |     6|
 |39    |      \ROW[10].COL[9].EH.E_M.CELL_XIYE     |cell_34  |     6|
-|40    |      \ROW[11].COL[0].EH.LL_LE.CELL_X0YH   |cell_35  |     6|
+|40    |      \ROW[11].COL[0].EH.LL_LE.CELL_X0YH   |cell_35  |     7|
 |41    |      \ROW[11].COL[10].EH.LL_M.CELL_XIYH   |cell_36  |     6|
 |42    |      \ROW[11].COL[11].EH.LL_M.CELL_XIYH   |cell_37  |     6|
 |43    |      \ROW[11].COL[12].EH.LL_M.CELL_XIYH   |cell_38  |     6|
@@ -884,11 +878,11 @@ Report Instance Areas:
 |219   |      \ROW[9].COL[9].EH.O_M.CELL_XIYO      |cell_214 |     6|
 +------+-------------------------------------------+---------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:33 ; elapsed = 00:00:33 . Memory (MB): peak = 663.859 ; gain = 438.703
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:36 ; elapsed = 00:00:39 . Memory (MB): peak = 663.957 ; gain = 438.773
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 23 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:18 ; elapsed = 00:00:26 . Memory (MB): peak = 663.859 ; gain = 139.273
-Synthesis Optimization Complete : Time (s): cpu = 00:00:33 ; elapsed = 00:00:33 . Memory (MB): peak = 663.859 ; gain = 438.703
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:21 ; elapsed = 00:00:31 . Memory (MB): peak = 663.957 ; gain = 139.379
+Synthesis Optimization Complete : Time (s): cpu = 00:00:37 ; elapsed = 00:00:40 . Memory (MB): peak = 663.957 ; gain = 438.773
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 278 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -897,9 +891,9 @@ INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-133 Infos, 48 Warnings, 0 Critical Warnings and 0 Errors encountered.
+128 Infos, 48 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:34 ; elapsed = 00:00:36 . Memory (MB): peak = 663.859 ; gain = 444.129
+synth_design: Time (s): cpu = 00:00:39 ; elapsed = 00:00:43 . Memory (MB): peak = 663.957 ; gain = 444.199
 INFO: [Common 17-1381] The checkpoint 'C:/Project/GameOfLife/ip/managed_ip_project/game_of_life_0_v1_0_project/game_of_life_0_v1_0_project.runs/synth_1/game_of_life_v1_0.dcp' has been generated.
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.025 . Memory (MB): peak = 663.859 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Thu Apr 29 17:31:37 2021...
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.033 . Memory (MB): peak = 663.957 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Mon May  3 13:07:50 2021...

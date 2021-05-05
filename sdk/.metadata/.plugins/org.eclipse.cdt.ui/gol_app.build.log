@@ -1,17 +1,17 @@
-20:47:27 **** Auto Build of configuration Debug for project gol_app ****
+17:54:42 **** Auto Build of configuration Debug for project gol_app ****
 make all 
-'Building file: ../src/main.c'
+'Building file: ../src/gol_driver.c'
 'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../gol_app_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
-In file included from ../src/gol_microblaze.h:11:0,
-                 from ../src/main.c:52:
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/gol_driver.o" -I../../gol_app_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/gol_driver.d" -MT"src/gol_driver.o" -o "src/gol_driver.o" "../src/gol_driver.c"
+In file included from ../src/gol_driver.h:11:0,
+                 from ../src/gol_driver.c:8:
 ../../gol_app_bsp/microblaze_0/include/xbasic_types.h:115:2: warning: #warning The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert. [-Wcpp]
  #warning  The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert.
   ^~~~~~~
 ../../gol_app_bsp/microblaze_0/include/xbasic_types.h:116:2: warning: #warning Please refer the Standalone BSP UG647 for further details [-Wcpp]
  #warning  Please refer the Standalone BSP UG647 for further details
   ^~~~~~~
-'Finished building: ../src/main.c'
+'Finished building: ../src/gol_driver.c'
 ' '
 'Building target: gol_app.elf'
 'Invoking: MicroBlaze gcc linker'
@@ -21,9 +21,9 @@ mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../gol_app_bsp/microblaze_0/lib -mlittl
 'Invoking: MicroBlaze Print Size'
 mb-size gol_app.elf  |tee "gol_app.elf.size"
    text	   data	    bss	    dec	    hex	filename
-  11912	    488	   3976	  16376	   3ff8	gol_app.elf
+   7608	    488	   3328	  11424	   2ca0	gol_app.elf
 'Finished building: gol_app.elf.size'
 ' '
 
-20:47:28 Build Finished (took 921ms)
+17:54:43 Build Finished (took 930ms)
 

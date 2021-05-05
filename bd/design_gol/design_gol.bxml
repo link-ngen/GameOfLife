@@ -2,9 +2,9 @@
 <Root MajorVersion="0" MinorVersion="33">
   <CompositeFile CompositeFileTopName="design_gol" CanBeSetAsTop="false" CanDisplayChildGraph="true">
     <Description>Composite Fileset</Description>
-    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1619711366"/>
-    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1619711366"/>
-    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1619711366"/>
+    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1620143270"/>
+    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1620143270"/>
+    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1620143270"/>
     <FileCollection Name="SOURCES" Type="SOURCES">
       <File Name="ip\design_gol_microblaze_0_0\design_gol_microblaze_0_0.xci" Type="IP">
         <Instance HierarchyPath="microblaze_0"/>

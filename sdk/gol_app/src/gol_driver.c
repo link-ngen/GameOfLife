@@ -6,9 +6,10 @@
  */
 
 #include "gol_driver.h"
+#include "gol_defines.h"
+
 //static
 static volatile Xuint32 *pRegister;
-static Xuint32 length;
 
 /**
  * Load pattern to the game of life grid.
@@ -16,16 +17,8 @@ static Xuint32 length;
 void init_gol(Xuint32 base_addr, Xuint8 data_array[])
 {
 	pRegister = (volatile Xuint32*) base_addr;
-
-	// set default max iteration
-	//ioctrl_changeMaxIterationValue(DEFAULT_ITERATION);
-
-	length = 216; //sizeof(data_array) / sizeof(data_array[0]);
-
-	for (Xint32 idx = length-1; idx >= 0; --idx)
-	{
-		pRegister[GOL_DATA_IN_REGISTER] = data_array[idx];
-	}
+	ioctrl_changeMaxIterationValue(DEFAULT_ITERATION);
+	write_gol(data_array);
 }
 
 void ioctrl_changeMaxIterationValue(Xuint8 value)
@@ -35,21 +28,48 @@ void ioctrl_changeMaxIterationValue(Xuint8 value)
 	pRegister[GOL_CTRL_REGISTER] &= ~GSI;
 }
 
-void write_bit_to_gol(Xuint8 data)
+static void write_bit_to_gol(Xuint8 data)
 {
 	pRegister[GOL_DATA_IN_REGISTER] = data;
 }
 
 void read_gol(Xuint8* data_array)
 {
-	for (Xint32 idx = length-1; idx >= 0; --idx)
+	Xuint32 line_idx = 0;
+	for (Xuint32 r = 0; r < HEIGHT; ++r)
 	{
-		pRegister[GOL_DATA_IN_REGISTER] = 0;
-		data_array[idx] = (Xuint8)pRegister[GOL_DATA_OUT_REGISTER];
+		for (Xuint32 c = 0; c < WIDTH; ++c)
+		{
+			pRegister[GOL_DATA_IN_REGISTER] = 0;
+
+			// mirror lines
+			if (r % 2)
+				data_array[line_idx + (WIDTH-1) - c] = pRegister[GOL_DATA_OUT_REGISTER];
+			else
+				data_array[line_idx + c] = pRegister[GOL_DATA_OUT_REGISTER];
+		}
+		line_idx += WIDTH;
 	}
 }
 
-unsigned int read_reg(Xuint32 reg)
+void write_gol(Xuint8 *data_array)
+{
+	Xuint32 line_idx = 0;
+	for (Xuint32 r = 0; r < HEIGHT; ++r)
+	{
+		for (Xuint32 c = 0; c < WIDTH; ++c)
+		{
+			// mirror lines
+			if (r % 2)
+				write_bit_to_gol(data_array[line_idx + (WIDTH-1) - c]);
+			else
+				write_bit_to_gol(data_array[line_idx + c]);
+		}
+		line_idx += WIDTH;
+	}
+}
+
+Xuint32 read_reg(Xuint32 reg)
 {
 	return pRegister[reg];
 }
