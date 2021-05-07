@@ -30,7 +30,7 @@ preplace netloc microblaze_0_dlmb_1 1 3 1 N
 preplace netloc microblaze_0_debug 1 2 1 N
 preplace netloc mdm_1_debug_sys_rst 1 1 2 210 20 560
 preplace netloc reset_rtl_1 1 0 2 10 210 NJ
-levelinfo -pg 1 -10 110 390 820 1240 1520 1650 -top 0 -bot 460
+levelinfo -pg 1 -10 110 390 820 1240 1520 1660 -top 0 -bot 460
 ",
 }
 {

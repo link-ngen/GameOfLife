@@ -200,8 +200,8 @@
         <spirit:componentRef spirit:library="user" spirit:name="game_of_life" spirit:vendor="xilinx.com" spirit:version="1.0"/>
         <spirit:configurableElementValues>
           <spirit:configurableElementValue spirit:referenceId="bd:xciName">design_gol_game_of_life_0_1</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="C_GOL_WIDTH">86</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="C_GOL_HEIGHT">90</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="C_GOL_WIDTH">76</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="C_GOL_HEIGHT">106</spirit:configurableElementValue>
         </spirit:configurableElementValues>
       </spirit:componentInstance>
     </spirit:componentInstances>

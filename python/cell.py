@@ -14,7 +14,7 @@ class Cell(object):
         return self._cell_name + str((self._ypos*self._WIDTH)+self._xpos)
 
     def get_cell_rloc_list(self):
-        self._cell_rloc_list = 'design_gol_i/game_of_life_0/U0/CACORE/'+ 'Field/ROW[' + str(self._ypos) + '].COL[' + str(self._xpos) + '].'
+        self._cell_rloc_list = 'design_gol_i/game_of_life_0/U0/CACORE/' + 'Field/ROW[' + str(self._ypos) + '].COL[' + str(self._xpos) + '].' # 'design_gol_i/game_of_life_0/U0/CACORE/'+ 
         # first cell
         if self._ypos == 0: 
             if self._xpos == 0:                         # erste zelle

@@ -47,26 +47,14 @@ start_step init_design
 set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
-  create_project -in_memory -part xc7z020clg484-1
-  set_property board_part em.avnet.com:zed:part0:1.3 [current_project]
-  set_property design_mode GateLvl [current_fileset]
-  set_param project.singleFileAddWarning.threshold 0
+  reset_param project.defaultXPMLibraries 
+  open_checkpoint C:/Project/GameOfLife/prj/project_microblaze/project_microblaze.runs/impl_1/design_gol_wrapper.dcp
   set_property webtalk.parent_dir C:/Project/GameOfLife/prj/project_microblaze/project_microblaze.cache/wt [current_project]
   set_property parent.project_path C:/Project/GameOfLife/prj/project_microblaze/project_microblaze.xpr [current_project]
   set_property ip_repo_paths C:/Project/GameOfLife/ip [current_project]
   set_property ip_output_repo C:/Project/GameOfLife/prj/project_microblaze/project_microblaze.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
   set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
-  add_files -quiet C:/Project/GameOfLife/prj/project_microblaze/project_microblaze.runs/synth_1/design_gol_wrapper.dcp
-  set_msg_config -source 4 -id {BD 41-1661} -suppress
-  set_param project.isImplRun true
-  add_files C:/Project/GameOfLife/bd/design_gol/design_gol.bd
-  set_property is_locked true [get_files C:/Project/GameOfLife/bd/design_gol/design_gol.bd]
-  set_param project.isImplRun false
-  read_xdc C:/Project/GameOfLife/prj/project_microblaze/project_microblaze.srcs/constrs_1/imports/constraints/zed_pins.xdc
-  set_param project.isImplRun true
-  link_design -top design_gol_wrapper -part xc7z020clg484-1
-  set_param project.isImplRun false
   write_hwdef -force -file design_gol_wrapper.hwdef
   close_msg_db -file init_design.pb
 } RESULT]
@@ -135,27 +123,6 @@ if {$rc} {
   return -code error $RESULT
 } else {
   end_step route_design
-  unset ACTIVE_STEP 
-}
-
-start_step write_bitstream
-set ACTIVE_STEP write_bitstream
-set rc [catch {
-  create_msg_db write_bitstream.pb
-  set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
-  catch { write_mem_info -force design_gol_wrapper.mmi }
-  catch { write_bmm -force design_gol_wrapper_bd.bmm }
-  write_bitstream -force design_gol_wrapper.bit 
-  catch { write_sysdef -hwdef design_gol_wrapper.hwdef -bitfile design_gol_wrapper.bit -meminfo design_gol_wrapper.mmi -file design_gol_wrapper.sysdef }
-  catch {write_debug_probes -no_partial_ltxfile -quiet -force debug_nets}
-  catch {file copy -force debug_nets.ltx design_gol_wrapper.ltx}
-  close_msg_db -file write_bitstream.pb
-} RESULT]
-if {$rc} {
-  step_failed write_bitstream
-  return -code error $RESULT
-} else {
-  end_step write_bitstream
   unset ACTIVE_STEP 
 }
 

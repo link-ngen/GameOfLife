@@ -32,12 +32,12 @@ use IEEE.NUMERIC_STD.ALL;
 --use UNISIM.VComponents.all;
 
 entity ca_core is
-    Generic (WIDTH : integer := 18;
-             HEIGHT: integer := 12);
+    Generic (WIDTH : integer := 76;
+             HEIGHT: integer := 110);
     Port ( clk:         in std_logic;   
            ce:          in std_logic;   -- chip enable
            shift_ca:    in std_logic;
-           n_iter:      in unsigned (31 downto 0);
+           --n_iter:      in unsigned (31 downto 0);
            d_in:        in std_logic;
            start_iter:  in std_logic;   -- flag
            stop_iter:   in std_logic;   -- flag
@@ -57,13 +57,13 @@ architecture Behavioral of ca_core is
     
     -- counter
     constant TOTAL_CELLS : integer := WIDTH * HEIGHT;
-    --constant n_iter: unsigned (31 downto 0) := x"00000005"; 
+    constant n_iter: unsigned (31 downto 0) := x"00000005"; 
     signal cnt_iter: unsigned(n_iter'range) := (others => '0');
     
     --signal shift_bit_counter: natural range 0 to (TOTAL_CELLS-1);
     component grid is
-        Generic ( WIDTH: integer := WIDTH; --max 93
-                  HEIGHT: integer := HEIGHT); --max 93
+        Generic ( WIDTH: integer := 76; --max 93
+                  HEIGHT: integer := 110); --max 93
         Port ( d_in:    in std_logic;
                clk:     in std_logic;
                ce:      in std_logic;
