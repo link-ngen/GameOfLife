@@ -79,8 +79,8 @@ architecture Behavioral of ca_core_tb is
 
 begin
 
-    dut: ca_core generic map (WIDTH => W,
-                              HEIGHT => H)
+    dut: ca_core generic map (WIDTH => 18,
+                              HEIGHT => 12)
                  port map (clk => clk,
                            ce => ce,
                            n_iter => x"00000001",

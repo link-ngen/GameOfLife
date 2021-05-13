@@ -118,7 +118,7 @@ ARCHITECTURE design_gol_game_of_life_0_1_arch OF design_gol_game_of_life_0_1 IS
   ATTRIBUTE CHECK_LICENSE_TYPE : STRING;
   ATTRIBUTE CHECK_LICENSE_TYPE OF design_gol_game_of_life_0_1_arch : ARCHITECTURE IS "design_gol_game_of_life_0_1,game_of_life_v1_0,{}";
   ATTRIBUTE CORE_GENERATION_INFO : STRING;
-  ATTRIBUTE CORE_GENERATION_INFO OF design_gol_game_of_life_0_1_arch: ARCHITECTURE IS "design_gol_game_of_life_0_1,game_of_life_v1_0,{x_ipProduct=Vivado 2017.2,x_ipVendor=xilinx.com,x_ipLibrary=user,x_ipName=game_of_life,x_ipVersion=1.0,x_ipCoreRevision=2,x_ipLanguage=VHDL,x_ipSimLanguage=MIXED,C_S00_AXI_DATA_WIDTH=32,C_S00_AXI_ADDR_WIDTH=4,C_GOL_WIDTH=76,C_GOL_HEIGHT=106}";
+  ATTRIBUTE CORE_GENERATION_INFO OF design_gol_game_of_life_0_1_arch: ARCHITECTURE IS "design_gol_game_of_life_0_1,game_of_life_v1_0,{x_ipProduct=Vivado 2017.2,x_ipVendor=xilinx.com,x_ipLibrary=user,x_ipName=game_of_life,x_ipVersion=1.0,x_ipCoreRevision=2,x_ipLanguage=VHDL,x_ipSimLanguage=MIXED,C_S00_AXI_DATA_WIDTH=32,C_S00_AXI_ADDR_WIDTH=4,C_GOL_WIDTH=76,C_GOL_HEIGHT=76}";
   ATTRIBUTE X_INTERFACE_INFO : STRING;
   ATTRIBUTE X_INTERFACE_INFO OF s00_axi_awaddr: SIGNAL IS "xilinx.com:interface:aximm:1.0 S00_AXI AWADDR";
   ATTRIBUTE X_INTERFACE_INFO OF s00_axi_awprot: SIGNAL IS "xilinx.com:interface:aximm:1.0 S00_AXI AWPROT";
@@ -147,7 +147,7 @@ BEGIN
       C_S00_AXI_DATA_WIDTH => 32,
       C_S00_AXI_ADDR_WIDTH => 4,
       C_GOL_WIDTH => 76,
-      C_GOL_HEIGHT => 106
+      C_GOL_HEIGHT => 76
     )
     PORT MAP (
       s00_axi_awaddr => s00_axi_awaddr,

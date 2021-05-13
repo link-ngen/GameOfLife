@@ -201,7 +201,7 @@
         <spirit:configurableElementValues>
           <spirit:configurableElementValue spirit:referenceId="bd:xciName">design_gol_game_of_life_0_1</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="C_GOL_WIDTH">76</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="C_GOL_HEIGHT">106</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="C_GOL_HEIGHT">76</spirit:configurableElementValue>
         </spirit:configurableElementValues>
       </spirit:componentInstance>
     </spirit:componentInstances>

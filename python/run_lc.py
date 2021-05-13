@@ -15,17 +15,16 @@ def is_empty_area(x: int, y: int) -> bool:
     empty_condition = (x >= 68) and (x <= 79) and (y <= 149) and (y >= 50)
     return empty_condition
 
-
 def main():
 
     slice_Xstart = 26     #int(args['xpos'])
     slice_Ystart = 149     #int(args['ypos'])
-    fyy = slice_Ystart -100
+    fyy = slice_Ystart - 100
 
     print("width:", COLUMN, "height:", ROWS)
-    
+
     os.chdir('../hdlscr/')
-    with open('local_const_cacore.tcl', 'w') as tcl_fp:
+    with open('local_const_cacore_w76h106.tcl', 'w') as tcl_fp:
         crrnt_sliceY = slice_Ystart
         for y in range(100):
             crrnt_sliceX = slice_Xstart
@@ -63,7 +62,7 @@ def main():
                 crrnt_sliceX += 1
             crrnt_sliceY -= 1
 
-        for y in range(100, slice_Ystart):
+        for y in range(100, ROWS):
             crrnt_sliceX = slice_Xstart + 12
             for x in range(COLUMN):
 
@@ -96,8 +95,8 @@ def main():
                 crrnt_sliceX += 1
             crrnt_sliceY -= 1
 
-    print(f"crrnt_sliceX = {crrnt_sliceX}")
-    print(f"crrnt_sliceY = {crrnt_sliceY}")
+    # print(f"crrnt_sliceX = {crrnt_sliceX}")
+    # print(f"crrnt_sliceY = {crrnt_sliceY}")
 
 if __name__ == '__main__':
     main()

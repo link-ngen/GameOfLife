@@ -39,8 +39,8 @@ def gen_LUT6_2(idx :int):
         cnt = s.count('1')
         str_count = f'{cnt:03b}'
 
-        if '1' in str_count[idx]:
-            #print(s + " => " + str_count + " => " + "INIT[" + str(runner) + "] = " + str_count[0])
+        if '1' in str_count[idx]: # big endian index
+            print(s + " => " + str_count + " => " + "INIT[" + str(runner) + "] = " + str_count[0])
             bit_array[runner] = 1
         runner += 1
     bit_array = bit_array[::-1] # change endian (inverse bit array)
@@ -54,8 +54,6 @@ def gen_LUT6_3_shift():
 
     masks_to_return1 = ["00111", "01001", "01010", "01011", "01100", "01101"]
 
-    
-
     for s in combination:
         if '0' in s[0]:     # 0 für shift 
             bit_array[runner] = int(s[4])
@@ -66,4 +64,5 @@ def gen_LUT6_3_shift():
     bit_array = bit_array[::-1]  # change endian (inverse bit array)
     print(tohex(BitArray(bit_array).int, 64))
 
-gen_LUT6_3_shift()
+#gen_LUT6_3_shift()
+gen_LUT6_2(0)

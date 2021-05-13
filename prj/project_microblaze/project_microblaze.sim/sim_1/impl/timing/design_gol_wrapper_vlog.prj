@@ -1,0 +1,5 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  "design_gol_wrapper_time_impl.v" --include "../../../../../../bd/design_gol/ipshared/9c7f" --include "../../../../../../bd/design_gol/ipshared/7e3a/hdl"
+
+# Do not sort compile order
+nosort

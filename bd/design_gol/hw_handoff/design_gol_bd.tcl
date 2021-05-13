@@ -275,7 +275,7 @@ CONFIG.USE_BOARD_FLOW {true} \
   # Create instance: game_of_life_0, and set properties
   set game_of_life_0 [ create_bd_cell -type ip -vlnv xilinx.com:user:game_of_life:1.0 game_of_life_0 ]
   set_property -dict [ list \
-CONFIG.C_GOL_HEIGHT {106} \
+CONFIG.C_GOL_HEIGHT {76} \
 CONFIG.C_GOL_WIDTH {76} \
  ] $game_of_life_0
 
