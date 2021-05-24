@@ -1,8 +1,0 @@
-0.6
-2017.2
-Jun 15 2017
-18:52:51
-c:/project/gameoflife/hdlscr/ca_core.vhd,1619457996,vhdl,,,,ca_core,,,,,,,,
-c:/project/gameoflife/hdlscr/cell.vhd,1619457996,vhdl,c:/project/gameoflife/hdlscr/grid.vhd,,,cell,,,,,,,,
-c:/project/gameoflife/hdlscr/grid.vhd,1619457996,vhdl,,,,grid,,,,,,,,
-c:/project/gameoflife/sim/ca_core_tb.vhd,1619457997,vhdl,,,,ca_core_tb,,,,,,,,

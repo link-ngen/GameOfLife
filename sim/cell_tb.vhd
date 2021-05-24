@@ -37,7 +37,6 @@ end cell_tb;
 
 architecture Behavioral of cell_tb is
     component cell is 
-          Generic ( init_state : std_logic := '0' );
           Port ( prox : in std_logic_vector (7 downto 0); -- proximity (Nachbarschaft)
                  ce: in std_logic;
                  clk : in std_logic;
@@ -47,14 +46,13 @@ architecture Behavioral of cell_tb is
        
     signal clk: std_logic := '0';
     signal prox: std_logic_vector(7 downto 0) := "00000000";
-    signal clk_en: std_logic := '0';
+    signal ce: std_logic := '0';
     signal Q: std_logic := '0';
     
 begin
 
-    uut: cell generic map(init_state => '0')
-              port map(prox => prox,
-                       ce => clk_en,
+    uut: cell port map(prox => prox,
+                       ce => ce,
                        clk => clk,
                        shift => '1',
                        Q => Q);
@@ -63,43 +61,19 @@ begin
    begin
        clk <= not clk;
        wait for 10ns;
-   end process;
-   
---   SIMU: process
---   begin
---       wait for 20ns;
---       clk_en <= '1';  
---       wait for 20ns; -- 0  40ns
---       prox <= "10000001"; -- 54h
---       wait for 20ns; -- 1  60ns
---       prox <= "01010100"; -- 54h
---       wait for 20ns; -- 1  60ns
---       prox <= "01011100"; -- 5ch
---       wait for 20ns; -- 0  80ns
---       prox <= "01010001"; -- 51h
---       wait for 20ns; -- 1  100ns
---       prox <= "11110000"; -- f0h
---       wait for 20ns; -- 0  120ns
---       prox <= "11100000"; -- e0h
---       wait for 20ns; -- 1  140ns
---       prox <= "10101010"; -- aah
---       wait for 20ns; -- 0  160ns
---       prox <= "00000111"; -- 07h
---       wait for 20ns; -- 1
---       wait;
---   end process;
+   end process;  
 
     SIMU: process
     begin
-        clk_en <= '0';
+        ce <= '0';
         wait for 20ns;
-        clk_en <= '1';
+        ce <= '1';
         prox <= "00111000";
-        wait for 40ns;
+        wait for 20ns;
         wait until rising_edge(clk);
-        prox <= "00000011"; -- 54h
-        wait for 40ns;
-        prox <= "00100001";
+        prox <= "00000001"; 
+        wait for 20ns;
+        prox <= "00100101";
         wait;
     end process;
 

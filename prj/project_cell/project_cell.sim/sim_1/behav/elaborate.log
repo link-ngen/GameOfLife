@@ -1,0 +1,26 @@
+Vivado Simulator 2017.2
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2017.2/bin/unwrapped/win64.o/xelab.exe -wto 7a01afa463984cdea16e0a91f98c3c7b --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot cell_tb_behav xil_defaultlib.cell_tb -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package unisim.vcomponents
+Compiling package ieee.vital_timing
+Compiling package ieee.vital_primitives
+Compiling package unisim.vpkg
+Compiling architecture lut6_v of entity unisim.LUT6 [\LUT6(init="11111110111010001110...]
+Compiling architecture lut6_v of entity unisim.LUT6 [\LUT6(init="10000001000101110001...]
+Compiling architecture lut6_v of entity unisim.LUT6 [\LUT6(init="01101001100101101001...]
+Compiling architecture carry4_v of entity unisim.CARRY4 [carry4_default]
+Compiling architecture lut6_v of entity unisim.LUT6 [\LUT6(init="00000000000000000011...]
+Compiling architecture fdre_v of entity unisim.FDRE [fdre_default]
+Compiling architecture behavioral of entity xil_defaultlib.cell [cell_default]
+Compiling architecture behavioral of entity xil_defaultlib.cell_tb
+Built simulation snapshot cell_tb_behav

@@ -40,7 +40,7 @@
  * ------------------------------------------------
  * | UART TYPE   BAUD RATE                        |
  * ------------------------------------------------
- *   uartns550   9600
+ *   uartns550   115200
  *   uartlite    Configurable only in HW design
  *   ps7_uart    115200 (configured by bootrom/bsp)
  */
@@ -52,105 +52,89 @@
 #include "gol_microblaze.h"
 #include "gol_driver.h"
 
-#define SIZE_OF_GRID 216
-
-//Xuint8 oszil[SIZE_OF_GRID] = {
-//		0,0,0,0,1,1,0,0,0,0,0,0,1,1,0,0,0,0,
-//		0,0,0,1,0,1,0,0,0,0,0,0,1,0,1,0,0,0,
-//		0,0,0,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0,
-//		1,1,0,1,0,0,0,0,0,0,0,0,0,0,1,0,1,1,
-//		1,1,0,1,0,1,0,0,1,1,0,0,1,0,1,0,1,1,
-//		0,0,0,1,0,1,0,1,0,0,1,0,1,0,1,0,0,0,
-//		0,0,0,1,0,1,0,1,0,0,1,0,1,0,1,0,0,0,
-//		1,1,0,1,0,1,0,0,1,1,0,0,1,0,1,0,1,1,
-//		1,1,0,1,0,0,0,0,0,0,0,0,0,0,1,0,1,1,
-//		0,0,0,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0,
-//		0,0,0,1,0,1,0,0,0,0,0,0,1,0,1,0,0,0,
-//		0,0,0,0,1,1,0,0,0,0,0,0,1,1,0,0,0,0
-//};
-//
-Xuint8 oszil[SIZE_OF_GRID] = {
-		0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-		0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-		0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-		0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-		0,0,0,0,0,0,0,1,0,0,0,1,1,0,0,0,0,0,
-		0,0,0,0,0,0,0,1,0,0,1,0,0,1,0,0,0,0,
-		0,0,0,0,0,0,0,1,0,0,0,1,1,0,0,0,0,0,
-		0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-		0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-		0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-		0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
-		0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Xuint8 pattern[GOL_SIZE] = {
+		0,0,0,0,1,1,0,0,0,0,0,0,1,1,0,0,0,0,
+		0,0,0,1,0,1,0,0,0,0,0,0,1,0,1,0,0,0,
+		0,0,0,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0,
+		1,1,0,1,0,0,0,0,0,0,0,0,0,0,1,0,1,1,
+		1,1,0,1,0,1,0,0,1,1,0,0,1,0,1,0,1,1,
+		0,0,0,1,0,1,0,1,0,0,1,0,1,0,1,0,0,0,
+		0,0,0,1,0,1,0,1,0,0,1,0,1,0,1,0,0,0,
+		1,1,0,1,0,1,0,0,1,1,0,0,1,0,1,0,1,1,
+		1,1,0,1,0,0,0,0,0,0,0,0,0,0,1,0,1,1,
+		0,0,0,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0,
+		0,0,0,1,0,1,0,0,0,0,0,0,1,0,1,0,0,0,
+		0,0,0,0,1,1,0,0,0,0,0,0,1,1,0,0,0,0
 };
 
-//unsigned int ones[SIZE_OF_GRID] = {
-//		1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
-//		1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
-//		1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
-//		1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
-//		1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
-//		1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
-//		1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
-//		1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
-//		1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
-//		1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
-//		1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,
-//		1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1
+//Xuint8 pattern[SIZE_OF_GRID] = {
+//		0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+//		0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+//		0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+//		0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+//		0,0,1,1,1,0,0,1,0,0,0,1,1,0,0,0,0,0,
+//		0,0,0,0,0,0,0,1,0,0,1,0,0,1,0,0,0,0,
+//		0,0,0,0,0,0,0,1,0,0,0,1,1,0,0,0,0,0,
+//		0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+//		0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+//		0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+//		0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+//		0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 //};
 
-Xuint8 outputs[SIZE_OF_GRID] = {0};
+Xuint8 outputs[GOL_SIZE] = {0};
 
 void print_array(Xuint8*);
+void delay_ms(Xuint32 ms);
 
 int main()
 {
 	init_platform();
-	const Xuint8 NITER = 1;
 
-	xil_printf("=====================================================\n");
-	xil_printf("Initialize the game of life pattern.\n");
+	Xuint32 iter_cnt = 0;
 
-	microblaze_init_gol(oszil);
-	init_gol(XPAR_GAME_OF_LIFE_0_S00_AXI_BASEADDR, oszil);
+	for(Xuint32 i=0; i < GOL_SIZE; i++) // globals don't re-initialize after reset button ;(
+		outputs[i] = pattern[i];
 
-	xil_printf("Now, let the system run for n = %d iteration.\n", 1);// will change later
+	while(1)
+	{
+		xil_printf("=========================\n");
+		xil_printf("Iterations: %d\n", iter_cnt++);
+		xil_printf("=========================\n");
+		print_array(outputs);
 
-	microblaze_calc_next_iter(NITER);
+		init_gol(XPAR_GAME_OF_LIFE_0_S00_AXI_BASEADDR, outputs); // default iterations = 1;
+		run_gol();
 
-	microblaze_read_gol(outputs);
-	xil_printf("Before\n");
-	print_array(oszil);
-	xil_printf("=========================\n");
-	xil_printf("CPU After\n");
-	print_array(outputs);
+		delay_ms(400);
 
-	ioctrl_changeMaxIterationValue(NITER);
-	run_gol();
-	while((read_reg(GOL_CTRL_REGISTER) >> 3) != 1);
+		while((read_reg(GOL_CTRL_REGISTER) & GMI) == 1);  // formality
 
-	read_gol(outputs);
+		read_gol(outputs);
 
-	xil_printf("=========================\n");
-	xil_printf("FPGA After\n");
-	print_array(outputs);
-
-	xil_printf("Register_GOLCR: 0x%08x\n", read_reg(GOL_CTRL_REGISTER));
-
+		if (iter_cnt == 10) break;
+	}
 
 	cleanup_platform();
 	return 0;
 }
 
+void delay_ms(Xuint32 ms)
+{
+	#define LOOPS_PER_MS 12500
+	volatile Xuint32 counter = LOOPS_PER_MS * ms;
+	while(counter--);
+}
+
 void print_array(Xuint8* array)
 {
-	for (unsigned int idx = 0; idx < SIZE_OF_GRID; ++idx)
+	for (Xuint32 idx = 0; idx < GOL_SIZE; ++idx)
 	{
-		if (array[idx] == 1)
+		if (array[idx] == 0x01)
 		{
 			xil_printf(" * ");
 		}
-		else
+		else if (array[idx] == 0x00)
 		{
 			xil_printf(" - ");
 		}

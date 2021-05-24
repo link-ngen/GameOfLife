@@ -29,40 +29,39 @@ def gen_LUT6_in6_out3():
         print(s + " => " + f'{cnt:03b}')
 
 
-def gen_LUT6_2(idx :int):
-    combination = [f'{n:06b}' for n in range(64)]
+def gen_LUT6(which_bit :int):
+    combination = [f'{n:06b}' for n in range(64)] # truth table with 2^6 inputs
     runner = 0
     bit_array = bitarray(64, endian='big')
     bit_array.setall(0)
 
     for s in combination:
         cnt = s.count('1')
-        str_count = f'{cnt:03b}'
+        str_count = (f'{cnt:03b}')[::-1]
 
-        if '1' in str_count[idx]: # big endian index
-            print(s + " => " + str_count + " => " + "INIT[" + str(runner) + "] = " + str_count[0])
+        if '1' in str_count[which_bit]:
             bit_array[runner] = 1
         runner += 1
     bit_array = bit_array[::-1] # change endian (inverse bit array)
-    print(tohex(BitArray(bit_array).int, 64))
+    print(f"LUT6[{which_bit}]: " + "INIT = " + tohex(BitArray(bit_array).int, 64))
 
 def gen_LUT6_3_shift():
     combination = [f'{n:06b}' for n in range(64)]
-    runner = 0
+    idx = 0
     bit_array = bitarray(64, endian='big')
     bit_array.setall(0)
-
+    
     masks_to_return1 = ["00111", "01001", "01010", "01011", "01100", "01101"]
-
-    for s in combination:
-        if '0' in s[0]:     # 0 für shift 
-            bit_array[runner] = int(s[4])
-        elif '1' in s[0]:   # 1 für calc
-            if s[1:] in masks_to_return1:
-                bit_array[runner] = 1
-        runner += 1
+    for inputs in combination:
+        if '0' in inputs[0]:     # 0 for shifting 
+            bit_array[idx] = int(inputs[4])
+        elif '1' in inputs[0]:   # 1 for calculation
+            if inputs[1:] in masks_to_return1:
+                bit_array[idx] = 1
+        idx += 1
     bit_array = bit_array[::-1]  # change endian (inverse bit array)
-    print(tohex(BitArray(bit_array).int, 64))
+    print(f"LUT6[3]: " + "INIT = " + tohex(BitArray(bit_array).int, 64))
 
-#gen_LUT6_3_shift()
-gen_LUT6_2(0)
+gen_LUT6_3_shift()
+''' Outputs:
+LUT6[3]: INIT = 0x00003e80cccccccc '''

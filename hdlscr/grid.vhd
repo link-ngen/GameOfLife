@@ -32,8 +32,8 @@ use IEEE.NUMERIC_STD.ALL;
 --use UNISIM.VComponents.all;
 
 entity grid is
-    Generic ( WIDTH: integer := 18; --max 93
-              HEIGHT: integer := 12); --max 93
+    Generic ( WIDTH: integer := 20; --max 93
+              HEIGHT: integer := 20); --max 93
     Port ( d_in:    in std_logic;
            clk:     in std_logic;
            ce:      in std_logic;
@@ -58,7 +58,7 @@ architecture Behavioral of grid is
                shift:   in std_logic;    -- 0 for shift | 1 for next gen
                Q:       out std_logic ); -- 1 stand for "ALIVE" and 0 stand for "DEAD" 
     end component;
- 
+
 for all: cell use entity work.cell(behavioral);
 begin
     -- using generic to instantiate cells
@@ -332,7 +332,7 @@ begin
                                             shift => shift,
                                             Q => state_grid(j, i));
                 end generate LL_LE;
-                
+
             end generate EH;
             
         end generate COL;

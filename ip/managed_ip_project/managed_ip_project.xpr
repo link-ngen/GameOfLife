@@ -6,7 +6,7 @@
 <Project Version="7" Minor="20" Path="C:/Project/GameOfLife/ip/managed_ip_project/managed_ip_project.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
-    <Option Name="Id" Val="e150989260c54328a9f3349d7f4a9c3c"/>
+    <Option Name="Id" Val="0899efd830e8476eb51a4e274b20ec86"/>
     <Option Name="Part" Val="xc7z020clg484-1"/>
     <Option Name="CompiledLibDir" Val="$PCACHEDIR/compile_simlib"/>
     <Option Name="CompiledLibDirXSim" Val=""/>

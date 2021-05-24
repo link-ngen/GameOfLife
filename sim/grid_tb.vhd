@@ -37,8 +37,8 @@ end grid_tb;
 
 architecture Behavioral of grid_tb is
     component grid is
-        Generic ( WIDTH: integer := 18;
-                  HEIGHT: integer := 12);
+        Generic ( WIDTH: integer := 3;
+                  HEIGHT: integer := 3);
         Port ( d_in:    in std_logic;
                clk:     in std_logic;
                ce:      in std_logic;
@@ -46,14 +46,12 @@ architecture Behavioral of grid_tb is
                Q:       out std_logic);
     end component;
     
-    constant W : integer := 18;
-    constant H : integer := 12;
+    constant W : integer := 3;
+    constant H : integer := 3;
     
     constant TOTAL_CELL : integer := W * H;
-    constant cpu_data: std_logic_vector(TOTAL_CELL-1 downto 0) := "000011000000110000000101000000101000000100000000001000110100000000001011110101001100101011000101010010101000000101010010101000110101001100101011110100000000001011000100000000001000000101000000101000000011000000110000";
-    --constant cpu_data: std_logic_vector(TOTAL_CELL-1 downto 0) := "010111010";
-    --constant cpu_data: std_logic_vector(TOTAL_CELL-1 downto 0) := "1010101010101010";
-    signal output_data : std_logic_vector(TOTAL_CELL-1 downto 0) := (others => '0');
+    --constant cpu_data: std_logic_vector(TOTAL_CELL-1 downto 0) := "000011000000110000000101000000101000000100000000001000110100000000001011110101001100101011000101010010101000000101010010101000110101001100101011110100000000001011000100000000001000000101000000101000000011000000110000";
+    constant cpu_data: std_logic_vector(TOTAL_CELL-1 downto 0) := "010111010";
     
     signal clk: std_logic := '0';
     signal ce: std_logic := '0';
@@ -84,6 +82,8 @@ begin
         shift <= '1';
         wait for 20ns;
         
+        --######### Shift Test #########   
+        -- begin shifting
         ce <= '1';
         shift <= '0';
         for i in 0 to (TOTAL_CELL-1) loop
@@ -91,45 +91,18 @@ begin
             wait for 20ns;   
         end loop;
         
-        
---        wait for 10ns;
---        ce <= '0';
---        wait for 10ns;
---        ce <= '1';
-        
---        for i in 0 to (TOTAL_CELL-1) loop
---            output_data <= Q & output_data(TOTAL_CELL-1 downto 1);
---            wait for 20ns;
---        end loop;
---        wait for 10ns;
---        shift <= '1';  
---        ce <= '0'; 
-               
-        -- shift end
-        wait for 10ns;    
+        -- shifting end
+        wait for 20ns;    
         shift <= '1';  
         ce <= '0'; 
         
 --######### Calc test #########
         wait for 40ns;
         ce <= '1';
-        wait for 100ns; -- 1 cycle = 20ns
+        wait for 40ns; -- 1 cycle = 20ns
         ce <= '0'; 
         
---######### Calc test end #########
-
---######### Shift out test #########   
-        wait for 40ns;
-        ce <= '1';
-        shift <= '0';
-        
-        for i in 0 to (TOTAL_CELL-1) loop
-            output_data <= Q & output_data(TOTAL_CELL-1 downto 1);
-            wait for 20ns;
-        end loop;
-        wait for 10ns;
-        shift <= '1';  
-        ce <= '0';        
+--######### Calc test end #########    
         
         wait;
     end process;

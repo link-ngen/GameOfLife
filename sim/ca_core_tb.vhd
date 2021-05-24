@@ -126,11 +126,11 @@ begin
         wait until max_iter = '1';
         
         wait for 200ns;
-        for i in 0 to (TOTAL_CELL-1) loop
+        for i in 0 to (TOTAL_CELL) loop
             wait until rising_edge(clk);
             shift_ca <= '1';
             ddata <= '0';
-            output_data(i) <= bitstream;-- & output_data(TOTAL_CELL-1 downto 1);
+            output_data <= bitstream & output_data(TOTAL_CELL-1 downto 1);
             wait until rising_edge(clk);
             shift_ca <= '0';
             wait for 20ns;

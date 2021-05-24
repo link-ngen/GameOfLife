@@ -1,0 +1,71 @@
+
+*** Running vivado
+    with args -log design_1_auto_cc_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_auto_cc_0.tcl
+
+
+****** Vivado v2017.2 (64-bit)
+  **** SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
+  **** IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+source design_1_auto_cc_0.tcl -notrace
+Starting RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 323.871 ; gain = 82.535
+INFO: [Synth 8-638] synthesizing module 'design_1_auto_cc_0' [c:/Project/GameOfLife/bd/design_1/ip/design_1_auto_cc_0/synth/design_1_auto_cc_0.v:58]
+INFO: [Synth 8-638] synthesizing module 'axi_clock_converter_v2_1_12_axi_clock_converter' [c:/Project/GameOfLife/bd/design_1/ipshared/80fd/hdl/axi_clock_converter_v2_1_vl_rfs.v:650]
+INFO: [Synth 8-638] synthesizing module 'axi_infrastructure_v1_1_0_axi2vector' [c:/Project/GameOfLife/bd/design_1/ipshared/7e3a/hdl/axi_infrastructure_v1_1_vl_rfs.v:60]
+INFO: [Synth 8-256] done synthesizing module 'axi_infrastructure_v1_1_0_axi2vector' (1#1) [c:/Project/GameOfLife/bd/design_1/ipshared/7e3a/hdl/axi_infrastructure_v1_1_vl_rfs.v:60]
+INFO: [Synth 8-638] synthesizing module 'axi_clock_converter_v2_1_12_lite_async' [c:/Project/GameOfLife/bd/design_1/ipshared/80fd/hdl/axi_clock_converter_v2_1_vl_rfs.v:517]
+INFO: [Synth 8-638] synthesizing module 'xpm_cdc_handshake' [C:/Xilinx/Vivado/2017.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:352]
+INFO: [Synth 8-638] synthesizing module 'xpm_cdc_single' [C:/Xilinx/Vivado/2017.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:99]
+INFO: [Synth 8-256] done synthesizing module 'xpm_cdc_single' (2#1) [C:/Xilinx/Vivado/2017.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:99]
+INFO: [Synth 8-256] done synthesizing module 'xpm_cdc_handshake' (3#1) [C:/Xilinx/Vivado/2017.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:352]
+INFO: [Synth 8-256] done synthesizing module 'axi_clock_converter_v2_1_12_lite_async' (4#1) [c:/Project/GameOfLife/bd/design_1/ipshared/80fd/hdl/axi_clock_converter_v2_1_vl_rfs.v:517]
+INFO: [Synth 8-638] synthesizing module 'axi_clock_converter_v2_1_12_lite_async__parameterized0' [c:/Project/GameOfLife/bd/design_1/ipshared/80fd/hdl/axi_clock_converter_v2_1_vl_rfs.v:517]
+INFO: [Synth 8-638] synthesizing module 'xpm_cdc_handshake__parameterized0' [C:/Xilinx/Vivado/2017.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:352]
+INFO: [Synth 8-256] done synthesizing module 'xpm_cdc_handshake__parameterized0' (4#1) [C:/Xilinx/Vivado/2017.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:352]
+INFO: [Synth 8-256] done synthesizing module 'axi_clock_converter_v2_1_12_lite_async__parameterized0' (4#1) [c:/Project/GameOfLife/bd/design_1/ipshared/80fd/hdl/axi_clock_converter_v2_1_vl_rfs.v:517]
+INFO: [Synth 8-638] synthesizing module 'axi_clock_converter_v2_1_12_lite_async__parameterized1' [c:/Project/GameOfLife/bd/design_1/ipshared/80fd/hdl/axi_clock_converter_v2_1_vl_rfs.v:517]
+INFO: [Synth 8-638] synthesizing module 'xpm_cdc_handshake__parameterized1' [C:/Xilinx/Vivado/2017.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:352]
+INFO: [Synth 8-256] done synthesizing module 'xpm_cdc_handshake__parameterized1' (4#1) [C:/Xilinx/Vivado/2017.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:352]
+INFO: [Synth 8-256] done synthesizing module 'axi_clock_converter_v2_1_12_lite_async__parameterized1' (4#1) [c:/Project/GameOfLife/bd/design_1/ipshared/80fd/hdl/axi_clock_converter_v2_1_vl_rfs.v:517]
+INFO: [Synth 8-638] synthesizing module 'axi_clock_converter_v2_1_12_lite_async__parameterized2' [c:/Project/GameOfLife/bd/design_1/ipshared/80fd/hdl/axi_clock_converter_v2_1_vl_rfs.v:517]
+INFO: [Synth 8-638] synthesizing module 'xpm_cdc_handshake__parameterized2' [C:/Xilinx/Vivado/2017.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:352]
+INFO: [Synth 8-256] done synthesizing module 'xpm_cdc_handshake__parameterized2' (4#1) [C:/Xilinx/Vivado/2017.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:352]
+INFO: [Synth 8-256] done synthesizing module 'axi_clock_converter_v2_1_12_lite_async__parameterized2' (4#1) [c:/Project/GameOfLife/bd/design_1/ipshared/80fd/hdl/axi_clock_converter_v2_1_vl_rfs.v:517]
+INFO: [Synth 8-638] synthesizing module 'axi_infrastructure_v1_1_0_vector2axi' [c:/Project/GameOfLife/bd/design_1/ipshared/7e3a/hdl/axi_infrastructure_v1_1_vl_rfs.v:474]
+INFO: [Synth 8-256] done synthesizing module 'axi_infrastructure_v1_1_0_vector2axi' (5#1) [c:/Project/GameOfLife/bd/design_1/ipshared/7e3a/hdl/axi_infrastructure_v1_1_vl_rfs.v:474]
+INFO: [Synth 8-256] done synthesizing module 'axi_clock_converter_v2_1_12_axi_clock_converter' (6#1) [c:/Project/GameOfLife/bd/design_1/ipshared/80fd/hdl/axi_clock_converter_v2_1_vl_rfs.v:650]
+INFO: [Synth 8-256] done synthesizing module 'design_1_auto_cc_0' (7#1) [c:/Project/GameOfLife/bd/design_1/ip/design_1_auto_cc_0/synth/design_1_auto_cc_0.v:58]
+Finished RTL Elaboration : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 443.734 ; gain = 202.398
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 443.734 ; gain = 202.398
+INFO: [Device 21-403] Loading part xc7z020clg484-1
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.027 . Memory (MB): peak = 688.094 ; gain = 0.000
+Finished Constraint Validation : Time (s): cpu = 00:00:31 ; elapsed = 00:00:33 . Memory (MB): peak = 688.094 ; gain = 446.758
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:31 ; elapsed = 00:00:33 . Memory (MB): peak = 688.094 ; gain = 446.758
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:31 ; elapsed = 00:00:33 . Memory (MB): peak = 688.094 ; gain = 446.758
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:31 ; elapsed = 00:00:34 . Memory (MB): peak = 688.094 ; gain = 446.758
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:32 ; elapsed = 00:00:35 . Memory (MB): peak = 688.094 ; gain = 446.758
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:45 ; elapsed = 00:00:48 . Memory (MB): peak = 688.094 ; gain = 446.758
+Finished Timing Optimization : Time (s): cpu = 00:00:45 ; elapsed = 00:00:48 . Memory (MB): peak = 688.094 ; gain = 446.758
+Finished Technology Mapping : Time (s): cpu = 00:00:45 ; elapsed = 00:00:48 . Memory (MB): peak = 688.094 ; gain = 446.758
+Finished IO Insertion : Time (s): cpu = 00:00:46 ; elapsed = 00:00:49 . Memory (MB): peak = 688.094 ; gain = 446.758
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:46 ; elapsed = 00:00:49 . Memory (MB): peak = 688.094 ; gain = 446.758
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:46 ; elapsed = 00:00:49 . Memory (MB): peak = 688.094 ; gain = 446.758
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:46 ; elapsed = 00:00:49 . Memory (MB): peak = 688.094 ; gain = 446.758
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:46 ; elapsed = 00:00:49 . Memory (MB): peak = 688.094 ; gain = 446.758
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:46 ; elapsed = 00:00:49 . Memory (MB): peak = 688.094 ; gain = 446.758
+
+Report Cell Usage: 
++------+-----+------+
+|      |Cell |Count |
++------+-----+------+
+|1     |LUT1 |     6|
+|2     |LUT2 |     5|
+|3     |LUT3 |     2|
+|4     |LUT4 |     5|
+|5     |LUT5 |    20|
+|6     |LUT6 |    15|
+|7     |FDRE |   242|
++------+-----+------+
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:46 ; elapsed = 00:00:49 . Memory (MB): peak = 688.094 ; gain = 446.758
+synth_design: Time (s): cpu = 00:00:50 ; elapsed = 00:00:54 . Memory (MB): peak = 1108.379 ; gain = 873.684
