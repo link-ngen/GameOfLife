@@ -46,6 +46,8 @@ void microblaze_calc_next_iter(Xuint16 n_iter)
 			{
 				Xuint8 crrnt_state = grid[r][c];
 				Xuint8 num_of_neighbors = microblaze_count_prox(&r, &c);
+				
+				// rules 
 				if (num_of_neighbors == 3)
 				{
 					new_grid[r][c] = 1;

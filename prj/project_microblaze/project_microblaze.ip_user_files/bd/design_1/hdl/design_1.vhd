@@ -1,7 +1,7 @@
 --Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
---Date        : Mon May 17 15:54:49 2021
+--Date        : Mon May 24 12:40:33 2021
 --Host        : DEVPC running 64-bit major release  (build 9200)
 --Command     : generate_target design_1.bd
 --Design      : design_1
@@ -1507,7 +1507,7 @@ entity design_1 is
     tx : out STD_LOGIC
   );
   attribute CORE_GENERATION_INFO : string;
-  attribute CORE_GENERATION_INFO of design_1 : entity is "design_1,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_1,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=18,numReposBlks=13,numNonXlnxBlks=0,numHierBlks=5,maxHierDepth=1,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_board_cnt=2,da_mb_cnt=1,synth_mode=OOC_per_IP}";
+  attribute CORE_GENERATION_INFO of design_1 : entity is "design_1,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_1,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=19,numReposBlks=14,numNonXlnxBlks=0,numHierBlks=5,maxHierDepth=1,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_board_cnt=2,da_mb_cnt=1,synth_mode=OOC_per_IP}";
   attribute HW_HANDOFF : string;
   attribute HW_HANDOFF of design_1 : entity is "design_1.hwdef";
 end design_1;
@@ -1586,10 +1586,10 @@ architecture STRUCTURE of design_1 is
   component design_1_clk_wiz_1_0 is
   port (
     reset : in STD_LOGIC;
-    clk_out1 : out STD_LOGIC;
-    locked : out STD_LOGIC;
     clk_in1 : in STD_LOGIC;
-    clk_out2 : out STD_LOGIC
+    clk_out1 : out STD_LOGIC;
+    clk_out2 : out STD_LOGIC;
+    locked : out STD_LOGIC
   );
   end component design_1_clk_wiz_1_0;
   component design_1_rst_clk_wiz_1_100M_0 is
@@ -1657,8 +1657,22 @@ architecture STRUCTURE of design_1 is
     s00_axi_aresetn : in STD_LOGIC
   );
   end component design_1_game_of_life_0_0;
+  component design_1_proc_sys_reset_0_0 is
+  port (
+    slowest_sync_clk : in STD_LOGIC;
+    ext_reset_in : in STD_LOGIC;
+    aux_reset_in : in STD_LOGIC;
+    mb_debug_sys_rst : in STD_LOGIC;
+    dcm_locked : in STD_LOGIC;
+    mb_reset : out STD_LOGIC;
+    bus_struct_reset : out STD_LOGIC_VECTOR ( 0 to 0 );
+    peripheral_reset : out STD_LOGIC_VECTOR ( 0 to 0 );
+    interconnect_aresetn : out STD_LOGIC_VECTOR ( 0 to 0 );
+    peripheral_aresetn : out STD_LOGIC_VECTOR ( 0 to 0 )
+  );
+  end component design_1_proc_sys_reset_0_0;
   signal ARESETN_1 : STD_LOGIC_VECTOR ( 0 to 0 );
-  signal M00_ARESETN_1 : STD_LOGIC_VECTOR ( 0 to 0 );
+  signal M01_ARESETN_1 : STD_LOGIC_VECTOR ( 0 to 0 );
   signal S00_AXI_1_ARADDR : STD_LOGIC_VECTOR ( 31 downto 0 );
   signal S00_AXI_1_ARPROT : STD_LOGIC_VECTOR ( 2 downto 0 );
   signal S00_AXI_1_ARREADY : STD_LOGIC_VECTOR ( 0 to 0 );
@@ -1750,10 +1764,15 @@ architecture STRUCTURE of design_1 is
   signal reset_rtl_1 : STD_LOGIC;
   signal rst_clk_wiz_1_100M_bus_struct_reset : STD_LOGIC_VECTOR ( 0 to 0 );
   signal rst_clk_wiz_1_100M_mb_reset : STD_LOGIC;
+  signal rst_clk_wiz_1_100M_peripheral_aresetn : STD_LOGIC_VECTOR ( 0 to 0 );
   signal rx_1 : STD_LOGIC;
   signal sys_clock_1 : STD_LOGIC;
   signal NLW_axi_uartlite_0_interrupt_UNCONNECTED : STD_LOGIC;
   signal NLW_microblaze_0_Interrupt_Ack_UNCONNECTED : STD_LOGIC_VECTOR ( 0 to 1 );
+  signal NLW_proc_sys_reset_0_mb_reset_UNCONNECTED : STD_LOGIC;
+  signal NLW_proc_sys_reset_0_bus_struct_reset_UNCONNECTED : STD_LOGIC_VECTOR ( 0 to 0 );
+  signal NLW_proc_sys_reset_0_interconnect_aresetn_UNCONNECTED : STD_LOGIC_VECTOR ( 0 to 0 );
+  signal NLW_proc_sys_reset_0_peripheral_reset_UNCONNECTED : STD_LOGIC_VECTOR ( 0 to 0 );
   signal NLW_rst_clk_wiz_1_100M_peripheral_reset_UNCONNECTED : STD_LOGIC_VECTOR ( 0 to 0 );
   attribute BMM_INFO_PROCESSOR : string;
   attribute BMM_INFO_PROCESSOR of microblaze_0 : label is "microblaze-le > design_1 microblaze_0_local_memory/dlmb_bram_if_cntlr";
@@ -1769,7 +1788,7 @@ axi_interconnect_0: entity work.design_1_axi_interconnect_0_0
       ACLK => microblaze_0_Clk,
       ARESETN => ARESETN_1(0),
       M00_ACLK => microblaze_0_Clk,
-      M00_ARESETN => M00_ARESETN_1(0),
+      M00_ARESETN => rst_clk_wiz_1_100M_peripheral_aresetn(0),
       M00_AXI_araddr(31 downto 0) => axi_interconnect_0_M00_AXI_ARADDR(31 downto 0),
       M00_AXI_arready => axi_interconnect_0_M00_AXI_ARREADY,
       M00_AXI_arvalid => axi_interconnect_0_M00_AXI_ARVALID,
@@ -1788,7 +1807,7 @@ axi_interconnect_0: entity work.design_1_axi_interconnect_0_0
       M00_AXI_wstrb(3 downto 0) => axi_interconnect_0_M00_AXI_WSTRB(3 downto 0),
       M00_AXI_wvalid => axi_interconnect_0_M00_AXI_WVALID,
       M01_ACLK => clk_wiz_1_clk_out2,
-      M01_ARESETN => M00_ARESETN_1(0),
+      M01_ARESETN => M01_ARESETN_1(0),
       M01_AXI_araddr(3 downto 0) => axi_interconnect_0_M01_AXI_ARADDR(3 downto 0),
       M01_AXI_arprot(2 downto 0) => axi_interconnect_0_M01_AXI_ARPROT(2 downto 0),
       M01_AXI_arready => axi_interconnect_0_M01_AXI_ARREADY,
@@ -1836,7 +1855,7 @@ axi_uartlite_0: component design_1_axi_uartlite_0_0
       rx => rx_1,
       s_axi_aclk => microblaze_0_Clk,
       s_axi_araddr(3 downto 0) => axi_interconnect_0_M00_AXI_ARADDR(3 downto 0),
-      s_axi_aresetn => M00_ARESETN_1(0),
+      s_axi_aresetn => rst_clk_wiz_1_100M_peripheral_aresetn(0),
       s_axi_arready => axi_interconnect_0_M00_AXI_ARREADY,
       s_axi_arvalid => axi_interconnect_0_M00_AXI_ARVALID,
       s_axi_awaddr(3 downto 0) => axi_interconnect_0_M00_AXI_AWADDR(3 downto 0),
@@ -1867,7 +1886,7 @@ game_of_life_0: component design_1_game_of_life_0_0
      port map (
       s00_axi_aclk => clk_wiz_1_clk_out2,
       s00_axi_araddr(3 downto 0) => axi_interconnect_0_M01_AXI_ARADDR(3 downto 0),
-      s00_axi_aresetn => M00_ARESETN_1(0),
+      s00_axi_aresetn => M01_ARESETN_1(0),
       s00_axi_arprot(2 downto 0) => axi_interconnect_0_M01_AXI_ARPROT(2 downto 0),
       s00_axi_arready => axi_interconnect_0_M01_AXI_ARREADY,
       s00_axi_arvalid => axi_interconnect_0_M01_AXI_ARVALID,
@@ -1979,6 +1998,19 @@ microblaze_0_local_memory: entity work.microblaze_0_local_memory_imp_1K0VQXK
       LMB_Clk => microblaze_0_Clk,
       SYS_Rst => rst_clk_wiz_1_100M_bus_struct_reset(0)
     );
+proc_sys_reset_0: component design_1_proc_sys_reset_0_0
+     port map (
+      aux_reset_in => '1',
+      bus_struct_reset(0) => NLW_proc_sys_reset_0_bus_struct_reset_UNCONNECTED(0),
+      dcm_locked => clk_wiz_1_locked,
+      ext_reset_in => reset_rtl_1,
+      interconnect_aresetn(0) => NLW_proc_sys_reset_0_interconnect_aresetn_UNCONNECTED(0),
+      mb_debug_sys_rst => mdm_1_debug_sys_rst,
+      mb_reset => NLW_proc_sys_reset_0_mb_reset_UNCONNECTED,
+      peripheral_aresetn(0) => M01_ARESETN_1(0),
+      peripheral_reset(0) => NLW_proc_sys_reset_0_peripheral_reset_UNCONNECTED(0),
+      slowest_sync_clk => clk_wiz_1_clk_out2
+    );
 rst_clk_wiz_1_100M: component design_1_rst_clk_wiz_1_100M_0
      port map (
       aux_reset_in => '1',
@@ -1988,7 +2020,7 @@ rst_clk_wiz_1_100M: component design_1_rst_clk_wiz_1_100M_0
       interconnect_aresetn(0) => ARESETN_1(0),
       mb_debug_sys_rst => mdm_1_debug_sys_rst,
       mb_reset => rst_clk_wiz_1_100M_mb_reset,
-      peripheral_aresetn(0) => M00_ARESETN_1(0),
+      peripheral_aresetn(0) => rst_clk_wiz_1_100M_peripheral_aresetn(0),
       peripheral_reset(0) => NLW_rst_clk_wiz_1_100M_peripheral_reset_UNCONNECTED(0),
       slowest_sync_clk => microblaze_0_Clk
     );

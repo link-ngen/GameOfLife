@@ -63,3 +63,4 @@ targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag
 17:21:34 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
 17:21:34 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248722788" && level==0} -index 1' command is executed.
 17:21:36 INFO  : FPGA configured successfully with bitstream "C:/Project/GameOfLife/sdk/design_1_wrapper_hw_platform_0/download.bit"
+18:29:51 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 

@@ -1,11 +1,11 @@
 -- Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
--- Date        : Mon May 17 13:10:17 2021
+-- Date        : Tue May 25 18:55:07 2021
 -- Host        : DEVPC running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode synth_stub -rename_top design_1_proc_sys_reset_0_0 -prefix
---               design_1_proc_sys_reset_0_0_ design_1_rst_clk_wiz_1_100M_0_stub.vhdl
--- Design      : design_1_rst_clk_wiz_1_100M_0
+-- Command     : write_vhdl -force -mode synth_stub
+--               C:/Project/GameOfLife/bd/design_1/ip/design_1_proc_sys_reset_0_0/design_1_proc_sys_reset_0_0_stub.vhdl
+-- Design      : design_1_proc_sys_reset_0_0
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xc7z020clg484-1
 -- --------------------------------------------------------------------------------

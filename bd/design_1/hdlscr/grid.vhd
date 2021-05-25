@@ -32,8 +32,8 @@ use IEEE.NUMERIC_STD.ALL;
 --use UNISIM.VComponents.all;
 
 entity grid is
-    Generic ( WIDTH: integer := 18; --max 93
-              HEIGHT: integer := 12); --max 93
+    Generic ( WIDTH: integer := 20; --max 93
+              HEIGHT: integer := 20); --max 93
     Port ( d_in:    in std_logic;
            clk:     in std_logic;
            ce:      in std_logic;

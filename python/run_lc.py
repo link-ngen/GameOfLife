@@ -8,8 +8,8 @@ LUT6_LAST_BIT1 = 'LUT6_LAST_BIT1'
 LUT6_BIT2 = 'LUT6_BIT2'
 LUT6_BIT0 = 'LUT6_BIT0'
 
-COLUMN = 57 #int(args['column'])
-ROWS = 47   #int(args['rows'])
+COLUMN = 63 #int(args['column'])
+ROWS = 49   #int(args['rows'])
 
 def is_empty_area(x: int, y: int) -> bool:
     empty_condition = (x >= 68) and (x <= 79) and (y <= 149) and (y >= 50)
@@ -17,14 +17,14 @@ def is_empty_area(x: int, y: int) -> bool:
 
 def main():
 
-    slice_Xstart = 54     #int(args['xpos'])
+    slice_Xstart = 50     #int(args['xpos'])
     slice_Ystart = 49     #int(args['ypos'])
     fyy = slice_Ystart - 100
 
     print("width:", COLUMN, "height:", ROWS)
 
     os.chdir('../tcl/')
-    with open('local_const_cacore_w57h47.tcl', 'w') as tcl_fp:
+    with open('local_const_cacore_w63h49.tcl', 'w') as tcl_fp:
         crrnt_sliceY = slice_Ystart
         for y in range(ROWS):
             crrnt_sliceX = slice_Xstart
