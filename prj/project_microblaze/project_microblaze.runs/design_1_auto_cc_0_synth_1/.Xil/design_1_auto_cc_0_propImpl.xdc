@@ -13,12 +13,12 @@ set_bus_skew -from [get_cells src_hsdata_ff_reg*] -to [get_cells dest_hsdata_ff_
 current_instance
 current_instance inst/gen_clock_conv.gen_async_lite_conv.w_handshake/handshake
 set_property src_info {type:SCOPED_XDC file:3 line:20 export:INPUT save:NONE read:READ} [current_design]
-set_bus_skew -from [get_cells src_hsdata_ff_reg*] -to [get_cells dest_hsdata_ff_reg*] 20.000
+set_bus_skew -from [get_cells src_hsdata_ff_reg*] -to [get_cells dest_hsdata_ff_reg*] 10.256
 current_instance
 current_instance inst/gen_clock_conv.gen_async_lite_conv.aw_handshake/handshake
 set_property src_info {type:SCOPED_XDC file:4 line:20 export:INPUT save:NONE read:READ} [current_design]
-set_bus_skew -from [get_cells src_hsdata_ff_reg*] -to [get_cells dest_hsdata_ff_reg*] 20.000
+set_bus_skew -from [get_cells src_hsdata_ff_reg*] -to [get_cells dest_hsdata_ff_reg*] 10.256
 current_instance
 current_instance inst/gen_clock_conv.gen_async_lite_conv.ar_handshake/handshake
 set_property src_info {type:SCOPED_XDC file:5 line:20 export:INPUT save:NONE read:READ} [current_design]
-set_bus_skew -from [get_cells src_hsdata_ff_reg*] -to [get_cells dest_hsdata_ff_reg*] 20.000
+set_bus_skew -from [get_cells src_hsdata_ff_reg*] -to [get_cells dest_hsdata_ff_reg*] 10.256

@@ -1,7 +1,7 @@
 -- Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
--- Date        : Tue May 25 18:55:26 2021
+-- Date        : Thu May 27 14:48:13 2021
 -- Host        : DEVPC running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode funcsim
 --               c:/Project/GameOfLife/bd/design_1/ip/design_1_auto_cc_0/design_1_auto_cc_0_sim_netlist.vhdl
@@ -1644,9 +1644,6 @@ architecture STRUCTURE of \design_1_auto_cc_0_xpm_cdc_handshake__parameterized1\
   attribute XPM_CDC of \dest_hsdata_ff_reg[0]\ : label is "HANDSHAKE";
   attribute KEEP of \dest_hsdata_ff_reg[1]\ : label is "yes";
   attribute XPM_CDC of \dest_hsdata_ff_reg[1]\ : label is "HANDSHAKE";
-  attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of \src_hsdata_ff[0]_i_1\ : label is "soft_lutpair0";
-  attribute SOFT_HLUTNM of \src_hsdata_ff[1]_i_1\ : label is "soft_lutpair0";
   attribute DEST_SYNC_FF of xpm_cdc_single_dest2src_inst : label is 2;
   attribute SIM_ASSERT_CHK of xpm_cdc_single_dest2src_inst : label is 0;
   attribute SRC_INPUT_REG : integer;
