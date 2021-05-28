@@ -1,7 +1,7 @@
 // Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
-// Date        : Wed May 26 15:18:14 2021
+// Date        : Fri May 28 12:47:37 2021
 // Host        : DEVPC running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode synth_stub
 //               C:/Project/GameOfLife/bd/design_1/ip/design_1_xbar_0/design_1_xbar_0_stub.v

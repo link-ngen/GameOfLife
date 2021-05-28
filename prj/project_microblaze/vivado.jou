@@ -1,0 +1,17 @@
+#-----------------------------------------------------------
+# Vivado v2017.2 (64-bit)
+# SW Build 1909853 on Thu Jun 15 18:39:09 MDT 2017
+# IP Build 1909766 on Thu Jun 15 19:58:00 MDT 2017
+# Start of session at: Thu May 27 16:40:13 2021
+# Process ID: 15488
+# Current directory: C:/Project/GameOfLife/prj/project_microblaze
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent3680 C:\Project\GameOfLife\prj\project_microblaze\project_microblaze.xpr
+# Log file: C:/Project/GameOfLife/prj/project_microblaze/vivado.log
+# Journal file: C:/Project/GameOfLife/prj/project_microblaze\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Project/GameOfLife/prj/project_microblaze/project_microblaze.xpr
+update_compile_order -fileset sources_1
+open_bd_design {C:/Project/GameOfLife/bd/design_1/design_1.bd}
+delete_bd_objs [get_bd_intf_nets axi_interconnect_0_M01_AXI] [get_bd_cells game_of_life_0]
+save_bd_design

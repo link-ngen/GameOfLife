@@ -112,7 +112,7 @@ begin
                             internal_ce <= '0';
                             internal_shift <= '1';
                             state <= IDLE;
-                        elsif cnt_iter = (n_iter-1) then
+                        elsif cnt_iter = n_iter then
                             internal_ce <= '0';
                             internal_shift <= '1';
                             internal_max_iter <= '1';

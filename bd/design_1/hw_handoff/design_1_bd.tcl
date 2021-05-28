@@ -261,16 +261,16 @@ CONFIG.C_BAUDRATE {115200} \
   # Create instance: clk_wiz_1, and set properties
   set clk_wiz_1 [ create_bd_cell -type ip -vlnv xilinx.com:ip:clk_wiz:5.4 clk_wiz_1 ]
   set_property -dict [ list \
-CONFIG.CLKOUT1_JITTER {130.067} \
-CONFIG.CLKOUT1_PHASE_ERROR {99.281} \
-CONFIG.CLKOUT2_JITTER {114.676} \
-CONFIG.CLKOUT2_PHASE_ERROR {99.281} \
-CONFIG.CLKOUT2_REQUESTED_OUT_FREQ {195.000} \
+CONFIG.CLKOUT1_JITTER {123.670} \
+CONFIG.CLKOUT1_PHASE_ERROR {92.672} \
+CONFIG.CLKOUT2_JITTER {102.698} \
+CONFIG.CLKOUT2_PHASE_ERROR {92.672} \
+CONFIG.CLKOUT2_REQUESTED_OUT_FREQ {275.000} \
 CONFIG.CLKOUT2_USED {true} \
 CONFIG.CLK_IN1_BOARD_INTERFACE {sys_clock} \
-CONFIG.MMCM_CLKFBOUT_MULT_F {9.750} \
-CONFIG.MMCM_CLKOUT0_DIVIDE_F {9.750} \
-CONFIG.MMCM_CLKOUT1_DIVIDE {5} \
+CONFIG.MMCM_CLKFBOUT_MULT_F {11.000} \
+CONFIG.MMCM_CLKOUT0_DIVIDE_F {11.000} \
+CONFIG.MMCM_CLKOUT1_DIVIDE {4} \
 CONFIG.MMCM_DIVCLK_DIVIDE {1} \
 CONFIG.NUM_OUT_CLKS {2} \
 CONFIG.PRIM_SOURCE {Single_ended_clock_capable_pin} \
@@ -280,8 +280,8 @@ CONFIG.USE_BOARD_FLOW {true} \
   # Create instance: game_of_life_0, and set properties
   set game_of_life_0 [ create_bd_cell -type ip -vlnv xilinx.com:user:game_of_life:1.0 game_of_life_0 ]
   set_property -dict [ list \
-CONFIG.C_GOL_HEIGHT {49} \
-CONFIG.C_GOL_WIDTH {63} \
+CONFIG.C_GOL_HEIGHT {30} \
+CONFIG.C_GOL_WIDTH {30} \
  ] $game_of_life_0
 
   # Create instance: mdm_1, and set properties
@@ -315,12 +315,12 @@ CONFIG.C_I_LMB {1} \
 
   # Create port connections
   connect_bd_net -net ARESETN_1 [get_bd_pins axi_interconnect_0/ARESETN] [get_bd_pins axi_interconnect_0/S00_ARESETN] [get_bd_pins rst_clk_wiz_1_100M/interconnect_aresetn]
-  connect_bd_net -net M01_ARESETN_1 [get_bd_pins axi_interconnect_0/M01_ARESETN] [get_bd_pins game_of_life_0/s00_axi_aresetn] [get_bd_pins proc_sys_reset_0/peripheral_aresetn]
   connect_bd_net -net axi_uartlite_0_tx [get_bd_ports tx] [get_bd_pins axi_uartlite_0/tx]
   connect_bd_net -net clk_wiz_1_clk_out2 [get_bd_pins axi_interconnect_0/M01_ACLK] [get_bd_pins clk_wiz_1/clk_out2] [get_bd_pins game_of_life_0/s00_axi_aclk] [get_bd_pins proc_sys_reset_0/slowest_sync_clk]
   connect_bd_net -net clk_wiz_1_locked [get_bd_pins clk_wiz_1/locked] [get_bd_pins proc_sys_reset_0/dcm_locked] [get_bd_pins rst_clk_wiz_1_100M/dcm_locked]
   connect_bd_net -net mdm_1_debug_sys_rst [get_bd_pins mdm_1/Debug_SYS_Rst] [get_bd_pins proc_sys_reset_0/mb_debug_sys_rst] [get_bd_pins rst_clk_wiz_1_100M/mb_debug_sys_rst]
   connect_bd_net -net microblaze_0_Clk [get_bd_pins axi_interconnect_0/ACLK] [get_bd_pins axi_interconnect_0/M00_ACLK] [get_bd_pins axi_interconnect_0/S00_ACLK] [get_bd_pins axi_uartlite_0/s_axi_aclk] [get_bd_pins clk_wiz_1/clk_out1] [get_bd_pins microblaze_0/Clk] [get_bd_pins microblaze_0_local_memory/LMB_Clk] [get_bd_pins rst_clk_wiz_1_100M/slowest_sync_clk]
+  connect_bd_net -net proc_sys_reset_0_peripheral_aresetn [get_bd_pins axi_interconnect_0/M01_ARESETN] [get_bd_pins game_of_life_0/s00_axi_aresetn] [get_bd_pins proc_sys_reset_0/peripheral_aresetn]
   connect_bd_net -net reset_rtl_1 [get_bd_ports reset_rtl] [get_bd_pins clk_wiz_1/reset] [get_bd_pins proc_sys_reset_0/ext_reset_in] [get_bd_pins rst_clk_wiz_1_100M/ext_reset_in]
   connect_bd_net -net rst_clk_wiz_1_100M_bus_struct_reset [get_bd_pins microblaze_0_local_memory/SYS_Rst] [get_bd_pins rst_clk_wiz_1_100M/bus_struct_reset]
   connect_bd_net -net rst_clk_wiz_1_100M_mb_reset [get_bd_pins microblaze_0/Reset] [get_bd_pins rst_clk_wiz_1_100M/mb_reset]

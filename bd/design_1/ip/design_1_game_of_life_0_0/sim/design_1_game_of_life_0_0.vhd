@@ -140,8 +140,8 @@ BEGIN
     GENERIC MAP (
       C_S00_AXI_DATA_WIDTH => 32,
       C_S00_AXI_ADDR_WIDTH => 4,
-      C_GOL_WIDTH => 63,
-      C_GOL_HEIGHT => 49
+      C_GOL_WIDTH => 30,
+      C_GOL_HEIGHT => 30
     )
     PORT MAP (
       s00_axi_awaddr => s00_axi_awaddr,

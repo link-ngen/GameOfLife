@@ -45,7 +45,7 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_lmb_br
 # IP: C:/Project/GameOfLife/bd/design_1/ip/design_1_proc_sys_reset_0_0/design_1_proc_sys_reset_0_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_proc_sys_reset_0_0 || ORIG_REF_NAME==design_1_proc_sys_reset_0_0}]
 
-# IP: C:/Project/GameOfLife/bd/design_1/ip/design_1_game_of_life_0_0/design_1_game_of_life_0_0.xci
+# IP: c:/Project/GameOfLife/bd/design_1/ip/design_1_game_of_life_0_0/design_1_game_of_life_0_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==design_1_game_of_life_0_0 || ORIG_REF_NAME==design_1_game_of_life_0_0}]
 
 # IP: c:/Project/GameOfLife/bd/design_1/ip/design_1_auto_cc_0/design_1_auto_cc_0.xci

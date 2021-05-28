@@ -1,7 +1,7 @@
 -- Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
--- Date        : Wed May 26 15:20:21 2021
+-- Date        : Fri May 28 20:17:07 2021
 -- Host        : DEVPC running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode synth_stub
 --               c:/Project/GameOfLife/bd/design_1/ip/design_1_game_of_life_0_0/design_1_game_of_life_0_0_stub.vhdl
