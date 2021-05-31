@@ -1,25 +1,78 @@
-12:37:40 **** Incremental Build of configuration Debug for project gol_app ****
+23:01:57 **** Incremental Build of configuration Debug for project gol_app ****
 make all 
 make: Für das Ziel »all« ist nichts zu tun.
-12:37:48 **** Incremental Build of configuration Debug for project gol_app ****
+23:02:35 **** Auto Build of configuration Debug for project gol_app ****
 make all 
-make: Für das Ziel »all« ist nichts zu tun.
-12:45:24 **** Clean-only build of project gol_app_bsp ****
+'Building file: ../src/gol_driver.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/gol_driver.o" -I../../gol_app_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/gol_driver.d" -MT"src/gol_driver.o" -o "src/gol_driver.o" "../src/gol_driver.c"
+In file included from ../src/gol_driver.h:11:0,
+                 from ../src/gol_driver.c:8:
+../../gol_app_bsp/microblaze_0/include/xbasic_types.h:115:2: warning: #warning The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert. [-Wcpp]
+ #warning  The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert.
+  ^~~~~~~
+../../gol_app_bsp/microblaze_0/include/xbasic_types.h:116:2: warning: #warning Please refer the Standalone BSP UG647 for further details [-Wcpp]
+ #warning  Please refer the Standalone BSP UG647 for further details
+  ^~~~~~~
+'Finished building: ../src/gol_driver.c'
+' '
+'Building file: ../src/gol_microblaze.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/gol_microblaze.o" -I../../gol_app_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/gol_microblaze.d" -MT"src/gol_microblaze.o" -o "src/gol_microblaze.o" "../src/gol_microblaze.c"
+In file included from ../src/gol_microblaze.h:11:0,
+                 from ../src/gol_microblaze.c:8:
+../../gol_app_bsp/microblaze_0/include/xbasic_types.h:115:2: warning: #warning The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert. [-Wcpp]
+ #warning  The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert.
+  ^~~~~~~
+../../gol_app_bsp/microblaze_0/include/xbasic_types.h:116:2: warning: #warning Please refer the Standalone BSP UG647 for further details [-Wcpp]
+ #warning  Please refer the Standalone BSP UG647 for further details
+  ^~~~~~~
+'Finished building: ../src/gol_microblaze.c'
+' '
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../gol_app_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/gol_microblaze.h:11:0,
+                 from ../src/main.c:52:
+../../gol_app_bsp/microblaze_0/include/xbasic_types.h:115:2: warning: #warning The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert. [-Wcpp]
+ #warning  The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert.
+  ^~~~~~~
+../../gol_app_bsp/microblaze_0/include/xbasic_types.h:116:2: warning: #warning Please refer the Standalone BSP UG647 for further details [-Wcpp]
+ #warning  Please refer the Standalone BSP UG647 for further details
+  ^~~~~~~
+In file included from ../src/main.c:53:0:
+../src/gol_driver.h:38:13: warning: 'write_bit_to_gol' declared 'static' but never defined [-Wunused-function]
+ static void write_bit_to_gol(Xuint8 data);
+             ^~~~~~~~~~~~~~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: gol_app.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../gol_app_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "gol_app.elf"  ./src/gol_driver.o ./src/gol_microblaze.o ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: gol_app.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size gol_app.elf  |tee "gol_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   7628	    284	   3128	  11040	   2b20	gol_app.elf
+'Finished building: gol_app.elf.size'
+' '
+14:15:04 **** Clean-only build of project gol_app_bsp ****
 make -k clean 
 make -C microblaze_0/libsrc/bram_v4_1/src -s clean 
 make -C microblaze_0/libsrc/cpu_v2_6/src -s clean 
 make -C microblaze_0/libsrc/game_of_life_v1_0/src -s clean 
 rm: Aufruf von lstat für „*.o“ nicht möglich: Invalid argument
 make[1]: *** [clean] Fehler 1
-make: *** [microblaze_0/libsrc/game_of_life_v1_0/src/make.clean] Fehler 2
 make -C microblaze_0/libsrc/standalone_v6_3/src -s clean 
+make: *** [microblaze_0/libsrc/game_of_life_v1_0/src/make.clean] Fehler 2
 make -C microblaze_0/libsrc/uartlite_v3_2/src -s clean 
 make: Das Target »clean« wurde wegen Fehlern nicht aktualisiert.
-12:45:25 **** Clean-only build of configuration Debug for project gol_app ****
+14:15:05 **** Clean-only build of configuration Debug for project gol_app ****
 make clean 
-rm -rf  ./src/helloworld.o ./src/platform.o  ./src/helloworld.d ./src/platform.d  gol_app.elf.size  gol_app.elf
+rm -rf  ./src/gol_driver.o ./src/gol_microblaze.o ./src/main.o ./src/platform.o  ./src/gol_driver.d ./src/gol_microblaze.d ./src/main.d ./src/platform.d  gol_app.elf.size  gol_app.elf
 ' '
-12:45:25 **** Build of project gol_app_bsp ****
+14:15:05 **** Build of project gol_app_bsp ****
 make -k all 
 "Running Make include in microblaze_0/libsrc/bram_v4_1/src"
 make -C microblaze_0/libsrc/bram_v4_1/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
@@ -55,78 +108,8 @@ make -C microblaze_0/libsrc/standalone_v6_3/src -s libs  "SHELL=CMD" "COMPILER=m
 make -C microblaze_0/libsrc/uartlite_v3_2/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
 "Compiling uartlite"
 'Finished building libraries'
-12:45:32 **** Build of configuration Debug for project gol_app ****
+14:15:13 **** Build of configuration Debug for project gol_app ****
 make all 
-'Building file: ../src/helloworld.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../gol_app_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
-'Finished building: ../src/helloworld.c'
-' '
-'Building file: ../src/platform.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -I../../gol_app_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
-'Finished building: ../src/platform.c'
-' '
-'Building target: gol_app.elf'
-'Invoking: MicroBlaze gcc linker'
-mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../gol_app_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "gol_app.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: gol_app.elf'
-' '
-'Invoking: MicroBlaze Print Size'
-mb-size gol_app.elf  |tee "gol_app.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-   2748	    268	   3112	   6128	   17f0	gol_app.elf
-'Finished building: gol_app.elf.size'
-' '
-12:46:29 **** Clean-only build of configuration Debug for project gol_app ****
-make clean 
-rm -rf  ./src/helloworld.o ./src/platform.o  ./src/helloworld.d ./src/platform.d  gol_app.elf.size  gol_app.elf
-' '
-12:46:30 **** Auto Build of configuration Debug for project gol_app ****
-make all 
-'Building file: ../src/main.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../gol_app_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
-'Finished building: ../src/main.c'
-' '
-'Building file: ../src/platform.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -I../../gol_app_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
-'Finished building: ../src/platform.c'
-' '
-'Building target: gol_app.elf'
-'Invoking: MicroBlaze gcc linker'
-mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../gol_app_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "gol_app.elf"  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: gol_app.elf'
-' '
-'Invoking: MicroBlaze Print Size'
-mb-size gol_app.elf  |tee "gol_app.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-   2748	    268	   3112	   6128	   17f0	gol_app.elf
-'Finished building: gol_app.elf.size'
-' '
-12:47:41 **** Auto Build of configuration Debug for project gol_app ****
-make all 
-make: Für das Ziel »all« ist nichts zu tun.
-12:48:08 **** Auto Build of configuration Debug for project gol_app ****
-make all 
-'Building file: ../src/main.c'
-'Invoking: MicroBlaze gcc compiler'
-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../gol_app_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
-In file included from ../src/gol_microblaze.h:11:0,
-                 from ../src/main.c:52:
-../../gol_app_bsp/microblaze_0/include/xbasic_types.h:115:2: warning: #warning The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert. [-Wcpp]
- #warning  The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert.
-  ^~~~~~~
-../../gol_app_bsp/microblaze_0/include/xbasic_types.h:116:2: warning: #warning Please refer the Standalone BSP UG647 for further details [-Wcpp]
- #warning  Please refer the Standalone BSP UG647 for further details
-  ^~~~~~~
-In file included from ../src/main.c:53:0:
-../src/gol_driver.h:38:13: warning: 'write_bit_to_gol' declared 'static' but never defined [-Wunused-function]
- static void write_bit_to_gol(Xuint8 data);
-             ^~~~~~~~~~~~~~~~
-'Finished building: ../src/main.c'
-' '
 'Building file: ../src/gol_driver.c'
 'Invoking: MicroBlaze gcc compiler'
 mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/gol_driver.o" -I../../gol_app_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/gol_driver.d" -MT"src/gol_driver.o" -o "src/gol_driver.o" "../src/gol_driver.c"
@@ -153,6 +136,28 @@ In file included from ../src/gol_microblaze.h:11:0,
   ^~~~~~~
 'Finished building: ../src/gol_microblaze.c'
 ' '
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../gol_app_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/gol_microblaze.h:11:0,
+                 from ../src/main.c:52:
+../../gol_app_bsp/microblaze_0/include/xbasic_types.h:115:2: warning: #warning The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert. [-Wcpp]
+ #warning  The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert.
+  ^~~~~~~
+../../gol_app_bsp/microblaze_0/include/xbasic_types.h:116:2: warning: #warning Please refer the Standalone BSP UG647 for further details [-Wcpp]
+ #warning  Please refer the Standalone BSP UG647 for further details
+  ^~~~~~~
+In file included from ../src/main.c:53:0:
+../src/gol_driver.h:38:13: warning: 'write_bit_to_gol' declared 'static' but never defined [-Wunused-function]
+ static void write_bit_to_gol(Xuint8 data);
+             ^~~~~~~~~~~~~~~~
+'Finished building: ../src/main.c'
+' '
+'Building file: ../src/platform.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -I../../gol_app_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
 'Building target: gol_app.elf'
 'Invoking: MicroBlaze gcc linker'
 mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../gol_app_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "gol_app.elf"  ./src/gol_driver.o ./src/gol_microblaze.o ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
@@ -161,10 +166,308 @@ mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../gol_app_bsp/microblaze_0/lib -mlittl
 'Invoking: MicroBlaze Print Size'
 mb-size gol_app.elf  |tee "gol_app.elf.size"
    text	   data	    bss	    dec	    hex	filename
-   7608	    488	   3328	  11424	   2ca0	gol_app.elf
+   7628	    284	   3128	  11040	   2b20	gol_app.elf
 'Finished building: gol_app.elf.size'
 ' '
-12:50:22 **** Auto Build of configuration Debug for project gol_app ****
+14:15:39 **** Auto Build of configuration Debug for project gol_app ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../gol_app_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/gol_microblaze.h:11:0,
+                 from ../src/main.c:52:
+../../gol_app_bsp/microblaze_0/include/xbasic_types.h:115:2: warning: #warning The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert. [-Wcpp]
+ #warning  The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert.
+  ^~~~~~~
+../../gol_app_bsp/microblaze_0/include/xbasic_types.h:116:2: warning: #warning Please refer the Standalone BSP UG647 for further details [-Wcpp]
+ #warning  Please refer the Standalone BSP UG647 for further details
+  ^~~~~~~
+../src/main.c:88:11: warning: excess elements in array initializer
+   0,1,0,0,1,
+           ^
+../src/main.c:88:11: note: (near initialization for 'pattern')
+../src/main.c:89:3: warning: excess elements in array initializer
+   0,0,1,0,0,
+   ^
+../src/main.c:89:3: note: (near initialization for 'pattern')
+../src/main.c:89:5: warning: excess elements in array initializer
+   0,0,1,0,0,
+     ^
+../src/main.c:89:5: note: (near initialization for 'pattern')
+../src/main.c:89:7: warning: excess elements in array initializer
+   0,0,1,0,0,
+       ^
+../src/main.c:89:7: note: (near initialization for 'pattern')
+../src/main.c:89:9: warning: excess elements in array initializer
+   0,0,1,0,0,
+         ^
+../src/main.c:89:9: note: (near initialization for 'pattern')
+../src/main.c:89:11: warning: excess elements in array initializer
+   0,0,1,0,0,
+           ^
+../src/main.c:89:11: note: (near initialization for 'pattern')
+../src/main.c:90:3: warning: excess elements in array initializer
+   1,1,0,0,0
+   ^
+../src/main.c:90:3: note: (near initialization for 'pattern')
+../src/main.c:90:5: warning: excess elements in array initializer
+   1,1,0,0,0
+     ^
+../src/main.c:90:5: note: (near initialization for 'pattern')
+../src/main.c:90:7: warning: excess elements in array initializer
+   1,1,0,0,0
+       ^
+../src/main.c:90:7: note: (near initialization for 'pattern')
+../src/main.c:90:9: warning: excess elements in array initializer
+   1,1,0,0,0
+         ^
+../src/main.c:90:9: note: (near initialization for 'pattern')
+../src/main.c:90:11: warning: excess elements in array initializer
+   1,1,0,0,0
+           ^
+../src/main.c:90:11: note: (near initialization for 'pattern')
+In file included from ../src/main.c:53:0:
+../src/gol_driver.h:38:13: warning: 'write_bit_to_gol' declared 'static' but never defined [-Wunused-function]
+ static void write_bit_to_gol(Xuint8 data);
+             ^~~~~~~~~~~~~~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: gol_app.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../gol_app_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "gol_app.elf"  ./src/gol_driver.o ./src/gol_microblaze.o ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: gol_app.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size gol_app.elf  |tee "gol_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   7628	    284	   3128	  11040	   2b20	gol_app.elf
+'Finished building: gol_app.elf.size'
+' '
+14:16:22 **** Auto Build of configuration Debug for project gol_app ****
+make all 
+'Building file: ../src/gol_driver.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/gol_driver.o" -I../../gol_app_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/gol_driver.d" -MT"src/gol_driver.o" -o "src/gol_driver.o" "../src/gol_driver.c"
+In file included from ../src/gol_driver.h:11:0,
+                 from ../src/gol_driver.c:8:
+../../gol_app_bsp/microblaze_0/include/xbasic_types.h:115:2: warning: #warning The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert. [-Wcpp]
+ #warning  The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert.
+  ^~~~~~~
+../../gol_app_bsp/microblaze_0/include/xbasic_types.h:116:2: warning: #warning Please refer the Standalone BSP UG647 for further details [-Wcpp]
+ #warning  Please refer the Standalone BSP UG647 for further details
+  ^~~~~~~
+'Finished building: ../src/gol_driver.c'
+' '
+'Building file: ../src/gol_microblaze.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/gol_microblaze.o" -I../../gol_app_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/gol_microblaze.d" -MT"src/gol_microblaze.o" -o "src/gol_microblaze.o" "../src/gol_microblaze.c"
+In file included from ../src/gol_microblaze.h:11:0,
+                 from ../src/gol_microblaze.c:8:
+../../gol_app_bsp/microblaze_0/include/xbasic_types.h:115:2: warning: #warning The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert. [-Wcpp]
+ #warning  The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert.
+  ^~~~~~~
+../../gol_app_bsp/microblaze_0/include/xbasic_types.h:116:2: warning: #warning Please refer the Standalone BSP UG647 for further details [-Wcpp]
+ #warning  Please refer the Standalone BSP UG647 for further details
+  ^~~~~~~
+'Finished building: ../src/gol_microblaze.c'
+' '
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../gol_app_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/gol_microblaze.h:11:0,
+                 from ../src/main.c:52:
+../../gol_app_bsp/microblaze_0/include/xbasic_types.h:115:2: warning: #warning The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert. [-Wcpp]
+ #warning  The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert.
+  ^~~~~~~
+../../gol_app_bsp/microblaze_0/include/xbasic_types.h:116:2: warning: #warning Please refer the Standalone BSP UG647 for further details [-Wcpp]
+ #warning  Please refer the Standalone BSP UG647 for further details
+  ^~~~~~~
+In file included from ../src/main.c:53:0:
+../src/gol_driver.h:38:13: warning: 'write_bit_to_gol' declared 'static' but never defined [-Wunused-function]
+ static void write_bit_to_gol(Xuint8 data);
+             ^~~~~~~~~~~~~~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: gol_app.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../gol_app_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "gol_app.elf"  ./src/gol_driver.o ./src/gol_microblaze.o ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: gol_app.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size gol_app.elf  |tee "gol_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   7628	    292	   3136	  11056	   2b30	gol_app.elf
+'Finished building: gol_app.elf.size'
+' '
+14:18:46 **** Auto Build of configuration Debug for project gol_app ****
+make all 
+'Building file: ../src/gol_driver.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/gol_driver.o" -I../../gol_app_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/gol_driver.d" -MT"src/gol_driver.o" -o "src/gol_driver.o" "../src/gol_driver.c"
+In file included from ../src/gol_driver.h:11:0,
+                 from ../src/gol_driver.c:8:
+../../gol_app_bsp/microblaze_0/include/xbasic_types.h:115:2: warning: #warning The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert. [-Wcpp]
+ #warning  The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert.
+  ^~~~~~~
+../../gol_app_bsp/microblaze_0/include/xbasic_types.h:116:2: warning: #warning Please refer the Standalone BSP UG647 for further details [-Wcpp]
+ #warning  Please refer the Standalone BSP UG647 for further details
+  ^~~~~~~
+'Finished building: ../src/gol_driver.c'
+' '
+'Building file: ../src/gol_microblaze.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/gol_microblaze.o" -I../../gol_app_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/gol_microblaze.d" -MT"src/gol_microblaze.o" -o "src/gol_microblaze.o" "../src/gol_microblaze.c"
+In file included from ../src/gol_microblaze.h:11:0,
+                 from ../src/gol_microblaze.c:8:
+../../gol_app_bsp/microblaze_0/include/xbasic_types.h:115:2: warning: #warning The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert. [-Wcpp]
+ #warning  The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert.
+  ^~~~~~~
+../../gol_app_bsp/microblaze_0/include/xbasic_types.h:116:2: warning: #warning Please refer the Standalone BSP UG647 for further details [-Wcpp]
+ #warning  Please refer the Standalone BSP UG647 for further details
+  ^~~~~~~
+'Finished building: ../src/gol_microblaze.c'
+' '
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../gol_app_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/gol_microblaze.h:11:0,
+                 from ../src/main.c:52:
+../../gol_app_bsp/microblaze_0/include/xbasic_types.h:115:2: warning: #warning The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert. [-Wcpp]
+ #warning  The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert.
+  ^~~~~~~
+../../gol_app_bsp/microblaze_0/include/xbasic_types.h:116:2: warning: #warning Please refer the Standalone BSP UG647 for further details [-Wcpp]
+ #warning  Please refer the Standalone BSP UG647 for further details
+  ^~~~~~~
+In file included from ../src/main.c:53:0:
+../src/gol_driver.h:38:13: warning: 'write_bit_to_gol' declared 'static' but never defined [-Wunused-function]
+ static void write_bit_to_gol(Xuint8 data);
+             ^~~~~~~~~~~~~~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: gol_app.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../gol_app_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "gol_app.elf"  ./src/gol_driver.o ./src/gol_microblaze.o ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: gol_app.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size gol_app.elf  |tee "gol_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   7628	    488	   3332	  11448	   2cb8	gol_app.elf
+'Finished building: gol_app.elf.size'
+' '
+14:23:02 **** Clean-only build of project gol_app_bsp ****
+make -k clean 
+make -C microblaze_0/libsrc/bram_v4_1/src -s clean 
+make -C microblaze_0/libsrc/cpu_v2_6/src -s clean 
+make -C microblaze_0/libsrc/game_of_life_v1_0/src -s clean 
+rm: Aufruf von lstat für „*.o“ nicht möglich: Invalid argument
+make[1]: *** [clean] Fehler 1
+make: *** [microblaze_0/libsrc/game_of_life_v1_0/src/make.clean] Fehler 2
+make -C microblaze_0/libsrc/standalone_v6_3/src -s clean 
+make -C microblaze_0/libsrc/uartlite_v3_2/src -s clean 
+make: Das Target »clean« wurde wegen Fehlern nicht aktualisiert.
+14:23:03 **** Clean-only build of configuration Debug for project gol_app ****
+make clean 
+rm -rf  ./src/gol_driver.o ./src/gol_microblaze.o ./src/main.o ./src/platform.o  ./src/gol_driver.d ./src/gol_microblaze.d ./src/main.d ./src/platform.d  gol_app.elf.size  gol_app.elf
+' '
+14:23:03 **** Build of project gol_app_bsp ****
+make -k all 
+"Running Make include in microblaze_0/libsrc/bram_v4_1/src"
+make -C microblaze_0/libsrc/bram_v4_1/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/cpu_v2_6/src"
+make -C microblaze_0/libsrc/cpu_v2_6/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/game_of_life_v1_0/src"
+make -C microblaze_0/libsrc/game_of_life_v1_0/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/standalone_v6_3/src"
+make -C microblaze_0/libsrc/standalone_v6_3/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/uartlite_v3_2/src"
+make -C microblaze_0/libsrc/uartlite_v3_2/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make libs in microblaze_0/libsrc/bram_v4_1/src"
+make -C microblaze_0/libsrc/bram_v4_1/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling bram"
+mb-ar: creating ../../../lib/libxil.a
+"Running Make libs in microblaze_0/libsrc/cpu_v2_6/src"
+make -C microblaze_0/libsrc/cpu_v2_6/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling cpu"
+"Running Make libs in microblaze_0/libsrc/game_of_life_v1_0/src"
+make -C microblaze_0/libsrc/game_of_life_v1_0/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling game_of_life..."
+game_of_life_selftest.c: In function 'GAME_OF_LIFE_Reg_SelfTest':
+game_of_life_selftest.c:52:61: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+    if ( GAME_OF_LIFE_mReadReg (baseaddr, read_loop_index*4) != (read_loop_index+1)*READ_WRITE_MUL_FACTOR){
+                                                             ^~
+game_of_life_selftest.c:36:6: warning: unused variable 'Index' [-Wunused-variable]
+  int Index;
+      ^~~~~
+"Running Make libs in microblaze_0/libsrc/standalone_v6_3/src"
+make -C microblaze_0/libsrc/standalone_v6_3/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling standalone";
+"Running Make libs in microblaze_0/libsrc/uartlite_v3_2/src"
+make -C microblaze_0/libsrc/uartlite_v3_2/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling uartlite"
+'Finished building libraries'
+14:23:10 **** Build of configuration Debug for project gol_app ****
+make all 
+'Building file: ../src/gol_driver.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/gol_driver.o" -I../../gol_app_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/gol_driver.d" -MT"src/gol_driver.o" -o "src/gol_driver.o" "../src/gol_driver.c"
+In file included from ../src/gol_driver.h:11:0,
+                 from ../src/gol_driver.c:8:
+../../gol_app_bsp/microblaze_0/include/xbasic_types.h:115:2: warning: #warning The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert. [-Wcpp]
+ #warning  The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert.
+  ^~~~~~~
+../../gol_app_bsp/microblaze_0/include/xbasic_types.h:116:2: warning: #warning Please refer the Standalone BSP UG647 for further details [-Wcpp]
+ #warning  Please refer the Standalone BSP UG647 for further details
+  ^~~~~~~
+'Finished building: ../src/gol_driver.c'
+' '
+'Building file: ../src/gol_microblaze.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/gol_microblaze.o" -I../../gol_app_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/gol_microblaze.d" -MT"src/gol_microblaze.o" -o "src/gol_microblaze.o" "../src/gol_microblaze.c"
+In file included from ../src/gol_microblaze.h:11:0,
+                 from ../src/gol_microblaze.c:8:
+../../gol_app_bsp/microblaze_0/include/xbasic_types.h:115:2: warning: #warning The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert. [-Wcpp]
+ #warning  The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert.
+  ^~~~~~~
+../../gol_app_bsp/microblaze_0/include/xbasic_types.h:116:2: warning: #warning Please refer the Standalone BSP UG647 for further details [-Wcpp]
+ #warning  Please refer the Standalone BSP UG647 for further details
+  ^~~~~~~
+'Finished building: ../src/gol_microblaze.c'
+' '
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../gol_app_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/gol_microblaze.h:11:0,
+                 from ../src/main.c:52:
+../../gol_app_bsp/microblaze_0/include/xbasic_types.h:115:2: warning: #warning The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert. [-Wcpp]
+ #warning  The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert.
+  ^~~~~~~
+../../gol_app_bsp/microblaze_0/include/xbasic_types.h:116:2: warning: #warning Please refer the Standalone BSP UG647 for further details [-Wcpp]
+ #warning  Please refer the Standalone BSP UG647 for further details
+  ^~~~~~~
+In file included from ../src/main.c:53:0:
+../src/gol_driver.h:38:13: warning: 'write_bit_to_gol' declared 'static' but never defined [-Wunused-function]
+ static void write_bit_to_gol(Xuint8 data);
+             ^~~~~~~~~~~~~~~~
+'Finished building: ../src/main.c'
+' '
+'Building file: ../src/platform.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -I../../gol_app_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building target: gol_app.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../gol_app_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "gol_app.elf"  ./src/gol_driver.o ./src/gol_microblaze.o ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: gol_app.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size gol_app.elf  |tee "gol_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   7628	    488	   3332	  11448	   2cb8	gol_app.elf
+'Finished building: gol_app.elf.size'
+' '
+14:25:24 **** Auto Build of configuration Debug for project gol_app ****
 make all 
 'Building file: ../src/main.c'
 'Invoking: MicroBlaze gcc compiler'
@@ -194,7 +497,7 @@ mb-size gol_app.elf  |tee "gol_app.elf.size"
    7628	    488	   3332	  11448	   2cb8	gol_app.elf
 'Finished building: gol_app.elf.size'
 ' '
-12:50:26 **** Auto Build of configuration Debug for project gol_app ****
+14:26:29 **** Auto Build of configuration Debug for project gol_app ****
 make all 
 'Building file: ../src/main.c'
 'Invoking: MicroBlaze gcc compiler'
@@ -224,8 +527,34 @@ mb-size gol_app.elf  |tee "gol_app.elf.size"
    7628	    488	   3332	  11448	   2cb8	gol_app.elf
 'Finished building: gol_app.elf.size'
 ' '
-13:22:41 **** Auto Build of configuration Debug for project gol_app ****
+14:30:15 **** Auto Build of configuration Debug for project gol_app ****
 make all 
+'Building file: ../src/gol_driver.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/gol_driver.o" -I../../gol_app_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/gol_driver.d" -MT"src/gol_driver.o" -o "src/gol_driver.o" "../src/gol_driver.c"
+In file included from ../src/gol_driver.h:11:0,
+                 from ../src/gol_driver.c:8:
+../../gol_app_bsp/microblaze_0/include/xbasic_types.h:115:2: warning: #warning The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert. [-Wcpp]
+ #warning  The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert.
+  ^~~~~~~
+../../gol_app_bsp/microblaze_0/include/xbasic_types.h:116:2: warning: #warning Please refer the Standalone BSP UG647 for further details [-Wcpp]
+ #warning  Please refer the Standalone BSP UG647 for further details
+  ^~~~~~~
+'Finished building: ../src/gol_driver.c'
+' '
+'Building file: ../src/gol_microblaze.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/gol_microblaze.o" -I../../gol_app_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/gol_microblaze.d" -MT"src/gol_microblaze.o" -o "src/gol_microblaze.o" "../src/gol_microblaze.c"
+In file included from ../src/gol_microblaze.h:11:0,
+                 from ../src/gol_microblaze.c:8:
+../../gol_app_bsp/microblaze_0/include/xbasic_types.h:115:2: warning: #warning The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert. [-Wcpp]
+ #warning  The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert.
+  ^~~~~~~
+../../gol_app_bsp/microblaze_0/include/xbasic_types.h:116:2: warning: #warning Please refer the Standalone BSP UG647 for further details [-Wcpp]
+ #warning  Please refer the Standalone BSP UG647 for further details
+  ^~~~~~~
+'Finished building: ../src/gol_microblaze.c'
+' '
 'Building file: ../src/main.c'
 'Invoking: MicroBlaze gcc compiler'
 mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../gol_app_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
@@ -237,6 +566,674 @@ In file included from ../src/gol_microblaze.h:11:0,
 ../../gol_app_bsp/microblaze_0/include/xbasic_types.h:116:2: warning: #warning Please refer the Standalone BSP UG647 for further details [-Wcpp]
  #warning  Please refer the Standalone BSP UG647 for further details
   ^~~~~~~
+../src/main.c:59:29: warning: excess elements in array initializer
+   0,0,0,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0,
+                             ^
+../src/main.c:59:29: note: (near initialization for 'pattern')
+../src/main.c:59:31: warning: excess elements in array initializer
+   0,0,0,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0,
+                               ^
+../src/main.c:59:31: note: (near initialization for 'pattern')
+../src/main.c:59:33: warning: excess elements in array initializer
+   0,0,0,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0,
+                                 ^
+../src/main.c:59:33: note: (near initialization for 'pattern')
+../src/main.c:59:35: warning: excess elements in array initializer
+   0,0,0,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0,
+                                   ^
+../src/main.c:59:35: note: (near initialization for 'pattern')
+../src/main.c:59:37: warning: excess elements in array initializer
+   0,0,0,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0,
+                                     ^
+../src/main.c:59:37: note: (near initialization for 'pattern')
+../src/main.c:60:3: warning: excess elements in array initializer
+   1,1,0,1,0,0,0,0,0,0,0,0,0,0,1,0,1,1,
+   ^
+../src/main.c:60:3: note: (near initialization for 'pattern')
+../src/main.c:60:5: warning: excess elements in array initializer
+   1,1,0,1,0,0,0,0,0,0,0,0,0,0,1,0,1,1,
+     ^
+../src/main.c:60:5: note: (near initialization for 'pattern')
+../src/main.c:60:7: warning: excess elements in array initializer
+   1,1,0,1,0,0,0,0,0,0,0,0,0,0,1,0,1,1,
+       ^
+../src/main.c:60:7: note: (near initialization for 'pattern')
+../src/main.c:60:9: warning: excess elements in array initializer
+   1,1,0,1,0,0,0,0,0,0,0,0,0,0,1,0,1,1,
+         ^
+../src/main.c:60:9: note: (near initialization for 'pattern')
+../src/main.c:60:11: warning: excess elements in array initializer
+   1,1,0,1,0,0,0,0,0,0,0,0,0,0,1,0,1,1,
+           ^
+../src/main.c:60:11: note: (near initialization for 'pattern')
+../src/main.c:60:13: warning: excess elements in array initializer
+   1,1,0,1,0,0,0,0,0,0,0,0,0,0,1,0,1,1,
+             ^
+../src/main.c:60:13: note: (near initialization for 'pattern')
+../src/main.c:60:15: warning: excess elements in array initializer
+   1,1,0,1,0,0,0,0,0,0,0,0,0,0,1,0,1,1,
+               ^
+../src/main.c:60:15: note: (near initialization for 'pattern')
+../src/main.c:60:17: warning: excess elements in array initializer
+   1,1,0,1,0,0,0,0,0,0,0,0,0,0,1,0,1,1,
+                 ^
+../src/main.c:60:17: note: (near initialization for 'pattern')
+../src/main.c:60:19: warning: excess elements in array initializer
+   1,1,0,1,0,0,0,0,0,0,0,0,0,0,1,0,1,1,
+                   ^
+../src/main.c:60:19: note: (near initialization for 'pattern')
+../src/main.c:60:21: warning: excess elements in array initializer
+   1,1,0,1,0,0,0,0,0,0,0,0,0,0,1,0,1,1,
+                     ^
+../src/main.c:60:21: note: (near initialization for 'pattern')
+../src/main.c:60:23: warning: excess elements in array initializer
+   1,1,0,1,0,0,0,0,0,0,0,0,0,0,1,0,1,1,
+                       ^
+../src/main.c:60:23: note: (near initialization for 'pattern')
+../src/main.c:60:25: warning: excess elements in array initializer
+   1,1,0,1,0,0,0,0,0,0,0,0,0,0,1,0,1,1,
+                         ^
+../src/main.c:60:25: note: (near initialization for 'pattern')
+../src/main.c:60:27: warning: excess elements in array initializer
+   1,1,0,1,0,0,0,0,0,0,0,0,0,0,1,0,1,1,
+                           ^
+../src/main.c:60:27: note: (near initialization for 'pattern')
+../src/main.c:60:29: warning: excess elements in array initializer
+   1,1,0,1,0,0,0,0,0,0,0,0,0,0,1,0,1,1,
+                             ^
+../src/main.c:60:29: note: (near initialization for 'pattern')
+../src/main.c:60:31: warning: excess elements in array initializer
+   1,1,0,1,0,0,0,0,0,0,0,0,0,0,1,0,1,1,
+                               ^
+../src/main.c:60:31: note: (near initialization for 'pattern')
+../src/main.c:60:33: warning: excess elements in array initializer
+   1,1,0,1,0,0,0,0,0,0,0,0,0,0,1,0,1,1,
+                                 ^
+../src/main.c:60:33: note: (near initialization for 'pattern')
+../src/main.c:60:35: warning: excess elements in array initializer
+   1,1,0,1,0,0,0,0,0,0,0,0,0,0,1,0,1,1,
+                                   ^
+../src/main.c:60:35: note: (near initialization for 'pattern')
+../src/main.c:60:37: warning: excess elements in array initializer
+   1,1,0,1,0,0,0,0,0,0,0,0,0,0,1,0,1,1,
+                                     ^
+../src/main.c:60:37: note: (near initialization for 'pattern')
+../src/main.c:61:3: warning: excess elements in array initializer
+   1,1,0,1,0,1,0,0,1,1,0,0,1,0,1,0,1,1,
+   ^
+../src/main.c:61:3: note: (near initialization for 'pattern')
+../src/main.c:61:5: warning: excess elements in array initializer
+   1,1,0,1,0,1,0,0,1,1,0,0,1,0,1,0,1,1,
+     ^
+../src/main.c:61:5: note: (near initialization for 'pattern')
+../src/main.c:61:7: warning: excess elements in array initializer
+   1,1,0,1,0,1,0,0,1,1,0,0,1,0,1,0,1,1,
+       ^
+../src/main.c:61:7: note: (near initialization for 'pattern')
+../src/main.c:61:9: warning: excess elements in array initializer
+   1,1,0,1,0,1,0,0,1,1,0,0,1,0,1,0,1,1,
+         ^
+../src/main.c:61:9: note: (near initialization for 'pattern')
+../src/main.c:61:11: warning: excess elements in array initializer
+   1,1,0,1,0,1,0,0,1,1,0,0,1,0,1,0,1,1,
+           ^
+../src/main.c:61:11: note: (near initialization for 'pattern')
+../src/main.c:61:13: warning: excess elements in array initializer
+   1,1,0,1,0,1,0,0,1,1,0,0,1,0,1,0,1,1,
+             ^
+../src/main.c:61:13: note: (near initialization for 'pattern')
+../src/main.c:61:15: warning: excess elements in array initializer
+   1,1,0,1,0,1,0,0,1,1,0,0,1,0,1,0,1,1,
+               ^
+../src/main.c:61:15: note: (near initialization for 'pattern')
+../src/main.c:61:17: warning: excess elements in array initializer
+   1,1,0,1,0,1,0,0,1,1,0,0,1,0,1,0,1,1,
+                 ^
+../src/main.c:61:17: note: (near initialization for 'pattern')
+../src/main.c:61:19: warning: excess elements in array initializer
+   1,1,0,1,0,1,0,0,1,1,0,0,1,0,1,0,1,1,
+                   ^
+../src/main.c:61:19: note: (near initialization for 'pattern')
+../src/main.c:61:21: warning: excess elements in array initializer
+   1,1,0,1,0,1,0,0,1,1,0,0,1,0,1,0,1,1,
+                     ^
+../src/main.c:61:21: note: (near initialization for 'pattern')
+../src/main.c:61:23: warning: excess elements in array initializer
+   1,1,0,1,0,1,0,0,1,1,0,0,1,0,1,0,1,1,
+                       ^
+../src/main.c:61:23: note: (near initialization for 'pattern')
+../src/main.c:61:25: warning: excess elements in array initializer
+   1,1,0,1,0,1,0,0,1,1,0,0,1,0,1,0,1,1,
+                         ^
+../src/main.c:61:25: note: (near initialization for 'pattern')
+../src/main.c:61:27: warning: excess elements in array initializer
+   1,1,0,1,0,1,0,0,1,1,0,0,1,0,1,0,1,1,
+                           ^
+../src/main.c:61:27: note: (near initialization for 'pattern')
+../src/main.c:61:29: warning: excess elements in array initializer
+   1,1,0,1,0,1,0,0,1,1,0,0,1,0,1,0,1,1,
+                             ^
+../src/main.c:61:29: note: (near initialization for 'pattern')
+../src/main.c:61:31: warning: excess elements in array initializer
+   1,1,0,1,0,1,0,0,1,1,0,0,1,0,1,0,1,1,
+                               ^
+../src/main.c:61:31: note: (near initialization for 'pattern')
+../src/main.c:61:33: warning: excess elements in array initializer
+   1,1,0,1,0,1,0,0,1,1,0,0,1,0,1,0,1,1,
+                                 ^
+../src/main.c:61:33: note: (near initialization for 'pattern')
+../src/main.c:61:35: warning: excess elements in array initializer
+   1,1,0,1,0,1,0,0,1,1,0,0,1,0,1,0,1,1,
+                                   ^
+../src/main.c:61:35: note: (near initialization for 'pattern')
+../src/main.c:61:37: warning: excess elements in array initializer
+   1,1,0,1,0,1,0,0,1,1,0,0,1,0,1,0,1,1,
+                                     ^
+../src/main.c:61:37: note: (near initialization for 'pattern')
+../src/main.c:62:3: warning: excess elements in array initializer
+   0,0,0,1,0,1,0,1,0,0,1,0,1,0,1,0,0,0,
+   ^
+../src/main.c:62:3: note: (near initialization for 'pattern')
+../src/main.c:62:5: warning: excess elements in array initializer
+   0,0,0,1,0,1,0,1,0,0,1,0,1,0,1,0,0,0,
+     ^
+../src/main.c:62:5: note: (near initialization for 'pattern')
+../src/main.c:62:7: warning: excess elements in array initializer
+   0,0,0,1,0,1,0,1,0,0,1,0,1,0,1,0,0,0,
+       ^
+../src/main.c:62:7: note: (near initialization for 'pattern')
+../src/main.c:62:9: warning: excess elements in array initializer
+   0,0,0,1,0,1,0,1,0,0,1,0,1,0,1,0,0,0,
+         ^
+../src/main.c:62:9: note: (near initialization for 'pattern')
+../src/main.c:62:11: warning: excess elements in array initializer
+   0,0,0,1,0,1,0,1,0,0,1,0,1,0,1,0,0,0,
+           ^
+../src/main.c:62:11: note: (near initialization for 'pattern')
+../src/main.c:62:13: warning: excess elements in array initializer
+   0,0,0,1,0,1,0,1,0,0,1,0,1,0,1,0,0,0,
+             ^
+../src/main.c:62:13: note: (near initialization for 'pattern')
+../src/main.c:62:15: warning: excess elements in array initializer
+   0,0,0,1,0,1,0,1,0,0,1,0,1,0,1,0,0,0,
+               ^
+../src/main.c:62:15: note: (near initialization for 'pattern')
+../src/main.c:62:17: warning: excess elements in array initializer
+   0,0,0,1,0,1,0,1,0,0,1,0,1,0,1,0,0,0,
+                 ^
+../src/main.c:62:17: note: (near initialization for 'pattern')
+../src/main.c:62:19: warning: excess elements in array initializer
+   0,0,0,1,0,1,0,1,0,0,1,0,1,0,1,0,0,0,
+                   ^
+../src/main.c:62:19: note: (near initialization for 'pattern')
+../src/main.c:62:21: warning: excess elements in array initializer
+   0,0,0,1,0,1,0,1,0,0,1,0,1,0,1,0,0,0,
+                     ^
+../src/main.c:62:21: note: (near initialization for 'pattern')
+../src/main.c:62:23: warning: excess elements in array initializer
+   0,0,0,1,0,1,0,1,0,0,1,0,1,0,1,0,0,0,
+                       ^
+../src/main.c:62:23: note: (near initialization for 'pattern')
+../src/main.c:62:25: warning: excess elements in array initializer
+   0,0,0,1,0,1,0,1,0,0,1,0,1,0,1,0,0,0,
+                         ^
+../src/main.c:62:25: note: (near initialization for 'pattern')
+../src/main.c:62:27: warning: excess elements in array initializer
+   0,0,0,1,0,1,0,1,0,0,1,0,1,0,1,0,0,0,
+                           ^
+../src/main.c:62:27: note: (near initialization for 'pattern')
+../src/main.c:62:29: warning: excess elements in array initializer
+   0,0,0,1,0,1,0,1,0,0,1,0,1,0,1,0,0,0,
+                             ^
+../src/main.c:62:29: note: (near initialization for 'pattern')
+../src/main.c:62:31: warning: excess elements in array initializer
+   0,0,0,1,0,1,0,1,0,0,1,0,1,0,1,0,0,0,
+                               ^
+../src/main.c:62:31: note: (near initialization for 'pattern')
+../src/main.c:62:33: warning: excess elements in array initializer
+   0,0,0,1,0,1,0,1,0,0,1,0,1,0,1,0,0,0,
+                                 ^
+../src/main.c:62:33: note: (near initialization for 'pattern')
+../src/main.c:62:35: warning: excess elements in array initializer
+   0,0,0,1,0,1,0,1,0,0,1,0,1,0,1,0,0,0,
+                                   ^
+../src/main.c:62:35: note: (near initialization for 'pattern')
+../src/main.c:62:37: warning: excess elements in array initializer
+   0,0,0,1,0,1,0,1,0,0,1,0,1,0,1,0,0,0,
+                                     ^
+../src/main.c:62:37: note: (near initialization for 'pattern')
+../src/main.c:63:3: warning: excess elements in array initializer
+   0,0,0,1,0,1,0,1,0,0,1,0,1,0,1,0,0,0,
+   ^
+../src/main.c:63:3: note: (near initialization for 'pattern')
+../src/main.c:63:5: warning: excess elements in array initializer
+   0,0,0,1,0,1,0,1,0,0,1,0,1,0,1,0,0,0,
+     ^
+../src/main.c:63:5: note: (near initialization for 'pattern')
+../src/main.c:63:7: warning: excess elements in array initializer
+   0,0,0,1,0,1,0,1,0,0,1,0,1,0,1,0,0,0,
+       ^
+../src/main.c:63:7: note: (near initialization for 'pattern')
+../src/main.c:63:9: warning: excess elements in array initializer
+   0,0,0,1,0,1,0,1,0,0,1,0,1,0,1,0,0,0,
+         ^
+../src/main.c:63:9: note: (near initialization for 'pattern')
+../src/main.c:63:11: warning: excess elements in array initializer
+   0,0,0,1,0,1,0,1,0,0,1,0,1,0,1,0,0,0,
+           ^
+../src/main.c:63:11: note: (near initialization for 'pattern')
+../src/main.c:63:13: warning: excess elements in array initializer
+   0,0,0,1,0,1,0,1,0,0,1,0,1,0,1,0,0,0,
+             ^
+../src/main.c:63:13: note: (near initialization for 'pattern')
+../src/main.c:63:15: warning: excess elements in array initializer
+   0,0,0,1,0,1,0,1,0,0,1,0,1,0,1,0,0,0,
+               ^
+../src/main.c:63:15: note: (near initialization for 'pattern')
+../src/main.c:63:17: warning: excess elements in array initializer
+   0,0,0,1,0,1,0,1,0,0,1,0,1,0,1,0,0,0,
+                 ^
+../src/main.c:63:17: note: (near initialization for 'pattern')
+../src/main.c:63:19: warning: excess elements in array initializer
+   0,0,0,1,0,1,0,1,0,0,1,0,1,0,1,0,0,0,
+                   ^
+../src/main.c:63:19: note: (near initialization for 'pattern')
+../src/main.c:63:21: warning: excess elements in array initializer
+   0,0,0,1,0,1,0,1,0,0,1,0,1,0,1,0,0,0,
+                     ^
+../src/main.c:63:21: note: (near initialization for 'pattern')
+../src/main.c:63:23: warning: excess elements in array initializer
+   0,0,0,1,0,1,0,1,0,0,1,0,1,0,1,0,0,0,
+                       ^
+../src/main.c:63:23: note: (near initialization for 'pattern')
+../src/main.c:63:25: warning: excess elements in array initializer
+   0,0,0,1,0,1,0,1,0,0,1,0,1,0,1,0,0,0,
+                         ^
+../src/main.c:63:25: note: (near initialization for 'pattern')
+../src/main.c:63:27: warning: excess elements in array initializer
+   0,0,0,1,0,1,0,1,0,0,1,0,1,0,1,0,0,0,
+                           ^
+../src/main.c:63:27: note: (near initialization for 'pattern')
+../src/main.c:63:29: warning: excess elements in array initializer
+   0,0,0,1,0,1,0,1,0,0,1,0,1,0,1,0,0,0,
+                             ^
+../src/main.c:63:29: note: (near initialization for 'pattern')
+../src/main.c:63:31: warning: excess elements in array initializer
+   0,0,0,1,0,1,0,1,0,0,1,0,1,0,1,0,0,0,
+                               ^
+../src/main.c:63:31: note: (near initialization for 'pattern')
+../src/main.c:63:33: warning: excess elements in array initializer
+   0,0,0,1,0,1,0,1,0,0,1,0,1,0,1,0,0,0,
+                                 ^
+../src/main.c:63:33: note: (near initialization for 'pattern')
+../src/main.c:63:35: warning: excess elements in array initializer
+   0,0,0,1,0,1,0,1,0,0,1,0,1,0,1,0,0,0,
+                                   ^
+../src/main.c:63:35: note: (near initialization for 'pattern')
+../src/main.c:63:37: warning: excess elements in array initializer
+   0,0,0,1,0,1,0,1,0,0,1,0,1,0,1,0,0,0,
+                                     ^
+../src/main.c:63:37: note: (near initialization for 'pattern')
+../src/main.c:64:3: warning: excess elements in array initializer
+   1,1,0,1,0,1,0,0,1,1,0,0,1,0,1,0,1,1,
+   ^
+../src/main.c:64:3: note: (near initialization for 'pattern')
+../src/main.c:64:5: warning: excess elements in array initializer
+   1,1,0,1,0,1,0,0,1,1,0,0,1,0,1,0,1,1,
+     ^
+../src/main.c:64:5: note: (near initialization for 'pattern')
+../src/main.c:64:7: warning: excess elements in array initializer
+   1,1,0,1,0,1,0,0,1,1,0,0,1,0,1,0,1,1,
+       ^
+../src/main.c:64:7: note: (near initialization for 'pattern')
+../src/main.c:64:9: warning: excess elements in array initializer
+   1,1,0,1,0,1,0,0,1,1,0,0,1,0,1,0,1,1,
+         ^
+../src/main.c:64:9: note: (near initialization for 'pattern')
+../src/main.c:64:11: warning: excess elements in array initializer
+   1,1,0,1,0,1,0,0,1,1,0,0,1,0,1,0,1,1,
+           ^
+../src/main.c:64:11: note: (near initialization for 'pattern')
+../src/main.c:64:13: warning: excess elements in array initializer
+   1,1,0,1,0,1,0,0,1,1,0,0,1,0,1,0,1,1,
+             ^
+../src/main.c:64:13: note: (near initialization for 'pattern')
+../src/main.c:64:15: warning: excess elements in array initializer
+   1,1,0,1,0,1,0,0,1,1,0,0,1,0,1,0,1,1,
+               ^
+../src/main.c:64:15: note: (near initialization for 'pattern')
+../src/main.c:64:17: warning: excess elements in array initializer
+   1,1,0,1,0,1,0,0,1,1,0,0,1,0,1,0,1,1,
+                 ^
+../src/main.c:64:17: note: (near initialization for 'pattern')
+../src/main.c:64:19: warning: excess elements in array initializer
+   1,1,0,1,0,1,0,0,1,1,0,0,1,0,1,0,1,1,
+                   ^
+../src/main.c:64:19: note: (near initialization for 'pattern')
+../src/main.c:64:21: warning: excess elements in array initializer
+   1,1,0,1,0,1,0,0,1,1,0,0,1,0,1,0,1,1,
+                     ^
+../src/main.c:64:21: note: (near initialization for 'pattern')
+../src/main.c:64:23: warning: excess elements in array initializer
+   1,1,0,1,0,1,0,0,1,1,0,0,1,0,1,0,1,1,
+                       ^
+../src/main.c:64:23: note: (near initialization for 'pattern')
+../src/main.c:64:25: warning: excess elements in array initializer
+   1,1,0,1,0,1,0,0,1,1,0,0,1,0,1,0,1,1,
+                         ^
+../src/main.c:64:25: note: (near initialization for 'pattern')
+../src/main.c:64:27: warning: excess elements in array initializer
+   1,1,0,1,0,1,0,0,1,1,0,0,1,0,1,0,1,1,
+                           ^
+../src/main.c:64:27: note: (near initialization for 'pattern')
+../src/main.c:64:29: warning: excess elements in array initializer
+   1,1,0,1,0,1,0,0,1,1,0,0,1,0,1,0,1,1,
+                             ^
+../src/main.c:64:29: note: (near initialization for 'pattern')
+../src/main.c:64:31: warning: excess elements in array initializer
+   1,1,0,1,0,1,0,0,1,1,0,0,1,0,1,0,1,1,
+                               ^
+../src/main.c:64:31: note: (near initialization for 'pattern')
+../src/main.c:64:33: warning: excess elements in array initializer
+   1,1,0,1,0,1,0,0,1,1,0,0,1,0,1,0,1,1,
+                                 ^
+../src/main.c:64:33: note: (near initialization for 'pattern')
+../src/main.c:64:35: warning: excess elements in array initializer
+   1,1,0,1,0,1,0,0,1,1,0,0,1,0,1,0,1,1,
+                                   ^
+../src/main.c:64:35: note: (near initialization for 'pattern')
+../src/main.c:64:37: warning: excess elements in array initializer
+   1,1,0,1,0,1,0,0,1,1,0,0,1,0,1,0,1,1,
+                                     ^
+../src/main.c:64:37: note: (near initialization for 'pattern')
+../src/main.c:65:3: warning: excess elements in array initializer
+   1,1,0,1,0,0,0,0,0,0,0,0,0,0,1,0,1,1,
+   ^
+../src/main.c:65:3: note: (near initialization for 'pattern')
+../src/main.c:65:5: warning: excess elements in array initializer
+   1,1,0,1,0,0,0,0,0,0,0,0,0,0,1,0,1,1,
+     ^
+../src/main.c:65:5: note: (near initialization for 'pattern')
+../src/main.c:65:7: warning: excess elements in array initializer
+   1,1,0,1,0,0,0,0,0,0,0,0,0,0,1,0,1,1,
+       ^
+../src/main.c:65:7: note: (near initialization for 'pattern')
+../src/main.c:65:9: warning: excess elements in array initializer
+   1,1,0,1,0,0,0,0,0,0,0,0,0,0,1,0,1,1,
+         ^
+../src/main.c:65:9: note: (near initialization for 'pattern')
+../src/main.c:65:11: warning: excess elements in array initializer
+   1,1,0,1,0,0,0,0,0,0,0,0,0,0,1,0,1,1,
+           ^
+../src/main.c:65:11: note: (near initialization for 'pattern')
+../src/main.c:65:13: warning: excess elements in array initializer
+   1,1,0,1,0,0,0,0,0,0,0,0,0,0,1,0,1,1,
+             ^
+../src/main.c:65:13: note: (near initialization for 'pattern')
+../src/main.c:65:15: warning: excess elements in array initializer
+   1,1,0,1,0,0,0,0,0,0,0,0,0,0,1,0,1,1,
+               ^
+../src/main.c:65:15: note: (near initialization for 'pattern')
+../src/main.c:65:17: warning: excess elements in array initializer
+   1,1,0,1,0,0,0,0,0,0,0,0,0,0,1,0,1,1,
+                 ^
+../src/main.c:65:17: note: (near initialization for 'pattern')
+../src/main.c:65:19: warning: excess elements in array initializer
+   1,1,0,1,0,0,0,0,0,0,0,0,0,0,1,0,1,1,
+                   ^
+../src/main.c:65:19: note: (near initialization for 'pattern')
+../src/main.c:65:21: warning: excess elements in array initializer
+   1,1,0,1,0,0,0,0,0,0,0,0,0,0,1,0,1,1,
+                     ^
+../src/main.c:65:21: note: (near initialization for 'pattern')
+../src/main.c:65:23: warning: excess elements in array initializer
+   1,1,0,1,0,0,0,0,0,0,0,0,0,0,1,0,1,1,
+                       ^
+../src/main.c:65:23: note: (near initialization for 'pattern')
+../src/main.c:65:25: warning: excess elements in array initializer
+   1,1,0,1,0,0,0,0,0,0,0,0,0,0,1,0,1,1,
+                         ^
+../src/main.c:65:25: note: (near initialization for 'pattern')
+../src/main.c:65:27: warning: excess elements in array initializer
+   1,1,0,1,0,0,0,0,0,0,0,0,0,0,1,0,1,1,
+                           ^
+../src/main.c:65:27: note: (near initialization for 'pattern')
+../src/main.c:65:29: warning: excess elements in array initializer
+   1,1,0,1,0,0,0,0,0,0,0,0,0,0,1,0,1,1,
+                             ^
+../src/main.c:65:29: note: (near initialization for 'pattern')
+../src/main.c:65:31: warning: excess elements in array initializer
+   1,1,0,1,0,0,0,0,0,0,0,0,0,0,1,0,1,1,
+                               ^
+../src/main.c:65:31: note: (near initialization for 'pattern')
+../src/main.c:65:33: warning: excess elements in array initializer
+   1,1,0,1,0,0,0,0,0,0,0,0,0,0,1,0,1,1,
+                                 ^
+../src/main.c:65:33: note: (near initialization for 'pattern')
+../src/main.c:65:35: warning: excess elements in array initializer
+   1,1,0,1,0,0,0,0,0,0,0,0,0,0,1,0,1,1,
+                                   ^
+../src/main.c:65:35: note: (near initialization for 'pattern')
+../src/main.c:65:37: warning: excess elements in array initializer
+   1,1,0,1,0,0,0,0,0,0,0,0,0,0,1,0,1,1,
+                                     ^
+../src/main.c:65:37: note: (near initialization for 'pattern')
+../src/main.c:66:3: warning: excess elements in array initializer
+   0,0,0,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0,
+   ^
+../src/main.c:66:3: note: (near initialization for 'pattern')
+../src/main.c:66:5: warning: excess elements in array initializer
+   0,0,0,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0,
+     ^
+../src/main.c:66:5: note: (near initialization for 'pattern')
+../src/main.c:66:7: warning: excess elements in array initializer
+   0,0,0,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0,
+       ^
+../src/main.c:66:7: note: (near initialization for 'pattern')
+../src/main.c:66:9: warning: excess elements in array initializer
+   0,0,0,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0,
+         ^
+../src/main.c:66:9: note: (near initialization for 'pattern')
+../src/main.c:66:11: warning: excess elements in array initializer
+   0,0,0,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0,
+           ^
+../src/main.c:66:11: note: (near initialization for 'pattern')
+../src/main.c:66:13: warning: excess elements in array initializer
+   0,0,0,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0,
+             ^
+../src/main.c:66:13: note: (near initialization for 'pattern')
+../src/main.c:66:15: warning: excess elements in array initializer
+   0,0,0,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0,
+               ^
+../src/main.c:66:15: note: (near initialization for 'pattern')
+../src/main.c:66:17: warning: excess elements in array initializer
+   0,0,0,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0,
+                 ^
+../src/main.c:66:17: note: (near initialization for 'pattern')
+../src/main.c:66:19: warning: excess elements in array initializer
+   0,0,0,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0,
+                   ^
+../src/main.c:66:19: note: (near initialization for 'pattern')
+../src/main.c:66:21: warning: excess elements in array initializer
+   0,0,0,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0,
+                     ^
+../src/main.c:66:21: note: (near initialization for 'pattern')
+../src/main.c:66:23: warning: excess elements in array initializer
+   0,0,0,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0,
+                       ^
+../src/main.c:66:23: note: (near initialization for 'pattern')
+../src/main.c:66:25: warning: excess elements in array initializer
+   0,0,0,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0,
+                         ^
+../src/main.c:66:25: note: (near initialization for 'pattern')
+../src/main.c:66:27: warning: excess elements in array initializer
+   0,0,0,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0,
+                           ^
+../src/main.c:66:27: note: (near initialization for 'pattern')
+../src/main.c:66:29: warning: excess elements in array initializer
+   0,0,0,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0,
+                             ^
+../src/main.c:66:29: note: (near initialization for 'pattern')
+../src/main.c:66:31: warning: excess elements in array initializer
+   0,0,0,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0,
+                               ^
+../src/main.c:66:31: note: (near initialization for 'pattern')
+../src/main.c:66:33: warning: excess elements in array initializer
+   0,0,0,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0,
+                                 ^
+../src/main.c:66:33: note: (near initialization for 'pattern')
+../src/main.c:66:35: warning: excess elements in array initializer
+   0,0,0,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0,
+                                   ^
+../src/main.c:66:35: note: (near initialization for 'pattern')
+../src/main.c:66:37: warning: excess elements in array initializer
+   0,0,0,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0,
+                                     ^
+../src/main.c:66:37: note: (near initialization for 'pattern')
+../src/main.c:67:3: warning: excess elements in array initializer
+   0,0,0,1,0,1,0,0,0,0,0,0,1,0,1,0,0,0,
+   ^
+../src/main.c:67:3: note: (near initialization for 'pattern')
+../src/main.c:67:5: warning: excess elements in array initializer
+   0,0,0,1,0,1,0,0,0,0,0,0,1,0,1,0,0,0,
+     ^
+../src/main.c:67:5: note: (near initialization for 'pattern')
+../src/main.c:67:7: warning: excess elements in array initializer
+   0,0,0,1,0,1,0,0,0,0,0,0,1,0,1,0,0,0,
+       ^
+../src/main.c:67:7: note: (near initialization for 'pattern')
+../src/main.c:67:9: warning: excess elements in array initializer
+   0,0,0,1,0,1,0,0,0,0,0,0,1,0,1,0,0,0,
+         ^
+../src/main.c:67:9: note: (near initialization for 'pattern')
+../src/main.c:67:11: warning: excess elements in array initializer
+   0,0,0,1,0,1,0,0,0,0,0,0,1,0,1,0,0,0,
+           ^
+../src/main.c:67:11: note: (near initialization for 'pattern')
+../src/main.c:67:13: warning: excess elements in array initializer
+   0,0,0,1,0,1,0,0,0,0,0,0,1,0,1,0,0,0,
+             ^
+../src/main.c:67:13: note: (near initialization for 'pattern')
+../src/main.c:67:15: warning: excess elements in array initializer
+   0,0,0,1,0,1,0,0,0,0,0,0,1,0,1,0,0,0,
+               ^
+../src/main.c:67:15: note: (near initialization for 'pattern')
+../src/main.c:67:17: warning: excess elements in array initializer
+   0,0,0,1,0,1,0,0,0,0,0,0,1,0,1,0,0,0,
+                 ^
+../src/main.c:67:17: note: (near initialization for 'pattern')
+../src/main.c:67:19: warning: excess elements in array initializer
+   0,0,0,1,0,1,0,0,0,0,0,0,1,0,1,0,0,0,
+                   ^
+../src/main.c:67:19: note: (near initialization for 'pattern')
+../src/main.c:67:21: warning: excess elements in array initializer
+   0,0,0,1,0,1,0,0,0,0,0,0,1,0,1,0,0,0,
+                     ^
+../src/main.c:67:21: note: (near initialization for 'pattern')
+../src/main.c:67:23: warning: excess elements in array initializer
+   0,0,0,1,0,1,0,0,0,0,0,0,1,0,1,0,0,0,
+                       ^
+../src/main.c:67:23: note: (near initialization for 'pattern')
+../src/main.c:67:25: warning: excess elements in array initializer
+   0,0,0,1,0,1,0,0,0,0,0,0,1,0,1,0,0,0,
+                         ^
+../src/main.c:67:25: note: (near initialization for 'pattern')
+../src/main.c:67:27: warning: excess elements in array initializer
+   0,0,0,1,0,1,0,0,0,0,0,0,1,0,1,0,0,0,
+                           ^
+../src/main.c:67:27: note: (near initialization for 'pattern')
+../src/main.c:67:29: warning: excess elements in array initializer
+   0,0,0,1,0,1,0,0,0,0,0,0,1,0,1,0,0,0,
+                             ^
+../src/main.c:67:29: note: (near initialization for 'pattern')
+../src/main.c:67:31: warning: excess elements in array initializer
+   0,0,0,1,0,1,0,0,0,0,0,0,1,0,1,0,0,0,
+                               ^
+../src/main.c:67:31: note: (near initialization for 'pattern')
+../src/main.c:67:33: warning: excess elements in array initializer
+   0,0,0,1,0,1,0,0,0,0,0,0,1,0,1,0,0,0,
+                                 ^
+../src/main.c:67:33: note: (near initialization for 'pattern')
+../src/main.c:67:35: warning: excess elements in array initializer
+   0,0,0,1,0,1,0,0,0,0,0,0,1,0,1,0,0,0,
+                                   ^
+../src/main.c:67:35: note: (near initialization for 'pattern')
+../src/main.c:67:37: warning: excess elements in array initializer
+   0,0,0,1,0,1,0,0,0,0,0,0,1,0,1,0,0,0,
+                                     ^
+../src/main.c:67:37: note: (near initialization for 'pattern')
+../src/main.c:68:3: warning: excess elements in array initializer
+   1,0,0,0,1,1,0,0,0,0,0,0,1,1,0,0,0,0
+   ^
+../src/main.c:68:3: note: (near initialization for 'pattern')
+../src/main.c:68:5: warning: excess elements in array initializer
+   1,0,0,0,1,1,0,0,0,0,0,0,1,1,0,0,0,0
+     ^
+../src/main.c:68:5: note: (near initialization for 'pattern')
+../src/main.c:68:7: warning: excess elements in array initializer
+   1,0,0,0,1,1,0,0,0,0,0,0,1,1,0,0,0,0
+       ^
+../src/main.c:68:7: note: (near initialization for 'pattern')
+../src/main.c:68:9: warning: excess elements in array initializer
+   1,0,0,0,1,1,0,0,0,0,0,0,1,1,0,0,0,0
+         ^
+../src/main.c:68:9: note: (near initialization for 'pattern')
+../src/main.c:68:11: warning: excess elements in array initializer
+   1,0,0,0,1,1,0,0,0,0,0,0,1,1,0,0,0,0
+           ^
+../src/main.c:68:11: note: (near initialization for 'pattern')
+../src/main.c:68:13: warning: excess elements in array initializer
+   1,0,0,0,1,1,0,0,0,0,0,0,1,1,0,0,0,0
+             ^
+../src/main.c:68:13: note: (near initialization for 'pattern')
+../src/main.c:68:15: warning: excess elements in array initializer
+   1,0,0,0,1,1,0,0,0,0,0,0,1,1,0,0,0,0
+               ^
+../src/main.c:68:15: note: (near initialization for 'pattern')
+../src/main.c:68:17: warning: excess elements in array initializer
+   1,0,0,0,1,1,0,0,0,0,0,0,1,1,0,0,0,0
+                 ^
+../src/main.c:68:17: note: (near initialization for 'pattern')
+../src/main.c:68:19: warning: excess elements in array initializer
+   1,0,0,0,1,1,0,0,0,0,0,0,1,1,0,0,0,0
+                   ^
+../src/main.c:68:19: note: (near initialization for 'pattern')
+../src/main.c:68:21: warning: excess elements in array initializer
+   1,0,0,0,1,1,0,0,0,0,0,0,1,1,0,0,0,0
+                     ^
+../src/main.c:68:21: note: (near initialization for 'pattern')
+../src/main.c:68:23: warning: excess elements in array initializer
+   1,0,0,0,1,1,0,0,0,0,0,0,1,1,0,0,0,0
+                       ^
+../src/main.c:68:23: note: (near initialization for 'pattern')
+../src/main.c:68:25: warning: excess elements in array initializer
+   1,0,0,0,1,1,0,0,0,0,0,0,1,1,0,0,0,0
+                         ^
+../src/main.c:68:25: note: (near initialization for 'pattern')
+../src/main.c:68:27: warning: excess elements in array initializer
+   1,0,0,0,1,1,0,0,0,0,0,0,1,1,0,0,0,0
+                           ^
+../src/main.c:68:27: note: (near initialization for 'pattern')
+../src/main.c:68:29: warning: excess elements in array initializer
+   1,0,0,0,1,1,0,0,0,0,0,0,1,1,0,0,0,0
+                             ^
+../src/main.c:68:29: note: (near initialization for 'pattern')
+../src/main.c:68:31: warning: excess elements in array initializer
+   1,0,0,0,1,1,0,0,0,0,0,0,1,1,0,0,0,0
+                               ^
+../src/main.c:68:31: note: (near initialization for 'pattern')
+../src/main.c:68:33: warning: excess elements in array initializer
+   1,0,0,0,1,1,0,0,0,0,0,0,1,1,0,0,0,0
+                                 ^
+../src/main.c:68:33: note: (near initialization for 'pattern')
+../src/main.c:68:35: warning: excess elements in array initializer
+   1,0,0,0,1,1,0,0,0,0,0,0,1,1,0,0,0,0
+                                   ^
+../src/main.c:68:35: note: (near initialization for 'pattern')
+../src/main.c:68:37: warning: excess elements in array initializer
+   1,0,0,0,1,1,0,0,0,0,0,0,1,1,0,0,0,0
+                                     ^
+../src/main.c:68:37: note: (near initialization for 'pattern')
 In file included from ../src/main.c:53:0:
 ../src/gol_driver.h:38:13: warning: 'write_bit_to_gol' declared 'static' but never defined [-Wunused-function]
  static void write_bit_to_gol(Xuint8 data);
@@ -251,10 +1248,702 @@ mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../gol_app_bsp/microblaze_0/lib -mlittl
 'Invoking: MicroBlaze Print Size'
 mb-size gol_app.elf  |tee "gol_app.elf.size"
    text	   data	    bss	    dec	    hex	filename
-   7628	    488	   3332	  11448	   2cb8	gol_app.elf
+   7628	    324	   3168	  11120	   2b70	gol_app.elf
 'Finished building: gol_app.elf.size'
 ' '
-17:19:35 **** Auto Build of configuration Debug for project gol_app ****
+14:33:42 **** Auto Build of configuration Debug for project gol_app ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../gol_app_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/gol_microblaze.h:11:0,
+                 from ../src/main.c:52:
+../../gol_app_bsp/microblaze_0/include/xbasic_types.h:115:2: warning: #warning The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert. [-Wcpp]
+ #warning  The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert.
+  ^~~~~~~
+../../gol_app_bsp/microblaze_0/include/xbasic_types.h:116:2: warning: #warning Please refer the Standalone BSP UG647 for further details [-Wcpp]
+ #warning  Please refer the Standalone BSP UG647 for further details
+  ^~~~~~~
+../src/main.c:59:29: warning: excess elements in array initializer
+   0,0,0,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0,
+                             ^
+../src/main.c:59:29: note: (near initialization for 'pattern')
+../src/main.c:59:31: warning: excess elements in array initializer
+   0,0,0,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0,
+                               ^
+../src/main.c:59:31: note: (near initialization for 'pattern')
+../src/main.c:59:33: warning: excess elements in array initializer
+   0,0,0,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0,
+                                 ^
+../src/main.c:59:33: note: (near initialization for 'pattern')
+../src/main.c:59:35: warning: excess elements in array initializer
+   0,0,0,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0,
+                                   ^
+../src/main.c:59:35: note: (near initialization for 'pattern')
+../src/main.c:59:37: warning: excess elements in array initializer
+   0,0,0,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0,
+                                     ^
+../src/main.c:59:37: note: (near initialization for 'pattern')
+../src/main.c:60:3: warning: excess elements in array initializer
+   1,1,0,1,0,0,0,0,0,0,0,0,0,0,1,0,1,1,
+   ^
+../src/main.c:60:3: note: (near initialization for 'pattern')
+../src/main.c:60:5: warning: excess elements in array initializer
+   1,1,0,1,0,0,0,0,0,0,0,0,0,0,1,0,1,1,
+     ^
+../src/main.c:60:5: note: (near initialization for 'pattern')
+../src/main.c:60:7: warning: excess elements in array initializer
+   1,1,0,1,0,0,0,0,0,0,0,0,0,0,1,0,1,1,
+       ^
+../src/main.c:60:7: note: (near initialization for 'pattern')
+../src/main.c:60:9: warning: excess elements in array initializer
+   1,1,0,1,0,0,0,0,0,0,0,0,0,0,1,0,1,1,
+         ^
+../src/main.c:60:9: note: (near initialization for 'pattern')
+../src/main.c:60:11: warning: excess elements in array initializer
+   1,1,0,1,0,0,0,0,0,0,0,0,0,0,1,0,1,1,
+           ^
+../src/main.c:60:11: note: (near initialization for 'pattern')
+../src/main.c:60:13: warning: excess elements in array initializer
+   1,1,0,1,0,0,0,0,0,0,0,0,0,0,1,0,1,1,
+             ^
+../src/main.c:60:13: note: (near initialization for 'pattern')
+../src/main.c:60:15: warning: excess elements in array initializer
+   1,1,0,1,0,0,0,0,0,0,0,0,0,0,1,0,1,1,
+               ^
+../src/main.c:60:15: note: (near initialization for 'pattern')
+../src/main.c:60:17: warning: excess elements in array initializer
+   1,1,0,1,0,0,0,0,0,0,0,0,0,0,1,0,1,1,
+                 ^
+../src/main.c:60:17: note: (near initialization for 'pattern')
+../src/main.c:60:19: warning: excess elements in array initializer
+   1,1,0,1,0,0,0,0,0,0,0,0,0,0,1,0,1,1,
+                   ^
+../src/main.c:60:19: note: (near initialization for 'pattern')
+../src/main.c:60:21: warning: excess elements in array initializer
+   1,1,0,1,0,0,0,0,0,0,0,0,0,0,1,0,1,1,
+                     ^
+../src/main.c:60:21: note: (near initialization for 'pattern')
+../src/main.c:60:23: warning: excess elements in array initializer
+   1,1,0,1,0,0,0,0,0,0,0,0,0,0,1,0,1,1,
+                       ^
+../src/main.c:60:23: note: (near initialization for 'pattern')
+../src/main.c:60:25: warning: excess elements in array initializer
+   1,1,0,1,0,0,0,0,0,0,0,0,0,0,1,0,1,1,
+                         ^
+../src/main.c:60:25: note: (near initialization for 'pattern')
+../src/main.c:60:27: warning: excess elements in array initializer
+   1,1,0,1,0,0,0,0,0,0,0,0,0,0,1,0,1,1,
+                           ^
+../src/main.c:60:27: note: (near initialization for 'pattern')
+../src/main.c:60:29: warning: excess elements in array initializer
+   1,1,0,1,0,0,0,0,0,0,0,0,0,0,1,0,1,1,
+                             ^
+../src/main.c:60:29: note: (near initialization for 'pattern')
+../src/main.c:60:31: warning: excess elements in array initializer
+   1,1,0,1,0,0,0,0,0,0,0,0,0,0,1,0,1,1,
+                               ^
+../src/main.c:60:31: note: (near initialization for 'pattern')
+../src/main.c:60:33: warning: excess elements in array initializer
+   1,1,0,1,0,0,0,0,0,0,0,0,0,0,1,0,1,1,
+                                 ^
+../src/main.c:60:33: note: (near initialization for 'pattern')
+../src/main.c:60:35: warning: excess elements in array initializer
+   1,1,0,1,0,0,0,0,0,0,0,0,0,0,1,0,1,1,
+                                   ^
+../src/main.c:60:35: note: (near initialization for 'pattern')
+../src/main.c:60:37: warning: excess elements in array initializer
+   1,1,0,1,0,0,0,0,0,0,0,0,0,0,1,0,1,1,
+                                     ^
+../src/main.c:60:37: note: (near initialization for 'pattern')
+../src/main.c:61:3: warning: excess elements in array initializer
+   1,1,0,1,0,1,0,0,1,1,0,0,1,0,1,0,1,1,
+   ^
+../src/main.c:61:3: note: (near initialization for 'pattern')
+../src/main.c:61:5: warning: excess elements in array initializer
+   1,1,0,1,0,1,0,0,1,1,0,0,1,0,1,0,1,1,
+     ^
+../src/main.c:61:5: note: (near initialization for 'pattern')
+../src/main.c:61:7: warning: excess elements in array initializer
+   1,1,0,1,0,1,0,0,1,1,0,0,1,0,1,0,1,1,
+       ^
+../src/main.c:61:7: note: (near initialization for 'pattern')
+../src/main.c:61:9: warning: excess elements in array initializer
+   1,1,0,1,0,1,0,0,1,1,0,0,1,0,1,0,1,1,
+         ^
+../src/main.c:61:9: note: (near initialization for 'pattern')
+../src/main.c:61:11: warning: excess elements in array initializer
+   1,1,0,1,0,1,0,0,1,1,0,0,1,0,1,0,1,1,
+           ^
+../src/main.c:61:11: note: (near initialization for 'pattern')
+../src/main.c:61:13: warning: excess elements in array initializer
+   1,1,0,1,0,1,0,0,1,1,0,0,1,0,1,0,1,1,
+             ^
+../src/main.c:61:13: note: (near initialization for 'pattern')
+../src/main.c:61:15: warning: excess elements in array initializer
+   1,1,0,1,0,1,0,0,1,1,0,0,1,0,1,0,1,1,
+               ^
+../src/main.c:61:15: note: (near initialization for 'pattern')
+../src/main.c:61:17: warning: excess elements in array initializer
+   1,1,0,1,0,1,0,0,1,1,0,0,1,0,1,0,1,1,
+                 ^
+../src/main.c:61:17: note: (near initialization for 'pattern')
+../src/main.c:61:19: warning: excess elements in array initializer
+   1,1,0,1,0,1,0,0,1,1,0,0,1,0,1,0,1,1,
+                   ^
+../src/main.c:61:19: note: (near initialization for 'pattern')
+../src/main.c:61:21: warning: excess elements in array initializer
+   1,1,0,1,0,1,0,0,1,1,0,0,1,0,1,0,1,1,
+                     ^
+../src/main.c:61:21: note: (near initialization for 'pattern')
+../src/main.c:61:23: warning: excess elements in array initializer
+   1,1,0,1,0,1,0,0,1,1,0,0,1,0,1,0,1,1,
+                       ^
+../src/main.c:61:23: note: (near initialization for 'pattern')
+../src/main.c:61:25: warning: excess elements in array initializer
+   1,1,0,1,0,1,0,0,1,1,0,0,1,0,1,0,1,1,
+                         ^
+../src/main.c:61:25: note: (near initialization for 'pattern')
+../src/main.c:61:27: warning: excess elements in array initializer
+   1,1,0,1,0,1,0,0,1,1,0,0,1,0,1,0,1,1,
+                           ^
+../src/main.c:61:27: note: (near initialization for 'pattern')
+../src/main.c:61:29: warning: excess elements in array initializer
+   1,1,0,1,0,1,0,0,1,1,0,0,1,0,1,0,1,1,
+                             ^
+../src/main.c:61:29: note: (near initialization for 'pattern')
+../src/main.c:61:31: warning: excess elements in array initializer
+   1,1,0,1,0,1,0,0,1,1,0,0,1,0,1,0,1,1,
+                               ^
+../src/main.c:61:31: note: (near initialization for 'pattern')
+../src/main.c:61:33: warning: excess elements in array initializer
+   1,1,0,1,0,1,0,0,1,1,0,0,1,0,1,0,1,1,
+                                 ^
+../src/main.c:61:33: note: (near initialization for 'pattern')
+../src/main.c:61:35: warning: excess elements in array initializer
+   1,1,0,1,0,1,0,0,1,1,0,0,1,0,1,0,1,1,
+                                   ^
+../src/main.c:61:35: note: (near initialization for 'pattern')
+../src/main.c:61:37: warning: excess elements in array initializer
+   1,1,0,1,0,1,0,0,1,1,0,0,1,0,1,0,1,1,
+                                     ^
+../src/main.c:61:37: note: (near initialization for 'pattern')
+../src/main.c:62:3: warning: excess elements in array initializer
+   0,0,0,1,0,1,0,1,0,0,1,0,1,0,1,0,0,0,
+   ^
+../src/main.c:62:3: note: (near initialization for 'pattern')
+../src/main.c:62:5: warning: excess elements in array initializer
+   0,0,0,1,0,1,0,1,0,0,1,0,1,0,1,0,0,0,
+     ^
+../src/main.c:62:5: note: (near initialization for 'pattern')
+../src/main.c:62:7: warning: excess elements in array initializer
+   0,0,0,1,0,1,0,1,0,0,1,0,1,0,1,0,0,0,
+       ^
+../src/main.c:62:7: note: (near initialization for 'pattern')
+../src/main.c:62:9: warning: excess elements in array initializer
+   0,0,0,1,0,1,0,1,0,0,1,0,1,0,1,0,0,0,
+         ^
+../src/main.c:62:9: note: (near initialization for 'pattern')
+../src/main.c:62:11: warning: excess elements in array initializer
+   0,0,0,1,0,1,0,1,0,0,1,0,1,0,1,0,0,0,
+           ^
+../src/main.c:62:11: note: (near initialization for 'pattern')
+../src/main.c:62:13: warning: excess elements in array initializer
+   0,0,0,1,0,1,0,1,0,0,1,0,1,0,1,0,0,0,
+             ^
+../src/main.c:62:13: note: (near initialization for 'pattern')
+../src/main.c:62:15: warning: excess elements in array initializer
+   0,0,0,1,0,1,0,1,0,0,1,0,1,0,1,0,0,0,
+               ^
+../src/main.c:62:15: note: (near initialization for 'pattern')
+../src/main.c:62:17: warning: excess elements in array initializer
+   0,0,0,1,0,1,0,1,0,0,1,0,1,0,1,0,0,0,
+                 ^
+../src/main.c:62:17: note: (near initialization for 'pattern')
+../src/main.c:62:19: warning: excess elements in array initializer
+   0,0,0,1,0,1,0,1,0,0,1,0,1,0,1,0,0,0,
+                   ^
+../src/main.c:62:19: note: (near initialization for 'pattern')
+../src/main.c:62:21: warning: excess elements in array initializer
+   0,0,0,1,0,1,0,1,0,0,1,0,1,0,1,0,0,0,
+                     ^
+../src/main.c:62:21: note: (near initialization for 'pattern')
+../src/main.c:62:23: warning: excess elements in array initializer
+   0,0,0,1,0,1,0,1,0,0,1,0,1,0,1,0,0,0,
+                       ^
+../src/main.c:62:23: note: (near initialization for 'pattern')
+../src/main.c:62:25: warning: excess elements in array initializer
+   0,0,0,1,0,1,0,1,0,0,1,0,1,0,1,0,0,0,
+                         ^
+../src/main.c:62:25: note: (near initialization for 'pattern')
+../src/main.c:62:27: warning: excess elements in array initializer
+   0,0,0,1,0,1,0,1,0,0,1,0,1,0,1,0,0,0,
+                           ^
+../src/main.c:62:27: note: (near initialization for 'pattern')
+../src/main.c:62:29: warning: excess elements in array initializer
+   0,0,0,1,0,1,0,1,0,0,1,0,1,0,1,0,0,0,
+                             ^
+../src/main.c:62:29: note: (near initialization for 'pattern')
+../src/main.c:62:31: warning: excess elements in array initializer
+   0,0,0,1,0,1,0,1,0,0,1,0,1,0,1,0,0,0,
+                               ^
+../src/main.c:62:31: note: (near initialization for 'pattern')
+../src/main.c:62:33: warning: excess elements in array initializer
+   0,0,0,1,0,1,0,1,0,0,1,0,1,0,1,0,0,0,
+                                 ^
+../src/main.c:62:33: note: (near initialization for 'pattern')
+../src/main.c:62:35: warning: excess elements in array initializer
+   0,0,0,1,0,1,0,1,0,0,1,0,1,0,1,0,0,0,
+                                   ^
+../src/main.c:62:35: note: (near initialization for 'pattern')
+../src/main.c:62:37: warning: excess elements in array initializer
+   0,0,0,1,0,1,0,1,0,0,1,0,1,0,1,0,0,0,
+                                     ^
+../src/main.c:62:37: note: (near initialization for 'pattern')
+../src/main.c:63:3: warning: excess elements in array initializer
+   0,0,0,1,0,1,0,1,0,0,1,0,1,0,1,0,0,0,
+   ^
+../src/main.c:63:3: note: (near initialization for 'pattern')
+../src/main.c:63:5: warning: excess elements in array initializer
+   0,0,0,1,0,1,0,1,0,0,1,0,1,0,1,0,0,0,
+     ^
+../src/main.c:63:5: note: (near initialization for 'pattern')
+../src/main.c:63:7: warning: excess elements in array initializer
+   0,0,0,1,0,1,0,1,0,0,1,0,1,0,1,0,0,0,
+       ^
+../src/main.c:63:7: note: (near initialization for 'pattern')
+../src/main.c:63:9: warning: excess elements in array initializer
+   0,0,0,1,0,1,0,1,0,0,1,0,1,0,1,0,0,0,
+         ^
+../src/main.c:63:9: note: (near initialization for 'pattern')
+../src/main.c:63:11: warning: excess elements in array initializer
+   0,0,0,1,0,1,0,1,0,0,1,0,1,0,1,0,0,0,
+           ^
+../src/main.c:63:11: note: (near initialization for 'pattern')
+../src/main.c:63:13: warning: excess elements in array initializer
+   0,0,0,1,0,1,0,1,0,0,1,0,1,0,1,0,0,0,
+             ^
+../src/main.c:63:13: note: (near initialization for 'pattern')
+../src/main.c:63:15: warning: excess elements in array initializer
+   0,0,0,1,0,1,0,1,0,0,1,0,1,0,1,0,0,0,
+               ^
+../src/main.c:63:15: note: (near initialization for 'pattern')
+../src/main.c:63:17: warning: excess elements in array initializer
+   0,0,0,1,0,1,0,1,0,0,1,0,1,0,1,0,0,0,
+                 ^
+../src/main.c:63:17: note: (near initialization for 'pattern')
+../src/main.c:63:19: warning: excess elements in array initializer
+   0,0,0,1,0,1,0,1,0,0,1,0,1,0,1,0,0,0,
+                   ^
+../src/main.c:63:19: note: (near initialization for 'pattern')
+../src/main.c:63:21: warning: excess elements in array initializer
+   0,0,0,1,0,1,0,1,0,0,1,0,1,0,1,0,0,0,
+                     ^
+../src/main.c:63:21: note: (near initialization for 'pattern')
+../src/main.c:63:23: warning: excess elements in array initializer
+   0,0,0,1,0,1,0,1,0,0,1,0,1,0,1,0,0,0,
+                       ^
+../src/main.c:63:23: note: (near initialization for 'pattern')
+../src/main.c:63:25: warning: excess elements in array initializer
+   0,0,0,1,0,1,0,1,0,0,1,0,1,0,1,0,0,0,
+                         ^
+../src/main.c:63:25: note: (near initialization for 'pattern')
+../src/main.c:63:27: warning: excess elements in array initializer
+   0,0,0,1,0,1,0,1,0,0,1,0,1,0,1,0,0,0,
+                           ^
+../src/main.c:63:27: note: (near initialization for 'pattern')
+../src/main.c:63:29: warning: excess elements in array initializer
+   0,0,0,1,0,1,0,1,0,0,1,0,1,0,1,0,0,0,
+                             ^
+../src/main.c:63:29: note: (near initialization for 'pattern')
+../src/main.c:63:31: warning: excess elements in array initializer
+   0,0,0,1,0,1,0,1,0,0,1,0,1,0,1,0,0,0,
+                               ^
+../src/main.c:63:31: note: (near initialization for 'pattern')
+../src/main.c:63:33: warning: excess elements in array initializer
+   0,0,0,1,0,1,0,1,0,0,1,0,1,0,1,0,0,0,
+                                 ^
+../src/main.c:63:33: note: (near initialization for 'pattern')
+../src/main.c:63:35: warning: excess elements in array initializer
+   0,0,0,1,0,1,0,1,0,0,1,0,1,0,1,0,0,0,
+                                   ^
+../src/main.c:63:35: note: (near initialization for 'pattern')
+../src/main.c:63:37: warning: excess elements in array initializer
+   0,0,0,1,0,1,0,1,0,0,1,0,1,0,1,0,0,0,
+                                     ^
+../src/main.c:63:37: note: (near initialization for 'pattern')
+../src/main.c:64:3: warning: excess elements in array initializer
+   1,1,0,1,0,1,0,0,1,1,0,0,1,0,1,0,1,1,
+   ^
+../src/main.c:64:3: note: (near initialization for 'pattern')
+../src/main.c:64:5: warning: excess elements in array initializer
+   1,1,0,1,0,1,0,0,1,1,0,0,1,0,1,0,1,1,
+     ^
+../src/main.c:64:5: note: (near initialization for 'pattern')
+../src/main.c:64:7: warning: excess elements in array initializer
+   1,1,0,1,0,1,0,0,1,1,0,0,1,0,1,0,1,1,
+       ^
+../src/main.c:64:7: note: (near initialization for 'pattern')
+../src/main.c:64:9: warning: excess elements in array initializer
+   1,1,0,1,0,1,0,0,1,1,0,0,1,0,1,0,1,1,
+         ^
+../src/main.c:64:9: note: (near initialization for 'pattern')
+../src/main.c:64:11: warning: excess elements in array initializer
+   1,1,0,1,0,1,0,0,1,1,0,0,1,0,1,0,1,1,
+           ^
+../src/main.c:64:11: note: (near initialization for 'pattern')
+../src/main.c:64:13: warning: excess elements in array initializer
+   1,1,0,1,0,1,0,0,1,1,0,0,1,0,1,0,1,1,
+             ^
+../src/main.c:64:13: note: (near initialization for 'pattern')
+../src/main.c:64:15: warning: excess elements in array initializer
+   1,1,0,1,0,1,0,0,1,1,0,0,1,0,1,0,1,1,
+               ^
+../src/main.c:64:15: note: (near initialization for 'pattern')
+../src/main.c:64:17: warning: excess elements in array initializer
+   1,1,0,1,0,1,0,0,1,1,0,0,1,0,1,0,1,1,
+                 ^
+../src/main.c:64:17: note: (near initialization for 'pattern')
+../src/main.c:64:19: warning: excess elements in array initializer
+   1,1,0,1,0,1,0,0,1,1,0,0,1,0,1,0,1,1,
+                   ^
+../src/main.c:64:19: note: (near initialization for 'pattern')
+../src/main.c:64:21: warning: excess elements in array initializer
+   1,1,0,1,0,1,0,0,1,1,0,0,1,0,1,0,1,1,
+                     ^
+../src/main.c:64:21: note: (near initialization for 'pattern')
+../src/main.c:64:23: warning: excess elements in array initializer
+   1,1,0,1,0,1,0,0,1,1,0,0,1,0,1,0,1,1,
+                       ^
+../src/main.c:64:23: note: (near initialization for 'pattern')
+../src/main.c:64:25: warning: excess elements in array initializer
+   1,1,0,1,0,1,0,0,1,1,0,0,1,0,1,0,1,1,
+                         ^
+../src/main.c:64:25: note: (near initialization for 'pattern')
+../src/main.c:64:27: warning: excess elements in array initializer
+   1,1,0,1,0,1,0,0,1,1,0,0,1,0,1,0,1,1,
+                           ^
+../src/main.c:64:27: note: (near initialization for 'pattern')
+../src/main.c:64:29: warning: excess elements in array initializer
+   1,1,0,1,0,1,0,0,1,1,0,0,1,0,1,0,1,1,
+                             ^
+../src/main.c:64:29: note: (near initialization for 'pattern')
+../src/main.c:64:31: warning: excess elements in array initializer
+   1,1,0,1,0,1,0,0,1,1,0,0,1,0,1,0,1,1,
+                               ^
+../src/main.c:64:31: note: (near initialization for 'pattern')
+../src/main.c:64:33: warning: excess elements in array initializer
+   1,1,0,1,0,1,0,0,1,1,0,0,1,0,1,0,1,1,
+                                 ^
+../src/main.c:64:33: note: (near initialization for 'pattern')
+../src/main.c:64:35: warning: excess elements in array initializer
+   1,1,0,1,0,1,0,0,1,1,0,0,1,0,1,0,1,1,
+                                   ^
+../src/main.c:64:35: note: (near initialization for 'pattern')
+../src/main.c:64:37: warning: excess elements in array initializer
+   1,1,0,1,0,1,0,0,1,1,0,0,1,0,1,0,1,1,
+                                     ^
+../src/main.c:64:37: note: (near initialization for 'pattern')
+../src/main.c:65:3: warning: excess elements in array initializer
+   1,1,0,1,0,0,0,0,0,0,0,0,0,0,1,0,1,1,
+   ^
+../src/main.c:65:3: note: (near initialization for 'pattern')
+../src/main.c:65:5: warning: excess elements in array initializer
+   1,1,0,1,0,0,0,0,0,0,0,0,0,0,1,0,1,1,
+     ^
+../src/main.c:65:5: note: (near initialization for 'pattern')
+../src/main.c:65:7: warning: excess elements in array initializer
+   1,1,0,1,0,0,0,0,0,0,0,0,0,0,1,0,1,1,
+       ^
+../src/main.c:65:7: note: (near initialization for 'pattern')
+../src/main.c:65:9: warning: excess elements in array initializer
+   1,1,0,1,0,0,0,0,0,0,0,0,0,0,1,0,1,1,
+         ^
+../src/main.c:65:9: note: (near initialization for 'pattern')
+../src/main.c:65:11: warning: excess elements in array initializer
+   1,1,0,1,0,0,0,0,0,0,0,0,0,0,1,0,1,1,
+           ^
+../src/main.c:65:11: note: (near initialization for 'pattern')
+../src/main.c:65:13: warning: excess elements in array initializer
+   1,1,0,1,0,0,0,0,0,0,0,0,0,0,1,0,1,1,
+             ^
+../src/main.c:65:13: note: (near initialization for 'pattern')
+../src/main.c:65:15: warning: excess elements in array initializer
+   1,1,0,1,0,0,0,0,0,0,0,0,0,0,1,0,1,1,
+               ^
+../src/main.c:65:15: note: (near initialization for 'pattern')
+../src/main.c:65:17: warning: excess elements in array initializer
+   1,1,0,1,0,0,0,0,0,0,0,0,0,0,1,0,1,1,
+                 ^
+../src/main.c:65:17: note: (near initialization for 'pattern')
+../src/main.c:65:19: warning: excess elements in array initializer
+   1,1,0,1,0,0,0,0,0,0,0,0,0,0,1,0,1,1,
+                   ^
+../src/main.c:65:19: note: (near initialization for 'pattern')
+../src/main.c:65:21: warning: excess elements in array initializer
+   1,1,0,1,0,0,0,0,0,0,0,0,0,0,1,0,1,1,
+                     ^
+../src/main.c:65:21: note: (near initialization for 'pattern')
+../src/main.c:65:23: warning: excess elements in array initializer
+   1,1,0,1,0,0,0,0,0,0,0,0,0,0,1,0,1,1,
+                       ^
+../src/main.c:65:23: note: (near initialization for 'pattern')
+../src/main.c:65:25: warning: excess elements in array initializer
+   1,1,0,1,0,0,0,0,0,0,0,0,0,0,1,0,1,1,
+                         ^
+../src/main.c:65:25: note: (near initialization for 'pattern')
+../src/main.c:65:27: warning: excess elements in array initializer
+   1,1,0,1,0,0,0,0,0,0,0,0,0,0,1,0,1,1,
+                           ^
+../src/main.c:65:27: note: (near initialization for 'pattern')
+../src/main.c:65:29: warning: excess elements in array initializer
+   1,1,0,1,0,0,0,0,0,0,0,0,0,0,1,0,1,1,
+                             ^
+../src/main.c:65:29: note: (near initialization for 'pattern')
+../src/main.c:65:31: warning: excess elements in array initializer
+   1,1,0,1,0,0,0,0,0,0,0,0,0,0,1,0,1,1,
+                               ^
+../src/main.c:65:31: note: (near initialization for 'pattern')
+../src/main.c:65:33: warning: excess elements in array initializer
+   1,1,0,1,0,0,0,0,0,0,0,0,0,0,1,0,1,1,
+                                 ^
+../src/main.c:65:33: note: (near initialization for 'pattern')
+../src/main.c:65:35: warning: excess elements in array initializer
+   1,1,0,1,0,0,0,0,0,0,0,0,0,0,1,0,1,1,
+                                   ^
+../src/main.c:65:35: note: (near initialization for 'pattern')
+../src/main.c:65:37: warning: excess elements in array initializer
+   1,1,0,1,0,0,0,0,0,0,0,0,0,0,1,0,1,1,
+                                     ^
+../src/main.c:65:37: note: (near initialization for 'pattern')
+../src/main.c:66:3: warning: excess elements in array initializer
+   0,0,0,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0,
+   ^
+../src/main.c:66:3: note: (near initialization for 'pattern')
+../src/main.c:66:5: warning: excess elements in array initializer
+   0,0,0,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0,
+     ^
+../src/main.c:66:5: note: (near initialization for 'pattern')
+../src/main.c:66:7: warning: excess elements in array initializer
+   0,0,0,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0,
+       ^
+../src/main.c:66:7: note: (near initialization for 'pattern')
+../src/main.c:66:9: warning: excess elements in array initializer
+   0,0,0,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0,
+         ^
+../src/main.c:66:9: note: (near initialization for 'pattern')
+../src/main.c:66:11: warning: excess elements in array initializer
+   0,0,0,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0,
+           ^
+../src/main.c:66:11: note: (near initialization for 'pattern')
+../src/main.c:66:13: warning: excess elements in array initializer
+   0,0,0,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0,
+             ^
+../src/main.c:66:13: note: (near initialization for 'pattern')
+../src/main.c:66:15: warning: excess elements in array initializer
+   0,0,0,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0,
+               ^
+../src/main.c:66:15: note: (near initialization for 'pattern')
+../src/main.c:66:17: warning: excess elements in array initializer
+   0,0,0,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0,
+                 ^
+../src/main.c:66:17: note: (near initialization for 'pattern')
+../src/main.c:66:19: warning: excess elements in array initializer
+   0,0,0,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0,
+                   ^
+../src/main.c:66:19: note: (near initialization for 'pattern')
+../src/main.c:66:21: warning: excess elements in array initializer
+   0,0,0,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0,
+                     ^
+../src/main.c:66:21: note: (near initialization for 'pattern')
+../src/main.c:66:23: warning: excess elements in array initializer
+   0,0,0,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0,
+                       ^
+../src/main.c:66:23: note: (near initialization for 'pattern')
+../src/main.c:66:25: warning: excess elements in array initializer
+   0,0,0,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0,
+                         ^
+../src/main.c:66:25: note: (near initialization for 'pattern')
+../src/main.c:66:27: warning: excess elements in array initializer
+   0,0,0,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0,
+                           ^
+../src/main.c:66:27: note: (near initialization for 'pattern')
+../src/main.c:66:29: warning: excess elements in array initializer
+   0,0,0,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0,
+                             ^
+../src/main.c:66:29: note: (near initialization for 'pattern')
+../src/main.c:66:31: warning: excess elements in array initializer
+   0,0,0,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0,
+                               ^
+../src/main.c:66:31: note: (near initialization for 'pattern')
+../src/main.c:66:33: warning: excess elements in array initializer
+   0,0,0,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0,
+                                 ^
+../src/main.c:66:33: note: (near initialization for 'pattern')
+../src/main.c:66:35: warning: excess elements in array initializer
+   0,0,0,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0,
+                                   ^
+../src/main.c:66:35: note: (near initialization for 'pattern')
+../src/main.c:66:37: warning: excess elements in array initializer
+   0,0,0,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0,
+                                     ^
+../src/main.c:66:37: note: (near initialization for 'pattern')
+../src/main.c:67:3: warning: excess elements in array initializer
+   0,0,0,1,0,1,0,0,0,0,0,0,1,0,1,0,0,0,
+   ^
+../src/main.c:67:3: note: (near initialization for 'pattern')
+../src/main.c:67:5: warning: excess elements in array initializer
+   0,0,0,1,0,1,0,0,0,0,0,0,1,0,1,0,0,0,
+     ^
+../src/main.c:67:5: note: (near initialization for 'pattern')
+../src/main.c:67:7: warning: excess elements in array initializer
+   0,0,0,1,0,1,0,0,0,0,0,0,1,0,1,0,0,0,
+       ^
+../src/main.c:67:7: note: (near initialization for 'pattern')
+../src/main.c:67:9: warning: excess elements in array initializer
+   0,0,0,1,0,1,0,0,0,0,0,0,1,0,1,0,0,0,
+         ^
+../src/main.c:67:9: note: (near initialization for 'pattern')
+../src/main.c:67:11: warning: excess elements in array initializer
+   0,0,0,1,0,1,0,0,0,0,0,0,1,0,1,0,0,0,
+           ^
+../src/main.c:67:11: note: (near initialization for 'pattern')
+../src/main.c:67:13: warning: excess elements in array initializer
+   0,0,0,1,0,1,0,0,0,0,0,0,1,0,1,0,0,0,
+             ^
+../src/main.c:67:13: note: (near initialization for 'pattern')
+../src/main.c:67:15: warning: excess elements in array initializer
+   0,0,0,1,0,1,0,0,0,0,0,0,1,0,1,0,0,0,
+               ^
+../src/main.c:67:15: note: (near initialization for 'pattern')
+../src/main.c:67:17: warning: excess elements in array initializer
+   0,0,0,1,0,1,0,0,0,0,0,0,1,0,1,0,0,0,
+                 ^
+../src/main.c:67:17: note: (near initialization for 'pattern')
+../src/main.c:67:19: warning: excess elements in array initializer
+   0,0,0,1,0,1,0,0,0,0,0,0,1,0,1,0,0,0,
+                   ^
+../src/main.c:67:19: note: (near initialization for 'pattern')
+../src/main.c:67:21: warning: excess elements in array initializer
+   0,0,0,1,0,1,0,0,0,0,0,0,1,0,1,0,0,0,
+                     ^
+../src/main.c:67:21: note: (near initialization for 'pattern')
+../src/main.c:67:23: warning: excess elements in array initializer
+   0,0,0,1,0,1,0,0,0,0,0,0,1,0,1,0,0,0,
+                       ^
+../src/main.c:67:23: note: (near initialization for 'pattern')
+../src/main.c:67:25: warning: excess elements in array initializer
+   0,0,0,1,0,1,0,0,0,0,0,0,1,0,1,0,0,0,
+                         ^
+../src/main.c:67:25: note: (near initialization for 'pattern')
+../src/main.c:67:27: warning: excess elements in array initializer
+   0,0,0,1,0,1,0,0,0,0,0,0,1,0,1,0,0,0,
+                           ^
+../src/main.c:67:27: note: (near initialization for 'pattern')
+../src/main.c:67:29: warning: excess elements in array initializer
+   0,0,0,1,0,1,0,0,0,0,0,0,1,0,1,0,0,0,
+                             ^
+../src/main.c:67:29: note: (near initialization for 'pattern')
+../src/main.c:67:31: warning: excess elements in array initializer
+   0,0,0,1,0,1,0,0,0,0,0,0,1,0,1,0,0,0,
+                               ^
+../src/main.c:67:31: note: (near initialization for 'pattern')
+../src/main.c:67:33: warning: excess elements in array initializer
+   0,0,0,1,0,1,0,0,0,0,0,0,1,0,1,0,0,0,
+                                 ^
+../src/main.c:67:33: note: (near initialization for 'pattern')
+../src/main.c:67:35: warning: excess elements in array initializer
+   0,0,0,1,0,1,0,0,0,0,0,0,1,0,1,0,0,0,
+                                   ^
+../src/main.c:67:35: note: (near initialization for 'pattern')
+../src/main.c:67:37: warning: excess elements in array initializer
+   0,0,0,1,0,1,0,0,0,0,0,0,1,0,1,0,0,0,
+                                     ^
+../src/main.c:67:37: note: (near initialization for 'pattern')
+../src/main.c:68:3: warning: excess elements in array initializer
+   1,0,0,0,1,1,0,0,0,0,0,0,1,1,0,0,0,0
+   ^
+../src/main.c:68:3: note: (near initialization for 'pattern')
+../src/main.c:68:5: warning: excess elements in array initializer
+   1,0,0,0,1,1,0,0,0,0,0,0,1,1,0,0,0,0
+     ^
+../src/main.c:68:5: note: (near initialization for 'pattern')
+../src/main.c:68:7: warning: excess elements in array initializer
+   1,0,0,0,1,1,0,0,0,0,0,0,1,1,0,0,0,0
+       ^
+../src/main.c:68:7: note: (near initialization for 'pattern')
+../src/main.c:68:9: warning: excess elements in array initializer
+   1,0,0,0,1,1,0,0,0,0,0,0,1,1,0,0,0,0
+         ^
+../src/main.c:68:9: note: (near initialization for 'pattern')
+../src/main.c:68:11: warning: excess elements in array initializer
+   1,0,0,0,1,1,0,0,0,0,0,0,1,1,0,0,0,0
+           ^
+../src/main.c:68:11: note: (near initialization for 'pattern')
+../src/main.c:68:13: warning: excess elements in array initializer
+   1,0,0,0,1,1,0,0,0,0,0,0,1,1,0,0,0,0
+             ^
+../src/main.c:68:13: note: (near initialization for 'pattern')
+../src/main.c:68:15: warning: excess elements in array initializer
+   1,0,0,0,1,1,0,0,0,0,0,0,1,1,0,0,0,0
+               ^
+../src/main.c:68:15: note: (near initialization for 'pattern')
+../src/main.c:68:17: warning: excess elements in array initializer
+   1,0,0,0,1,1,0,0,0,0,0,0,1,1,0,0,0,0
+                 ^
+../src/main.c:68:17: note: (near initialization for 'pattern')
+../src/main.c:68:19: warning: excess elements in array initializer
+   1,0,0,0,1,1,0,0,0,0,0,0,1,1,0,0,0,0
+                   ^
+../src/main.c:68:19: note: (near initialization for 'pattern')
+../src/main.c:68:21: warning: excess elements in array initializer
+   1,0,0,0,1,1,0,0,0,0,0,0,1,1,0,0,0,0
+                     ^
+../src/main.c:68:21: note: (near initialization for 'pattern')
+../src/main.c:68:23: warning: excess elements in array initializer
+   1,0,0,0,1,1,0,0,0,0,0,0,1,1,0,0,0,0
+                       ^
+../src/main.c:68:23: note: (near initialization for 'pattern')
+../src/main.c:68:25: warning: excess elements in array initializer
+   1,0,0,0,1,1,0,0,0,0,0,0,1,1,0,0,0,0
+                         ^
+../src/main.c:68:25: note: (near initialization for 'pattern')
+../src/main.c:68:27: warning: excess elements in array initializer
+   1,0,0,0,1,1,0,0,0,0,0,0,1,1,0,0,0,0
+                           ^
+../src/main.c:68:27: note: (near initialization for 'pattern')
+../src/main.c:68:29: warning: excess elements in array initializer
+   1,0,0,0,1,1,0,0,0,0,0,0,1,1,0,0,0,0
+                             ^
+../src/main.c:68:29: note: (near initialization for 'pattern')
+../src/main.c:68:31: warning: excess elements in array initializer
+   1,0,0,0,1,1,0,0,0,0,0,0,1,1,0,0,0,0
+                               ^
+../src/main.c:68:31: note: (near initialization for 'pattern')
+../src/main.c:68:33: warning: excess elements in array initializer
+   1,0,0,0,1,1,0,0,0,0,0,0,1,1,0,0,0,0
+                                 ^
+../src/main.c:68:33: note: (near initialization for 'pattern')
+../src/main.c:68:35: warning: excess elements in array initializer
+   1,0,0,0,1,1,0,0,0,0,0,0,1,1,0,0,0,0
+                                   ^
+../src/main.c:68:35: note: (near initialization for 'pattern')
+../src/main.c:68:37: warning: excess elements in array initializer
+   1,0,0,0,1,1,0,0,0,0,0,0,1,1,0,0,0,0
+                                     ^
+../src/main.c:68:37: note: (near initialization for 'pattern')
+../src/main.c:99:8: error: redefinition of 'pattern'
+ Xuint8 pattern[GOL_SIZE] = {
+        ^~~~~~~
+../src/main.c:56:8: note: previous definition of 'pattern' was here
+ Xuint8 pattern[GOL_SIZE] = {
+        ^~~~~~~
+In file included from ../src/main.c:53:0:
+../src/gol_driver.h:38:13: warning: 'write_bit_to_gol' declared 'static' but never defined [-Wunused-function]
+ static void write_bit_to_gol(Xuint8 data);
+             ^~~~~~~~~~~~~~~~
+make: *** [src/main.o] Fehler 1
+14:33:56 **** Auto Build of configuration Debug for project gol_app ****
 make all 
 'Building file: ../src/main.c'
 'Invoking: MicroBlaze gcc compiler'
@@ -281,11 +1970,88 @@ mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../gol_app_bsp/microblaze_0/lib -mlittl
 'Invoking: MicroBlaze Print Size'
 mb-size gol_app.elf  |tee "gol_app.elf.size"
    text	   data	    bss	    dec	    hex	filename
-   7628	    488	   3332	  11448	   2cb8	gol_app.elf
+   7628	    324	   3168	  11120	   2b70	gol_app.elf
 'Finished building: gol_app.elf.size'
 ' '
-17:20:39 **** Auto Build of configuration Debug for project gol_app ****
+14:34:10 **** Clean-only build of project gol_app_bsp ****
+make -k clean 
+make -C microblaze_0/libsrc/bram_v4_1/src -s clean 
+make -C microblaze_0/libsrc/cpu_v2_6/src -s clean 
+make -C microblaze_0/libsrc/game_of_life_v1_0/src -s clean 
+rm: Aufruf von lstat für „*.o“ nicht möglich: Invalid argument
+make[1]: *** [clean] Fehler 1
+make: *** [microblaze_0/libsrc/game_of_life_v1_0/src/make.clean] Fehler 2
+make -C microblaze_0/libsrc/standalone_v6_3/src -s clean 
+make -C microblaze_0/libsrc/uartlite_v3_2/src -s clean 
+make: Das Target »clean« wurde wegen Fehlern nicht aktualisiert.
+14:34:11 **** Clean-only build of configuration Debug for project gol_app ****
+make clean 
+rm -rf  ./src/gol_driver.o ./src/gol_microblaze.o ./src/main.o ./src/platform.o  ./src/gol_driver.d ./src/gol_microblaze.d ./src/main.d ./src/platform.d  gol_app.elf.size  gol_app.elf
+' '
+14:34:11 **** Build of project gol_app_bsp ****
+make -k all 
+"Running Make include in microblaze_0/libsrc/bram_v4_1/src"
+make -C microblaze_0/libsrc/bram_v4_1/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/cpu_v2_6/src"
+make -C microblaze_0/libsrc/cpu_v2_6/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/game_of_life_v1_0/src"
+make -C microblaze_0/libsrc/game_of_life_v1_0/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/standalone_v6_3/src"
+make -C microblaze_0/libsrc/standalone_v6_3/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/uartlite_v3_2/src"
+make -C microblaze_0/libsrc/uartlite_v3_2/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make libs in microblaze_0/libsrc/bram_v4_1/src"
+make -C microblaze_0/libsrc/bram_v4_1/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling bram"
+mb-ar: creating ../../../lib/libxil.a
+"Running Make libs in microblaze_0/libsrc/cpu_v2_6/src"
+make -C microblaze_0/libsrc/cpu_v2_6/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling cpu"
+"Running Make libs in microblaze_0/libsrc/game_of_life_v1_0/src"
+make -C microblaze_0/libsrc/game_of_life_v1_0/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling game_of_life..."
+game_of_life_selftest.c: In function 'GAME_OF_LIFE_Reg_SelfTest':
+game_of_life_selftest.c:52:61: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+    if ( GAME_OF_LIFE_mReadReg (baseaddr, read_loop_index*4) != (read_loop_index+1)*READ_WRITE_MUL_FACTOR){
+                                                             ^~
+game_of_life_selftest.c:36:6: warning: unused variable 'Index' [-Wunused-variable]
+  int Index;
+      ^~~~~
+"Running Make libs in microblaze_0/libsrc/standalone_v6_3/src"
+make -C microblaze_0/libsrc/standalone_v6_3/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling standalone";
+"Running Make libs in microblaze_0/libsrc/uartlite_v3_2/src"
+make -C microblaze_0/libsrc/uartlite_v3_2/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling uartlite"
+'Finished building libraries'
+14:34:19 **** Build of configuration Debug for project gol_app ****
 make all 
+'Building file: ../src/gol_driver.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/gol_driver.o" -I../../gol_app_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/gol_driver.d" -MT"src/gol_driver.o" -o "src/gol_driver.o" "../src/gol_driver.c"
+In file included from ../src/gol_driver.h:11:0,
+                 from ../src/gol_driver.c:8:
+../../gol_app_bsp/microblaze_0/include/xbasic_types.h:115:2: warning: #warning The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert. [-Wcpp]
+ #warning  The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert.
+  ^~~~~~~
+../../gol_app_bsp/microblaze_0/include/xbasic_types.h:116:2: warning: #warning Please refer the Standalone BSP UG647 for further details [-Wcpp]
+ #warning  Please refer the Standalone BSP UG647 for further details
+  ^~~~~~~
+'Finished building: ../src/gol_driver.c'
+' '
+'Building file: ../src/gol_microblaze.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/gol_microblaze.o" -I../../gol_app_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/gol_microblaze.d" -MT"src/gol_microblaze.o" -o "src/gol_microblaze.o" "../src/gol_microblaze.c"
+In file included from ../src/gol_microblaze.h:11:0,
+                 from ../src/gol_microblaze.c:8:
+../../gol_app_bsp/microblaze_0/include/xbasic_types.h:115:2: warning: #warning The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert. [-Wcpp]
+ #warning  The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert.
+  ^~~~~~~
+../../gol_app_bsp/microblaze_0/include/xbasic_types.h:116:2: warning: #warning Please refer the Standalone BSP UG647 for further details [-Wcpp]
+ #warning  Please refer the Standalone BSP UG647 for further details
+  ^~~~~~~
+'Finished building: ../src/gol_microblaze.c'
+' '
 'Building file: ../src/main.c'
 'Invoking: MicroBlaze gcc compiler'
 mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../gol_app_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
@@ -303,6 +2069,11 @@ In file included from ../src/main.c:53:0:
              ^~~~~~~~~~~~~~~~
 'Finished building: ../src/main.c'
 ' '
+'Building file: ../src/platform.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -I../../gol_app_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
 'Building target: gol_app.elf'
 'Invoking: MicroBlaze gcc linker'
 mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../gol_app_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "gol_app.elf"  ./src/gol_driver.o ./src/gol_microblaze.o ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
@@ -311,10 +2082,10 @@ mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../gol_app_bsp/microblaze_0/lib -mlittl
 'Invoking: MicroBlaze Print Size'
 mb-size gol_app.elf  |tee "gol_app.elf.size"
    text	   data	    bss	    dec	    hex	filename
-   7628	    488	   3332	  11448	   2cb8	gol_app.elf
+   7628	    324	   3168	  11120	   2b70	gol_app.elf
 'Finished building: gol_app.elf.size'
 ' '
-17:21:13 **** Auto Build of configuration Debug for project gol_app ****
+15:04:35 **** Auto Build of configuration Debug for project gol_app ****
 make all 
 'Building file: ../src/main.c'
 'Invoking: MicroBlaze gcc compiler'
@@ -341,6 +2112,234 @@ mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../gol_app_bsp/microblaze_0/lib -mlittl
 'Invoking: MicroBlaze Print Size'
 mb-size gol_app.elf  |tee "gol_app.elf.size"
    text	   data	    bss	    dec	    hex	filename
-   7628	    488	   3332	  11448	   2cb8	gol_app.elf
+   7628	    324	   3168	  11120	   2b70	gol_app.elf
+'Finished building: gol_app.elf.size'
+' '
+15:08:16 **** Clean-only build of project gol_app_bsp ****
+make -k clean 
+make -C microblaze_0/libsrc/bram_v4_1/src -s clean 
+make -C microblaze_0/libsrc/cpu_v2_6/src -s clean 
+make -C microblaze_0/libsrc/game_of_life_v1_0/src -s clean 
+rm: Aufruf von lstat für „*.o“ nicht möglich: Invalid argument
+make[1]: *** [clean] Fehler 1
+make: *** [microblaze_0/libsrc/game_of_life_v1_0/src/make.clean] Fehler 2
+make -C microblaze_0/libsrc/standalone_v6_3/src -s clean 
+make -C microblaze_0/libsrc/uartlite_v3_2/src -s clean 
+make: Das Target »clean« wurde wegen Fehlern nicht aktualisiert.
+15:08:16 **** Clean-only build of configuration Debug for project gol_app ****
+make clean 
+rm -rf  ./src/gol_driver.o ./src/gol_microblaze.o ./src/main.o ./src/platform.o  ./src/gol_driver.d ./src/gol_microblaze.d ./src/main.d ./src/platform.d  gol_app.elf.size  gol_app.elf
+' '
+15:08:17 **** Build of project gol_app_bsp ****
+make -k all 
+"Running Make include in microblaze_0/libsrc/bram_v4_1/src"
+make -C microblaze_0/libsrc/bram_v4_1/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/cpu_v2_6/src"
+make -C microblaze_0/libsrc/cpu_v2_6/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/game_of_life_v1_0/src"
+make -C microblaze_0/libsrc/game_of_life_v1_0/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/standalone_v6_3/src"
+make -C microblaze_0/libsrc/standalone_v6_3/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/uartlite_v3_2/src"
+make -C microblaze_0/libsrc/uartlite_v3_2/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make libs in microblaze_0/libsrc/bram_v4_1/src"
+make -C microblaze_0/libsrc/bram_v4_1/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling bram"
+mb-ar: creating ../../../lib/libxil.a
+"Running Make libs in microblaze_0/libsrc/cpu_v2_6/src"
+make -C microblaze_0/libsrc/cpu_v2_6/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling cpu"
+"Running Make libs in microblaze_0/libsrc/game_of_life_v1_0/src"
+make -C microblaze_0/libsrc/game_of_life_v1_0/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling game_of_life..."
+game_of_life_selftest.c: In function 'GAME_OF_LIFE_Reg_SelfTest':
+game_of_life_selftest.c:52:61: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+    if ( GAME_OF_LIFE_mReadReg (baseaddr, read_loop_index*4) != (read_loop_index+1)*READ_WRITE_MUL_FACTOR){
+                                                             ^~
+game_of_life_selftest.c:36:6: warning: unused variable 'Index' [-Wunused-variable]
+  int Index;
+      ^~~~~
+"Running Make libs in microblaze_0/libsrc/standalone_v6_3/src"
+make -C microblaze_0/libsrc/standalone_v6_3/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling standalone";
+"Running Make libs in microblaze_0/libsrc/uartlite_v3_2/src"
+make -C microblaze_0/libsrc/uartlite_v3_2/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling uartlite"
+'Finished building libraries'
+15:08:23 **** Build of configuration Debug for project gol_app ****
+make all 
+'Building file: ../src/gol_driver.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/gol_driver.o" -I../../gol_app_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/gol_driver.d" -MT"src/gol_driver.o" -o "src/gol_driver.o" "../src/gol_driver.c"
+In file included from ../src/gol_driver.h:11:0,
+                 from ../src/gol_driver.c:8:
+../../gol_app_bsp/microblaze_0/include/xbasic_types.h:115:2: warning: #warning The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert. [-Wcpp]
+ #warning  The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert.
+  ^~~~~~~
+../../gol_app_bsp/microblaze_0/include/xbasic_types.h:116:2: warning: #warning Please refer the Standalone BSP UG647 for further details [-Wcpp]
+ #warning  Please refer the Standalone BSP UG647 for further details
+  ^~~~~~~
+'Finished building: ../src/gol_driver.c'
+' '
+'Building file: ../src/gol_microblaze.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/gol_microblaze.o" -I../../gol_app_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/gol_microblaze.d" -MT"src/gol_microblaze.o" -o "src/gol_microblaze.o" "../src/gol_microblaze.c"
+In file included from ../src/gol_microblaze.h:11:0,
+                 from ../src/gol_microblaze.c:8:
+../../gol_app_bsp/microblaze_0/include/xbasic_types.h:115:2: warning: #warning The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert. [-Wcpp]
+ #warning  The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert.
+  ^~~~~~~
+../../gol_app_bsp/microblaze_0/include/xbasic_types.h:116:2: warning: #warning Please refer the Standalone BSP UG647 for further details [-Wcpp]
+ #warning  Please refer the Standalone BSP UG647 for further details
+  ^~~~~~~
+'Finished building: ../src/gol_microblaze.c'
+' '
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../gol_app_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/gol_microblaze.h:11:0,
+                 from ../src/main.c:52:
+../../gol_app_bsp/microblaze_0/include/xbasic_types.h:115:2: warning: #warning The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert. [-Wcpp]
+ #warning  The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert.
+  ^~~~~~~
+../../gol_app_bsp/microblaze_0/include/xbasic_types.h:116:2: warning: #warning Please refer the Standalone BSP UG647 for further details [-Wcpp]
+ #warning  Please refer the Standalone BSP UG647 for further details
+  ^~~~~~~
+In file included from ../src/main.c:53:0:
+../src/gol_driver.h:38:13: warning: 'write_bit_to_gol' declared 'static' but never defined [-Wunused-function]
+ static void write_bit_to_gol(Xuint8 data);
+             ^~~~~~~~~~~~~~~~
+'Finished building: ../src/main.c'
+' '
+'Building file: ../src/platform.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -I../../gol_app_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building target: gol_app.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../gol_app_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "gol_app.elf"  ./src/gol_driver.o ./src/gol_microblaze.o ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: gol_app.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size gol_app.elf  |tee "gol_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   7628	    324	   3168	  11120	   2b70	gol_app.elf
+'Finished building: gol_app.elf.size'
+' '
+15:08:28 **** Auto Build of configuration Debug for project gol_app ****
+make all 
+'Building file: ../src/gol_driver.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/gol_driver.o" -I../../gol_app_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/gol_driver.d" -MT"src/gol_driver.o" -o "src/gol_driver.o" "../src/gol_driver.c"
+In file included from ../src/gol_driver.h:11:0,
+                 from ../src/gol_driver.c:8:
+../../gol_app_bsp/microblaze_0/include/xbasic_types.h:115:2: warning: #warning The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert. [-Wcpp]
+ #warning  The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert.
+  ^~~~~~~
+../../gol_app_bsp/microblaze_0/include/xbasic_types.h:116:2: warning: #warning Please refer the Standalone BSP UG647 for further details [-Wcpp]
+ #warning  Please refer the Standalone BSP UG647 for further details
+  ^~~~~~~
+'Finished building: ../src/gol_driver.c'
+' '
+'Building file: ../src/gol_microblaze.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/gol_microblaze.o" -I../../gol_app_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/gol_microblaze.d" -MT"src/gol_microblaze.o" -o "src/gol_microblaze.o" "../src/gol_microblaze.c"
+In file included from ../src/gol_microblaze.h:11:0,
+                 from ../src/gol_microblaze.c:8:
+../../gol_app_bsp/microblaze_0/include/xbasic_types.h:115:2: warning: #warning The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert. [-Wcpp]
+ #warning  The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert.
+  ^~~~~~~
+../../gol_app_bsp/microblaze_0/include/xbasic_types.h:116:2: warning: #warning Please refer the Standalone BSP UG647 for further details [-Wcpp]
+ #warning  Please refer the Standalone BSP UG647 for further details
+  ^~~~~~~
+'Finished building: ../src/gol_microblaze.c'
+' '
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../gol_app_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/gol_microblaze.h:11:0,
+                 from ../src/main.c:52:
+../../gol_app_bsp/microblaze_0/include/xbasic_types.h:115:2: warning: #warning The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert. [-Wcpp]
+ #warning  The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert.
+  ^~~~~~~
+../../gol_app_bsp/microblaze_0/include/xbasic_types.h:116:2: warning: #warning Please refer the Standalone BSP UG647 for further details [-Wcpp]
+ #warning  Please refer the Standalone BSP UG647 for further details
+  ^~~~~~~
+In file included from ../src/main.c:53:0:
+../src/gol_driver.h:38:13: warning: 'write_bit_to_gol' declared 'static' but never defined [-Wunused-function]
+ static void write_bit_to_gol(Xuint8 data);
+             ^~~~~~~~~~~~~~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: gol_app.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../gol_app_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "gol_app.elf"  ./src/gol_driver.o ./src/gol_microblaze.o ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: gol_app.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size gol_app.elf  |tee "gol_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   7612	    288	   3132	  11032	   2b18	gol_app.elf
+'Finished building: gol_app.elf.size'
+' '
+15:09:08 **** Auto Build of configuration Debug for project gol_app ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../gol_app_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/gol_microblaze.h:11:0,
+                 from ../src/main.c:52:
+../../gol_app_bsp/microblaze_0/include/xbasic_types.h:115:2: warning: #warning The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert. [-Wcpp]
+ #warning  The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert.
+  ^~~~~~~
+../../gol_app_bsp/microblaze_0/include/xbasic_types.h:116:2: warning: #warning Please refer the Standalone BSP UG647 for further details [-Wcpp]
+ #warning  Please refer the Standalone BSP UG647 for further details
+  ^~~~~~~
+In file included from ../src/main.c:53:0:
+../src/gol_driver.h:38:13: warning: 'write_bit_to_gol' declared 'static' but never defined [-Wunused-function]
+ static void write_bit_to_gol(Xuint8 data);
+             ^~~~~~~~~~~~~~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: gol_app.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../gol_app_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "gol_app.elf"  ./src/gol_driver.o ./src/gol_microblaze.o ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: gol_app.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size gol_app.elf  |tee "gol_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   7220	    288	   3132	  10640	   2990	gol_app.elf
+'Finished building: gol_app.elf.size'
+' '
+15:11:50 **** Auto Build of configuration Debug for project gol_app ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../gol_app_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/gol_microblaze.h:11:0,
+                 from ../src/main.c:52:
+../../gol_app_bsp/microblaze_0/include/xbasic_types.h:115:2: warning: #warning The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert. [-Wcpp]
+ #warning  The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert.
+  ^~~~~~~
+../../gol_app_bsp/microblaze_0/include/xbasic_types.h:116:2: warning: #warning Please refer the Standalone BSP UG647 for further details [-Wcpp]
+ #warning  Please refer the Standalone BSP UG647 for further details
+  ^~~~~~~
+In file included from ../src/main.c:53:0:
+../src/gol_driver.h:38:13: warning: 'write_bit_to_gol' declared 'static' but never defined [-Wunused-function]
+ static void write_bit_to_gol(Xuint8 data);
+             ^~~~~~~~~~~~~~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: gol_app.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../gol_app_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "gol_app.elf"  ./src/gol_driver.o ./src/gol_microblaze.o ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: gol_app.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size gol_app.elf  |tee "gol_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   7612	    288	   3132	  11032	   2b18	gol_app.elf
 'Finished building: gol_app.elf.size'
 ' '

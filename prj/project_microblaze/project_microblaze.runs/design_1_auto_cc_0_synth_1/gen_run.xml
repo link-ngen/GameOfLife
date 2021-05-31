@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="design_1_auto_cc_0_synth_1" LaunchPart="xc7z020clg484-1" LaunchTime="1622226177">
+<GenRun Id="design_1_auto_cc_0_synth_1" LaunchPart="xc7z020clg484-1" LaunchTime="1622395859">
   <File Type="RDS-PROPCONSTRS" Name="design_1_auto_cc_0_drc_synth.rpt"/>
   <File Type="PA-TCL" Name="design_1_auto_cc_0.tcl"/>
   <File Type="RDS-RDS" Name="design_1_auto_cc_0.vds"/>

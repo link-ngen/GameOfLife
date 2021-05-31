@@ -37,8 +37,8 @@ end grid_tb;
 
 architecture Behavioral of grid_tb is
     component grid is
-        Generic ( WIDTH: integer := 3;
-                  HEIGHT: integer := 3);
+        Generic ( WIDTH: integer := 5;
+                  HEIGHT: integer := 4);
         Port ( d_in:    in std_logic;
                clk:     in std_logic;
                ce:      in std_logic;
@@ -46,12 +46,14 @@ architecture Behavioral of grid_tb is
                Q:       out std_logic);
     end component;
     
-    constant W : integer := 3;
-    constant H : integer := 3;
+    constant W : integer := 5;
+    constant H : integer := 4;
     
     constant TOTAL_CELL : integer := W * H;
     --constant cpu_data: std_logic_vector(TOTAL_CELL-1 downto 0) := "000011000000110000000101000000101000000100000000001000110100000000001011110101001100101011000101010010101000000101010010101000110101001100101011110100000000001011000100000000001000000101000000101000000011000000110000";
-    constant cpu_data: std_logic_vector(TOTAL_CELL-1 downto 0) := "010111010";
+    --constant cpu_data: std_logic_vector(TOTAL_CELL-1 downto 0) := "010111010";
+    constant cpu_data: std_logic_vector(TOTAL_CELL-1 downto 0) := "11000001000100110001"; --10001100100010000011
+    signal output_data: std_logic_vector(TOTAL_CELL-1 downto 0) := (others => '0');
     
     signal clk: std_logic := '0';
     signal ce: std_logic := '0';
@@ -103,6 +105,19 @@ begin
         ce <= '0'; 
         
 --######### Calc test end #########    
+        wait for 50ns;
+        -- begin shifting
+        ce <= '1';
+        shift <= '0';
+        for i in 0 to (TOTAL_CELL-1) loop
+            output_data(i) <= Q;        
+            wait for 20ns;   
+        end loop;
+        
+        -- shifting end
+        wait for 20ns;    
+        shift <= '1';  
+        ce <= '0'; 
         
         wait;
     end process;

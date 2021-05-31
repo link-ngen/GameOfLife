@@ -8,8 +8,8 @@
 #ifndef SRC_GOL_DEFINES_H_
 #define SRC_GOL_DEFINES_H_
 
-#define WIDTH  (18)
-#define HEIGHT (12)
+#define WIDTH  (4)
+#define HEIGHT (4)
 #define GOL_SIZE (WIDTH*HEIGHT)
 
 #endif /* SRC_GOL_DEFINES_H_ */

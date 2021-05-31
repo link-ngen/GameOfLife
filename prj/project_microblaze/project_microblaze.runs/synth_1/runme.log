@@ -19,9 +19,9 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020-clg484'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020-clg484'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 7580 
+INFO: Helper process launched with PID 2344 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 359.645 ; gain = 76.051
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 359.086 ; gain = 75.051
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'design_1_wrapper' [C:/Project/GameOfLife/bd/design_1/hdl/design_1_wrapper.vhd:23]
 INFO: [Synth 8-3491] module 'design_1' declared at 'C:/Project/GameOfLife/bd/design_1/hdl/design_1.vhd:1502' bound to instance 'design_1_i' of component 'design_1' [C:/Project/GameOfLife/bd/design_1/hdl/design_1_wrapper.vhd:33]
@@ -30,40 +30,40 @@ INFO: [Synth 8-638] synthesizing module 'design_1_axi_interconnect_0_0' [C:/Proj
 INFO: [Synth 8-638] synthesizing module 'm00_couplers_imp_1CA5Z32' [C:/Project/GameOfLife/bd/design_1/hdl/design_1.vhd:57]
 INFO: [Synth 8-256] done synthesizing module 'm00_couplers_imp_1CA5Z32' (1#1) [C:/Project/GameOfLife/bd/design_1/hdl/design_1.vhd:57]
 INFO: [Synth 8-638] synthesizing module 'm01_couplers_imp_I4GRPB' [C:/Project/GameOfLife/bd/design_1/hdl/design_1.vhd:162]
-INFO: [Synth 8-3491] module 'design_1_auto_cc_0' declared at 'C:/Project/GameOfLife/prj/project_microblaze/project_microblaze.runs/synth_1/.Xil/Vivado-1368-DEVPC/realtime/design_1_auto_cc_0_stub.vhdl:5' bound to instance 'auto_cc' of component 'design_1_auto_cc_0' [C:/Project/GameOfLife/bd/design_1/hdl/design_1.vhd:294]
-INFO: [Synth 8-638] synthesizing module 'design_1_auto_cc_0' [C:/Project/GameOfLife/prj/project_microblaze/project_microblaze.runs/synth_1/.Xil/Vivado-1368-DEVPC/realtime/design_1_auto_cc_0_stub.vhdl:53]
+INFO: [Synth 8-3491] module 'design_1_auto_cc_0' declared at 'C:/Project/GameOfLife/prj/project_microblaze/project_microblaze.runs/synth_1/.Xil/Vivado-7076-DEVPC/realtime/design_1_auto_cc_0_stub.vhdl:5' bound to instance 'auto_cc' of component 'design_1_auto_cc_0' [C:/Project/GameOfLife/bd/design_1/hdl/design_1.vhd:294]
+INFO: [Synth 8-638] synthesizing module 'design_1_auto_cc_0' [C:/Project/GameOfLife/prj/project_microblaze/project_microblaze.runs/synth_1/.Xil/Vivado-7076-DEVPC/realtime/design_1_auto_cc_0_stub.vhdl:53]
 INFO: [Synth 8-256] done synthesizing module 'm01_couplers_imp_I4GRPB' (2#1) [C:/Project/GameOfLife/bd/design_1/hdl/design_1.vhd:162]
 INFO: [Synth 8-638] synthesizing module 's00_couplers_imp_O7FAN0' [C:/Project/GameOfLife/bd/design_1/hdl/design_1.vhd:943]
 INFO: [Synth 8-256] done synthesizing module 's00_couplers_imp_O7FAN0' (3#1) [C:/Project/GameOfLife/bd/design_1/hdl/design_1.vhd:943]
-INFO: [Synth 8-3491] module 'design_1_xbar_0' declared at 'C:/Project/GameOfLife/prj/project_microblaze/project_microblaze.runs/synth_1/.Xil/Vivado-1368-DEVPC/realtime/design_1_xbar_0_stub.vhdl:5' bound to instance 'xbar' of component 'design_1_xbar_0' [C:/Project/GameOfLife/bd/design_1/hdl/design_1.vhd:1435]
-INFO: [Synth 8-638] synthesizing module 'design_1_xbar_0' [C:/Project/GameOfLife/prj/project_microblaze/project_microblaze.runs/synth_1/.Xil/Vivado-1368-DEVPC/realtime/design_1_xbar_0_stub.vhdl:51]
+INFO: [Synth 8-3491] module 'design_1_xbar_0' declared at 'C:/Project/GameOfLife/prj/project_microblaze/project_microblaze.runs/synth_1/.Xil/Vivado-7076-DEVPC/realtime/design_1_xbar_0_stub.vhdl:5' bound to instance 'xbar' of component 'design_1_xbar_0' [C:/Project/GameOfLife/bd/design_1/hdl/design_1.vhd:1435]
+INFO: [Synth 8-638] synthesizing module 'design_1_xbar_0' [C:/Project/GameOfLife/prj/project_microblaze/project_microblaze.runs/synth_1/.Xil/Vivado-7076-DEVPC/realtime/design_1_xbar_0_stub.vhdl:51]
 INFO: [Synth 8-256] done synthesizing module 'design_1_axi_interconnect_0_0' (4#1) [C:/Project/GameOfLife/bd/design_1/hdl/design_1.vhd:1075]
-INFO: [Synth 8-3491] module 'design_1_axi_uartlite_0_0' declared at 'C:/Project/GameOfLife/prj/project_microblaze/project_microblaze.runs/synth_1/.Xil/Vivado-1368-DEVPC/realtime/design_1_axi_uartlite_0_0_stub.vhdl:5' bound to instance 'axi_uartlite_0' of component 'design_1_axi_uartlite_0_0' [C:/Project/GameOfLife/bd/design_1/hdl/design_1.vhd:1852]
-INFO: [Synth 8-638] synthesizing module 'design_1_axi_uartlite_0_0' [C:/Project/GameOfLife/prj/project_microblaze/project_microblaze.runs/synth_1/.Xil/Vivado-1368-DEVPC/realtime/design_1_axi_uartlite_0_0_stub.vhdl:33]
-INFO: [Synth 8-3491] module 'design_1_clk_wiz_1_0' declared at 'C:/Project/GameOfLife/prj/project_microblaze/project_microblaze.runs/synth_1/.Xil/Vivado-1368-DEVPC/realtime/design_1_clk_wiz_1_0_stub.vhdl:5' bound to instance 'clk_wiz_1' of component 'design_1_clk_wiz_1_0' [C:/Project/GameOfLife/bd/design_1/hdl/design_1.vhd:1877]
-INFO: [Synth 8-638] synthesizing module 'design_1_clk_wiz_1_0' [C:/Project/GameOfLife/prj/project_microblaze/project_microblaze.runs/synth_1/.Xil/Vivado-1368-DEVPC/realtime/design_1_clk_wiz_1_0_stub.vhdl:16]
-INFO: [Synth 8-3491] module 'design_1_game_of_life_0_0' declared at 'C:/Project/GameOfLife/prj/project_microblaze/project_microblaze.runs/synth_1/.Xil/Vivado-1368-DEVPC/realtime/design_1_game_of_life_0_0_stub.vhdl:5' bound to instance 'game_of_life_0' of component 'design_1_game_of_life_0_0' [C:/Project/GameOfLife/bd/design_1/hdl/design_1.vhd:1885]
-INFO: [Synth 8-638] synthesizing module 'design_1_game_of_life_0_0' [C:/Project/GameOfLife/prj/project_microblaze/project_microblaze.runs/synth_1/.Xil/Vivado-1368-DEVPC/realtime/design_1_game_of_life_0_0_stub.vhdl:32]
-INFO: [Synth 8-3491] module 'design_1_mdm_1_0' declared at 'C:/Project/GameOfLife/prj/project_microblaze/project_microblaze.runs/synth_1/.Xil/Vivado-1368-DEVPC/realtime/design_1_mdm_1_0_stub.vhdl:5' bound to instance 'mdm_1' of component 'design_1_mdm_1_0' [C:/Project/GameOfLife/bd/design_1/hdl/design_1.vhd:1909]
-INFO: [Synth 8-638] synthesizing module 'design_1_mdm_1_0' [C:/Project/GameOfLife/prj/project_microblaze/project_microblaze.runs/synth_1/.Xil/Vivado-1368-DEVPC/realtime/design_1_mdm_1_0_stub.vhdl:21]
-INFO: [Synth 8-3491] module 'design_1_microblaze_0_0' declared at 'C:/Project/GameOfLife/prj/project_microblaze/project_microblaze.runs/synth_1/.Xil/Vivado-1368-DEVPC/realtime/design_1_microblaze_0_0_stub.vhdl:5' bound to instance 'microblaze_0' of component 'design_1_microblaze_0_0' [C:/Project/GameOfLife/bd/design_1/hdl/design_1.vhd:1922]
-INFO: [Synth 8-638] synthesizing module 'design_1_microblaze_0_0' [C:/Project/GameOfLife/prj/project_microblaze/project_microblaze.runs/synth_1/.Xil/Vivado-1368-DEVPC/realtime/design_1_microblaze_0_0_stub.vhdl:63]
+INFO: [Synth 8-3491] module 'design_1_axi_uartlite_0_0' declared at 'C:/Project/GameOfLife/prj/project_microblaze/project_microblaze.runs/synth_1/.Xil/Vivado-7076-DEVPC/realtime/design_1_axi_uartlite_0_0_stub.vhdl:5' bound to instance 'axi_uartlite_0' of component 'design_1_axi_uartlite_0_0' [C:/Project/GameOfLife/bd/design_1/hdl/design_1.vhd:1852]
+INFO: [Synth 8-638] synthesizing module 'design_1_axi_uartlite_0_0' [C:/Project/GameOfLife/prj/project_microblaze/project_microblaze.runs/synth_1/.Xil/Vivado-7076-DEVPC/realtime/design_1_axi_uartlite_0_0_stub.vhdl:33]
+INFO: [Synth 8-3491] module 'design_1_clk_wiz_1_0' declared at 'C:/Project/GameOfLife/prj/project_microblaze/project_microblaze.runs/synth_1/.Xil/Vivado-7076-DEVPC/realtime/design_1_clk_wiz_1_0_stub.vhdl:5' bound to instance 'clk_wiz_1' of component 'design_1_clk_wiz_1_0' [C:/Project/GameOfLife/bd/design_1/hdl/design_1.vhd:1877]
+INFO: [Synth 8-638] synthesizing module 'design_1_clk_wiz_1_0' [C:/Project/GameOfLife/prj/project_microblaze/project_microblaze.runs/synth_1/.Xil/Vivado-7076-DEVPC/realtime/design_1_clk_wiz_1_0_stub.vhdl:16]
+INFO: [Synth 8-3491] module 'design_1_game_of_life_0_0' declared at 'C:/Project/GameOfLife/prj/project_microblaze/project_microblaze.runs/synth_1/.Xil/Vivado-7076-DEVPC/realtime/design_1_game_of_life_0_0_stub.vhdl:5' bound to instance 'game_of_life_0' of component 'design_1_game_of_life_0_0' [C:/Project/GameOfLife/bd/design_1/hdl/design_1.vhd:1885]
+INFO: [Synth 8-638] synthesizing module 'design_1_game_of_life_0_0' [C:/Project/GameOfLife/prj/project_microblaze/project_microblaze.runs/synth_1/.Xil/Vivado-7076-DEVPC/realtime/design_1_game_of_life_0_0_stub.vhdl:32]
+INFO: [Synth 8-3491] module 'design_1_mdm_1_0' declared at 'C:/Project/GameOfLife/prj/project_microblaze/project_microblaze.runs/synth_1/.Xil/Vivado-7076-DEVPC/realtime/design_1_mdm_1_0_stub.vhdl:5' bound to instance 'mdm_1' of component 'design_1_mdm_1_0' [C:/Project/GameOfLife/bd/design_1/hdl/design_1.vhd:1909]
+INFO: [Synth 8-638] synthesizing module 'design_1_mdm_1_0' [C:/Project/GameOfLife/prj/project_microblaze/project_microblaze.runs/synth_1/.Xil/Vivado-7076-DEVPC/realtime/design_1_mdm_1_0_stub.vhdl:21]
+INFO: [Synth 8-3491] module 'design_1_microblaze_0_0' declared at 'C:/Project/GameOfLife/prj/project_microblaze/project_microblaze.runs/synth_1/.Xil/Vivado-7076-DEVPC/realtime/design_1_microblaze_0_0_stub.vhdl:5' bound to instance 'microblaze_0' of component 'design_1_microblaze_0_0' [C:/Project/GameOfLife/bd/design_1/hdl/design_1.vhd:1922]
+INFO: [Synth 8-638] synthesizing module 'design_1_microblaze_0_0' [C:/Project/GameOfLife/prj/project_microblaze/project_microblaze.runs/synth_1/.Xil/Vivado-7076-DEVPC/realtime/design_1_microblaze_0_0_stub.vhdl:63]
 INFO: [Synth 8-638] synthesizing module 'microblaze_0_local_memory_imp_1K0VQXK' [C:/Project/GameOfLife/bd/design_1/hdl/design_1.vhd:370]
-INFO: [Synth 8-3491] module 'design_1_dlmb_bram_if_cntlr_0' declared at 'C:/Project/GameOfLife/prj/project_microblaze/project_microblaze.runs/synth_1/.Xil/Vivado-1368-DEVPC/realtime/design_1_dlmb_bram_if_cntlr_0_stub.vhdl:5' bound to instance 'dlmb_bram_if_cntlr' of component 'design_1_dlmb_bram_if_cntlr_0' [C:/Project/GameOfLife/bd/design_1/hdl/design_1.vhd:580]
-INFO: [Synth 8-638] synthesizing module 'design_1_dlmb_bram_if_cntlr_0' [C:/Project/GameOfLife/prj/project_microblaze/project_microblaze.runs/synth_1/.Xil/Vivado-1368-DEVPC/realtime/design_1_dlmb_bram_if_cntlr_0_stub.vhdl:31]
-INFO: [Synth 8-3491] module 'design_1_dlmb_v10_0' declared at 'C:/Project/GameOfLife/prj/project_microblaze/project_microblaze.runs/synth_1/.Xil/Vivado-1368-DEVPC/realtime/design_1_dlmb_v10_0_stub.vhdl:5' bound to instance 'dlmb_v10' of component 'design_1_dlmb_v10_0' [C:/Project/GameOfLife/bd/design_1/hdl/design_1.vhd:634]
-INFO: [Synth 8-638] synthesizing module 'design_1_dlmb_v10_0' [C:/Project/GameOfLife/prj/project_microblaze/project_microblaze.runs/synth_1/.Xil/Vivado-1368-DEVPC/realtime/design_1_dlmb_v10_0_stub.vhdl:36]
-INFO: [Synth 8-3491] module 'design_1_ilmb_bram_if_cntlr_0' declared at 'C:/Project/GameOfLife/prj/project_microblaze/project_microblaze.runs/synth_1/.Xil/Vivado-1368-DEVPC/realtime/design_1_ilmb_bram_if_cntlr_0_stub.vhdl:5' bound to instance 'ilmb_bram_if_cntlr' of component 'design_1_ilmb_bram_if_cntlr_0' [C:/Project/GameOfLife/bd/design_1/hdl/design_1.vhd:662]
-INFO: [Synth 8-638] synthesizing module 'design_1_ilmb_bram_if_cntlr_0' [C:/Project/GameOfLife/prj/project_microblaze/project_microblaze.runs/synth_1/.Xil/Vivado-1368-DEVPC/realtime/design_1_ilmb_bram_if_cntlr_0_stub.vhdl:31]
-INFO: [Synth 8-3491] module 'design_1_ilmb_v10_0' declared at 'C:/Project/GameOfLife/prj/project_microblaze/project_microblaze.runs/synth_1/.Xil/Vivado-1368-DEVPC/realtime/design_1_ilmb_v10_0_stub.vhdl:5' bound to instance 'ilmb_v10' of component 'design_1_ilmb_v10_0' [C:/Project/GameOfLife/bd/design_1/hdl/design_1.vhd:716]
-INFO: [Synth 8-638] synthesizing module 'design_1_ilmb_v10_0' [C:/Project/GameOfLife/prj/project_microblaze/project_microblaze.runs/synth_1/.Xil/Vivado-1368-DEVPC/realtime/design_1_ilmb_v10_0_stub.vhdl:36]
-INFO: [Synth 8-3491] module 'design_1_lmb_bram_0' declared at 'C:/Project/GameOfLife/prj/project_microblaze/project_microblaze.runs/synth_1/.Xil/Vivado-1368-DEVPC/realtime/design_1_lmb_bram_0_stub.vhdl:5' bound to instance 'lmb_bram' of component 'design_1_lmb_bram_0' [C:/Project/GameOfLife/bd/design_1/hdl/design_1.vhd:744]
-INFO: [Synth 8-638] synthesizing module 'design_1_lmb_bram_0' [C:/Project/GameOfLife/prj/project_microblaze/project_microblaze.runs/synth_1/.Xil/Vivado-1368-DEVPC/realtime/design_1_lmb_bram_0_stub.vhdl:25]
+INFO: [Synth 8-3491] module 'design_1_dlmb_bram_if_cntlr_0' declared at 'C:/Project/GameOfLife/prj/project_microblaze/project_microblaze.runs/synth_1/.Xil/Vivado-7076-DEVPC/realtime/design_1_dlmb_bram_if_cntlr_0_stub.vhdl:5' bound to instance 'dlmb_bram_if_cntlr' of component 'design_1_dlmb_bram_if_cntlr_0' [C:/Project/GameOfLife/bd/design_1/hdl/design_1.vhd:580]
+INFO: [Synth 8-638] synthesizing module 'design_1_dlmb_bram_if_cntlr_0' [C:/Project/GameOfLife/prj/project_microblaze/project_microblaze.runs/synth_1/.Xil/Vivado-7076-DEVPC/realtime/design_1_dlmb_bram_if_cntlr_0_stub.vhdl:31]
+INFO: [Synth 8-3491] module 'design_1_dlmb_v10_0' declared at 'C:/Project/GameOfLife/prj/project_microblaze/project_microblaze.runs/synth_1/.Xil/Vivado-7076-DEVPC/realtime/design_1_dlmb_v10_0_stub.vhdl:5' bound to instance 'dlmb_v10' of component 'design_1_dlmb_v10_0' [C:/Project/GameOfLife/bd/design_1/hdl/design_1.vhd:634]
+INFO: [Synth 8-638] synthesizing module 'design_1_dlmb_v10_0' [C:/Project/GameOfLife/prj/project_microblaze/project_microblaze.runs/synth_1/.Xil/Vivado-7076-DEVPC/realtime/design_1_dlmb_v10_0_stub.vhdl:36]
+INFO: [Synth 8-3491] module 'design_1_ilmb_bram_if_cntlr_0' declared at 'C:/Project/GameOfLife/prj/project_microblaze/project_microblaze.runs/synth_1/.Xil/Vivado-7076-DEVPC/realtime/design_1_ilmb_bram_if_cntlr_0_stub.vhdl:5' bound to instance 'ilmb_bram_if_cntlr' of component 'design_1_ilmb_bram_if_cntlr_0' [C:/Project/GameOfLife/bd/design_1/hdl/design_1.vhd:662]
+INFO: [Synth 8-638] synthesizing module 'design_1_ilmb_bram_if_cntlr_0' [C:/Project/GameOfLife/prj/project_microblaze/project_microblaze.runs/synth_1/.Xil/Vivado-7076-DEVPC/realtime/design_1_ilmb_bram_if_cntlr_0_stub.vhdl:31]
+INFO: [Synth 8-3491] module 'design_1_ilmb_v10_0' declared at 'C:/Project/GameOfLife/prj/project_microblaze/project_microblaze.runs/synth_1/.Xil/Vivado-7076-DEVPC/realtime/design_1_ilmb_v10_0_stub.vhdl:5' bound to instance 'ilmb_v10' of component 'design_1_ilmb_v10_0' [C:/Project/GameOfLife/bd/design_1/hdl/design_1.vhd:716]
+INFO: [Synth 8-638] synthesizing module 'design_1_ilmb_v10_0' [C:/Project/GameOfLife/prj/project_microblaze/project_microblaze.runs/synth_1/.Xil/Vivado-7076-DEVPC/realtime/design_1_ilmb_v10_0_stub.vhdl:36]
+INFO: [Synth 8-3491] module 'design_1_lmb_bram_0' declared at 'C:/Project/GameOfLife/prj/project_microblaze/project_microblaze.runs/synth_1/.Xil/Vivado-7076-DEVPC/realtime/design_1_lmb_bram_0_stub.vhdl:5' bound to instance 'lmb_bram' of component 'design_1_lmb_bram_0' [C:/Project/GameOfLife/bd/design_1/hdl/design_1.vhd:744]
+INFO: [Synth 8-638] synthesizing module 'design_1_lmb_bram_0' [C:/Project/GameOfLife/prj/project_microblaze/project_microblaze.runs/synth_1/.Xil/Vivado-7076-DEVPC/realtime/design_1_lmb_bram_0_stub.vhdl:25]
 INFO: [Synth 8-256] done synthesizing module 'microblaze_0_local_memory_imp_1K0VQXK' (5#1) [C:/Project/GameOfLife/bd/design_1/hdl/design_1.vhd:370]
-INFO: [Synth 8-3491] module 'design_1_proc_sys_reset_0_0' declared at 'C:/Project/GameOfLife/prj/project_microblaze/project_microblaze.runs/synth_1/.Xil/Vivado-1368-DEVPC/realtime/design_1_proc_sys_reset_0_0_stub.vhdl:5' bound to instance 'proc_sys_reset_0' of component 'design_1_proc_sys_reset_0_0' [C:/Project/GameOfLife/bd/design_1/hdl/design_1.vhd:2001]
-INFO: [Synth 8-638] synthesizing module 'design_1_proc_sys_reset_0_0' [C:/Project/GameOfLife/prj/project_microblaze/project_microblaze.runs/synth_1/.Xil/Vivado-1368-DEVPC/realtime/design_1_proc_sys_reset_0_0_stub.vhdl:21]
-INFO: [Synth 8-3491] module 'design_1_rst_clk_wiz_1_100M_0' declared at 'C:/Project/GameOfLife/prj/project_microblaze/project_microblaze.runs/synth_1/.Xil/Vivado-1368-DEVPC/realtime/design_1_rst_clk_wiz_1_100M_0_stub.vhdl:5' bound to instance 'rst_clk_wiz_1_100M' of component 'design_1_rst_clk_wiz_1_100M_0' [C:/Project/GameOfLife/bd/design_1/hdl/design_1.vhd:2014]
-INFO: [Synth 8-638] synthesizing module 'design_1_rst_clk_wiz_1_100M_0' [C:/Project/GameOfLife/prj/project_microblaze/project_microblaze.runs/synth_1/.Xil/Vivado-1368-DEVPC/realtime/design_1_rst_clk_wiz_1_100M_0_stub.vhdl:21]
+INFO: [Synth 8-3491] module 'design_1_proc_sys_reset_0_0' declared at 'C:/Project/GameOfLife/prj/project_microblaze/project_microblaze.runs/synth_1/.Xil/Vivado-7076-DEVPC/realtime/design_1_proc_sys_reset_0_0_stub.vhdl:5' bound to instance 'proc_sys_reset_0' of component 'design_1_proc_sys_reset_0_0' [C:/Project/GameOfLife/bd/design_1/hdl/design_1.vhd:2001]
+INFO: [Synth 8-638] synthesizing module 'design_1_proc_sys_reset_0_0' [C:/Project/GameOfLife/prj/project_microblaze/project_microblaze.runs/synth_1/.Xil/Vivado-7076-DEVPC/realtime/design_1_proc_sys_reset_0_0_stub.vhdl:21]
+INFO: [Synth 8-3491] module 'design_1_rst_clk_wiz_1_100M_0' declared at 'C:/Project/GameOfLife/prj/project_microblaze/project_microblaze.runs/synth_1/.Xil/Vivado-7076-DEVPC/realtime/design_1_rst_clk_wiz_1_100M_0_stub.vhdl:5' bound to instance 'rst_clk_wiz_1_100M' of component 'design_1_rst_clk_wiz_1_100M_0' [C:/Project/GameOfLife/bd/design_1/hdl/design_1.vhd:2014]
+INFO: [Synth 8-638] synthesizing module 'design_1_rst_clk_wiz_1_100M_0' [C:/Project/GameOfLife/prj/project_microblaze/project_microblaze.runs/synth_1/.Xil/Vivado-7076-DEVPC/realtime/design_1_rst_clk_wiz_1_100M_0_stub.vhdl:21]
 INFO: [Synth 8-256] done synthesizing module 'design_1' (6#1) [C:/Project/GameOfLife/bd/design_1/hdl/design_1.vhd:1515]
 INFO: [Synth 8-256] done synthesizing module 'design_1_wrapper' (7#1) [C:/Project/GameOfLife/bd/design_1/hdl/design_1_wrapper.vhd:23]
 WARNING: [Synth 8-3331] design s00_couplers_imp_O7FAN0 has unconnected port M_ACLK
@@ -131,7 +131,7 @@ WARNING: [Synth 8-3331] design m00_couplers_imp_1CA5Z32 has unconnected port M_A
 WARNING: [Synth 8-3331] design m00_couplers_imp_1CA5Z32 has unconnected port S_ACLK
 WARNING: [Synth 8-3331] design m00_couplers_imp_1CA5Z32 has unconnected port S_ARESETN
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 399.973 ; gain = 116.379
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 399.414 ; gain = 115.379
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -141,41 +141,41 @@ Report Check Netlist:
 |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 399.973 ; gain = 116.379
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 399.414 ; gain = 115.379
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7z020clg484-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [C:/Project/GameOfLife/prj/project_microblaze/project_microblaze.runs/synth_1/.Xil/Vivado-1368-DEVPC/dcp29/design_1_microblaze_0_0_in_context.xdc] for cell 'design_1_i/microblaze_0'
-Finished Parsing XDC File [C:/Project/GameOfLife/prj/project_microblaze/project_microblaze.runs/synth_1/.Xil/Vivado-1368-DEVPC/dcp29/design_1_microblaze_0_0_in_context.xdc] for cell 'design_1_i/microblaze_0'
-Parsing XDC File [C:/Project/GameOfLife/prj/project_microblaze/project_microblaze.runs/synth_1/.Xil/Vivado-1368-DEVPC/dcp31/design_1_mdm_1_0_in_context.xdc] for cell 'design_1_i/mdm_1'
-Finished Parsing XDC File [C:/Project/GameOfLife/prj/project_microblaze/project_microblaze.runs/synth_1/.Xil/Vivado-1368-DEVPC/dcp31/design_1_mdm_1_0_in_context.xdc] for cell 'design_1_i/mdm_1'
-Parsing XDC File [C:/Project/GameOfLife/prj/project_microblaze/project_microblaze.runs/synth_1/.Xil/Vivado-1368-DEVPC/dcp33/design_1_clk_wiz_1_0_in_context.xdc] for cell 'design_1_i/clk_wiz_1'
-Finished Parsing XDC File [C:/Project/GameOfLife/prj/project_microblaze/project_microblaze.runs/synth_1/.Xil/Vivado-1368-DEVPC/dcp33/design_1_clk_wiz_1_0_in_context.xdc] for cell 'design_1_i/clk_wiz_1'
-Parsing XDC File [C:/Project/GameOfLife/prj/project_microblaze/project_microblaze.runs/synth_1/.Xil/Vivado-1368-DEVPC/dcp35/design_1_rst_clk_wiz_1_100M_0_in_context.xdc] for cell 'design_1_i/rst_clk_wiz_1_100M'
-Finished Parsing XDC File [C:/Project/GameOfLife/prj/project_microblaze/project_microblaze.runs/synth_1/.Xil/Vivado-1368-DEVPC/dcp35/design_1_rst_clk_wiz_1_100M_0_in_context.xdc] for cell 'design_1_i/rst_clk_wiz_1_100M'
-Parsing XDC File [C:/Project/GameOfLife/prj/project_microblaze/project_microblaze.runs/synth_1/.Xil/Vivado-1368-DEVPC/dcp37/design_1_axi_uartlite_0_0_in_context.xdc] for cell 'design_1_i/axi_uartlite_0'
-Finished Parsing XDC File [C:/Project/GameOfLife/prj/project_microblaze/project_microblaze.runs/synth_1/.Xil/Vivado-1368-DEVPC/dcp37/design_1_axi_uartlite_0_0_in_context.xdc] for cell 'design_1_i/axi_uartlite_0'
-Parsing XDC File [C:/Project/GameOfLife/prj/project_microblaze/project_microblaze.runs/synth_1/.Xil/Vivado-1368-DEVPC/dcp39/design_1_xbar_0_in_context.xdc] for cell 'design_1_i/axi_interconnect_0/xbar'
-Finished Parsing XDC File [C:/Project/GameOfLife/prj/project_microblaze/project_microblaze.runs/synth_1/.Xil/Vivado-1368-DEVPC/dcp39/design_1_xbar_0_in_context.xdc] for cell 'design_1_i/axi_interconnect_0/xbar'
-Parsing XDC File [C:/Project/GameOfLife/prj/project_microblaze/project_microblaze.runs/synth_1/.Xil/Vivado-1368-DEVPC/dcp41/design_1_dlmb_v10_0_in_context.xdc] for cell 'design_1_i/microblaze_0_local_memory/dlmb_v10'
-Finished Parsing XDC File [C:/Project/GameOfLife/prj/project_microblaze/project_microblaze.runs/synth_1/.Xil/Vivado-1368-DEVPC/dcp41/design_1_dlmb_v10_0_in_context.xdc] for cell 'design_1_i/microblaze_0_local_memory/dlmb_v10'
-Parsing XDC File [C:/Project/GameOfLife/prj/project_microblaze/project_microblaze.runs/synth_1/.Xil/Vivado-1368-DEVPC/dcp43/design_1_ilmb_v10_0_in_context.xdc] for cell 'design_1_i/microblaze_0_local_memory/ilmb_v10'
-Finished Parsing XDC File [C:/Project/GameOfLife/prj/project_microblaze/project_microblaze.runs/synth_1/.Xil/Vivado-1368-DEVPC/dcp43/design_1_ilmb_v10_0_in_context.xdc] for cell 'design_1_i/microblaze_0_local_memory/ilmb_v10'
-Parsing XDC File [C:/Project/GameOfLife/prj/project_microblaze/project_microblaze.runs/synth_1/.Xil/Vivado-1368-DEVPC/dcp45/design_1_dlmb_bram_if_cntlr_0_in_context.xdc] for cell 'design_1_i/microblaze_0_local_memory/dlmb_bram_if_cntlr'
-Finished Parsing XDC File [C:/Project/GameOfLife/prj/project_microblaze/project_microblaze.runs/synth_1/.Xil/Vivado-1368-DEVPC/dcp45/design_1_dlmb_bram_if_cntlr_0_in_context.xdc] for cell 'design_1_i/microblaze_0_local_memory/dlmb_bram_if_cntlr'
-Parsing XDC File [C:/Project/GameOfLife/prj/project_microblaze/project_microblaze.runs/synth_1/.Xil/Vivado-1368-DEVPC/dcp47/design_1_ilmb_bram_if_cntlr_0_in_context.xdc] for cell 'design_1_i/microblaze_0_local_memory/ilmb_bram_if_cntlr'
-Finished Parsing XDC File [C:/Project/GameOfLife/prj/project_microblaze/project_microblaze.runs/synth_1/.Xil/Vivado-1368-DEVPC/dcp47/design_1_ilmb_bram_if_cntlr_0_in_context.xdc] for cell 'design_1_i/microblaze_0_local_memory/ilmb_bram_if_cntlr'
-Parsing XDC File [C:/Project/GameOfLife/prj/project_microblaze/project_microblaze.runs/synth_1/.Xil/Vivado-1368-DEVPC/dcp49/design_1_lmb_bram_0_in_context.xdc] for cell 'design_1_i/microblaze_0_local_memory/lmb_bram'
-Finished Parsing XDC File [C:/Project/GameOfLife/prj/project_microblaze/project_microblaze.runs/synth_1/.Xil/Vivado-1368-DEVPC/dcp49/design_1_lmb_bram_0_in_context.xdc] for cell 'design_1_i/microblaze_0_local_memory/lmb_bram'
-Parsing XDC File [C:/Project/GameOfLife/prj/project_microblaze/project_microblaze.runs/synth_1/.Xil/Vivado-1368-DEVPC/dcp51/design_1_proc_sys_reset_0_0_in_context.xdc] for cell 'design_1_i/proc_sys_reset_0'
-Finished Parsing XDC File [C:/Project/GameOfLife/prj/project_microblaze/project_microblaze.runs/synth_1/.Xil/Vivado-1368-DEVPC/dcp51/design_1_proc_sys_reset_0_0_in_context.xdc] for cell 'design_1_i/proc_sys_reset_0'
-Parsing XDC File [C:/Project/GameOfLife/prj/project_microblaze/project_microblaze.runs/synth_1/.Xil/Vivado-1368-DEVPC/dcp53/design_1_game_of_life_0_0_in_context.xdc] for cell 'design_1_i/game_of_life_0'
-Finished Parsing XDC File [C:/Project/GameOfLife/prj/project_microblaze/project_microblaze.runs/synth_1/.Xil/Vivado-1368-DEVPC/dcp53/design_1_game_of_life_0_0_in_context.xdc] for cell 'design_1_i/game_of_life_0'
-Parsing XDC File [C:/Project/GameOfLife/prj/project_microblaze/project_microblaze.runs/synth_1/.Xil/Vivado-1368-DEVPC/dcp55/design_1_auto_cc_0_in_context.xdc] for cell 'design_1_i/axi_interconnect_0/m01_couplers/auto_cc'
-Finished Parsing XDC File [C:/Project/GameOfLife/prj/project_microblaze/project_microblaze.runs/synth_1/.Xil/Vivado-1368-DEVPC/dcp55/design_1_auto_cc_0_in_context.xdc] for cell 'design_1_i/axi_interconnect_0/m01_couplers/auto_cc'
+Parsing XDC File [C:/Project/GameOfLife/prj/project_microblaze/project_microblaze.runs/synth_1/.Xil/Vivado-7076-DEVPC/dcp29/design_1_microblaze_0_0_in_context.xdc] for cell 'design_1_i/microblaze_0'
+Finished Parsing XDC File [C:/Project/GameOfLife/prj/project_microblaze/project_microblaze.runs/synth_1/.Xil/Vivado-7076-DEVPC/dcp29/design_1_microblaze_0_0_in_context.xdc] for cell 'design_1_i/microblaze_0'
+Parsing XDC File [C:/Project/GameOfLife/prj/project_microblaze/project_microblaze.runs/synth_1/.Xil/Vivado-7076-DEVPC/dcp31/design_1_mdm_1_0_in_context.xdc] for cell 'design_1_i/mdm_1'
+Finished Parsing XDC File [C:/Project/GameOfLife/prj/project_microblaze/project_microblaze.runs/synth_1/.Xil/Vivado-7076-DEVPC/dcp31/design_1_mdm_1_0_in_context.xdc] for cell 'design_1_i/mdm_1'
+Parsing XDC File [C:/Project/GameOfLife/prj/project_microblaze/project_microblaze.runs/synth_1/.Xil/Vivado-7076-DEVPC/dcp33/design_1_clk_wiz_1_0_in_context.xdc] for cell 'design_1_i/clk_wiz_1'
+Finished Parsing XDC File [C:/Project/GameOfLife/prj/project_microblaze/project_microblaze.runs/synth_1/.Xil/Vivado-7076-DEVPC/dcp33/design_1_clk_wiz_1_0_in_context.xdc] for cell 'design_1_i/clk_wiz_1'
+Parsing XDC File [C:/Project/GameOfLife/prj/project_microblaze/project_microblaze.runs/synth_1/.Xil/Vivado-7076-DEVPC/dcp35/design_1_rst_clk_wiz_1_100M_0_in_context.xdc] for cell 'design_1_i/rst_clk_wiz_1_100M'
+Finished Parsing XDC File [C:/Project/GameOfLife/prj/project_microblaze/project_microblaze.runs/synth_1/.Xil/Vivado-7076-DEVPC/dcp35/design_1_rst_clk_wiz_1_100M_0_in_context.xdc] for cell 'design_1_i/rst_clk_wiz_1_100M'
+Parsing XDC File [C:/Project/GameOfLife/prj/project_microblaze/project_microblaze.runs/synth_1/.Xil/Vivado-7076-DEVPC/dcp37/design_1_axi_uartlite_0_0_in_context.xdc] for cell 'design_1_i/axi_uartlite_0'
+Finished Parsing XDC File [C:/Project/GameOfLife/prj/project_microblaze/project_microblaze.runs/synth_1/.Xil/Vivado-7076-DEVPC/dcp37/design_1_axi_uartlite_0_0_in_context.xdc] for cell 'design_1_i/axi_uartlite_0'
+Parsing XDC File [C:/Project/GameOfLife/prj/project_microblaze/project_microblaze.runs/synth_1/.Xil/Vivado-7076-DEVPC/dcp39/design_1_xbar_0_in_context.xdc] for cell 'design_1_i/axi_interconnect_0/xbar'
+Finished Parsing XDC File [C:/Project/GameOfLife/prj/project_microblaze/project_microblaze.runs/synth_1/.Xil/Vivado-7076-DEVPC/dcp39/design_1_xbar_0_in_context.xdc] for cell 'design_1_i/axi_interconnect_0/xbar'
+Parsing XDC File [C:/Project/GameOfLife/prj/project_microblaze/project_microblaze.runs/synth_1/.Xil/Vivado-7076-DEVPC/dcp41/design_1_dlmb_v10_0_in_context.xdc] for cell 'design_1_i/microblaze_0_local_memory/dlmb_v10'
+Finished Parsing XDC File [C:/Project/GameOfLife/prj/project_microblaze/project_microblaze.runs/synth_1/.Xil/Vivado-7076-DEVPC/dcp41/design_1_dlmb_v10_0_in_context.xdc] for cell 'design_1_i/microblaze_0_local_memory/dlmb_v10'
+Parsing XDC File [C:/Project/GameOfLife/prj/project_microblaze/project_microblaze.runs/synth_1/.Xil/Vivado-7076-DEVPC/dcp43/design_1_ilmb_v10_0_in_context.xdc] for cell 'design_1_i/microblaze_0_local_memory/ilmb_v10'
+Finished Parsing XDC File [C:/Project/GameOfLife/prj/project_microblaze/project_microblaze.runs/synth_1/.Xil/Vivado-7076-DEVPC/dcp43/design_1_ilmb_v10_0_in_context.xdc] for cell 'design_1_i/microblaze_0_local_memory/ilmb_v10'
+Parsing XDC File [C:/Project/GameOfLife/prj/project_microblaze/project_microblaze.runs/synth_1/.Xil/Vivado-7076-DEVPC/dcp45/design_1_dlmb_bram_if_cntlr_0_in_context.xdc] for cell 'design_1_i/microblaze_0_local_memory/dlmb_bram_if_cntlr'
+Finished Parsing XDC File [C:/Project/GameOfLife/prj/project_microblaze/project_microblaze.runs/synth_1/.Xil/Vivado-7076-DEVPC/dcp45/design_1_dlmb_bram_if_cntlr_0_in_context.xdc] for cell 'design_1_i/microblaze_0_local_memory/dlmb_bram_if_cntlr'
+Parsing XDC File [C:/Project/GameOfLife/prj/project_microblaze/project_microblaze.runs/synth_1/.Xil/Vivado-7076-DEVPC/dcp47/design_1_ilmb_bram_if_cntlr_0_in_context.xdc] for cell 'design_1_i/microblaze_0_local_memory/ilmb_bram_if_cntlr'
+Finished Parsing XDC File [C:/Project/GameOfLife/prj/project_microblaze/project_microblaze.runs/synth_1/.Xil/Vivado-7076-DEVPC/dcp47/design_1_ilmb_bram_if_cntlr_0_in_context.xdc] for cell 'design_1_i/microblaze_0_local_memory/ilmb_bram_if_cntlr'
+Parsing XDC File [C:/Project/GameOfLife/prj/project_microblaze/project_microblaze.runs/synth_1/.Xil/Vivado-7076-DEVPC/dcp49/design_1_lmb_bram_0_in_context.xdc] for cell 'design_1_i/microblaze_0_local_memory/lmb_bram'
+Finished Parsing XDC File [C:/Project/GameOfLife/prj/project_microblaze/project_microblaze.runs/synth_1/.Xil/Vivado-7076-DEVPC/dcp49/design_1_lmb_bram_0_in_context.xdc] for cell 'design_1_i/microblaze_0_local_memory/lmb_bram'
+Parsing XDC File [C:/Project/GameOfLife/prj/project_microblaze/project_microblaze.runs/synth_1/.Xil/Vivado-7076-DEVPC/dcp51/design_1_proc_sys_reset_0_0_in_context.xdc] for cell 'design_1_i/proc_sys_reset_0'
+Finished Parsing XDC File [C:/Project/GameOfLife/prj/project_microblaze/project_microblaze.runs/synth_1/.Xil/Vivado-7076-DEVPC/dcp51/design_1_proc_sys_reset_0_0_in_context.xdc] for cell 'design_1_i/proc_sys_reset_0'
+Parsing XDC File [C:/Project/GameOfLife/prj/project_microblaze/project_microblaze.runs/synth_1/.Xil/Vivado-7076-DEVPC/dcp53/design_1_game_of_life_0_0_in_context.xdc] for cell 'design_1_i/game_of_life_0'
+Finished Parsing XDC File [C:/Project/GameOfLife/prj/project_microblaze/project_microblaze.runs/synth_1/.Xil/Vivado-7076-DEVPC/dcp53/design_1_game_of_life_0_0_in_context.xdc] for cell 'design_1_i/game_of_life_0'
+Parsing XDC File [C:/Project/GameOfLife/prj/project_microblaze/project_microblaze.runs/synth_1/.Xil/Vivado-7076-DEVPC/dcp55/design_1_auto_cc_0_in_context.xdc] for cell 'design_1_i/axi_interconnect_0/m01_couplers/auto_cc'
+Finished Parsing XDC File [C:/Project/GameOfLife/prj/project_microblaze/project_microblaze.runs/synth_1/.Xil/Vivado-7076-DEVPC/dcp55/design_1_auto_cc_0_in_context.xdc] for cell 'design_1_i/axi_interconnect_0/m01_couplers/auto_cc'
 Parsing XDC File [C:/Project/GameOfLife/constraints/zed_pins.xdc]
 Finished Parsing XDC File [C:/Project/GameOfLife/constraints/zed_pins.xdc]
 INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Project/GameOfLife/constraints/zed_pins.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/design_1_wrapper_propImpl.xdc].
@@ -187,23 +187,23 @@ Completed Processing XDC Constraints
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.009 . Memory (MB): peak = 693.230 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 693.680 ; gain = 0.000
 WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'design_1_i/microblaze_0_local_memory/lmb_bram' at clock pin 'clka' is different from the actual clock period '10.000', this can lead to different synthesis results.
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:17 ; elapsed = 00:00:20 . Memory (MB): peak = 693.230 ; gain = 409.637
+Finished Constraint Validation : Time (s): cpu = 00:00:16 ; elapsed = 00:00:19 . Memory (MB): peak = 693.680 ; gain = 409.645
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg484-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:17 ; elapsed = 00:00:20 . Memory (MB): peak = 693.230 ; gain = 409.637
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:16 ; elapsed = 00:00:19 . Memory (MB): peak = 693.680 ; gain = 409.645
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
-Applied set_property IO_BUFFER_TYPE = NONE for sys_clock. (constraint file  C:/Project/GameOfLife/prj/project_microblaze/project_microblaze.runs/synth_1/.Xil/Vivado-1368-DEVPC/dcp33/design_1_clk_wiz_1_0_in_context.xdc, line 4).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for sys_clock. (constraint file  C:/Project/GameOfLife/prj/project_microblaze/project_microblaze.runs/synth_1/.Xil/Vivado-1368-DEVPC/dcp33/design_1_clk_wiz_1_0_in_context.xdc, line 5).
+Applied set_property IO_BUFFER_TYPE = NONE for sys_clock. (constraint file  C:/Project/GameOfLife/prj/project_microblaze/project_microblaze.runs/synth_1/.Xil/Vivado-7076-DEVPC/dcp33/design_1_clk_wiz_1_0_in_context.xdc, line 4).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for sys_clock. (constraint file  C:/Project/GameOfLife/prj/project_microblaze/project_microblaze.runs/synth_1/.Xil/Vivado-7076-DEVPC/dcp33/design_1_clk_wiz_1_0_in_context.xdc, line 5).
 Applied set_property DONT_TOUCH = true for design_1_i. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for design_1_i/axi_interconnect_0. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for design_1_i/axi_interconnect_0/m01_couplers/auto_cc. (constraint file  auto generated constraint, line ).
@@ -221,10 +221,10 @@ Applied set_property DONT_TOUCH = true for design_1_i/microblaze_0_local_memory/
 Applied set_property DONT_TOUCH = true for design_1_i/proc_sys_reset_0. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for design_1_i/rst_clk_wiz_1_100M. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:17 ; elapsed = 00:00:20 . Memory (MB): peak = 693.230 ; gain = 409.637
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:16 ; elapsed = 00:00:19 . Memory (MB): peak = 693.680 ; gain = 409.645
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 693.230 ; gain = 409.637
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 693.680 ; gain = 409.645
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -263,7 +263,7 @@ WARNING: [Synth 8-3331] design design_1_axi_interconnect_0_0 has unconnected por
 WARNING: [Synth 8-3331] design design_1_axi_interconnect_0_0 has unconnected port S00_ACLK
 WARNING: [Synth 8-3331] design design_1_axi_interconnect_0_0 has unconnected port S00_ARESETN
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:00:21 . Memory (MB): peak = 693.230 ; gain = 409.637
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:20 . Memory (MB): peak = 693.680 ; gain = 409.645
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -282,13 +282,13 @@ INFO: [Synth 8-5578] Moved timing constraint from pin 'design_1_i/microblaze_0_l
 INFO: [Synth 8-5578] Moved timing constraint from pin 'design_1_i/microblaze_0_local_memory/ilmb_bram_if_cntlr/BRAM_Clk_A' to pin 'design_1_i/microblaze_0_local_memory/ilmb_bram_if_cntlr/bbstub_BRAM_Clk_A/O'
 INFO: [Synth 8-5819] Moved 6 constraints on hierarchical pins to their respective driving/loading pins
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:30 ; elapsed = 00:00:33 . Memory (MB): peak = 693.230 ; gain = 409.637
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:29 ; elapsed = 00:00:31 . Memory (MB): peak = 693.680 ; gain = 409.645
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:30 ; elapsed = 00:00:33 . Memory (MB): peak = 693.230 ; gain = 409.637
+Finished Timing Optimization : Time (s): cpu = 00:00:29 ; elapsed = 00:00:31 . Memory (MB): peak = 693.680 ; gain = 409.645
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -300,7 +300,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:30 ; elapsed = 00:00:33 . Memory (MB): peak = 693.230 ; gain = 409.637
+Finished Technology Mapping : Time (s): cpu = 00:00:29 ; elapsed = 00:00:32 . Memory (MB): peak = 693.680 ; gain = 409.645
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -324,7 +324,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:31 ; elapsed = 00:00:34 . Memory (MB): peak = 693.230 ; gain = 409.637
+Finished IO Insertion : Time (s): cpu = 00:00:29 ; elapsed = 00:00:32 . Memory (MB): peak = 693.680 ; gain = 409.645
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -337,7 +337,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:31 ; elapsed = 00:00:34 . Memory (MB): peak = 693.230 ; gain = 409.637
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:29 ; elapsed = 00:00:32 . Memory (MB): peak = 693.680 ; gain = 409.645
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -349,25 +349,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:31 ; elapsed = 00:00:34 . Memory (MB): peak = 693.230 ; gain = 409.637
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:29 ; elapsed = 00:00:32 . Memory (MB): peak = 693.680 ; gain = 409.645
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:31 ; elapsed = 00:00:34 . Memory (MB): peak = 693.230 ; gain = 409.637
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:29 ; elapsed = 00:00:32 . Memory (MB): peak = 693.680 ; gain = 409.645
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:31 ; elapsed = 00:00:34 . Memory (MB): peak = 693.230 ; gain = 409.637
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:29 ; elapsed = 00:00:32 . Memory (MB): peak = 693.680 ; gain = 409.645
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:31 ; elapsed = 00:00:34 . Memory (MB): peak = 693.230 ; gain = 409.637
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:29 ; elapsed = 00:00:32 . Memory (MB): peak = 693.680 ; gain = 409.645
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -426,11 +426,11 @@ Report Instance Areas:
 |5     |    microblaze_0_local_memory |microblaze_0_local_memory_imp_1K0VQXK |   494|
 +------+------------------------------+--------------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:31 ; elapsed = 00:00:34 . Memory (MB): peak = 693.230 ; gain = 409.637
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:29 ; elapsed = 00:00:32 . Memory (MB): peak = 693.680 ; gain = 409.645
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 4 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:18 ; elapsed = 00:00:24 . Memory (MB): peak = 693.230 ; gain = 116.379
-Synthesis Optimization Complete : Time (s): cpu = 00:00:31 ; elapsed = 00:00:34 . Memory (MB): peak = 693.230 ; gain = 409.637
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:17 ; elapsed = 00:00:23 . Memory (MB): peak = 693.680 ; gain = 115.379
+Synthesis Optimization Complete : Time (s): cpu = 00:00:29 ; elapsed = 00:00:32 . Memory (MB): peak = 693.680 ; gain = 409.645
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 2 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -441,7 +441,7 @@ No Unisim elements were transformed.
 
 64 Infos, 71 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:33 ; elapsed = 00:00:39 . Memory (MB): peak = 693.230 ; gain = 418.711
+synth_design: Time (s): cpu = 00:00:31 ; elapsed = 00:00:37 . Memory (MB): peak = 693.680 ; gain = 419.508
 INFO: [Common 17-1381] The checkpoint 'C:/Project/GameOfLife/prj/project_microblaze/project_microblaze.runs/synth_1/design_1_wrapper.dcp' has been generated.
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.015 . Memory (MB): peak = 693.230 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Fri May 28 20:24:53 2021...
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.016 . Memory (MB): peak = 693.680 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Sun May 30 19:32:49 2021...

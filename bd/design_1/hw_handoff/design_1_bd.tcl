@@ -263,14 +263,14 @@ CONFIG.C_BAUDRATE {115200} \
   set_property -dict [ list \
 CONFIG.CLKOUT1_JITTER {123.670} \
 CONFIG.CLKOUT1_PHASE_ERROR {92.672} \
-CONFIG.CLKOUT2_JITTER {102.698} \
+CONFIG.CLKOUT2_JITTER {106.967} \
 CONFIG.CLKOUT2_PHASE_ERROR {92.672} \
-CONFIG.CLKOUT2_REQUESTED_OUT_FREQ {275.000} \
+CONFIG.CLKOUT2_REQUESTED_OUT_FREQ {220.000} \
 CONFIG.CLKOUT2_USED {true} \
 CONFIG.CLK_IN1_BOARD_INTERFACE {sys_clock} \
 CONFIG.MMCM_CLKFBOUT_MULT_F {11.000} \
 CONFIG.MMCM_CLKOUT0_DIVIDE_F {11.000} \
-CONFIG.MMCM_CLKOUT1_DIVIDE {4} \
+CONFIG.MMCM_CLKOUT1_DIVIDE {5} \
 CONFIG.MMCM_DIVCLK_DIVIDE {1} \
 CONFIG.NUM_OUT_CLKS {2} \
 CONFIG.PRIM_SOURCE {Single_ended_clock_capable_pin} \
@@ -280,8 +280,8 @@ CONFIG.USE_BOARD_FLOW {true} \
   # Create instance: game_of_life_0, and set properties
   set game_of_life_0 [ create_bd_cell -type ip -vlnv xilinx.com:user:game_of_life:1.0 game_of_life_0 ]
   set_property -dict [ list \
-CONFIG.C_GOL_HEIGHT {30} \
-CONFIG.C_GOL_WIDTH {30} \
+CONFIG.C_GOL_HEIGHT {49} \
+CONFIG.C_GOL_WIDTH {63} \
  ] $game_of_life_0
 
   # Create instance: mdm_1, and set properties

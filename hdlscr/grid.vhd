@@ -218,10 +218,10 @@ begin
             end generate OH;
             
 -- EVEN HEIGHT ####################################################################################################################################################################################################
-                        
+
             EH: if HEIGHT mod 2 = 0 generate
                 -- odd line right 
-                O_RS: if ((j mod 2 = 1) and (j /= HEIGHT-1) and (i = WIDTH-1)) generate
+                O_RS: if ((j mod 2 = 1) and (j < HEIGHT-1) and (i = WIDTH-1)) generate
                     internal_proxs((j * WIDTH)+i) <= state_grid(j,i-1) & state_grid(j+1,i-1) & state_grid(j+1,i) & "000" & state_grid(j-1,i-1) & state_grid(j-1,i);
                     CELL_XWYO: cell generic map ('0')
                                 port map (prox => internal_proxs((j * WIDTH)+i),
@@ -232,7 +232,7 @@ begin
                 end generate O_RS;
                 
                 -- odd line middle 
-                O_M: if ((j mod 2 = 1) and (j /= HEIGHT-1) and ((i < WIDTH-1) and (i > 0))) generate
+                O_M: if ((j mod 2 = 1) and (j < HEIGHT-1) and ((i < WIDTH-1) and (i > 0))) generate
                     internal_proxs((j * WIDTH)+i) <= state_grid(j,i-1)   & 
                                                       state_grid(j+1,i-1) & 
                                                       state_grid(j+1,i)   & 
@@ -250,7 +250,7 @@ begin
                 end generate O_M;
                 
                 -- odd line left 
-                O_LS: if ((j mod 2 = 1) and (j /= HEIGHT-1) and (i = 0)) generate 
+                O_LS: if ((j mod 2 = 1) and (j < HEIGHT-1) and (i = 0)) generate 
                     internal_proxs((j * WIDTH)+i) <= "00" & state_grid(j+1,i) & state_grid(j+1,i+1) & '0' & state_grid(j-1,i+1) & state_grid(j-1,i) & state_grid(j,i+1);
                     CELL_X0YO: cell generic map ('0')
                                  port map (prox => internal_proxs((j * WIDTH)+i),
@@ -326,18 +326,16 @@ begin
                 LL_LE: if ((j = HEIGHT-1) and (i = 0)) generate
                      internal_proxs((j * WIDTH)+i) <= "00000" & state_grid(j-1,i+1) & state_grid(j-1,i) & state_grid(j,i+1); --
                      CELL_X0YH: cell generic map ('0')
-                                        port map (prox => internal_proxs((j * WIDTH)+i),
-                                            ce => ce,
-                                            clk => clk,
-                                            shift => shift,
-                                            Q => state_grid(j, i));
+                                     port map (prox => internal_proxs((j * WIDTH)+i),
+                                               ce => ce,
+                                               clk => clk,
+                                               shift => shift,
+                                               Q => state_grid(j, i));
                 end generate LL_LE;
-
             end generate EH;
-            
         end generate COL;
     end generate ROW;
-    
-    Q <= state_grid(HEIGHT-1,0) when (HEIGHT mod 2 = 0) else state_grid(HEIGHT-1, WIDTH-1);
+
+    Q <= state_grid(HEIGHT-1,0) when ((HEIGHT mod 2) = 0) else state_grid(HEIGHT-1, WIDTH-1);
 
 end Behavioral;

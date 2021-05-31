@@ -9,10 +9,7 @@
 #define SRC_GOL_MICROBLAZE_H_
 
 #include "xbasic_types.h"
-
-#define WIDTH  18
-#define HEIGHT 12
-#define GOL_SIZE WIDTH*HEIGHT
+#include "gol_defines.h"
 
 void microblaze_init_gol(Xuint8 data_array[]);
 

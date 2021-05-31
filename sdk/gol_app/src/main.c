@@ -51,21 +51,22 @@
 #include "xil_printf.h"
 #include "gol_microblaze.h"
 #include "gol_driver.h"
+//#include "gol_defines.h"
 
-Xuint8 pattern[GOL_SIZE] = {
-		0,0,0,0,1,1,0,0,0,0,0,0,1,1,0,0,0,0,
-		0,0,0,1,0,1,0,0,0,0,0,0,1,0,1,0,0,0,
-		0,0,0,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0,
-		1,1,0,1,0,0,0,0,0,0,0,0,0,0,1,0,1,1,
-		1,1,0,1,0,1,0,0,1,1,0,0,1,0,1,0,1,1,
-		0,0,0,1,0,1,0,1,0,0,1,0,1,0,1,0,0,0,
-		0,0,0,1,0,1,0,1,0,0,1,0,1,0,1,0,0,0,
-		1,1,0,1,0,1,0,0,1,1,0,0,1,0,1,0,1,1,
-		1,1,0,1,0,0,0,0,0,0,0,0,0,0,1,0,1,1,
-		0,0,0,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0,
-		0,0,0,1,0,1,0,0,0,0,0,0,1,0,1,0,0,0,
-		0,0,0,0,1,1,0,0,0,0,0,0,1,1,0,0,0,0
-};
+//Xuint8 pattern[GOL_SIZE] = {
+//		0,0,0,0,1,1,0,0,0,0,0,0,1,1,0,0,0,0,
+//		0,0,0,1,0,1,0,0,0,0,0,0,1,0,1,0,0,0,
+//		0,0,0,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0,
+//		1,1,0,1,0,0,0,0,0,0,0,0,0,0,1,0,1,1,
+//		1,1,0,1,0,1,0,0,1,1,0,0,1,0,1,0,1,1,
+//		0,0,0,1,0,1,0,1,0,0,1,0,1,0,1,0,0,0,
+//		0,0,0,1,0,1,0,1,0,0,1,0,1,0,1,0,0,0,
+//		1,1,0,1,0,1,0,0,1,1,0,0,1,0,1,0,1,1,
+//		1,1,0,1,0,0,0,0,0,0,0,0,0,0,1,0,1,1,
+//		0,0,0,1,0,0,0,0,0,0,0,0,0,0,1,0,0,0,
+//		0,0,0,1,0,1,0,0,0,0,0,0,1,0,1,0,0,0,
+//		1,0,0,0,1,1,0,0,0,0,0,0,1,1,0,0,0,0
+//};
 
 //Xuint8 pattern[SIZE_OF_GRID] = {
 //		0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -82,6 +83,26 @@ Xuint8 pattern[GOL_SIZE] = {
 //		0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 //};
 
+//Xuint8 pattern[GOL_SIZE] = {
+//		1,0,0,0,1,
+//		0,1,0,0,1,
+//		0,0,1,0,0,
+//		1,1,0,0,0
+//};
+
+//Xuint8 pattern[GOL_SIZE] = {
+//		0,0,1,
+//		0,1,0,
+//		1,0,0
+//};
+
+Xuint8 pattern[GOL_SIZE] = {
+		0,0,1,0,
+		1,1,0,0,
+		0,0,1,1,
+		0,1,0,0
+};
+
 Xuint8 outputs[GOL_SIZE] = {0};
 
 void print_array(Xuint8*);
@@ -95,6 +116,21 @@ int main()
 
 	for(Xuint32 i=0; i < GOL_SIZE; i++) // globals don't re-initialize after reset button ;(
 		outputs[i] = pattern[i];
+
+//	while(1)
+//	{
+//		xil_printf("=========================\n");
+//		xil_printf("Iterations: %d\n", iter_cnt++);
+//		xil_printf("=========================\n");
+//
+//		print_array(outputs);
+//		microblaze_init_gol(outputs);
+//		microblaze_calc_next_iter(1);
+//		delay_ms(400);
+//		microblaze_read_gol(outputs);
+//		if (iter_cnt == 3) break;
+//	}
+
 
 	init_gol(XPAR_GAME_OF_LIFE_0_S00_AXI_BASEADDR, outputs); // default iterations = 1;
 
@@ -114,8 +150,10 @@ int main()
 
 		read_gol(outputs);
 
-		if (iter_cnt == 6) break;
+		if (iter_cnt == 5) break;
 	}
+
+
 
 	cleanup_platform();
 	return 0;
@@ -140,7 +178,7 @@ void print_array(Xuint8* array)
 		{
 			xil_printf(" - ");
 		}
-		if ((idx % 18) == 17)
+		if ((idx % WIDTH) == WIDTH-1)
 		{
 			xil_printf("\n");
 		}

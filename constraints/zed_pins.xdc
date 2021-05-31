@@ -20,10 +20,9 @@ set_property IOSTANDARD LVCMOS33 [get_ports rx]
 set_property PACKAGE_PIN P16 [get_ports reset_rtl]
 set_property IOSTANDARD LVCMOS33 [get_ports reset_rtl]
 
-
 create_pblock pblock_Field
 add_cells_to_pblock [get_pblocks pblock_Field] [get_cells -quiet [list design_1_i/game_of_life_0/U0/CACORE/Field]]
-resize_pblock [get_pblocks pblock_Field] -add {SLICE_X18Y0:SLICE_X113Y49}
-resize_pblock [get_pblocks pblock_Field] -add {DSP48_X1Y0:DSP48_X4Y19}
-resize_pblock [get_pblocks pblock_Field] -add {RAMB18_X1Y0:RAMB18_X5Y19}
-resize_pblock [get_pblocks pblock_Field] -add {RAMB36_X1Y0:RAMB36_X5Y9}
+resize_pblock [get_pblocks pblock_Field] -add {SLICE_X32Y0:SLICE_X113Y49}
+resize_pblock [get_pblocks pblock_Field] -add {DSP48_X2Y0:DSP48_X4Y19}
+resize_pblock [get_pblocks pblock_Field] -add {RAMB18_X3Y0:RAMB18_X5Y19}
+resize_pblock [get_pblocks pblock_Field] -add {RAMB36_X3Y0:RAMB36_X5Y9}

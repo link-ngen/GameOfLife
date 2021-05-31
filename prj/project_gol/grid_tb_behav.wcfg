@@ -11,14 +11,14 @@
    </db_ref_list>
    <zoom_setting>
       <ZoomStartTime time="0fs"></ZoomStartTime>
-      <ZoomEndTime time="522797203fs"></ZoomEndTime>
-      <Cursor1Time time="340000000fs"></Cursor1Time>
+      <ZoomEndTime time="1060000001fs"></ZoomEndTime>
+      <Cursor1Time time="480000000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="105"></NameColumnWidth>
-      <ValueColumnWidth column_width="58"></ValueColumnWidth>
+      <NameColumnWidth column_width="132"></NameColumnWidth>
+      <ValueColumnWidth column_width="187"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="14" />
+   <WVObjectSize size="9" />
    <wvobject fp_name="/grid_tb/clk" type="logic">
       <obj_property name="ElementShortName">clk</obj_property>
       <obj_property name="ObjectShortName">clk</obj_property>
@@ -38,8 +38,8 @@
       <obj_property name="ObjectShortName">ddata</obj_property>
    </wvobject>
    <wvobject fp_name="/grid_tb/cpu_data" type="array">
-      <obj_property name="ElementShortName">cpu_data[8:0]</obj_property>
-      <obj_property name="ObjectShortName">cpu_data[8:0]</obj_property>
+      <obj_property name="ElementShortName">cpu_data[19:0]</obj_property>
+      <obj_property name="ObjectShortName">cpu_data[19:0]</obj_property>
    </wvobject>
    <wvobject fp_name="/grid_tb/dut/\ROW(0)\/\COL(0)\/fl/le/CELL_X0Y0/Q" type="logic">
       <obj_property name="DisplayName">label</obj_property>
@@ -57,60 +57,34 @@
       <obj_property name="CustomSignalColor">#FF0000</obj_property>
       <obj_property name="UseCustomSignalColor">true</obj_property>
    </wvobject>
-   <wvobject fp_name="/grid_tb/dut/\ROW(0)\/\COL(2)\/fl/re/CELL_XWY0/Q" type="logic">
-      <obj_property name="DisplayName">label</obj_property>
-      <obj_property name="ElementShortName">Q</obj_property>
-      <obj_property name="ObjectShortName">Q</obj_property>
-      <obj_property name="label">cell2</obj_property>
-      <obj_property name="CustomSignalColor">#FF0000</obj_property>
-      <obj_property name="UseCustomSignalColor">true</obj_property>
+   <wvobject fp_name="/grid_tb/output_data" type="array">
+      <obj_property name="ElementShortName">output_data[19:0]</obj_property>
+      <obj_property name="ObjectShortName">output_data[19:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
    </wvobject>
-   <wvobject fp_name="/grid_tb/dut/\ROW(1)\/\COL(2)\/oh/o_rs/CELL_XWYO/Q" type="logic">
-      <obj_property name="DisplayName">label</obj_property>
-      <obj_property name="ElementShortName">Q</obj_property>
-      <obj_property name="ObjectShortName">Q</obj_property>
-      <obj_property name="label">cell3</obj_property>
-      <obj_property name="CustomSignalColor">#FF0000</obj_property>
-      <obj_property name="UseCustomSignalColor">true</obj_property>
-   </wvobject>
-   <wvobject fp_name="/grid_tb/dut/\ROW(1)\/\COL(1)\/oh/o_m/CELL_XIYO/Q" type="logic">
-      <obj_property name="DisplayName">label</obj_property>
-      <obj_property name="ElementShortName">Q</obj_property>
-      <obj_property name="ObjectShortName">Q</obj_property>
-      <obj_property name="label">cell_ij</obj_property>
-      <obj_property name="CustomSignalColor">#FF0000</obj_property>
-      <obj_property name="UseCustomSignalColor">true</obj_property>
-   </wvobject>
-   <wvobject fp_name="/grid_tb/dut/\ROW(1)\/\COL(0)\/oh/o_ls/CELL_X0YO/Q" type="logic">
-      <obj_property name="DisplayName">label</obj_property>
-      <obj_property name="ElementShortName">Q</obj_property>
-      <obj_property name="ObjectShortName">Q</obj_property>
-      <obj_property name="label">cell7</obj_property>
-      <obj_property name="CustomSignalColor">#FF0000</obj_property>
-      <obj_property name="UseCustomSignalColor">true</obj_property>
-   </wvobject>
-   <wvobject fp_name="/grid_tb/dut/\ROW(2)\/\COL(0)\/oh/ll_le/CELL_X0YH/Q" type="logic">
-      <obj_property name="DisplayName">label</obj_property>
-      <obj_property name="ElementShortName">Q</obj_property>
-      <obj_property name="ObjectShortName">Q</obj_property>
-      <obj_property name="label">cell6</obj_property>
-      <obj_property name="CustomSignalColor">#FF0000</obj_property>
-      <obj_property name="UseCustomSignalColor">true</obj_property>
-   </wvobject>
-   <wvobject fp_name="/grid_tb/dut/\ROW(2)\/\COL(1)\/oh/ll_m/CELL_XIYH/Q" type="logic">
-      <obj_property name="DisplayName">label</obj_property>
-      <obj_property name="ElementShortName">Q</obj_property>
-      <obj_property name="ObjectShortName">Q</obj_property>
-      <obj_property name="label">cell5</obj_property>
-      <obj_property name="CustomSignalColor">#FF0000</obj_property>
-      <obj_property name="UseCustomSignalColor">true</obj_property>
-   </wvobject>
-   <wvobject fp_name="/grid_tb/dut/\ROW(2)\/\COL(2)\/oh/ll_re/CELL_XWYH/Q" type="logic">
-      <obj_property name="DisplayName">label</obj_property>
-      <obj_property name="ElementShortName">Q</obj_property>
-      <obj_property name="ObjectShortName">Q</obj_property>
-      <obj_property name="label">cell4</obj_property>
-      <obj_property name="CustomSignalColor">#FF0000</obj_property>
-      <obj_property name="UseCustomSignalColor">true</obj_property>
+   <wvobject fp_name="/grid_tb/dut/state_grid" type="array">
+      <obj_property name="ElementShortName">state_grid[0:3,0:4]</obj_property>
+      <obj_property name="ObjectShortName">state_grid[0:3,0:4]</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject fp_name="/grid_tb/dut/state_grid[0]" type="array">
+         <obj_property name="ElementShortName">[0,0:4]</obj_property>
+         <obj_property name="ObjectShortName">[0,0:4]</obj_property>
+         <obj_property name="isExpanded"></obj_property>
+      </wvobject>
+      <wvobject fp_name="/grid_tb/dut/state_grid[1]" type="array">
+         <obj_property name="ElementShortName">[1,0:4]</obj_property>
+         <obj_property name="ObjectShortName">[1,0:4]</obj_property>
+         <obj_property name="isExpanded"></obj_property>
+      </wvobject>
+      <wvobject fp_name="/grid_tb/dut/state_grid[2]" type="array">
+         <obj_property name="ElementShortName">[2,0:4]</obj_property>
+         <obj_property name="ObjectShortName">[2,0:4]</obj_property>
+         <obj_property name="isExpanded"></obj_property>
+      </wvobject>
+      <wvobject fp_name="/grid_tb/dut/state_grid[3]" type="array">
+         <obj_property name="ElementShortName">[3,0:4]</obj_property>
+         <obj_property name="ObjectShortName">[3,0:4]</obj_property>
+         <obj_property name="isExpanded"></obj_property>
+      </wvobject>
    </wvobject>
 </wave_config>

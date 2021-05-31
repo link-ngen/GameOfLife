@@ -20,7 +20,7 @@
 #define GSI (0x00000004)	// set iteration
 #define GMI (0x00000008)	// max iteration
 
-#define DEFAULT_ITERATION	(1)
+#define DEFAULT_ITERATION	(0)
 
 /**
  * Load pattern to the game of life grid.

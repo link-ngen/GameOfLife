@@ -6,34 +6,34 @@ preplace port reset_rtl -pg 1 -y 20 -defaultsOSRD
 preplace port rx -pg 1 -y 150 -defaultsOSRD -right
 preplace port sys_clock -pg 1 -y 90 -defaultsOSRD
 preplace inst proc_sys_reset_0 -pg 1 -lvl 3 -y 110 -defaultsOSRD
-preplace inst game_of_life_0 -pg 1 -lvl 5 -y 330 -defaultsOSRD
+preplace inst game_of_life_0 -pg 1 -lvl 5 -y 350 -defaultsOSRD
 preplace inst mdm_1 -pg 1 -lvl 2 -y 400 -defaultsOSRD
-preplace inst axi_uartlite_0 -pg 1 -lvl 5 -y 160 -defaultsOSRD
+preplace inst axi_uartlite_0 -pg 1 -lvl 5 -y 140 -defaultsOSRD
 preplace inst axi_interconnect_0 -pg 1 -lvl 4 -y 150 -defaultsOSRD
 preplace inst microblaze_0 -pg 1 -lvl 3 -y 400 -defaultsOSRD
 preplace inst rst_clk_wiz_1_100M -pg 1 -lvl 2 -y 240 -defaultsOSRD
 preplace inst clk_wiz_1 -pg 1 -lvl 1 -y 80 -defaultsOSRD
 preplace inst microblaze_0_local_memory -pg 1 -lvl 4 -y 410 -defaultsOSRD
-preplace netloc rx_1 1 5 1 NJ
-preplace netloc microblaze_0_Clk 1 1 4 210 150 590 200 1140 290 1470J
-preplace netloc ARESETN_1 1 2 2 610J 230 1130
+preplace netloc rx_1 1 5 1 1930J
+preplace netloc microblaze_0_Clk 1 1 4 210 150 790 210 1330 300 1670J
+preplace netloc ARESETN_1 1 2 2 820J 200 1340
 preplace netloc microblaze_0_ilmb_1 1 3 1 N
 preplace netloc sys_clock_1 1 0 1 NJ
-preplace netloc axi_uartlite_0_tx 1 5 1 NJ
-preplace netloc rst_clk_wiz_1_100M_bus_struct_reset 1 2 2 NJ 220 1090
-preplace netloc S00_AXI_1 1 3 1 1100
-preplace netloc rst_clk_wiz_1_100M_peripheral_aresetn 1 2 3 600J 210 1090 10 1480J
-preplace netloc rst_clk_wiz_1_100M_mb_reset 1 2 1 570
-preplace netloc clk_wiz_1_locked 1 1 2 200 140 610J
-preplace netloc axi_interconnect_0_M00_AXI 1 4 1 N
-preplace netloc proc_sys_reset_0_peripheral_aresetn 1 3 2 1110 310 1450J
-preplace netloc clk_wiz_1_clk_out2 1 1 4 200J 70 580 20 1120 320 1440J
-preplace netloc axi_interconnect_0_M01_AXI 1 4 1 1460
+preplace netloc axi_uartlite_0_tx 1 5 1 1920J
+preplace netloc rst_clk_wiz_1_100M_bus_struct_reset 1 2 2 NJ 220 1300
+preplace netloc S00_AXI_1 1 3 1 1310
+preplace netloc rst_clk_wiz_1_100M_peripheral_aresetn 1 2 3 NJ 280 1360 290 1690J
+preplace netloc rst_clk_wiz_1_100M_mb_reset 1 2 1 780
+preplace netloc clk_wiz_1_locked 1 1 2 200 130 800J
+preplace netloc axi_interconnect_0_M00_AXI 1 4 1 1660
+preplace netloc proc_sys_reset_0_peripheral_aresetn 1 3 2 1320 320 1660
+preplace netloc clk_wiz_1_clk_out2 1 1 4 200J 70 800 20 1350 310 1670J
+preplace netloc axi_interconnect_0_M01_AXI 1 4 1 1680
 preplace netloc microblaze_0_dlmb_1 1 3 1 N
 preplace netloc microblaze_0_debug 1 2 1 N
-preplace netloc mdm_1_debug_sys_rst 1 1 2 220 330 580
+preplace netloc mdm_1_debug_sys_rst 1 1 2 230 140 810
 preplace netloc reset_rtl_1 1 0 3 10 10 220 90 NJ
-levelinfo -pg 1 -10 110 400 850 1290 1590 1720 -top 0 -bot 490
+levelinfo -pg 1 -10 110 610 1060 1510 1810 1950 -top -240 -bot 490
 ",
 }
 {

@@ -1,7 +1,7 @@
 -- Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2017.2 (win64) Build 1909853 Thu Jun 15 18:39:09 MDT 2017
--- Date        : Fri May 28 20:24:03 2021
+-- Date        : Sun May 30 19:32:01 2021
 -- Host        : DEVPC running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode funcsim
 --               c:/Project/GameOfLife/bd/design_1/ip/design_1_auto_cc_0/design_1_auto_cc_0_sim_netlist.vhdl

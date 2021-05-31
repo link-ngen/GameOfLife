@@ -46,6 +46,26 @@ entity ca_core is
 end ca_core;
 
 architecture Behavioral of ca_core is
+
+    attribute shreg_extract:string;
+    attribute equivalent_register_removal:string;
+
+    signal delayed_ce_sr : std_logic_vector(9 downto 0);   
+    signal delayed_shift_sr : std_logic_vector(9 downto 0);
+    
+    attribute shreg_extract of delayed_ce_sr: signal is "no";
+    attribute shreg_extract of delayed_shift_sr: signal is "no";
+
+    attribute equivalent_register_removal of delayed_ce_sr: signal is "no";
+    attribute equivalent_register_removal of delayed_shift_sr: signal is "no";
+
+    signal delayed_ce : std_logic := '0';   
+    signal delayed_shift : std_logic := '1';  -- 0 -> start shift and 1 -> stop shift
+
+
+
+
+
     -- internal signals 
     signal internal_ce : std_logic := '0';   
     signal internal_shift : std_logic := '1';  -- 0 -> start shift and 1 -> stop shift
@@ -72,12 +92,33 @@ architecture Behavioral of ca_core is
     end component;
 begin
 
+
+    shift_regs: process(clk)
+    begin
+        if rising_edge(clk) then
+            if ce = '0' then
+                delayed_ce_sr <= (others => '0');
+                delayed_shift_sr <= (others => '1');
+            else
+                delayed_ce_sr <= internal_ce & delayed_ce_sr(9 downto 1);
+                delayed_shift_sr <= internal_shift & delayed_shift_sr(9 downto 1);
+            end if;
+        end if;
+    end process shift_regs;
+    delayed_ce <= delayed_ce_sr(0);
+    delayed_shift <= delayed_shift_sr(0);
+
+
+
+
+
+
     Field: grid generic map (WIDTH => WIDTH,
                              HEIGHT => HEIGHT)
                 port map (d_in  => d_in,
                           clk   => clk,
-                          ce    => internal_ce,
-                          shift => internal_shift,
+                          ce    => delayed_ce,--internal_ce,
+                          shift => delayed_shift,--internal_shift,
                           Q     => bitstream);
 
     FSM_PROC: process(clk)
